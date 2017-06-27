@@ -35,4 +35,9 @@ cp doxygen.conf.template doxygen.conf
 sed -i "s#<PROJECT_NAME>#$project#g" doxygen.conf
 sed -i "s#<INPUT_PROJECT>#$input#g" doxygen.conf
 
+rm -rf $project
+
 doxygen -s doxygen.conf
+
+#change dirname to ''
+sed -i "s#$input##g" ./${project}/html/*.html 
