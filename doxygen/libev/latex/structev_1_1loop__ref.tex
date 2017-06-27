@@ -1,0 +1,805 @@
+\hypertarget{structev_1_1loop__ref}{\section{loop\-\_\-ref \-Struct \-Reference}
+\label{structev_1_1loop__ref}\index{loop\-\_\-ref@{loop\-\_\-ref}}
+}
+
+
+{\ttfamily \#include $<$ev++.\-h$>$}
+
+
+
+\-Inheritance diagram for loop\-\_\-ref\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=280pt]{structev_1_1loop__ref__inherit__graph}
+\end{center}
+\end{figure}
+
+
+\-Collaboration diagram for loop\-\_\-ref\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{structev_1_1loop__ref__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structev_1_1loop__ref_a6dee3b5f76ff45ed7bc33d1cbab089d4}{loop\-\_\-ref} (\hyperlink{ev_8h_a6e6c6b499d18513c01cf4bde00121617}{\-E\-V\-\_\-\-P})  throw ()
+\item 
+bool \hyperlink{structev_1_1loop__ref_a1f090cb316333b2c1648df9e160e2ad6}{operator==} (const \hyperlink{structev_1_1loop__ref}{loop\-\_\-ref} \&other) const   throw ()
+\item 
+bool \hyperlink{structev_1_1loop__ref_aebe64584aeb2fb24a3a3a9bcfa13eebf}{operator!=} (const \hyperlink{structev_1_1loop__ref}{loop\-\_\-ref} \&other) const   throw ()
+\item 
+bool \hyperlink{structev_1_1loop__ref_a8d7e20431148d5493bc9c2315840bebb}{operator==} (const \hyperlink{ev_8h_a6e6c6b499d18513c01cf4bde00121617}{\-E\-V\-\_\-\-P}) const   throw ()
+\item 
+bool \hyperlink{structev_1_1loop__ref_aca6d051b2096bc358dfb6625d1b9aebb}{operator!=} (const \hyperlink{ev_8h_a6e6c6b499d18513c01cf4bde00121617}{\-E\-V\-\_\-\-P}) const   throw ()
+\item 
+\hyperlink{structev_1_1loop__ref_af995b1dfab9287f0f3a98d8134cfd974}{operator struct ev\-\_\-loop $\ast$} () const   throw ()
+\item 
+\hyperlink{structev_1_1loop__ref_a13b88541123e99d2782cd6c81101417d}{operator const struct ev\-\_\-loop $\ast$} () const   throw ()
+\item 
+bool \hyperlink{structev_1_1loop__ref_aa9b92fe88733a9bd5be8b42301459b13}{is\-\_\-default} () const   throw ()
+\item 
+void \hyperlink{structev_1_1loop__ref_a52fa73aeb9b8f6319d2041baf5a8bd58}{loop} (int flags=0)
+\item 
+void \hyperlink{structev_1_1loop__ref_af629d4578522c4f65e29b0b57249889e}{unloop} (\hyperlink{namespaceev_aca7e42bfd95674ad51c82b41e0c3329e}{how\-\_\-t} how=\hyperlink{namespaceev_aca7e42bfd95674ad51c82b41e0c3329ea7a725f13af144bdef532d0389ba75e0d}{\-O\-N\-E})  throw ()
+\item 
+void \hyperlink{structev_1_1loop__ref_a64fe8b8a12ce7308a7f5fb9399d36757}{run} (int flags=0)
+\item 
+void \hyperlink{structev_1_1loop__ref_a1f85df7d48620ed7aefb863acb7167ad}{break\-\_\-loop} (\hyperlink{namespaceev_aca7e42bfd95674ad51c82b41e0c3329e}{how\-\_\-t} how=\hyperlink{namespaceev_aca7e42bfd95674ad51c82b41e0c3329ea7a725f13af144bdef532d0389ba75e0d}{\-O\-N\-E})  throw ()
+\item 
+void \hyperlink{structev_1_1loop__ref_a974a8c58270dc360e96f567d31a7176e}{post\-\_\-fork} ()  throw ()
+\item 
+unsigned int \hyperlink{structev_1_1loop__ref_ae47173b96e5b1a587c38070bfe78d98a}{backend} () const   throw ()
+\item 
+\hyperlink{namespaceev_a9853823b701944a8a5ce179d10a24b97}{tstamp} \hyperlink{structev_1_1loop__ref_a98d982e3931bfdd1e920dd577db61c31}{now} () const   throw ()
+\item 
+void \hyperlink{structev_1_1loop__ref_ae84429cc5d55e687f3abbd5c0bfe7430}{ref} ()  throw ()
+\item 
+void \hyperlink{structev_1_1loop__ref_abe058b11156f019666c15a53a3fa7218}{unref} ()  throw ()
+\item 
+unsigned int \hyperlink{structev_1_1loop__ref_a2b3d64162433abbd749e2722926fb0b5}{iteration} () const   throw ()
+\item 
+unsigned int \hyperlink{structev_1_1loop__ref_a38a6400670c0b7da8bf9523a22d68692}{depth} () const   throw ()
+\item 
+void \hyperlink{structev_1_1loop__ref_aeace41f14b7d95fa116a81298ab0d058}{set\-\_\-io\-\_\-collect\-\_\-interval} (\hyperlink{namespaceev_a9853823b701944a8a5ce179d10a24b97}{tstamp} interval)  throw ()
+\item 
+void \hyperlink{structev_1_1loop__ref_aa29b4b76ece69d4dea9509a2cf827a6c}{set\-\_\-timeout\-\_\-collect\-\_\-interval} (\hyperlink{namespaceev_a9853823b701944a8a5ce179d10a24b97}{tstamp} interval)  throw ()
+\item 
+void \hyperlink{structev_1_1loop__ref_a5cd55f27ad5ce7084be26022d3dc6628}{once} (int fd, int events, \hyperlink{namespaceev_a9853823b701944a8a5ce179d10a24b97}{tstamp} timeout, void($\ast$cb)(int, void $\ast$), void $\ast$arg=0)  throw ()
+\item 
+{\footnotesize template$<$class K , void(\-K\-::$\ast$)(int) method$>$ }\\void \hyperlink{structev_1_1loop__ref_aecce9953b684e4b8db13b3a9d82520ca}{once} (int fd, int events, \hyperlink{namespaceev_a9853823b701944a8a5ce179d10a24b97}{tstamp} timeout, \-K $\ast$object)  throw ()
+\item 
+{\footnotesize template$<$class K $>$ }\\void \hyperlink{structev_1_1loop__ref_ae3a77041d3c6ae893f0573000cac252a}{once} (int fd, int events, \hyperlink{namespaceev_a9853823b701944a8a5ce179d10a24b97}{tstamp} timeout, \-K $\ast$object)  throw ()
+\item 
+{\footnotesize template$<$class K , void(\-K\-::$\ast$)() method$>$ }\\void \hyperlink{structev_1_1loop__ref_aecce9953b684e4b8db13b3a9d82520ca}{once} (int fd, int events, \hyperlink{namespaceev_a9853823b701944a8a5ce179d10a24b97}{tstamp} timeout, \-K $\ast$object)  throw ()
+\item 
+{\footnotesize template$<$void($\ast$)(int) cb$>$ }\\void \hyperlink{structev_1_1loop__ref_a5a68aa8f7554b9aab364abce41180d84}{once} (int fd, int events, \hyperlink{namespaceev_a9853823b701944a8a5ce179d10a24b97}{tstamp} timeout)  throw ()
+\item 
+{\footnotesize template$<$void($\ast$)() cb$>$ }\\void \hyperlink{structev_1_1loop__ref_a5a68aa8f7554b9aab364abce41180d84}{once} (int fd, int events, \hyperlink{namespaceev_a9853823b701944a8a5ce179d10a24b97}{tstamp} timeout)  throw ()
+\item 
+void \hyperlink{structev_1_1loop__ref_a583fb6668c11d14b9e9a5495b5664656}{feed\-\_\-fd\-\_\-event} (int fd, int revents)  throw ()
+\item 
+void \hyperlink{structev_1_1loop__ref_ab64972f5cac053e4f240d8cb3bace62e}{feed\-\_\-signal\-\_\-event} (int signum)  throw ()
+\end{DoxyCompactItemize}
+\subsection*{\-Static \-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$class K , void(\-K\-::$\ast$)(int) method$>$ }\\static void \hyperlink{structev_1_1loop__ref_a2eb69b009eb6f3f2a7dc4c0228acae47}{method\-\_\-thunk} (int revents, void $\ast$arg)
+\item 
+{\footnotesize template$<$class K , void(\-K\-::$\ast$)() method$>$ }\\static void \hyperlink{structev_1_1loop__ref_a0e7541afccf795b86f16d22b3b70ea60}{method\-\_\-noargs\-\_\-thunk} (int revents, void $\ast$arg)
+\item 
+{\footnotesize template$<$void($\ast$)(int) cb$>$ }\\static void \hyperlink{structev_1_1loop__ref_a5f709bebce00398bdfb96a55fecb43c9}{simpler\-\_\-func\-\_\-thunk} (int revents, void $\ast$arg)
+\item 
+{\footnotesize template$<$void($\ast$)() cb$>$ }\\static void \hyperlink{structev_1_1loop__ref_a40790ea6f443c6f410c35f4c252c2079}{simplest\-\_\-func\-\_\-thunk} (int revents, void $\ast$arg)
+\end{DoxyCompactItemize}
+\subsection*{\-Data \-Fields}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structev__loop}{ev\-\_\-loop} $\ast$ \hyperlink{structev_1_1loop__ref_a955b73dc5c60c9d1821e4b9bb19e254c}{\-E\-V\-\_\-\-A\-X}
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+
+
+\-Definition at line 143 of file ev++.\-h.
+
+
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\hypertarget{structev_1_1loop__ref_a6dee3b5f76ff45ed7bc33d1cbab089d4}{\index{ev\-::loop\-\_\-ref@{ev\-::loop\-\_\-ref}!loop\-\_\-ref@{loop\-\_\-ref}}
+\index{loop\-\_\-ref@{loop\-\_\-ref}!ev::loop_ref@{ev\-::loop\-\_\-ref}}
+\subsubsection[{loop\-\_\-ref}]{\setlength{\rightskip}{0pt plus 5cm}{\bf loop\-\_\-ref} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-E\-V\-\_\-\-P}}]{}
+\end{DoxyParamCaption}
+)  throw ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{structev_1_1loop__ref_a6dee3b5f76ff45ed7bc33d1cbab089d4}
+
+
+\-Definition at line 145 of file ev++.\-h.
+
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{structev_1_1loop__ref_ae47173b96e5b1a587c38070bfe78d98a}{\index{ev\-::loop\-\_\-ref@{ev\-::loop\-\_\-ref}!backend@{backend}}
+\index{backend@{backend}!ev::loop_ref@{ev\-::loop\-\_\-ref}}
+\subsubsection[{backend}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int {\bf backend} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const  throw ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{structev_1_1loop__ref_ae47173b96e5b1a587c38070bfe78d98a}
+
+
+\-Definition at line 224 of file ev++.\-h.
+
+
+
+\-Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=240pt]{structev_1_1loop__ref_ae47173b96e5b1a587c38070bfe78d98a_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{structev_1_1loop__ref_a1f85df7d48620ed7aefb863acb7167ad}{\index{ev\-::loop\-\_\-ref@{ev\-::loop\-\_\-ref}!break\-\_\-loop@{break\-\_\-loop}}
+\index{break\-\_\-loop@{break\-\_\-loop}!ev::loop_ref@{ev\-::loop\-\_\-ref}}
+\subsubsection[{break\-\_\-loop}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf break\-\_\-loop} (
+\begin{DoxyParamCaption}
+\item[{{\bf how\-\_\-t}}]{how = {\ttfamily {\bf \-O\-N\-E}}}
+\end{DoxyParamCaption}
+)  throw ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{structev_1_1loop__ref_a1f85df7d48620ed7aefb863acb7167ad}
+
+
+\-Definition at line 214 of file ev++.\-h.
+
+
+
+\-Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=236pt]{structev_1_1loop__ref_a1f85df7d48620ed7aefb863acb7167ad_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{structev_1_1loop__ref_a38a6400670c0b7da8bf9523a22d68692}{\index{ev\-::loop\-\_\-ref@{ev\-::loop\-\_\-ref}!depth@{depth}}
+\index{depth@{depth}!ev::loop_ref@{ev\-::loop\-\_\-ref}}
+\subsubsection[{depth}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int {\bf depth} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const  throw ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{structev_1_1loop__ref_a38a6400670c0b7da8bf9523a22d68692}
+
+
+\-Definition at line 250 of file ev++.\-h.
+
+
+
+\-Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=214pt]{structev_1_1loop__ref_a38a6400670c0b7da8bf9523a22d68692_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{structev_1_1loop__ref_a583fb6668c11d14b9e9a5495b5664656}{\index{ev\-::loop\-\_\-ref@{ev\-::loop\-\_\-ref}!feed\-\_\-fd\-\_\-event@{feed\-\_\-fd\-\_\-event}}
+\index{feed\-\_\-fd\-\_\-event@{feed\-\_\-fd\-\_\-event}!ev::loop_ref@{ev\-::loop\-\_\-ref}}
+\subsubsection[{feed\-\_\-fd\-\_\-event}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf feed\-\_\-fd\-\_\-event} (
+\begin{DoxyParamCaption}
+\item[{int}]{fd, }
+\item[{int}]{revents}
+\end{DoxyParamCaption}
+)  throw ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{structev_1_1loop__ref_a583fb6668c11d14b9e9a5495b5664656}
+
+
+\-Definition at line 335 of file ev++.\-h.
+
+
+
+\-Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structev_1_1loop__ref_a583fb6668c11d14b9e9a5495b5664656_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{structev_1_1loop__ref_ab64972f5cac053e4f240d8cb3bace62e}{\index{ev\-::loop\-\_\-ref@{ev\-::loop\-\_\-ref}!feed\-\_\-signal\-\_\-event@{feed\-\_\-signal\-\_\-event}}
+\index{feed\-\_\-signal\-\_\-event@{feed\-\_\-signal\-\_\-event}!ev::loop_ref@{ev\-::loop\-\_\-ref}}
+\subsubsection[{feed\-\_\-signal\-\_\-event}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf feed\-\_\-signal\-\_\-event} (
+\begin{DoxyParamCaption}
+\item[{int}]{signum}
+\end{DoxyParamCaption}
+)  throw ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{structev_1_1loop__ref_ab64972f5cac053e4f240d8cb3bace62e}
+
+
+\-Definition at line 340 of file ev++.\-h.
+
+
+
+\-Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structev_1_1loop__ref_ab64972f5cac053e4f240d8cb3bace62e_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{structev_1_1loop__ref_aa9b92fe88733a9bd5be8b42301459b13}{\index{ev\-::loop\-\_\-ref@{ev\-::loop\-\_\-ref}!is\-\_\-default@{is\-\_\-default}}
+\index{is\-\_\-default@{is\-\_\-default}!ev::loop_ref@{ev\-::loop\-\_\-ref}}
+\subsubsection[{is\-\_\-default}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf is\-\_\-default} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const  throw ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{structev_1_1loop__ref_aa9b92fe88733a9bd5be8b42301459b13}
+
+
+\-Definition at line 191 of file ev++.\-h.
+
+
+
+\-Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structev_1_1loop__ref_aa9b92fe88733a9bd5be8b42301459b13_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{structev_1_1loop__ref_a2b3d64162433abbd749e2722926fb0b5}{\index{ev\-::loop\-\_\-ref@{ev\-::loop\-\_\-ref}!iteration@{iteration}}
+\index{iteration@{iteration}!ev::loop_ref@{ev\-::loop\-\_\-ref}}
+\subsubsection[{iteration}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int {\bf iteration} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const  throw ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{structev_1_1loop__ref_a2b3d64162433abbd749e2722926fb0b5}
+
+
+\-Definition at line 245 of file ev++.\-h.
+
+
+
+\-Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=236pt]{structev_1_1loop__ref_a2b3d64162433abbd749e2722926fb0b5_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{structev_1_1loop__ref_a52fa73aeb9b8f6319d2041baf5a8bd58}{\index{ev\-::loop\-\_\-ref@{ev\-::loop\-\_\-ref}!loop@{loop}}
+\index{loop@{loop}!ev::loop_ref@{ev\-::loop\-\_\-ref}}
+\subsubsection[{loop}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf loop} (
+\begin{DoxyParamCaption}
+\item[{int}]{flags = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{structev_1_1loop__ref_a52fa73aeb9b8f6319d2041baf5a8bd58}
+
+
+\-Definition at line 198 of file ev++.\-h.
+
+
+
+\-Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structev_1_1loop__ref_a52fa73aeb9b8f6319d2041baf5a8bd58_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{structev_1_1loop__ref_a0e7541afccf795b86f16d22b3b70ea60}{\index{ev\-::loop\-\_\-ref@{ev\-::loop\-\_\-ref}!method\-\_\-noargs\-\_\-thunk@{method\-\_\-noargs\-\_\-thunk}}
+\index{method\-\_\-noargs\-\_\-thunk@{method\-\_\-noargs\-\_\-thunk}!ev::loop_ref@{ev\-::loop\-\_\-ref}}
+\subsubsection[{method\-\_\-noargs\-\_\-thunk}]{\setlength{\rightskip}{0pt plus 5cm}static void {\bf method\-\_\-noargs\-\_\-thunk} (
+\begin{DoxyParamCaption}
+\item[{int}]{revents, }
+\item[{void $\ast$}]{arg}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, static\mbox{]}}}}\label{structev_1_1loop__ref_a0e7541afccf795b86f16d22b3b70ea60}
+
+
+\-Definition at line 301 of file ev++.\-h.
+
+\hypertarget{structev_1_1loop__ref_a2eb69b009eb6f3f2a7dc4c0228acae47}{\index{ev\-::loop\-\_\-ref@{ev\-::loop\-\_\-ref}!method\-\_\-thunk@{method\-\_\-thunk}}
+\index{method\-\_\-thunk@{method\-\_\-thunk}!ev::loop_ref@{ev\-::loop\-\_\-ref}}
+\subsubsection[{method\-\_\-thunk}]{\setlength{\rightskip}{0pt plus 5cm}static void {\bf method\-\_\-thunk} (
+\begin{DoxyParamCaption}
+\item[{int}]{revents, }
+\item[{void $\ast$}]{arg}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, static\mbox{]}}}}\label{structev_1_1loop__ref_a2eb69b009eb6f3f2a7dc4c0228acae47}
+
+
+\-Definition at line 287 of file ev++.\-h.
+
+
+
+\-Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=232pt]{structev_1_1loop__ref_a2eb69b009eb6f3f2a7dc4c0228acae47_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{structev_1_1loop__ref_a98d982e3931bfdd1e920dd577db61c31}{\index{ev\-::loop\-\_\-ref@{ev\-::loop\-\_\-ref}!now@{now}}
+\index{now@{now}!ev::loop_ref@{ev\-::loop\-\_\-ref}}
+\subsubsection[{now}]{\setlength{\rightskip}{0pt plus 5cm}{\bf tstamp} {\bf now} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const  throw ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{structev_1_1loop__ref_a98d982e3931bfdd1e920dd577db61c31}
+
+
+\-Definition at line 229 of file ev++.\-h.
+
+
+
+\-Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=202pt]{structev_1_1loop__ref_a98d982e3931bfdd1e920dd577db61c31_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{structev_1_1loop__ref_a5cd55f27ad5ce7084be26022d3dc6628}{\index{ev\-::loop\-\_\-ref@{ev\-::loop\-\_\-ref}!once@{once}}
+\index{once@{once}!ev::loop_ref@{ev\-::loop\-\_\-ref}}
+\subsubsection[{once}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf once} (
+\begin{DoxyParamCaption}
+\item[{int}]{fd, }
+\item[{int}]{events, }
+\item[{{\bf tstamp}}]{timeout, }
+\item[{void($\ast$)(int, void $\ast$)}]{cb, }
+\item[{void $\ast$}]{arg = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)  throw ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{structev_1_1loop__ref_a5cd55f27ad5ce7084be26022d3dc6628}
+
+
+\-Definition at line 267 of file ev++.\-h.
+
+
+
+\-Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structev_1_1loop__ref_a5cd55f27ad5ce7084be26022d3dc6628_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\-Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=192pt]{structev_1_1loop__ref_a5cd55f27ad5ce7084be26022d3dc6628_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{structev_1_1loop__ref_aecce9953b684e4b8db13b3a9d82520ca}{\index{ev\-::loop\-\_\-ref@{ev\-::loop\-\_\-ref}!once@{once}}
+\index{once@{once}!ev::loop_ref@{ev\-::loop\-\_\-ref}}
+\subsubsection[{once}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf once} (
+\begin{DoxyParamCaption}
+\item[{int}]{fd, }
+\item[{int}]{events, }
+\item[{{\bf tstamp}}]{timeout, }
+\item[{\-K $\ast$}]{object}
+\end{DoxyParamCaption}
+)  throw ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{structev_1_1loop__ref_aecce9953b684e4b8db13b3a9d82520ca}
+
+
+\-Definition at line 274 of file ev++.\-h.
+
+
+
+\-Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structev_1_1loop__ref_aecce9953b684e4b8db13b3a9d82520ca_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{structev_1_1loop__ref_ae3a77041d3c6ae893f0573000cac252a}{\index{ev\-::loop\-\_\-ref@{ev\-::loop\-\_\-ref}!once@{once}}
+\index{once@{once}!ev::loop_ref@{ev\-::loop\-\_\-ref}}
+\subsubsection[{once}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf once} (
+\begin{DoxyParamCaption}
+\item[{int}]{fd, }
+\item[{int}]{events, }
+\item[{{\bf tstamp}}]{timeout, }
+\item[{\-K $\ast$}]{object}
+\end{DoxyParamCaption}
+)  throw ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{structev_1_1loop__ref_ae3a77041d3c6ae893f0573000cac252a}
+
+
+\-Definition at line 281 of file ev++.\-h.
+
+
+
+\-Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structev_1_1loop__ref_ae3a77041d3c6ae893f0573000cac252a_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{structev_1_1loop__ref_aecce9953b684e4b8db13b3a9d82520ca}{\index{ev\-::loop\-\_\-ref@{ev\-::loop\-\_\-ref}!once@{once}}
+\index{once@{once}!ev::loop_ref@{ev\-::loop\-\_\-ref}}
+\subsubsection[{once}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf once} (
+\begin{DoxyParamCaption}
+\item[{int}]{fd, }
+\item[{int}]{events, }
+\item[{{\bf tstamp}}]{timeout, }
+\item[{\-K $\ast$}]{object}
+\end{DoxyParamCaption}
+)  throw ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{structev_1_1loop__ref_aecce9953b684e4b8db13b3a9d82520ca}
+
+
+\-Definition at line 295 of file ev++.\-h.
+
+
+
+\-Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structev_1_1loop__ref_aecce9953b684e4b8db13b3a9d82520ca_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{structev_1_1loop__ref_a5a68aa8f7554b9aab364abce41180d84}{\index{ev\-::loop\-\_\-ref@{ev\-::loop\-\_\-ref}!once@{once}}
+\index{once@{once}!ev::loop_ref@{ev\-::loop\-\_\-ref}}
+\subsubsection[{once}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf once} (
+\begin{DoxyParamCaption}
+\item[{int}]{fd, }
+\item[{int}]{events, }
+\item[{{\bf tstamp}}]{timeout}
+\end{DoxyParamCaption}
+)  throw ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{structev_1_1loop__ref_a5a68aa8f7554b9aab364abce41180d84}
+
+
+\-Definition at line 309 of file ev++.\-h.
+
+
+
+\-Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structev_1_1loop__ref_a5a68aa8f7554b9aab364abce41180d84_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{structev_1_1loop__ref_a5a68aa8f7554b9aab364abce41180d84}{\index{ev\-::loop\-\_\-ref@{ev\-::loop\-\_\-ref}!once@{once}}
+\index{once@{once}!ev::loop_ref@{ev\-::loop\-\_\-ref}}
+\subsubsection[{once}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf once} (
+\begin{DoxyParamCaption}
+\item[{int}]{fd, }
+\item[{int}]{events, }
+\item[{{\bf tstamp}}]{timeout}
+\end{DoxyParamCaption}
+)  throw ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{structev_1_1loop__ref_a5a68aa8f7554b9aab364abce41180d84}
+
+
+\-Definition at line 323 of file ev++.\-h.
+
+
+
+\-Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structev_1_1loop__ref_a5a68aa8f7554b9aab364abce41180d84_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{structev_1_1loop__ref_a13b88541123e99d2782cd6c81101417d}{\index{ev\-::loop\-\_\-ref@{ev\-::loop\-\_\-ref}!operator const struct ev\-\_\-loop $\ast$@{operator const struct ev\-\_\-loop $\ast$}}
+\index{operator const struct ev\-\_\-loop $\ast$@{operator const struct ev\-\_\-loop $\ast$}!ev::loop_ref@{ev\-::loop\-\_\-ref}}
+\subsubsection[{operator const struct ev\-\_\-loop $\ast$}]{\setlength{\rightskip}{0pt plus 5cm}operator const struct {\bf ev\-\_\-loop} $\ast$ (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const  throw ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{structev_1_1loop__ref_a13b88541123e99d2782cd6c81101417d}
+
+
+\-Definition at line 186 of file ev++.\-h.
+
+\hypertarget{structev_1_1loop__ref_af995b1dfab9287f0f3a98d8134cfd974}{\index{ev\-::loop\-\_\-ref@{ev\-::loop\-\_\-ref}!operator struct ev\-\_\-loop $\ast$@{operator struct ev\-\_\-loop $\ast$}}
+\index{operator struct ev\-\_\-loop $\ast$@{operator struct ev\-\_\-loop $\ast$}!ev::loop_ref@{ev\-::loop\-\_\-ref}}
+\subsubsection[{operator struct ev\-\_\-loop $\ast$}]{\setlength{\rightskip}{0pt plus 5cm}operator struct {\bf ev\-\_\-loop} $\ast$ (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const  throw ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{structev_1_1loop__ref_af995b1dfab9287f0f3a98d8134cfd974}
+
+
+\-Definition at line 181 of file ev++.\-h.
+
+\hypertarget{structev_1_1loop__ref_aebe64584aeb2fb24a3a3a9bcfa13eebf}{\index{ev\-::loop\-\_\-ref@{ev\-::loop\-\_\-ref}!operator!=@{operator!=}}
+\index{operator!=@{operator!=}!ev::loop_ref@{ev\-::loop\-\_\-ref}}
+\subsubsection[{operator!=}]{\setlength{\rightskip}{0pt plus 5cm}bool operator!= (
+\begin{DoxyParamCaption}
+\item[{const {\bf loop\-\_\-ref} \&}]{other}
+\end{DoxyParamCaption}
+) const  throw ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{structev_1_1loop__ref_aebe64584aeb2fb24a3a3a9bcfa13eebf}
+
+
+\-Definition at line 161 of file ev++.\-h.
+
+\hypertarget{structev_1_1loop__ref_aca6d051b2096bc358dfb6625d1b9aebb}{\index{ev\-::loop\-\_\-ref@{ev\-::loop\-\_\-ref}!operator!=@{operator!=}}
+\index{operator!=@{operator!=}!ev::loop_ref@{ev\-::loop\-\_\-ref}}
+\subsubsection[{operator!=}]{\setlength{\rightskip}{0pt plus 5cm}bool operator!= (
+\begin{DoxyParamCaption}
+\item[{const {\bf \-E\-V\-\_\-\-P}}]{}
+\end{DoxyParamCaption}
+) const  throw ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{structev_1_1loop__ref_aca6d051b2096bc358dfb6625d1b9aebb}
+
+
+\-Definition at line 176 of file ev++.\-h.
+
+\hypertarget{structev_1_1loop__ref_a1f090cb316333b2c1648df9e160e2ad6}{\index{ev\-::loop\-\_\-ref@{ev\-::loop\-\_\-ref}!operator==@{operator==}}
+\index{operator==@{operator==}!ev::loop_ref@{ev\-::loop\-\_\-ref}}
+\subsubsection[{operator==}]{\setlength{\rightskip}{0pt plus 5cm}bool operator== (
+\begin{DoxyParamCaption}
+\item[{const {\bf loop\-\_\-ref} \&}]{other}
+\end{DoxyParamCaption}
+) const  throw ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{structev_1_1loop__ref_a1f090cb316333b2c1648df9e160e2ad6}
+
+
+\-Definition at line 152 of file ev++.\-h.
+
+\hypertarget{structev_1_1loop__ref_a8d7e20431148d5493bc9c2315840bebb}{\index{ev\-::loop\-\_\-ref@{ev\-::loop\-\_\-ref}!operator==@{operator==}}
+\index{operator==@{operator==}!ev::loop_ref@{ev\-::loop\-\_\-ref}}
+\subsubsection[{operator==}]{\setlength{\rightskip}{0pt plus 5cm}bool operator== (
+\begin{DoxyParamCaption}
+\item[{const {\bf \-E\-V\-\_\-\-P}}]{}
+\end{DoxyParamCaption}
+) const  throw ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{structev_1_1loop__ref_a8d7e20431148d5493bc9c2315840bebb}
+
+
+\-Definition at line 171 of file ev++.\-h.
+
+\hypertarget{structev_1_1loop__ref_a974a8c58270dc360e96f567d31a7176e}{\index{ev\-::loop\-\_\-ref@{ev\-::loop\-\_\-ref}!post\-\_\-fork@{post\-\_\-fork}}
+\index{post\-\_\-fork@{post\-\_\-fork}!ev::loop_ref@{ev\-::loop\-\_\-ref}}
+\subsubsection[{post\-\_\-fork}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf post\-\_\-fork} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)  throw ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{structev_1_1loop__ref_a974a8c58270dc360e96f567d31a7176e}
+
+
+\-Definition at line 219 of file ev++.\-h.
+
+
+
+\-Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=246pt]{structev_1_1loop__ref_a974a8c58270dc360e96f567d31a7176e_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{structev_1_1loop__ref_ae84429cc5d55e687f3abbd5c0bfe7430}{\index{ev\-::loop\-\_\-ref@{ev\-::loop\-\_\-ref}!ref@{ref}}
+\index{ref@{ref}!ev::loop_ref@{ev\-::loop\-\_\-ref}}
+\subsubsection[{ref}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf ref} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)  throw ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{structev_1_1loop__ref_ae84429cc5d55e687f3abbd5c0bfe7430}
+
+
+\-Definition at line 234 of file ev++.\-h.
+
+
+
+\-Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=190pt]{structev_1_1loop__ref_ae84429cc5d55e687f3abbd5c0bfe7430_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{structev_1_1loop__ref_a64fe8b8a12ce7308a7f5fb9399d36757}{\index{ev\-::loop\-\_\-ref@{ev\-::loop\-\_\-ref}!run@{run}}
+\index{run@{run}!ev::loop_ref@{ev\-::loop\-\_\-ref}}
+\subsubsection[{run}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf run} (
+\begin{DoxyParamCaption}
+\item[{int}]{flags = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{structev_1_1loop__ref_a64fe8b8a12ce7308a7f5fb9399d36757}
+
+
+\-Definition at line 209 of file ev++.\-h.
+
+
+
+\-Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structev_1_1loop__ref_a64fe8b8a12ce7308a7f5fb9399d36757_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{structev_1_1loop__ref_aeace41f14b7d95fa116a81298ab0d058}{\index{ev\-::loop\-\_\-ref@{ev\-::loop\-\_\-ref}!set\-\_\-io\-\_\-collect\-\_\-interval@{set\-\_\-io\-\_\-collect\-\_\-interval}}
+\index{set\-\_\-io\-\_\-collect\-\_\-interval@{set\-\_\-io\-\_\-collect\-\_\-interval}!ev::loop_ref@{ev\-::loop\-\_\-ref}}
+\subsubsection[{set\-\_\-io\-\_\-collect\-\_\-interval}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf set\-\_\-io\-\_\-collect\-\_\-interval} (
+\begin{DoxyParamCaption}
+\item[{{\bf tstamp}}]{interval}
+\end{DoxyParamCaption}
+)  throw ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{structev_1_1loop__ref_aeace41f14b7d95fa116a81298ab0d058}
+
+
+\-Definition at line 255 of file ev++.\-h.
+
+
+
+\-Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structev_1_1loop__ref_aeace41f14b7d95fa116a81298ab0d058_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{structev_1_1loop__ref_aa29b4b76ece69d4dea9509a2cf827a6c}{\index{ev\-::loop\-\_\-ref@{ev\-::loop\-\_\-ref}!set\-\_\-timeout\-\_\-collect\-\_\-interval@{set\-\_\-timeout\-\_\-collect\-\_\-interval}}
+\index{set\-\_\-timeout\-\_\-collect\-\_\-interval@{set\-\_\-timeout\-\_\-collect\-\_\-interval}!ev::loop_ref@{ev\-::loop\-\_\-ref}}
+\subsubsection[{set\-\_\-timeout\-\_\-collect\-\_\-interval}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf set\-\_\-timeout\-\_\-collect\-\_\-interval} (
+\begin{DoxyParamCaption}
+\item[{{\bf tstamp}}]{interval}
+\end{DoxyParamCaption}
+)  throw ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{structev_1_1loop__ref_aa29b4b76ece69d4dea9509a2cf827a6c}
+
+
+\-Definition at line 260 of file ev++.\-h.
+
+
+
+\-Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structev_1_1loop__ref_aa29b4b76ece69d4dea9509a2cf827a6c_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{structev_1_1loop__ref_a5f709bebce00398bdfb96a55fecb43c9}{\index{ev\-::loop\-\_\-ref@{ev\-::loop\-\_\-ref}!simpler\-\_\-func\-\_\-thunk@{simpler\-\_\-func\-\_\-thunk}}
+\index{simpler\-\_\-func\-\_\-thunk@{simpler\-\_\-func\-\_\-thunk}!ev::loop_ref@{ev\-::loop\-\_\-ref}}
+\subsubsection[{simpler\-\_\-func\-\_\-thunk}]{\setlength{\rightskip}{0pt plus 5cm}static void {\bf simpler\-\_\-func\-\_\-thunk} (
+\begin{DoxyParamCaption}
+\item[{int}]{revents, }
+\item[{void $\ast$}]{arg}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, static\mbox{]}}}}\label{structev_1_1loop__ref_a5f709bebce00398bdfb96a55fecb43c9}
+
+
+\-Definition at line 315 of file ev++.\-h.
+
+\hypertarget{structev_1_1loop__ref_a40790ea6f443c6f410c35f4c252c2079}{\index{ev\-::loop\-\_\-ref@{ev\-::loop\-\_\-ref}!simplest\-\_\-func\-\_\-thunk@{simplest\-\_\-func\-\_\-thunk}}
+\index{simplest\-\_\-func\-\_\-thunk@{simplest\-\_\-func\-\_\-thunk}!ev::loop_ref@{ev\-::loop\-\_\-ref}}
+\subsubsection[{simplest\-\_\-func\-\_\-thunk}]{\setlength{\rightskip}{0pt plus 5cm}static void {\bf simplest\-\_\-func\-\_\-thunk} (
+\begin{DoxyParamCaption}
+\item[{int}]{revents, }
+\item[{void $\ast$}]{arg}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, static\mbox{]}}}}\label{structev_1_1loop__ref_a40790ea6f443c6f410c35f4c252c2079}
+
+
+\-Definition at line 329 of file ev++.\-h.
+
+\hypertarget{structev_1_1loop__ref_af629d4578522c4f65e29b0b57249889e}{\index{ev\-::loop\-\_\-ref@{ev\-::loop\-\_\-ref}!unloop@{unloop}}
+\index{unloop@{unloop}!ev::loop_ref@{ev\-::loop\-\_\-ref}}
+\subsubsection[{unloop}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf unloop} (
+\begin{DoxyParamCaption}
+\item[{{\bf how\-\_\-t}}]{how = {\ttfamily {\bf \-O\-N\-E}}}
+\end{DoxyParamCaption}
+)  throw ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{structev_1_1loop__ref_af629d4578522c4f65e29b0b57249889e}
+
+
+\-Definition at line 203 of file ev++.\-h.
+
+
+
+\-Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=218pt]{structev_1_1loop__ref_af629d4578522c4f65e29b0b57249889e_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{structev_1_1loop__ref_abe058b11156f019666c15a53a3fa7218}{\index{ev\-::loop\-\_\-ref@{ev\-::loop\-\_\-ref}!unref@{unref}}
+\index{unref@{unref}!ev::loop_ref@{ev\-::loop\-\_\-ref}}
+\subsubsection[{unref}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf unref} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)  throw ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{structev_1_1loop__ref_abe058b11156f019666c15a53a3fa7218}
+
+
+\-Definition at line 239 of file ev++.\-h.
+
+
+
+\-Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=208pt]{structev_1_1loop__ref_abe058b11156f019666c15a53a3fa7218_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{\-Field \-Documentation}
+\hypertarget{structev_1_1loop__ref_a955b73dc5c60c9d1821e4b9bb19e254c}{\index{ev\-::loop\-\_\-ref@{ev\-::loop\-\_\-ref}!\-E\-V\-\_\-\-A\-X@{\-E\-V\-\_\-\-A\-X}}
+\index{\-E\-V\-\_\-\-A\-X@{\-E\-V\-\_\-\-A\-X}!ev::loop_ref@{ev\-::loop\-\_\-ref}}
+\subsubsection[{\-E\-V\-\_\-\-A\-X}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf ev\-\_\-loop}$\ast$ {\bf \-E\-V\-\_\-\-A\-X}}}\label{structev_1_1loop__ref_a955b73dc5c60c9d1821e4b9bb19e254c}
+
+
+\-Definition at line 346 of file ev++.\-h.
+
+
+
+\-The documentation for this struct was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+/home/jaymiao/workstation/github/libev-\/4.\-19/\hyperlink{ev_09_09_8h}{ev++.\-h}\end{DoxyCompactItemize}

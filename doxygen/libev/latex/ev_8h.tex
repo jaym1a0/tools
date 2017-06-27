@@ -1,0 +1,3397 @@
+\hypertarget{ev_8h}{\section{/home/jaymiao/workstation/github/libev-\/4.19/ev.h \-File \-Reference}
+\label{ev_8h}\index{/home/jaymiao/workstation/github/libev-\/4.\-19/ev.\-h@{/home/jaymiao/workstation/github/libev-\/4.\-19/ev.\-h}}
+}
+{\ttfamily \#include $<$signal.\-h$>$}\*
+{\ttfamily \#include $<$sys/stat.\-h$>$}\*
+\-Include dependency graph for ev.\-h\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=310pt]{ev_8h__incl}
+\end{center}
+\end{figure}
+\-This graph shows which files directly or indirectly include this file\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ev_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{\-Data \-Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structev__watcher}{ev\-\_\-watcher}
+\item 
+struct \hyperlink{structev__watcher__list}{ev\-\_\-watcher\-\_\-list}
+\item 
+struct \hyperlink{structev__watcher__time}{ev\-\_\-watcher\-\_\-time}
+\item 
+struct \hyperlink{structev__io}{ev\-\_\-io}
+\item 
+struct \hyperlink{structev__timer}{ev\-\_\-timer}
+\item 
+struct \hyperlink{structev__periodic}{ev\-\_\-periodic}
+\item 
+struct \hyperlink{structev__signal}{ev\-\_\-signal}
+\item 
+struct \hyperlink{structev__child}{ev\-\_\-child}
+\item 
+struct \hyperlink{structev__stat}{ev\-\_\-stat}
+\item 
+struct \hyperlink{structev__idle}{ev\-\_\-idle}
+\item 
+struct \hyperlink{structev__prepare}{ev\-\_\-prepare}
+\item 
+struct \hyperlink{structev__check}{ev\-\_\-check}
+\item 
+struct \hyperlink{structev__fork}{ev\-\_\-fork}
+\item 
+struct \hyperlink{structev__cleanup}{ev\-\_\-cleanup}
+\item 
+struct \hyperlink{structev__embed}{ev\-\_\-embed}
+\item 
+struct \hyperlink{structev__async}{ev\-\_\-async}
+\item 
+union \hyperlink{unionev__any__watcher}{ev\-\_\-any\-\_\-watcher}
+\end{DoxyCompactItemize}
+\subsection*{\-Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{ev_8h_ad93be303cf5157adefdaa90d8f76d09a}{\-E\-V\-\_\-\-C\-P\-P}(x)
+\item 
+\#define \hyperlink{ev_8h_a473b5b606fdd3d484227542605e80bcf}{\-E\-V\-\_\-\-T\-H\-R\-O\-W}~\hyperlink{ev_8c_a28c87addf521a1be2f0a57f1e209d4aa}{\-E\-V\-\_\-\-C\-P\-P}(throw())
+\item 
+\#define \hyperlink{ev_8h_a0700d231d90ef577985f7c3cc3cf3e22}{\-E\-V\-\_\-\-F\-E\-A\-T\-U\-R\-E\-\_\-\-C\-O\-D\-E}~((\-E\-V\-\_\-\-F\-E\-A\-T\-U\-R\-E\-S) \&  1)
+\item 
+\#define \hyperlink{ev_8h_a4110905306df98bc6b758ae0ec6bc677}{\-E\-V\-\_\-\-F\-E\-A\-T\-U\-R\-E\-\_\-\-D\-A\-T\-A}~((\-E\-V\-\_\-\-F\-E\-A\-T\-U\-R\-E\-S) \&  2)
+\item 
+\#define \hyperlink{ev_8h_a2848b181235e82a3bab72d3ad177812a}{\-E\-V\-\_\-\-F\-E\-A\-T\-U\-R\-E\-\_\-\-C\-O\-N\-F\-I\-G}~((\-E\-V\-\_\-\-F\-E\-A\-T\-U\-R\-E\-S) \&  4)
+\item 
+\#define \hyperlink{ev_8h_a5f6b7c382d676f2005892b9036f23f49}{\-E\-V\-\_\-\-F\-E\-A\-T\-U\-R\-E\-\_\-\-A\-P\-I}~((\-E\-V\-\_\-\-F\-E\-A\-T\-U\-R\-E\-S) \&  8)
+\item 
+\#define \hyperlink{ev_8h_aa144474dba376a42cc6259fbd2401461}{\-E\-V\-\_\-\-F\-E\-A\-T\-U\-R\-E\-\_\-\-W\-A\-T\-C\-H\-E\-R\-S}~((\-E\-V\-\_\-\-F\-E\-A\-T\-U\-R\-E\-S) \& 16)
+\item 
+\#define \hyperlink{ev_8h_ae4d289af44f03c4186ecf05ffea22832}{\-E\-V\-\_\-\-F\-E\-A\-T\-U\-R\-E\-\_\-\-B\-A\-C\-K\-E\-N\-D\-S}~((\-E\-V\-\_\-\-F\-E\-A\-T\-U\-R\-E\-S) \& 32)
+\item 
+\#define \hyperlink{ev_8h_aaea054009d1db29e1552f1bfad585385}{\-E\-V\-\_\-\-F\-E\-A\-T\-U\-R\-E\-\_\-\-O\-S}~((\-E\-V\-\_\-\-F\-E\-A\-T\-U\-R\-E\-S) \& 64)
+\item 
+\#define \hyperlink{ev_8h_a6e6c6b499d18513c01cf4bde00121617}{\-E\-V\-\_\-\-P}~struct \hyperlink{structev__loop}{ev\-\_\-loop} $\ast$loop               /$\ast$ a loop as sole parameter in a declaration $\ast$/
+\item 
+\#define \hyperlink{ev_8h_a8ac42969e0a499b8c1367f0ad85dbba9}{\-E\-V\-\_\-\-P\-\_\-}~\hyperlink{ev_8h_a6e6c6b499d18513c01cf4bde00121617}{\-E\-V\-\_\-\-P},                              /$\ast$ a loop as first of multiple parameters $\ast$/
+\item 
+\#define \hyperlink{ev_8h_a383ea0dc8239cccecd730d5034abaab8}{\-E\-V\-\_\-\-A}~loop                               /$\ast$ a loop as sole argument to a function call $\ast$/
+\item 
+\#define \hyperlink{ev_8h_ac0fea9e1f8c3efe427907d4cad8dbc7a}{\-E\-V\-\_\-\-A\-\_\-}~\hyperlink{ev_8h_a383ea0dc8239cccecd730d5034abaab8}{\-E\-V\-\_\-\-A},                              /$\ast$ a loop as first of multiple arguments $\ast$/
+\item 
+\#define \hyperlink{ev_8h_a9adf91debf265c4e9bbd9010d2c8653c}{\-E\-V\-\_\-\-D\-E\-F\-A\-U\-L\-T\-\_\-\-U\-C}~\hyperlink{ev_8h_aa54ecf88e3cb67c3de954caff7013b13}{ev\-\_\-default\-\_\-loop\-\_\-uc\-\_\-} ()    /$\ast$ the default loop, if initialised, as sole arg $\ast$/
+\item 
+\#define \hyperlink{ev_8h_a7531fb3e3b5f0fe3bdc3ba4c610af924}{\-E\-V\-\_\-\-D\-E\-F\-A\-U\-L\-T\-\_\-\-U\-C\-\_\-}~\hyperlink{ev_8h_a9adf91debf265c4e9bbd9010d2c8653c}{\-E\-V\-\_\-\-D\-E\-F\-A\-U\-L\-T\-\_\-\-U\-C},            /$\ast$ the default loop as first of multiple arguments $\ast$/
+\item 
+\#define \hyperlink{ev_8h_a4da807dc9ecbfce6b5446d0e4d7e423e}{\-E\-V\-\_\-\-D\-E\-F\-A\-U\-L\-T}~\hyperlink{ev_8h_a48fd511f5f2aa7af7d8738c149cfa8f6}{ev\-\_\-default\-\_\-loop} (0)          /$\ast$ the default loop as sole arg $\ast$/
+\item 
+\#define \hyperlink{ev_8h_a0b0ef45041d126c1024c0ea9f09820a2}{\-E\-V\-\_\-\-D\-E\-F\-A\-U\-L\-T\-\_\-}~\hyperlink{ev_8h_a4da807dc9ecbfce6b5446d0e4d7e423e}{\-E\-V\-\_\-\-D\-E\-F\-A\-U\-L\-T},                  /$\ast$ the default loop as first of multiple arguments $\ast$/
+\item 
+\#define \hyperlink{ev_8h_ac5b317e52904cdfbe2332e6460ace504}{\-E\-V\-\_\-\-I\-N\-L\-I\-N\-E}~static
+\item 
+\#define \hyperlink{ev_8h_a8cd4ac9d91eee2b97ad3bfcd23518774}{\-E\-V\-\_\-\-A\-P\-I\-\_\-\-D\-E\-C\-L}~extern
+\item 
+\#define \hyperlink{ev_8h_a1420af17e257e580fc929f9334caeebf}{\-E\-V\-\_\-\-V\-E\-R\-S\-I\-O\-N\-\_\-\-M\-A\-J\-O\-R}~4
+\item 
+\#define \hyperlink{ev_8h_af9e05ec52a1ce71b51555fa5dcf026bd}{\-E\-V\-\_\-\-V\-E\-R\-S\-I\-O\-N\-\_\-\-M\-I\-N\-O\-R}~19
+\item 
+\#define \hyperlink{ev_8h_ac242261c5628b4207bf778eed8d0828a}{\-E\-V\-\_\-\-C\-B}(type, name)~void name (\hyperlink{ev_8h_a8ac42969e0a499b8c1367f0ad85dbba9}{\-E\-V\-\_\-\-P\-\_\-} struct ev\-\_\- \#\# type $\ast$w, int revents)
+\item 
+\#define \hyperlink{ev_8h_ad75c5fc9b1600de6109dfced9cbca1ac}{\-E\-V\-\_\-\-W\-A\-T\-C\-H\-E\-R}(type)
+\item 
+\#define \hyperlink{ev_8h_a48fb83f5d9ef4bf54199680286454e14}{\-E\-V\-\_\-\-W\-A\-T\-C\-H\-E\-R\-\_\-\-L\-I\-S\-T}(type)
+\item 
+\#define \hyperlink{ev_8h_acce22ad2bfb8b43bf4a77500fe429a1f}{\-E\-V\-\_\-\-W\-A\-T\-C\-H\-E\-R\-\_\-\-T\-I\-M\-E}(type)
+\item 
+\#define \hyperlink{ev_8h_ac5883ba29d04a74e07d37fa181203d23}{ev\-\_\-async\-\_\-pending}(w)~(+(w)-\/$>$sent)
+\item 
+\#define \hyperlink{ev_8h_afce00f29401e939a5fd361969a22b367}{ev\-\_\-init}(ev, cb\-\_\-)
+\item 
+\#define \hyperlink{ev_8h_a3b38f73216cf66a0cbd8faffec61f1bb}{ev\-\_\-io\-\_\-set}(ev, fd\-\_\-, events\-\_\-)~do \{ (ev)-\/$>$fd = (fd\-\_\-); (ev)-\/$>$events = (events\-\_\-) $|$ \hyperlink{ev_8h_abc6126af1d45847bc59afa0aa3216b04a68c22e838de9f43f108efa01b0034443}{\-E\-V\-\_\-\-\_\-\-I\-O\-F\-D\-S\-E\-T}; \} while (0)
+\item 
+\#define \hyperlink{ev_8h_aa9dd7da938caa9b4d01ef1387203e616}{ev\-\_\-timer\-\_\-set}(ev, after\-\_\-, repeat\-\_\-)~do \{ ((\hyperlink{structev__watcher__time}{ev\-\_\-watcher\-\_\-time} $\ast$)(ev))-\/$>$at = (after\-\_\-); (ev)-\/$>$repeat = (repeat\-\_\-); \} while (0)
+\item 
+\#define \hyperlink{ev_8h_a98113929e3ebdc9b987cc99536f784d5}{ev\-\_\-periodic\-\_\-set}(ev, ofs\-\_\-, ival\-\_\-, rcb\-\_\-)~do \{ (ev)-\/$>$offset = (ofs\-\_\-); (ev)-\/$>$interval = (ival\-\_\-); (ev)-\/$>$reschedule\-\_\-cb = (rcb\-\_\-); \} while (0)
+\item 
+\#define \hyperlink{ev_8h_afa1ef10683f201267e65f49eb1a7cee8}{ev\-\_\-signal\-\_\-set}(ev, signum\-\_\-)~do \{ (ev)-\/$>$signum = (signum\-\_\-); \} while (0)
+\item 
+\#define \hyperlink{ev_8h_af9a17a290301c0ec7aae247f6f82411e}{ev\-\_\-child\-\_\-set}(ev, pid\-\_\-, trace\-\_\-)~do \{ (ev)-\/$>$pid = (pid\-\_\-); (ev)-\/$>$flags = !!(trace\-\_\-); \} while (0)
+\item 
+\#define \hyperlink{ev_8h_a651c002839ae3cab734c683e702b4ce0}{ev\-\_\-stat\-\_\-set}(ev, path\-\_\-, interval\-\_\-)~do \{ (ev)-\/$>$path = (path\-\_\-); (ev)-\/$>$interval = (interval\-\_\-); (ev)-\/$>$wd = -\/2; \} while (0)
+\item 
+\#define \hyperlink{ev_8h_a0a92944d00749dad567364d405ba3fc7}{ev\-\_\-idle\-\_\-set}(ev)~/$\ast$ nop, yes, this is a serious in-\/joke $\ast$/
+\item 
+\#define \hyperlink{ev_8h_ad6b3fb99eaef9882be66609bea9351e5}{ev\-\_\-prepare\-\_\-set}(ev)~/$\ast$ nop, yes, this is a serious in-\/joke $\ast$/
+\item 
+\#define \hyperlink{ev_8h_aecc749c133be0689f0d39a247761dac1}{ev\-\_\-check\-\_\-set}(ev)~/$\ast$ nop, yes, this is a serious in-\/joke $\ast$/
+\item 
+\#define \hyperlink{ev_8h_acfe12eec8b4aa2bc9dc92eef625909c5}{ev\-\_\-embed\-\_\-set}(ev, other\-\_\-)~do \{ (ev)-\/$>$other = (other\-\_\-); \} while (0)
+\item 
+\#define \hyperlink{ev_8h_a3c9880a05981c93a9041255da9f5eb63}{ev\-\_\-fork\-\_\-set}(ev)~/$\ast$ nop, yes, this is a serious in-\/joke $\ast$/
+\item 
+\#define \hyperlink{ev_8h_a8e8b0d7fdb6993e15761f2c749d18ef4}{ev\-\_\-cleanup\-\_\-set}(ev)~/$\ast$ nop, yes, this is a serious in-\/joke $\ast$/
+\item 
+\#define \hyperlink{ev_8h_a5a6cf323cbb47d2c5fa52bbb85f48bc5}{ev\-\_\-async\-\_\-set}(ev)~/$\ast$ nop, yes, this is a serious in-\/joke $\ast$/
+\item 
+\#define \hyperlink{ev_8h_ad029e4a7a0fdfafc298a4db8b53683f1}{ev\-\_\-io\-\_\-init}(ev, cb, fd, events)~do \{ \hyperlink{ev_8h_afce00f29401e939a5fd361969a22b367}{ev\-\_\-init} ((ev), (cb)); \hyperlink{ev_8h_a3b38f73216cf66a0cbd8faffec61f1bb}{ev\-\_\-io\-\_\-set} ((ev),(fd),(events)); \} while (0)
+\item 
+\#define \hyperlink{ev_8h_a1eba8817493d641fc74aa193c0ffbd14}{ev\-\_\-timer\-\_\-init}(ev, cb, after, repeat)~do \{ \hyperlink{ev_8h_afce00f29401e939a5fd361969a22b367}{ev\-\_\-init} ((ev), (cb)); \hyperlink{ev_8h_aa9dd7da938caa9b4d01ef1387203e616}{ev\-\_\-timer\-\_\-set} ((ev),(after),(repeat)); \} while (0)
+\item 
+\#define \hyperlink{ev_8h_a78d7c9d5857dc202e0c2b032a8ca3091}{ev\-\_\-periodic\-\_\-init}(ev, cb, ofs, ival, rcb)~do \{ \hyperlink{ev_8h_afce00f29401e939a5fd361969a22b367}{ev\-\_\-init} ((ev), (cb)); \hyperlink{ev_8h_a98113929e3ebdc9b987cc99536f784d5}{ev\-\_\-periodic\-\_\-set} ((ev),(ofs),(ival),(rcb)); \} while (0)
+\item 
+\#define \hyperlink{ev_8h_acbc2cda0665b2951e5535d183445d827}{ev\-\_\-signal\-\_\-init}(ev, cb, signum)~do \{ \hyperlink{ev_8h_afce00f29401e939a5fd361969a22b367}{ev\-\_\-init} ((ev), (cb)); \hyperlink{ev_8h_afa1ef10683f201267e65f49eb1a7cee8}{ev\-\_\-signal\-\_\-set} ((ev), (signum)); \} while (0)
+\item 
+\#define \hyperlink{ev_8h_acef2763338b7dca2c5bae4232a10bbda}{ev\-\_\-child\-\_\-init}(ev, cb, pid, trace)~do \{ \hyperlink{ev_8h_afce00f29401e939a5fd361969a22b367}{ev\-\_\-init} ((ev), (cb)); \hyperlink{ev_8h_af9a17a290301c0ec7aae247f6f82411e}{ev\-\_\-child\-\_\-set} ((ev),(pid),(trace)); \} while (0)
+\item 
+\#define \hyperlink{ev_8h_abb681c2ed0683c556febcff127438746}{ev\-\_\-stat\-\_\-init}(ev, cb, path, interval)~do \{ \hyperlink{ev_8h_afce00f29401e939a5fd361969a22b367}{ev\-\_\-init} ((ev), (cb)); \hyperlink{ev_8h_a651c002839ae3cab734c683e702b4ce0}{ev\-\_\-stat\-\_\-set} ((ev),(path),(interval)); \} while (0)
+\item 
+\#define \hyperlink{ev_8h_ab65d51ee3b074504f446cd7e58b7bfc9}{ev\-\_\-idle\-\_\-init}(ev, cb)~do \{ \hyperlink{ev_8h_afce00f29401e939a5fd361969a22b367}{ev\-\_\-init} ((ev), (cb)); \hyperlink{ev_8h_a0a92944d00749dad567364d405ba3fc7}{ev\-\_\-idle\-\_\-set} ((ev)); \} while (0)
+\item 
+\#define \hyperlink{ev_8h_a7f53767dd05a6c79358a7dd707d81cef}{ev\-\_\-prepare\-\_\-init}(ev, cb)~do \{ \hyperlink{ev_8h_afce00f29401e939a5fd361969a22b367}{ev\-\_\-init} ((ev), (cb)); \hyperlink{ev_8h_ad6b3fb99eaef9882be66609bea9351e5}{ev\-\_\-prepare\-\_\-set} ((ev)); \} while (0)
+\item 
+\#define \hyperlink{ev_8h_aac51ad15b009a9a8f58fa2031942c5b8}{ev\-\_\-check\-\_\-init}(ev, cb)~do \{ \hyperlink{ev_8h_afce00f29401e939a5fd361969a22b367}{ev\-\_\-init} ((ev), (cb)); \hyperlink{ev_8h_aecc749c133be0689f0d39a247761dac1}{ev\-\_\-check\-\_\-set} ((ev)); \} while (0)
+\item 
+\#define \hyperlink{ev_8h_aad1b5a070516d5e3b06c8d293fa6de60}{ev\-\_\-embed\-\_\-init}(ev, cb, other)~do \{ \hyperlink{ev_8h_afce00f29401e939a5fd361969a22b367}{ev\-\_\-init} ((ev), (cb)); \hyperlink{ev_8h_acfe12eec8b4aa2bc9dc92eef625909c5}{ev\-\_\-embed\-\_\-set} ((ev),(other)); \} while (0)
+\item 
+\#define \hyperlink{ev_8h_a2a164a86cbb5e7249e1e2d634572138d}{ev\-\_\-fork\-\_\-init}(ev, cb)~do \{ \hyperlink{ev_8h_afce00f29401e939a5fd361969a22b367}{ev\-\_\-init} ((ev), (cb)); \hyperlink{ev_8h_a3c9880a05981c93a9041255da9f5eb63}{ev\-\_\-fork\-\_\-set} ((ev)); \} while (0)
+\item 
+\#define \hyperlink{ev_8h_a46264cc88c963086a5bcf82a7b6396cd}{ev\-\_\-cleanup\-\_\-init}(ev, cb)~do \{ \hyperlink{ev_8h_afce00f29401e939a5fd361969a22b367}{ev\-\_\-init} ((ev), (cb)); \hyperlink{ev_8h_a8e8b0d7fdb6993e15761f2c749d18ef4}{ev\-\_\-cleanup\-\_\-set} ((ev)); \} while (0)
+\item 
+\#define \hyperlink{ev_8h_a2e63ac302a0ed3c93a202cd5cf9877d1}{ev\-\_\-async\-\_\-init}(ev, cb)~do \{ \hyperlink{ev_8h_afce00f29401e939a5fd361969a22b367}{ev\-\_\-init} ((ev), (cb)); \hyperlink{ev_8h_a5a6cf323cbb47d2c5fa52bbb85f48bc5}{ev\-\_\-async\-\_\-set} ((ev)); \} while (0)
+\item 
+\#define \hyperlink{ev_8h_ae61ecda498e618f0f5305e377739ec52}{ev\-\_\-is\-\_\-pending}(ev)~(0 + ((\hyperlink{structev__watcher}{ev\-\_\-watcher} $\ast$)(void $\ast$)(ev))-\/$>$pending) /$\ast$ ro, true when watcher is waiting for callback invocation $\ast$/
+\item 
+\#define \hyperlink{ev_8h_a00d37feaf24edc639b8399001ff691e1}{ev\-\_\-is\-\_\-active}(ev)~(0 + ((\hyperlink{structev__watcher}{ev\-\_\-watcher} $\ast$)(void $\ast$)(ev))-\/$>$active) /$\ast$ ro, true when the watcher has been started $\ast$/
+\item 
+\#define \hyperlink{ev_8h_a0c98def6e9cd6939b97bdf21c5599e75}{ev\-\_\-cb}(ev)~(ev)-\/$>$cb /$\ast$ rw $\ast$/
+\item 
+\#define \hyperlink{ev_8h_a8aba222af78ca946cde63b0c41b7c3bb}{ev\-\_\-priority}(ev)~(+(((\hyperlink{structev__watcher}{ev\-\_\-watcher} $\ast$)(void $\ast$)(ev))-\/$>$priority))
+\item 
+\#define \hyperlink{ev_8h_af330134df02d6cedec85c3481c4967fa}{ev\-\_\-set\-\_\-priority}(ev, pri)~(   (\hyperlink{structev__watcher}{ev\-\_\-watcher} $\ast$)(void $\ast$)(ev))-\/$>$priority = (pri)
+\item 
+\#define \hyperlink{ev_8h_aaff6ccc8f151e78def0491d350380574}{ev\-\_\-periodic\-\_\-at}(ev)~(+((\hyperlink{structev__watcher__time}{ev\-\_\-watcher\-\_\-time} $\ast$)(ev))-\/$>$at)
+\item 
+\#define \hyperlink{ev_8h_a10b9c102337d0ece8607c9c01bc4f7c8}{\-E\-V\-L\-O\-O\-P\-\_\-\-N\-O\-N\-B\-L\-O\-C\-K}~\hyperlink{ev_8h_a726ca809ffd3d67ab4b8476646f26635ac75ab37896e4d3fb4164594a41fc357a}{\-E\-V\-R\-U\-N\-\_\-\-N\-O\-W\-A\-I\-T}
+\item 
+\#define \hyperlink{ev_8h_a793e265da56758aad50a34562da2ee56}{\-E\-V\-L\-O\-O\-P\-\_\-\-O\-N\-E\-S\-H\-O\-T}~\hyperlink{ev_8h_a726ca809ffd3d67ab4b8476646f26635aaa2a9275f457925739a29b0a9b8a2b9a}{\-E\-V\-R\-U\-N\-\_\-\-O\-N\-C\-E}
+\item 
+\#define \hyperlink{ev_8h_a4eaa043451f3a33b0218e2d7cf7db40d}{\-E\-V\-U\-N\-L\-O\-O\-P\-\_\-\-C\-A\-N\-C\-E\-L}~\hyperlink{ev_8h_a0411cd49bb5b71852cecd93bcbf0ca2da4ca00cefda44cfc4e87e9396dca8dbfb}{\-E\-V\-B\-R\-E\-A\-K\-\_\-\-C\-A\-N\-C\-E\-L}
+\item 
+\#define \hyperlink{ev_8h_a61fd259e234950d2db1d28b5e319f841}{\-E\-V\-U\-N\-L\-O\-O\-P\-\_\-\-O\-N\-E}~\hyperlink{ev_8h_a0411cd49bb5b71852cecd93bcbf0ca2dac841fbcf2a25bbc53c1096c75bc3700a}{\-E\-V\-B\-R\-E\-A\-K\-\_\-\-O\-N\-E}
+\item 
+\#define \hyperlink{ev_8h_aa5c21122bf9bbc6950b24c6a8bccb68c}{\-E\-V\-U\-N\-L\-O\-O\-P\-\_\-\-A\-L\-L}~\hyperlink{ev_8h_a0411cd49bb5b71852cecd93bcbf0ca2da40079975b839818a78ba756fc92cf769}{\-E\-V\-B\-R\-E\-A\-K\-\_\-\-A\-L\-L}
+\end{DoxyCompactItemize}
+\subsection*{\-Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef double \hyperlink{ev_8h_add71e34ce2b04bbf7eb6f31a850814e8}{ev\-\_\-tstamp}
+\item 
+typedef struct \hyperlink{structev__watcher}{ev\-\_\-watcher} \hyperlink{ev_8h_a01b286ddf47faf1dc10ffe3261e9b937}{ev\-\_\-watcher}
+\item 
+typedef struct \hyperlink{structev__watcher__list}{ev\-\_\-watcher\-\_\-list} \hyperlink{ev_8h_abc06a38d6eb4abb0e6acedefb66fe214}{ev\-\_\-watcher\-\_\-list}
+\item 
+typedef struct \hyperlink{structev__watcher__time}{ev\-\_\-watcher\-\_\-time} \hyperlink{ev_8h_a98a87d95ebc9a45467754f7ee1273e0e}{ev\-\_\-watcher\-\_\-time}
+\item 
+typedef struct \hyperlink{structev__io}{ev\-\_\-io} \hyperlink{ev_8h_a91fd48f4e9368c122235b3530c525aac}{ev\-\_\-io}
+\item 
+typedef struct \hyperlink{structev__timer}{ev\-\_\-timer} \hyperlink{ev_8h_a413902256d85441a7cae68be83f05f1e}{ev\-\_\-timer}
+\item 
+typedef struct \hyperlink{structev__periodic}{ev\-\_\-periodic} \hyperlink{ev_8h_a18edacf68959ce969d3919660e13c4a5}{ev\-\_\-periodic}
+\item 
+typedef struct \hyperlink{structev__signal}{ev\-\_\-signal} \hyperlink{ev_8h_a9b17f14bae54bdc26fc98019e4313364}{ev\-\_\-signal}
+\item 
+typedef struct \hyperlink{structev__child}{ev\-\_\-child} \hyperlink{ev_8h_a37646363840dd094d5bb737f6c4361cc}{ev\-\_\-child}
+\item 
+typedef struct stat \hyperlink{ev_8h_af7665657cb718a911fd591bc0613db83}{ev\-\_\-statdata}
+\item 
+typedef struct \hyperlink{structev__stat}{ev\-\_\-stat} \hyperlink{ev_8h_a2517f66cb03dc98ed3dc4abde8c660f8}{ev\-\_\-stat}
+\item 
+typedef struct \hyperlink{structev__idle}{ev\-\_\-idle} \hyperlink{ev_8h_a8ef20a44467d34d7aaf0258c4cea478e}{ev\-\_\-idle}
+\item 
+typedef struct \hyperlink{structev__prepare}{ev\-\_\-prepare} \hyperlink{ev_8h_ab441c085d15f37fa8dd3678e6ef29ef1}{ev\-\_\-prepare}
+\item 
+typedef struct \hyperlink{structev__check}{ev\-\_\-check} \hyperlink{ev_8h_abc3a4ab75d0a33b8af66d0e750604f36}{ev\-\_\-check}
+\item 
+typedef struct \hyperlink{structev__fork}{ev\-\_\-fork} \hyperlink{ev_8h_a34e50beb3fb56c17e1bf4ad5ce8bd1f6}{ev\-\_\-fork}
+\item 
+typedef struct \hyperlink{structev__cleanup}{ev\-\_\-cleanup} \hyperlink{ev_8h_a4866f225b2fb654501ae36637822ce48}{ev\-\_\-cleanup}
+\item 
+typedef struct \hyperlink{structev__embed}{ev\-\_\-embed} \hyperlink{ev_8h_a9cfb18de4da72f22581bfa2ddbb96395}{ev\-\_\-embed}
+\item 
+typedef struct \hyperlink{structev__async}{ev\-\_\-async} \hyperlink{ev_8h_ad63509b156e81a42d83dd0bba8f397e8}{ev\-\_\-async}
+\item 
+typedef void($\ast$ \hyperlink{ev_8h_ac89d96d28c5acaff89a5e973cb8e3087}{ev\-\_\-loop\-\_\-callback} )(\hyperlink{ev_8h_a6e6c6b499d18513c01cf4bde00121617}{\-E\-V\-\_\-\-P})
+\end{DoxyCompactItemize}
+\subsection*{\-Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ \*
+\hyperlink{ev_8h_abc6126af1d45847bc59afa0aa3216b04ad1171dcfff57cf1425e53bd38d69999d}{\-E\-V\-\_\-\-U\-N\-D\-E\-F} =  (int)0x\-F\-F\-F\-F\-F\-F\-F\-F, 
+\hyperlink{ev_8h_abc6126af1d45847bc59afa0aa3216b04aed55dd6c8ee040c948acb2c7cfad9b5e}{\-E\-V\-\_\-\-N\-O\-N\-E} =  0x00, 
+\hyperlink{ev_8h_abc6126af1d45847bc59afa0aa3216b04a16263f50341e34fb1beb08ec01d41d84}{\-E\-V\-\_\-\-R\-E\-A\-D} =  0x01, 
+\hyperlink{ev_8h_abc6126af1d45847bc59afa0aa3216b04ab7bc8ec04ddc725eeaa6251ade9cb7fa}{\-E\-V\-\_\-\-W\-R\-I\-T\-E} =  0x02, 
+\*
+\hyperlink{ev_8h_abc6126af1d45847bc59afa0aa3216b04a68c22e838de9f43f108efa01b0034443}{\-E\-V\-\_\-\-\_\-\-I\-O\-F\-D\-S\-E\-T} =  0x80, 
+\hyperlink{ev_8h_abc6126af1d45847bc59afa0aa3216b04afbf2b617a6e230f4e4b312f20e400d5b}{\-E\-V\-\_\-\-I\-O} =  \-E\-V\-\_\-\-R\-E\-A\-D, 
+\hyperlink{ev_8h_abc6126af1d45847bc59afa0aa3216b04aa739ea483262fc0a00558019b3070ddf}{\-E\-V\-\_\-\-T\-I\-M\-E\-R} =  0x00000100, 
+\hyperlink{ev_8h_abc6126af1d45847bc59afa0aa3216b04a9b445cfad2fb0cd03aa69105e79c0e8a}{\-E\-V\-\_\-\-T\-I\-M\-E\-O\-U\-T} =  \-E\-V\-\_\-\-T\-I\-M\-E\-R, 
+\*
+\hyperlink{ev_8h_abc6126af1d45847bc59afa0aa3216b04aac30252c1747fc7cac95e890b4f5faca}{\-E\-V\-\_\-\-P\-E\-R\-I\-O\-D\-I\-C} =  0x00000200, 
+\hyperlink{ev_8h_abc6126af1d45847bc59afa0aa3216b04a5591733bb6dd2baeb9a308dcbae83669}{\-E\-V\-\_\-\-S\-I\-G\-N\-A\-L} =  0x00000400, 
+\hyperlink{ev_8h_abc6126af1d45847bc59afa0aa3216b04a7f134ef3af785804ed9539430cbdf751}{\-E\-V\-\_\-\-C\-H\-I\-L\-D} =  0x00000800, 
+\hyperlink{ev_8h_abc6126af1d45847bc59afa0aa3216b04a7b7ee965ca86c3403c71eceb80a8c2f5}{\-E\-V\-\_\-\-S\-T\-A\-T} =  0x00001000, 
+\*
+\hyperlink{ev_8h_abc6126af1d45847bc59afa0aa3216b04a7189bc403262499e97971c4b5fd47b3f}{\-E\-V\-\_\-\-I\-D\-L\-E} =  0x00002000, 
+\hyperlink{ev_8h_abc6126af1d45847bc59afa0aa3216b04a1cc878a2c8b99db2ce8ab2e54ea7607e}{\-E\-V\-\_\-\-P\-R\-E\-P\-A\-R\-E} =  0x00004000, 
+\hyperlink{ev_8h_abc6126af1d45847bc59afa0aa3216b04a63c97e6118e58eac97001417bed8e671}{\-E\-V\-\_\-\-C\-H\-E\-C\-K} =  0x00008000, 
+\hyperlink{ev_8h_abc6126af1d45847bc59afa0aa3216b04a9d27b29cb6b0e656214e4f9e8854155b}{\-E\-V\-\_\-\-E\-M\-B\-E\-D} =  0x00010000, 
+\*
+\hyperlink{ev_8h_abc6126af1d45847bc59afa0aa3216b04a1377899c2fa20ec6f6d69bcceb72e2d4}{\-E\-V\-\_\-\-F\-O\-R\-K} =  0x00020000, 
+\hyperlink{ev_8h_abc6126af1d45847bc59afa0aa3216b04a697706744241b2ccf6b7ec90d9d0f2f9}{\-E\-V\-\_\-\-C\-L\-E\-A\-N\-U\-P} =  0x00040000, 
+\hyperlink{ev_8h_abc6126af1d45847bc59afa0aa3216b04aade4a90fd3e753ad9542d126798022f2}{\-E\-V\-\_\-\-A\-S\-Y\-N\-C} =  0x00080000, 
+\hyperlink{ev_8h_abc6126af1d45847bc59afa0aa3216b04ad09a3e427026b6fe463796c5cb038573}{\-E\-V\-\_\-\-C\-U\-S\-T\-O\-M} =  0x01000000, 
+\*
+\hyperlink{ev_8h_abc6126af1d45847bc59afa0aa3216b04ae4cf1f27fd4b75d24098e931f2e93bd9}{\-E\-V\-\_\-\-E\-R\-R\-O\-R} =  (int)0x80000000
+ \}
+\item 
+enum \{ \*
+\hyperlink{ev_8h_adc29c2ff13d900c2f185ee95427fb06caecc851bf761b8c7fd772b7b69dca4ab4}{\-E\-V\-F\-L\-A\-G\-\_\-\-A\-U\-T\-O} =  0x00000000\-U, 
+\hyperlink{ev_8h_adc29c2ff13d900c2f185ee95427fb06caa9609b04005897921117f0a37a11eb70}{\-E\-V\-F\-L\-A\-G\-\_\-\-N\-O\-E\-N\-V} =  0x01000000\-U, 
+\hyperlink{ev_8h_adc29c2ff13d900c2f185ee95427fb06ca78e94655d79812c42eb49450a834f0ef}{\-E\-V\-F\-L\-A\-G\-\_\-\-F\-O\-R\-K\-C\-H\-E\-C\-K} =  0x02000000\-U, 
+\hyperlink{ev_8h_adc29c2ff13d900c2f185ee95427fb06ca166f714b5d20f3d98b27f6b4f9ef6737}{\-E\-V\-F\-L\-A\-G\-\_\-\-N\-O\-I\-N\-O\-T\-I\-F\-Y} =  0x00100000\-U, 
+\*
+\hyperlink{ev_8h_adc29c2ff13d900c2f185ee95427fb06cac311e9fc99cac8c9565dc4cb785492f3}{\-E\-V\-F\-L\-A\-G\-\_\-\-N\-O\-S\-I\-G\-F\-D} =  0, 
+\hyperlink{ev_8h_adc29c2ff13d900c2f185ee95427fb06ca5fabb14ec8b4d85517441d7d438dc383}{\-E\-V\-F\-L\-A\-G\-\_\-\-S\-I\-G\-N\-A\-L\-F\-D} =  0x00200000\-U, 
+\hyperlink{ev_8h_adc29c2ff13d900c2f185ee95427fb06ca4ea9a4fbe56c08cf4fb9ec999aa1b107}{\-E\-V\-F\-L\-A\-G\-\_\-\-N\-O\-S\-I\-G\-M\-A\-S\-K} =  0x00400000\-U
+ \}
+\item 
+enum \{ \*
+\hyperlink{ev_8h_a61dadd085c1777f559549e05962b2c9ea95a4838cd47bb2dfe4b8ab307db2f005}{\-E\-V\-B\-A\-C\-K\-E\-N\-D\-\_\-\-S\-E\-L\-E\-C\-T} =  0x00000001\-U, 
+\hyperlink{ev_8h_a61dadd085c1777f559549e05962b2c9eaa8f85d4c47549668b5e1b7ee04ddbfed}{\-E\-V\-B\-A\-C\-K\-E\-N\-D\-\_\-\-P\-O\-L\-L} =  0x00000002\-U, 
+\hyperlink{ev_8h_a61dadd085c1777f559549e05962b2c9ea84c51aeecca15d34d8c67edc6f0b976b}{\-E\-V\-B\-A\-C\-K\-E\-N\-D\-\_\-\-E\-P\-O\-L\-L} =  0x00000004\-U, 
+\hyperlink{ev_8h_a61dadd085c1777f559549e05962b2c9ea472aa93b93eb7272fd010a7e93d0d679}{\-E\-V\-B\-A\-C\-K\-E\-N\-D\-\_\-\-K\-Q\-U\-E\-U\-E} =  0x00000008\-U, 
+\*
+\hyperlink{ev_8h_a61dadd085c1777f559549e05962b2c9eac94b8228869d115bd36ad37a1c1a7323}{\-E\-V\-B\-A\-C\-K\-E\-N\-D\-\_\-\-D\-E\-V\-P\-O\-L\-L} =  0x00000010\-U, 
+\hyperlink{ev_8h_a61dadd085c1777f559549e05962b2c9eaccd031573a9fd37301808a913f8312c4}{\-E\-V\-B\-A\-C\-K\-E\-N\-D\-\_\-\-P\-O\-R\-T} =  0x00000020\-U, 
+\hyperlink{ev_8h_a61dadd085c1777f559549e05962b2c9eae88126f66c1cc6d9e1d8944d6ac1713a}{\-E\-V\-B\-A\-C\-K\-E\-N\-D\-\_\-\-A\-L\-L} =  0x0000003\-F\-U, 
+\hyperlink{ev_8h_a61dadd085c1777f559549e05962b2c9eadd56b3e4be5bc0652f415de095f691cc}{\-E\-V\-B\-A\-C\-K\-E\-N\-D\-\_\-\-M\-A\-S\-K} =  0x0000\-F\-F\-F\-F\-U
+ \}
+\item 
+enum \{ \hyperlink{ev_8h_a726ca809ffd3d67ab4b8476646f26635ac75ab37896e4d3fb4164594a41fc357a}{\-E\-V\-R\-U\-N\-\_\-\-N\-O\-W\-A\-I\-T} =  1, 
+\hyperlink{ev_8h_a726ca809ffd3d67ab4b8476646f26635aaa2a9275f457925739a29b0a9b8a2b9a}{\-E\-V\-R\-U\-N\-\_\-\-O\-N\-C\-E} =  2
+ \}
+\item 
+enum \{ \hyperlink{ev_8h_a0411cd49bb5b71852cecd93bcbf0ca2da4ca00cefda44cfc4e87e9396dca8dbfb}{\-E\-V\-B\-R\-E\-A\-K\-\_\-\-C\-A\-N\-C\-E\-L} =  0, 
+\hyperlink{ev_8h_a0411cd49bb5b71852cecd93bcbf0ca2dac841fbcf2a25bbc53c1096c75bc3700a}{\-E\-V\-B\-R\-E\-A\-K\-\_\-\-O\-N\-E} =  1, 
+\hyperlink{ev_8h_a0411cd49bb5b71852cecd93bcbf0ca2da40079975b839818a78ba756fc92cf769}{\-E\-V\-B\-R\-E\-A\-K\-\_\-\-A\-L\-L} =  2
+ \}
+\end{DoxyCompactItemize}
+\subsection*{\-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{ev_8h_a8cd4ac9d91eee2b97ad3bfcd23518774}{\-E\-V\-\_\-\-A\-P\-I\-\_\-\-D\-E\-C\-L} int \hyperlink{ev_8h_a2555de913f36736c4b40f299141c519a}{ev\-\_\-version\-\_\-major} (void) \hyperlink{ev_8h_a473b5b606fdd3d484227542605e80bcf}{\-E\-V\-\_\-\-T\-H\-R\-O\-W}
+\item 
+\hyperlink{ev_8h_a8cd4ac9d91eee2b97ad3bfcd23518774}{\-E\-V\-\_\-\-A\-P\-I\-\_\-\-D\-E\-C\-L} int \hyperlink{ev_8h_a602e64c6fbe01ebff4211ea08c01b5fc}{ev\-\_\-version\-\_\-minor} (void) \hyperlink{ev_8h_a473b5b606fdd3d484227542605e80bcf}{\-E\-V\-\_\-\-T\-H\-R\-O\-W}
+\item 
+\hyperlink{ev_8h_a8cd4ac9d91eee2b97ad3bfcd23518774}{\-E\-V\-\_\-\-A\-P\-I\-\_\-\-D\-E\-C\-L} unsigned int \hyperlink{ev_8h_a4ecda940ad19e9783065b65855009a63}{ev\-\_\-supported\-\_\-backends} (void) \hyperlink{ev_8h_a473b5b606fdd3d484227542605e80bcf}{\-E\-V\-\_\-\-T\-H\-R\-O\-W}
+\item 
+\hyperlink{ev_8h_a8cd4ac9d91eee2b97ad3bfcd23518774}{\-E\-V\-\_\-\-A\-P\-I\-\_\-\-D\-E\-C\-L} unsigned int \hyperlink{ev_8h_a18f76972f872b29564eb98d37d9578b3}{ev\-\_\-recommended\-\_\-backends} (void) \hyperlink{ev_8h_a473b5b606fdd3d484227542605e80bcf}{\-E\-V\-\_\-\-T\-H\-R\-O\-W}
+\item 
+\hyperlink{ev_8h_a8cd4ac9d91eee2b97ad3bfcd23518774}{\-E\-V\-\_\-\-A\-P\-I\-\_\-\-D\-E\-C\-L} unsigned int \hyperlink{ev_8h_adb589abbf7cbe3f587915573a57880b7}{ev\-\_\-embeddable\-\_\-backends} (void) \hyperlink{ev_8h_a473b5b606fdd3d484227542605e80bcf}{\-E\-V\-\_\-\-T\-H\-R\-O\-W}
+\item 
+\hyperlink{ev_8h_a8cd4ac9d91eee2b97ad3bfcd23518774}{\-E\-V\-\_\-\-A\-P\-I\-\_\-\-D\-E\-C\-L} \hyperlink{ev_8h_add71e34ce2b04bbf7eb6f31a850814e8}{ev\-\_\-tstamp} \hyperlink{ev_8h_a1c45ff19b8d646807464aa15d4c242b1}{ev\-\_\-time} (void) \hyperlink{ev_8h_a473b5b606fdd3d484227542605e80bcf}{\-E\-V\-\_\-\-T\-H\-R\-O\-W}
+\item 
+\hyperlink{ev_8h_a8cd4ac9d91eee2b97ad3bfcd23518774}{\-E\-V\-\_\-\-A\-P\-I\-\_\-\-D\-E\-C\-L} void \hyperlink{ev_8h_a874bf0226ae17171d6163e97c5688b36}{ev\-\_\-sleep} (\hyperlink{ev_8h_add71e34ce2b04bbf7eb6f31a850814e8}{ev\-\_\-tstamp} delay) \hyperlink{ev_8h_a473b5b606fdd3d484227542605e80bcf}{\-E\-V\-\_\-\-T\-H\-R\-O\-W}
+\item 
+\hyperlink{ev_8h_a8cd4ac9d91eee2b97ad3bfcd23518774}{\-E\-V\-\_\-\-A\-P\-I\-\_\-\-D\-E\-C\-L} void \hyperlink{ev_8h_a5531dae7a5ad92679b544eb30d36c927}{ev\-\_\-set\-\_\-allocator} (void $\ast$($\ast$cb)(void $\ast$ptr, long size) \hyperlink{ev_8h_a473b5b606fdd3d484227542605e80bcf}{\-E\-V\-\_\-\-T\-H\-R\-O\-W}) \hyperlink{ev_8h_a473b5b606fdd3d484227542605e80bcf}{\-E\-V\-\_\-\-T\-H\-R\-O\-W}
+\item 
+\hyperlink{ev_8h_a8cd4ac9d91eee2b97ad3bfcd23518774}{\-E\-V\-\_\-\-A\-P\-I\-\_\-\-D\-E\-C\-L} void \hyperlink{ev_8h_a3bc01624ac6c3ab6d9549f96f735d4a5}{ev\-\_\-set\-\_\-syserr\-\_\-cb} (void($\ast$cb)(const char $\ast$msg) \hyperlink{ev_8h_a473b5b606fdd3d484227542605e80bcf}{\-E\-V\-\_\-\-T\-H\-R\-O\-W}) \hyperlink{ev_8h_a473b5b606fdd3d484227542605e80bcf}{\-E\-V\-\_\-\-T\-H\-R\-O\-W}
+\item 
+\hyperlink{ev_8h_a8cd4ac9d91eee2b97ad3bfcd23518774}{\-E\-V\-\_\-\-A\-P\-I\-\_\-\-D\-E\-C\-L} struct \hyperlink{structev__loop}{ev\-\_\-loop} $\ast$ \hyperlink{ev_8h_a48fd511f5f2aa7af7d8738c149cfa8f6}{ev\-\_\-default\-\_\-loop} (unsigned int flags \hyperlink{ev_8c_a28c87addf521a1be2f0a57f1e209d4aa}{\-E\-V\-\_\-\-C\-P\-P}(=0)) \hyperlink{ev_8h_a473b5b606fdd3d484227542605e80bcf}{\-E\-V\-\_\-\-T\-H\-R\-O\-W}
+\item 
+\hyperlink{ev_8h_ac5b317e52904cdfbe2332e6460ace504}{\-E\-V\-\_\-\-I\-N\-L\-I\-N\-E} struct \hyperlink{structev__loop}{ev\-\_\-loop} $\ast$ \hyperlink{ev_8h_aa54ecf88e3cb67c3de954caff7013b13}{ev\-\_\-default\-\_\-loop\-\_\-uc\-\_\-} (void) \hyperlink{ev_8h_a473b5b606fdd3d484227542605e80bcf}{\-E\-V\-\_\-\-T\-H\-R\-O\-W}
+\item 
+\hyperlink{ev_8h_ac5b317e52904cdfbe2332e6460ace504}{\-E\-V\-\_\-\-I\-N\-L\-I\-N\-E} int \hyperlink{ev_8h_a7330a0474a3157b00beb72e97ef554d0}{ev\-\_\-is\-\_\-default\-\_\-loop} (\hyperlink{ev_8h_a6e6c6b499d18513c01cf4bde00121617}{\-E\-V\-\_\-\-P}) \hyperlink{ev_8h_a473b5b606fdd3d484227542605e80bcf}{\-E\-V\-\_\-\-T\-H\-R\-O\-W}
+\item 
+\hyperlink{ev_8h_a8cd4ac9d91eee2b97ad3bfcd23518774}{\-E\-V\-\_\-\-A\-P\-I\-\_\-\-D\-E\-C\-L} struct \hyperlink{structev__loop}{ev\-\_\-loop} $\ast$ \hyperlink{ev_8h_a57aefba41ed2c4f0220ab951bf8a76f3}{ev\-\_\-loop\-\_\-new} (unsigned int flags \hyperlink{ev_8c_a28c87addf521a1be2f0a57f1e209d4aa}{\-E\-V\-\_\-\-C\-P\-P}(=0)) \hyperlink{ev_8h_a473b5b606fdd3d484227542605e80bcf}{\-E\-V\-\_\-\-T\-H\-R\-O\-W}
+\item 
+\hyperlink{ev_8h_a8cd4ac9d91eee2b97ad3bfcd23518774}{\-E\-V\-\_\-\-A\-P\-I\-\_\-\-D\-E\-C\-L} \hyperlink{ev_8h_add71e34ce2b04bbf7eb6f31a850814e8}{ev\-\_\-tstamp} \hyperlink{ev_8h_adef78707ed544f0328d03927a5209fb8}{ev\-\_\-now} (\hyperlink{ev_8h_a6e6c6b499d18513c01cf4bde00121617}{\-E\-V\-\_\-\-P}) \hyperlink{ev_8h_a473b5b606fdd3d484227542605e80bcf}{\-E\-V\-\_\-\-T\-H\-R\-O\-W}
+\item 
+\hyperlink{ev_8h_a8cd4ac9d91eee2b97ad3bfcd23518774}{\-E\-V\-\_\-\-A\-P\-I\-\_\-\-D\-E\-C\-L} void \hyperlink{ev_8h_a90f663e3b068cfd82d7abcb1774bc307}{ev\-\_\-loop\-\_\-destroy} (\hyperlink{ev_8h_a6e6c6b499d18513c01cf4bde00121617}{\-E\-V\-\_\-\-P})
+\item 
+\hyperlink{ev_8h_a8cd4ac9d91eee2b97ad3bfcd23518774}{\-E\-V\-\_\-\-A\-P\-I\-\_\-\-D\-E\-C\-L} void \hyperlink{ev_8h_adbd3570da80e38ac0baee98c0db05a40}{ev\-\_\-loop\-\_\-fork} (\hyperlink{ev_8h_a6e6c6b499d18513c01cf4bde00121617}{\-E\-V\-\_\-\-P}) \hyperlink{ev_8h_a473b5b606fdd3d484227542605e80bcf}{\-E\-V\-\_\-\-T\-H\-R\-O\-W}
+\item 
+\hyperlink{ev_8h_a8cd4ac9d91eee2b97ad3bfcd23518774}{\-E\-V\-\_\-\-A\-P\-I\-\_\-\-D\-E\-C\-L} unsigned int \hyperlink{ev_8h_a44a3950d2de0a1fafe5d21f90812ef4c}{ev\-\_\-backend} (\hyperlink{ev_8h_a6e6c6b499d18513c01cf4bde00121617}{\-E\-V\-\_\-\-P}) \hyperlink{ev_8h_a473b5b606fdd3d484227542605e80bcf}{\-E\-V\-\_\-\-T\-H\-R\-O\-W}
+\item 
+\hyperlink{ev_8h_a8cd4ac9d91eee2b97ad3bfcd23518774}{\-E\-V\-\_\-\-A\-P\-I\-\_\-\-D\-E\-C\-L} void \hyperlink{ev_8h_a6743be85bd913998ef987c1c62892387}{ev\-\_\-now\-\_\-update} (\hyperlink{ev_8h_a6e6c6b499d18513c01cf4bde00121617}{\-E\-V\-\_\-\-P}) \hyperlink{ev_8h_a473b5b606fdd3d484227542605e80bcf}{\-E\-V\-\_\-\-T\-H\-R\-O\-W}
+\item 
+\hyperlink{ev_8h_a8cd4ac9d91eee2b97ad3bfcd23518774}{\-E\-V\-\_\-\-A\-P\-I\-\_\-\-D\-E\-C\-L} int \hyperlink{ev_8h_ad0ca9d158e39309e619c80f2a3a9e7dc}{ev\-\_\-run} (\hyperlink{ev_8h_a8ac42969e0a499b8c1367f0ad85dbba9}{\-E\-V\-\_\-\-P\-\_\-} int flags \hyperlink{ev_8c_a28c87addf521a1be2f0a57f1e209d4aa}{\-E\-V\-\_\-\-C\-P\-P}(=0))
+\item 
+\hyperlink{ev_8h_a8cd4ac9d91eee2b97ad3bfcd23518774}{\-E\-V\-\_\-\-A\-P\-I\-\_\-\-D\-E\-C\-L} void \hyperlink{ev_8h_a2c4e380d49cff0fb9b5968d232b29113}{ev\-\_\-break} (\hyperlink{ev_8h_a8ac42969e0a499b8c1367f0ad85dbba9}{\-E\-V\-\_\-\-P\-\_\-} int how \hyperlink{ev_8c_a28c87addf521a1be2f0a57f1e209d4aa}{\-E\-V\-\_\-\-C\-P\-P}(=\hyperlink{ev_8h_a0411cd49bb5b71852cecd93bcbf0ca2dac841fbcf2a25bbc53c1096c75bc3700a}{\-E\-V\-B\-R\-E\-A\-K\-\_\-\-O\-N\-E})) \hyperlink{ev_8h_a473b5b606fdd3d484227542605e80bcf}{\-E\-V\-\_\-\-T\-H\-R\-O\-W}
+\item 
+\hyperlink{ev_8h_a8cd4ac9d91eee2b97ad3bfcd23518774}{\-E\-V\-\_\-\-A\-P\-I\-\_\-\-D\-E\-C\-L} void \hyperlink{ev_8h_ae62e1105637ddaf9130e2c2739e8b7f8}{ev\-\_\-ref} (\hyperlink{ev_8h_a6e6c6b499d18513c01cf4bde00121617}{\-E\-V\-\_\-\-P}) \hyperlink{ev_8h_a473b5b606fdd3d484227542605e80bcf}{\-E\-V\-\_\-\-T\-H\-R\-O\-W}
+\item 
+\hyperlink{ev_8h_a8cd4ac9d91eee2b97ad3bfcd23518774}{\-E\-V\-\_\-\-A\-P\-I\-\_\-\-D\-E\-C\-L} void \hyperlink{ev_8h_a8ada7ca71dcef045d53e7f99898dec9a}{ev\-\_\-unref} (\hyperlink{ev_8h_a6e6c6b499d18513c01cf4bde00121617}{\-E\-V\-\_\-\-P}) \hyperlink{ev_8h_a473b5b606fdd3d484227542605e80bcf}{\-E\-V\-\_\-\-T\-H\-R\-O\-W}
+\item 
+\hyperlink{ev_8h_a8cd4ac9d91eee2b97ad3bfcd23518774}{\-E\-V\-\_\-\-A\-P\-I\-\_\-\-D\-E\-C\-L} void \hyperlink{ev_8h_a77e2b9085f39447aec919e6a789e257f}{ev\-\_\-once} (\hyperlink{ev_8h_a8ac42969e0a499b8c1367f0ad85dbba9}{\-E\-V\-\_\-\-P\-\_\-} int fd, int events, \hyperlink{ev_8h_add71e34ce2b04bbf7eb6f31a850814e8}{ev\-\_\-tstamp} timeout, void($\ast$cb)(int revents, void $\ast$arg), void $\ast$arg) \hyperlink{ev_8h_a473b5b606fdd3d484227542605e80bcf}{\-E\-V\-\_\-\-T\-H\-R\-O\-W}
+\item 
+\hyperlink{ev_8h_a8cd4ac9d91eee2b97ad3bfcd23518774}{\-E\-V\-\_\-\-A\-P\-I\-\_\-\-D\-E\-C\-L} unsigned int \hyperlink{ev_8h_a1b771a54716a8dd6ee1a05755e890d55}{ev\-\_\-iteration} (\hyperlink{ev_8h_a6e6c6b499d18513c01cf4bde00121617}{\-E\-V\-\_\-\-P}) \hyperlink{ev_8h_a473b5b606fdd3d484227542605e80bcf}{\-E\-V\-\_\-\-T\-H\-R\-O\-W}
+\item 
+\hyperlink{ev_8h_a8cd4ac9d91eee2b97ad3bfcd23518774}{\-E\-V\-\_\-\-A\-P\-I\-\_\-\-D\-E\-C\-L} unsigned int \hyperlink{ev_8h_a79f74f25f9e9875803fd5f9c9502464f}{ev\-\_\-depth} (\hyperlink{ev_8h_a6e6c6b499d18513c01cf4bde00121617}{\-E\-V\-\_\-\-P}) \hyperlink{ev_8h_a473b5b606fdd3d484227542605e80bcf}{\-E\-V\-\_\-\-T\-H\-R\-O\-W}
+\item 
+\hyperlink{ev_8h_a8cd4ac9d91eee2b97ad3bfcd23518774}{\-E\-V\-\_\-\-A\-P\-I\-\_\-\-D\-E\-C\-L} void \hyperlink{ev_8h_a18ca7a4b689f8ed19a25919cbe28314e}{ev\-\_\-verify} (\hyperlink{ev_8h_a6e6c6b499d18513c01cf4bde00121617}{\-E\-V\-\_\-\-P}) \hyperlink{ev_8h_a473b5b606fdd3d484227542605e80bcf}{\-E\-V\-\_\-\-T\-H\-R\-O\-W}
+\item 
+\hyperlink{ev_8h_a8cd4ac9d91eee2b97ad3bfcd23518774}{\-E\-V\-\_\-\-A\-P\-I\-\_\-\-D\-E\-C\-L} void \hyperlink{ev_8h_a34a3889414c0cba2934c65f0a02804b3}{ev\-\_\-set\-\_\-io\-\_\-collect\-\_\-interval} (\hyperlink{ev_8h_a8ac42969e0a499b8c1367f0ad85dbba9}{\-E\-V\-\_\-\-P\-\_\-} \hyperlink{ev_8h_add71e34ce2b04bbf7eb6f31a850814e8}{ev\-\_\-tstamp} interval) \hyperlink{ev_8h_a473b5b606fdd3d484227542605e80bcf}{\-E\-V\-\_\-\-T\-H\-R\-O\-W}
+\item 
+\hyperlink{ev_8h_a8cd4ac9d91eee2b97ad3bfcd23518774}{\-E\-V\-\_\-\-A\-P\-I\-\_\-\-D\-E\-C\-L} void \hyperlink{ev_8h_a461f1511d1d1148eb54806ae0b5878da}{ev\-\_\-set\-\_\-timeout\-\_\-collect\-\_\-interval} (\hyperlink{ev_8h_a8ac42969e0a499b8c1367f0ad85dbba9}{\-E\-V\-\_\-\-P\-\_\-} \hyperlink{ev_8h_add71e34ce2b04bbf7eb6f31a850814e8}{ev\-\_\-tstamp} interval) \hyperlink{ev_8h_a473b5b606fdd3d484227542605e80bcf}{\-E\-V\-\_\-\-T\-H\-R\-O\-W}
+\item 
+\hyperlink{ev_8h_a8cd4ac9d91eee2b97ad3bfcd23518774}{\-E\-V\-\_\-\-A\-P\-I\-\_\-\-D\-E\-C\-L} void \hyperlink{ev_8h_a97191f018a00f83008c705cbc6863d73}{ev\-\_\-set\-\_\-userdata} (\hyperlink{ev_8h_a8ac42969e0a499b8c1367f0ad85dbba9}{\-E\-V\-\_\-\-P\-\_\-} void $\ast$data) \hyperlink{ev_8h_a473b5b606fdd3d484227542605e80bcf}{\-E\-V\-\_\-\-T\-H\-R\-O\-W}
+\item 
+\hyperlink{ev_8h_a8cd4ac9d91eee2b97ad3bfcd23518774}{\-E\-V\-\_\-\-A\-P\-I\-\_\-\-D\-E\-C\-L} void $\ast$ \hyperlink{ev_8h_a638025b4178e4f1731740f0d216db98e}{ev\-\_\-userdata} (\hyperlink{ev_8h_a6e6c6b499d18513c01cf4bde00121617}{\-E\-V\-\_\-\-P}) \hyperlink{ev_8h_a473b5b606fdd3d484227542605e80bcf}{\-E\-V\-\_\-\-T\-H\-R\-O\-W}
+\item 
+\hyperlink{ev_8h_a8cd4ac9d91eee2b97ad3bfcd23518774}{\-E\-V\-\_\-\-A\-P\-I\-\_\-\-D\-E\-C\-L} void \hyperlink{ev_8h_a0245df41020e38c0d745a0693b2b34a5}{ev\-\_\-set\-\_\-invoke\-\_\-pending\-\_\-cb} (\hyperlink{ev_8h_a8ac42969e0a499b8c1367f0ad85dbba9}{\-E\-V\-\_\-\-P\-\_\-} \hyperlink{ev_8h_ac89d96d28c5acaff89a5e973cb8e3087}{ev\-\_\-loop\-\_\-callback} invoke\-\_\-pending\-\_\-cb) \hyperlink{ev_8h_a473b5b606fdd3d484227542605e80bcf}{\-E\-V\-\_\-\-T\-H\-R\-O\-W}
+\item 
+\hyperlink{ev_8h_a8cd4ac9d91eee2b97ad3bfcd23518774}{\-E\-V\-\_\-\-A\-P\-I\-\_\-\-D\-E\-C\-L} void \hyperlink{ev_8h_a8be13b1cf415f6567f13442a83317ca8}{ev\-\_\-set\-\_\-loop\-\_\-release\-\_\-cb} (\hyperlink{ev_8h_a8ac42969e0a499b8c1367f0ad85dbba9}{\-E\-V\-\_\-\-P\-\_\-} void($\ast$release)(\hyperlink{ev_8h_a6e6c6b499d18513c01cf4bde00121617}{\-E\-V\-\_\-\-P}) \hyperlink{ev_8h_a473b5b606fdd3d484227542605e80bcf}{\-E\-V\-\_\-\-T\-H\-R\-O\-W}, void($\ast$acquire)(\hyperlink{ev_8h_a6e6c6b499d18513c01cf4bde00121617}{\-E\-V\-\_\-\-P}) \hyperlink{ev_8h_a473b5b606fdd3d484227542605e80bcf}{\-E\-V\-\_\-\-T\-H\-R\-O\-W}) \hyperlink{ev_8h_a473b5b606fdd3d484227542605e80bcf}{\-E\-V\-\_\-\-T\-H\-R\-O\-W}
+\item 
+\hyperlink{ev_8h_a8cd4ac9d91eee2b97ad3bfcd23518774}{\-E\-V\-\_\-\-A\-P\-I\-\_\-\-D\-E\-C\-L} unsigned int \hyperlink{ev_8h_a509e2a9c29f1ae92e5643f2bacd2a076}{ev\-\_\-pending\-\_\-count} (\hyperlink{ev_8h_a6e6c6b499d18513c01cf4bde00121617}{\-E\-V\-\_\-\-P}) \hyperlink{ev_8h_a473b5b606fdd3d484227542605e80bcf}{\-E\-V\-\_\-\-T\-H\-R\-O\-W}
+\item 
+\hyperlink{ev_8h_a8cd4ac9d91eee2b97ad3bfcd23518774}{\-E\-V\-\_\-\-A\-P\-I\-\_\-\-D\-E\-C\-L} void \hyperlink{ev_8h_ace06e06473c889eeb88f1d0542cdc299}{ev\-\_\-invoke\-\_\-pending} (\hyperlink{ev_8h_a6e6c6b499d18513c01cf4bde00121617}{\-E\-V\-\_\-\-P})
+\item 
+\hyperlink{ev_8h_a8cd4ac9d91eee2b97ad3bfcd23518774}{\-E\-V\-\_\-\-A\-P\-I\-\_\-\-D\-E\-C\-L} void \hyperlink{ev_8h_acdc615b41ecb16e8907b4affc3fe5e86}{ev\-\_\-suspend} (\hyperlink{ev_8h_a6e6c6b499d18513c01cf4bde00121617}{\-E\-V\-\_\-\-P}) \hyperlink{ev_8h_a473b5b606fdd3d484227542605e80bcf}{\-E\-V\-\_\-\-T\-H\-R\-O\-W}
+\item 
+\hyperlink{ev_8h_a8cd4ac9d91eee2b97ad3bfcd23518774}{\-E\-V\-\_\-\-A\-P\-I\-\_\-\-D\-E\-C\-L} void \hyperlink{ev_8h_ae4e8e9496a78f2a072d4e54b1ad47842}{ev\-\_\-resume} (\hyperlink{ev_8h_a6e6c6b499d18513c01cf4bde00121617}{\-E\-V\-\_\-\-P}) \hyperlink{ev_8h_a473b5b606fdd3d484227542605e80bcf}{\-E\-V\-\_\-\-T\-H\-R\-O\-W}
+\item 
+\hyperlink{ev_8h_a8cd4ac9d91eee2b97ad3bfcd23518774}{\-E\-V\-\_\-\-A\-P\-I\-\_\-\-D\-E\-C\-L} void \hyperlink{ev_8h_a9beed1dcd442c0862a3106b5880d64c3}{ev\-\_\-feed\-\_\-event} (\hyperlink{ev_8h_a8ac42969e0a499b8c1367f0ad85dbba9}{\-E\-V\-\_\-\-P\-\_\-} void $\ast$w, int revents) \hyperlink{ev_8h_a473b5b606fdd3d484227542605e80bcf}{\-E\-V\-\_\-\-T\-H\-R\-O\-W}
+\item 
+\hyperlink{ev_8h_a8cd4ac9d91eee2b97ad3bfcd23518774}{\-E\-V\-\_\-\-A\-P\-I\-\_\-\-D\-E\-C\-L} void \hyperlink{ev_8h_aaf24f85779456ff40a967d7cc13c60a2}{ev\-\_\-feed\-\_\-fd\-\_\-event} (\hyperlink{ev_8h_a8ac42969e0a499b8c1367f0ad85dbba9}{\-E\-V\-\_\-\-P\-\_\-} int fd, int revents) \hyperlink{ev_8h_a473b5b606fdd3d484227542605e80bcf}{\-E\-V\-\_\-\-T\-H\-R\-O\-W}
+\item 
+\hyperlink{ev_8h_a8cd4ac9d91eee2b97ad3bfcd23518774}{\-E\-V\-\_\-\-A\-P\-I\-\_\-\-D\-E\-C\-L} void \hyperlink{ev_8h_a329a30cfba2f9bb96d56a2c42c969b46}{ev\-\_\-feed\-\_\-signal} (int signum) \hyperlink{ev_8h_a473b5b606fdd3d484227542605e80bcf}{\-E\-V\-\_\-\-T\-H\-R\-O\-W}
+\item 
+\hyperlink{ev_8h_a8cd4ac9d91eee2b97ad3bfcd23518774}{\-E\-V\-\_\-\-A\-P\-I\-\_\-\-D\-E\-C\-L} void \hyperlink{ev_8h_acd564834f90d7274091af8bc3008ff4f}{ev\-\_\-feed\-\_\-signal\-\_\-event} (\hyperlink{ev_8h_a8ac42969e0a499b8c1367f0ad85dbba9}{\-E\-V\-\_\-\-P\-\_\-} int signum) \hyperlink{ev_8h_a473b5b606fdd3d484227542605e80bcf}{\-E\-V\-\_\-\-T\-H\-R\-O\-W}
+\item 
+\hyperlink{ev_8h_a8cd4ac9d91eee2b97ad3bfcd23518774}{\-E\-V\-\_\-\-A\-P\-I\-\_\-\-D\-E\-C\-L} void \hyperlink{ev_8h_aabd181573b92f2c532a87449598c01db}{ev\-\_\-invoke} (\hyperlink{ev_8h_a8ac42969e0a499b8c1367f0ad85dbba9}{\-E\-V\-\_\-\-P\-\_\-} void $\ast$w, int revents)
+\item 
+\hyperlink{ev_8h_a8cd4ac9d91eee2b97ad3bfcd23518774}{\-E\-V\-\_\-\-A\-P\-I\-\_\-\-D\-E\-C\-L} int \hyperlink{ev_8h_ad25fdb961bfa55665a23660db02e46ca}{ev\-\_\-clear\-\_\-pending} (\hyperlink{ev_8h_a8ac42969e0a499b8c1367f0ad85dbba9}{\-E\-V\-\_\-\-P\-\_\-} void $\ast$w) \hyperlink{ev_8h_a473b5b606fdd3d484227542605e80bcf}{\-E\-V\-\_\-\-T\-H\-R\-O\-W}
+\item 
+\hyperlink{ev_8h_a8cd4ac9d91eee2b97ad3bfcd23518774}{\-E\-V\-\_\-\-A\-P\-I\-\_\-\-D\-E\-C\-L} void \hyperlink{ev_8h_ac6ab0a227a1d14be9e4dcd8d70d83d30}{ev\-\_\-io\-\_\-start} (\hyperlink{ev_8h_a8ac42969e0a499b8c1367f0ad85dbba9}{\-E\-V\-\_\-\-P\-\_\-} \hyperlink{structev__io}{ev\-\_\-io} $\ast$w) \hyperlink{ev_8h_a473b5b606fdd3d484227542605e80bcf}{\-E\-V\-\_\-\-T\-H\-R\-O\-W}
+\item 
+\hyperlink{ev_8h_a8cd4ac9d91eee2b97ad3bfcd23518774}{\-E\-V\-\_\-\-A\-P\-I\-\_\-\-D\-E\-C\-L} void \hyperlink{ev_8h_a6081593bf08f23d733f701faae734f81}{ev\-\_\-io\-\_\-stop} (\hyperlink{ev_8h_a8ac42969e0a499b8c1367f0ad85dbba9}{\-E\-V\-\_\-\-P\-\_\-} \hyperlink{structev__io}{ev\-\_\-io} $\ast$w) \hyperlink{ev_8h_a473b5b606fdd3d484227542605e80bcf}{\-E\-V\-\_\-\-T\-H\-R\-O\-W}
+\item 
+\hyperlink{ev_8h_a8cd4ac9d91eee2b97ad3bfcd23518774}{\-E\-V\-\_\-\-A\-P\-I\-\_\-\-D\-E\-C\-L} void \hyperlink{ev_8h_a1e7c7995074b1261cb3e97c8ce414e23}{ev\-\_\-timer\-\_\-start} (\hyperlink{ev_8h_a8ac42969e0a499b8c1367f0ad85dbba9}{\-E\-V\-\_\-\-P\-\_\-} \hyperlink{structev__timer}{ev\-\_\-timer} $\ast$w) \hyperlink{ev_8h_a473b5b606fdd3d484227542605e80bcf}{\-E\-V\-\_\-\-T\-H\-R\-O\-W}
+\item 
+\hyperlink{ev_8h_a8cd4ac9d91eee2b97ad3bfcd23518774}{\-E\-V\-\_\-\-A\-P\-I\-\_\-\-D\-E\-C\-L} void \hyperlink{ev_8h_a3bf56eec01e17f3d68e282ea892c4d1b}{ev\-\_\-timer\-\_\-stop} (\hyperlink{ev_8h_a8ac42969e0a499b8c1367f0ad85dbba9}{\-E\-V\-\_\-\-P\-\_\-} \hyperlink{structev__timer}{ev\-\_\-timer} $\ast$w) \hyperlink{ev_8h_a473b5b606fdd3d484227542605e80bcf}{\-E\-V\-\_\-\-T\-H\-R\-O\-W}
+\item 
+\hyperlink{ev_8h_a8cd4ac9d91eee2b97ad3bfcd23518774}{\-E\-V\-\_\-\-A\-P\-I\-\_\-\-D\-E\-C\-L} void \hyperlink{ev_8h_ad8d1a8546e3ad2d0366d9b0242dc8805}{ev\-\_\-timer\-\_\-again} (\hyperlink{ev_8h_a8ac42969e0a499b8c1367f0ad85dbba9}{\-E\-V\-\_\-\-P\-\_\-} \hyperlink{structev__timer}{ev\-\_\-timer} $\ast$w) \hyperlink{ev_8h_a473b5b606fdd3d484227542605e80bcf}{\-E\-V\-\_\-\-T\-H\-R\-O\-W}
+\item 
+\hyperlink{ev_8h_a8cd4ac9d91eee2b97ad3bfcd23518774}{\-E\-V\-\_\-\-A\-P\-I\-\_\-\-D\-E\-C\-L} \hyperlink{ev_8h_add71e34ce2b04bbf7eb6f31a850814e8}{ev\-\_\-tstamp} \hyperlink{ev_8h_a44ab0901ea6ee17f578e7ddcea798c7a}{ev\-\_\-timer\-\_\-remaining} (\hyperlink{ev_8h_a8ac42969e0a499b8c1367f0ad85dbba9}{\-E\-V\-\_\-\-P\-\_\-} \hyperlink{structev__timer}{ev\-\_\-timer} $\ast$w) \hyperlink{ev_8h_a473b5b606fdd3d484227542605e80bcf}{\-E\-V\-\_\-\-T\-H\-R\-O\-W}
+\item 
+\hyperlink{ev_8h_a8cd4ac9d91eee2b97ad3bfcd23518774}{\-E\-V\-\_\-\-A\-P\-I\-\_\-\-D\-E\-C\-L} void \hyperlink{ev_8h_ad7391fac547f08e45bd115ea79ca877c}{ev\-\_\-periodic\-\_\-start} (\hyperlink{ev_8h_a8ac42969e0a499b8c1367f0ad85dbba9}{\-E\-V\-\_\-\-P\-\_\-} \hyperlink{structev__periodic}{ev\-\_\-periodic} $\ast$w) \hyperlink{ev_8h_a473b5b606fdd3d484227542605e80bcf}{\-E\-V\-\_\-\-T\-H\-R\-O\-W}
+\item 
+\hyperlink{ev_8h_a8cd4ac9d91eee2b97ad3bfcd23518774}{\-E\-V\-\_\-\-A\-P\-I\-\_\-\-D\-E\-C\-L} void \hyperlink{ev_8h_a369eae8025f29c7d15c0f3160c71750a}{ev\-\_\-periodic\-\_\-stop} (\hyperlink{ev_8h_a8ac42969e0a499b8c1367f0ad85dbba9}{\-E\-V\-\_\-\-P\-\_\-} \hyperlink{structev__periodic}{ev\-\_\-periodic} $\ast$w) \hyperlink{ev_8h_a473b5b606fdd3d484227542605e80bcf}{\-E\-V\-\_\-\-T\-H\-R\-O\-W}
+\item 
+\hyperlink{ev_8h_a8cd4ac9d91eee2b97ad3bfcd23518774}{\-E\-V\-\_\-\-A\-P\-I\-\_\-\-D\-E\-C\-L} void \hyperlink{ev_8h_a46107712715d36432967c7fcb03a4eac}{ev\-\_\-periodic\-\_\-again} (\hyperlink{ev_8h_a8ac42969e0a499b8c1367f0ad85dbba9}{\-E\-V\-\_\-\-P\-\_\-} \hyperlink{structev__periodic}{ev\-\_\-periodic} $\ast$w) \hyperlink{ev_8h_a473b5b606fdd3d484227542605e80bcf}{\-E\-V\-\_\-\-T\-H\-R\-O\-W}
+\item 
+\hyperlink{ev_8h_a8cd4ac9d91eee2b97ad3bfcd23518774}{\-E\-V\-\_\-\-A\-P\-I\-\_\-\-D\-E\-C\-L} void \hyperlink{ev_8h_a9c6255b00237314f95d6b1273c5acbc7}{ev\-\_\-signal\-\_\-start} (\hyperlink{ev_8h_a8ac42969e0a499b8c1367f0ad85dbba9}{\-E\-V\-\_\-\-P\-\_\-} \hyperlink{structev__signal}{ev\-\_\-signal} $\ast$w) \hyperlink{ev_8h_a473b5b606fdd3d484227542605e80bcf}{\-E\-V\-\_\-\-T\-H\-R\-O\-W}
+\item 
+\hyperlink{ev_8h_a8cd4ac9d91eee2b97ad3bfcd23518774}{\-E\-V\-\_\-\-A\-P\-I\-\_\-\-D\-E\-C\-L} void \hyperlink{ev_8h_ae0bd793b1dbe30d2407645cde3b64485}{ev\-\_\-signal\-\_\-stop} (\hyperlink{ev_8h_a8ac42969e0a499b8c1367f0ad85dbba9}{\-E\-V\-\_\-\-P\-\_\-} \hyperlink{structev__signal}{ev\-\_\-signal} $\ast$w) \hyperlink{ev_8h_a473b5b606fdd3d484227542605e80bcf}{\-E\-V\-\_\-\-T\-H\-R\-O\-W}
+\item 
+\hyperlink{ev_8h_a8cd4ac9d91eee2b97ad3bfcd23518774}{\-E\-V\-\_\-\-A\-P\-I\-\_\-\-D\-E\-C\-L} void \hyperlink{ev_8h_ae30c5be8f00796697b24ff236f4438c1}{ev\-\_\-child\-\_\-start} (\hyperlink{ev_8h_a8ac42969e0a499b8c1367f0ad85dbba9}{\-E\-V\-\_\-\-P\-\_\-} \hyperlink{structev__child}{ev\-\_\-child} $\ast$w) \hyperlink{ev_8h_a473b5b606fdd3d484227542605e80bcf}{\-E\-V\-\_\-\-T\-H\-R\-O\-W}
+\item 
+\hyperlink{ev_8h_a8cd4ac9d91eee2b97ad3bfcd23518774}{\-E\-V\-\_\-\-A\-P\-I\-\_\-\-D\-E\-C\-L} void \hyperlink{ev_8h_a6c02fca23fc33412e69e0f4d5ea84f6a}{ev\-\_\-child\-\_\-stop} (\hyperlink{ev_8h_a8ac42969e0a499b8c1367f0ad85dbba9}{\-E\-V\-\_\-\-P\-\_\-} \hyperlink{structev__child}{ev\-\_\-child} $\ast$w) \hyperlink{ev_8h_a473b5b606fdd3d484227542605e80bcf}{\-E\-V\-\_\-\-T\-H\-R\-O\-W}
+\item 
+\hyperlink{ev_8h_a8cd4ac9d91eee2b97ad3bfcd23518774}{\-E\-V\-\_\-\-A\-P\-I\-\_\-\-D\-E\-C\-L} void \hyperlink{ev_8h_ac87fa2509078b764d36dceb8404042a5}{ev\-\_\-stat\-\_\-start} (\hyperlink{ev_8h_a8ac42969e0a499b8c1367f0ad85dbba9}{\-E\-V\-\_\-\-P\-\_\-} \hyperlink{structev__stat}{ev\-\_\-stat} $\ast$w) \hyperlink{ev_8h_a473b5b606fdd3d484227542605e80bcf}{\-E\-V\-\_\-\-T\-H\-R\-O\-W}
+\item 
+\hyperlink{ev_8h_a8cd4ac9d91eee2b97ad3bfcd23518774}{\-E\-V\-\_\-\-A\-P\-I\-\_\-\-D\-E\-C\-L} void \hyperlink{ev_8h_a3cda429cc799e55c6d2295498a9ad2b8}{ev\-\_\-stat\-\_\-stop} (\hyperlink{ev_8h_a8ac42969e0a499b8c1367f0ad85dbba9}{\-E\-V\-\_\-\-P\-\_\-} \hyperlink{structev__stat}{ev\-\_\-stat} $\ast$w) \hyperlink{ev_8h_a473b5b606fdd3d484227542605e80bcf}{\-E\-V\-\_\-\-T\-H\-R\-O\-W}
+\item 
+\hyperlink{ev_8h_a8cd4ac9d91eee2b97ad3bfcd23518774}{\-E\-V\-\_\-\-A\-P\-I\-\_\-\-D\-E\-C\-L} void \hyperlink{ev_8h_ad188fbcf3eb9087ff378bae7cdfe8da5}{ev\-\_\-stat\-\_\-stat} (\hyperlink{ev_8h_a8ac42969e0a499b8c1367f0ad85dbba9}{\-E\-V\-\_\-\-P\-\_\-} \hyperlink{structev__stat}{ev\-\_\-stat} $\ast$w) \hyperlink{ev_8h_a473b5b606fdd3d484227542605e80bcf}{\-E\-V\-\_\-\-T\-H\-R\-O\-W}
+\item 
+\hyperlink{ev_8h_a8cd4ac9d91eee2b97ad3bfcd23518774}{\-E\-V\-\_\-\-A\-P\-I\-\_\-\-D\-E\-C\-L} void \hyperlink{ev_8h_a37d1f736a527b1b75581e5eba48114f1}{ev\-\_\-idle\-\_\-start} (\hyperlink{ev_8h_a8ac42969e0a499b8c1367f0ad85dbba9}{\-E\-V\-\_\-\-P\-\_\-} \hyperlink{structev__idle}{ev\-\_\-idle} $\ast$w) \hyperlink{ev_8h_a473b5b606fdd3d484227542605e80bcf}{\-E\-V\-\_\-\-T\-H\-R\-O\-W}
+\item 
+\hyperlink{ev_8h_a8cd4ac9d91eee2b97ad3bfcd23518774}{\-E\-V\-\_\-\-A\-P\-I\-\_\-\-D\-E\-C\-L} void \hyperlink{ev_8h_a84447c2553ab6db5bd2194e893349115}{ev\-\_\-idle\-\_\-stop} (\hyperlink{ev_8h_a8ac42969e0a499b8c1367f0ad85dbba9}{\-E\-V\-\_\-\-P\-\_\-} \hyperlink{structev__idle}{ev\-\_\-idle} $\ast$w) \hyperlink{ev_8h_a473b5b606fdd3d484227542605e80bcf}{\-E\-V\-\_\-\-T\-H\-R\-O\-W}
+\item 
+\hyperlink{ev_8h_a8cd4ac9d91eee2b97ad3bfcd23518774}{\-E\-V\-\_\-\-A\-P\-I\-\_\-\-D\-E\-C\-L} void \hyperlink{ev_8h_a7bdd926796104730dbd7e162b9c87108}{ev\-\_\-prepare\-\_\-start} (\hyperlink{ev_8h_a8ac42969e0a499b8c1367f0ad85dbba9}{\-E\-V\-\_\-\-P\-\_\-} \hyperlink{structev__prepare}{ev\-\_\-prepare} $\ast$w) \hyperlink{ev_8h_a473b5b606fdd3d484227542605e80bcf}{\-E\-V\-\_\-\-T\-H\-R\-O\-W}
+\item 
+\hyperlink{ev_8h_a8cd4ac9d91eee2b97ad3bfcd23518774}{\-E\-V\-\_\-\-A\-P\-I\-\_\-\-D\-E\-C\-L} void \hyperlink{ev_8h_ab4b493a6979ebfa429827e7fdd1525c4}{ev\-\_\-prepare\-\_\-stop} (\hyperlink{ev_8h_a8ac42969e0a499b8c1367f0ad85dbba9}{\-E\-V\-\_\-\-P\-\_\-} \hyperlink{structev__prepare}{ev\-\_\-prepare} $\ast$w) \hyperlink{ev_8h_a473b5b606fdd3d484227542605e80bcf}{\-E\-V\-\_\-\-T\-H\-R\-O\-W}
+\item 
+\hyperlink{ev_8h_a8cd4ac9d91eee2b97ad3bfcd23518774}{\-E\-V\-\_\-\-A\-P\-I\-\_\-\-D\-E\-C\-L} void \hyperlink{ev_8h_a348e9a1d375ea004142209a55a40f8bd}{ev\-\_\-check\-\_\-start} (\hyperlink{ev_8h_a8ac42969e0a499b8c1367f0ad85dbba9}{\-E\-V\-\_\-\-P\-\_\-} \hyperlink{structev__check}{ev\-\_\-check} $\ast$w) \hyperlink{ev_8h_a473b5b606fdd3d484227542605e80bcf}{\-E\-V\-\_\-\-T\-H\-R\-O\-W}
+\item 
+\hyperlink{ev_8h_a8cd4ac9d91eee2b97ad3bfcd23518774}{\-E\-V\-\_\-\-A\-P\-I\-\_\-\-D\-E\-C\-L} void \hyperlink{ev_8h_a0174b19babfd44d2483817bef4a1949d}{ev\-\_\-check\-\_\-stop} (\hyperlink{ev_8h_a8ac42969e0a499b8c1367f0ad85dbba9}{\-E\-V\-\_\-\-P\-\_\-} \hyperlink{structev__check}{ev\-\_\-check} $\ast$w) \hyperlink{ev_8h_a473b5b606fdd3d484227542605e80bcf}{\-E\-V\-\_\-\-T\-H\-R\-O\-W}
+\item 
+\hyperlink{ev_8h_a8cd4ac9d91eee2b97ad3bfcd23518774}{\-E\-V\-\_\-\-A\-P\-I\-\_\-\-D\-E\-C\-L} void \hyperlink{ev_8h_a84e83828b9be7636c12de746d3016209}{ev\-\_\-fork\-\_\-start} (\hyperlink{ev_8h_a8ac42969e0a499b8c1367f0ad85dbba9}{\-E\-V\-\_\-\-P\-\_\-} \hyperlink{structev__fork}{ev\-\_\-fork} $\ast$w) \hyperlink{ev_8h_a473b5b606fdd3d484227542605e80bcf}{\-E\-V\-\_\-\-T\-H\-R\-O\-W}
+\item 
+\hyperlink{ev_8h_a8cd4ac9d91eee2b97ad3bfcd23518774}{\-E\-V\-\_\-\-A\-P\-I\-\_\-\-D\-E\-C\-L} void \hyperlink{ev_8h_aeccf8a578c3b5006f662f02528a4cf63}{ev\-\_\-fork\-\_\-stop} (\hyperlink{ev_8h_a8ac42969e0a499b8c1367f0ad85dbba9}{\-E\-V\-\_\-\-P\-\_\-} \hyperlink{structev__fork}{ev\-\_\-fork} $\ast$w) \hyperlink{ev_8h_a473b5b606fdd3d484227542605e80bcf}{\-E\-V\-\_\-\-T\-H\-R\-O\-W}
+\item 
+\hyperlink{ev_8h_a8cd4ac9d91eee2b97ad3bfcd23518774}{\-E\-V\-\_\-\-A\-P\-I\-\_\-\-D\-E\-C\-L} void \hyperlink{ev_8h_aafa08f8c064a12dafa32a92d375d1b21}{ev\-\_\-cleanup\-\_\-start} (\hyperlink{ev_8h_a8ac42969e0a499b8c1367f0ad85dbba9}{\-E\-V\-\_\-\-P\-\_\-} \hyperlink{structev__cleanup}{ev\-\_\-cleanup} $\ast$w) \hyperlink{ev_8h_a473b5b606fdd3d484227542605e80bcf}{\-E\-V\-\_\-\-T\-H\-R\-O\-W}
+\item 
+\hyperlink{ev_8h_a8cd4ac9d91eee2b97ad3bfcd23518774}{\-E\-V\-\_\-\-A\-P\-I\-\_\-\-D\-E\-C\-L} void \hyperlink{ev_8h_a51fd32f237a82bdc5caadbbd43e11c2c}{ev\-\_\-cleanup\-\_\-stop} (\hyperlink{ev_8h_a8ac42969e0a499b8c1367f0ad85dbba9}{\-E\-V\-\_\-\-P\-\_\-} \hyperlink{structev__cleanup}{ev\-\_\-cleanup} $\ast$w) \hyperlink{ev_8h_a473b5b606fdd3d484227542605e80bcf}{\-E\-V\-\_\-\-T\-H\-R\-O\-W}
+\item 
+\hyperlink{ev_8h_a8cd4ac9d91eee2b97ad3bfcd23518774}{\-E\-V\-\_\-\-A\-P\-I\-\_\-\-D\-E\-C\-L} void \hyperlink{ev_8h_a16dc9ccd4350d7280a0d3ee26cf5dc25}{ev\-\_\-embed\-\_\-start} (\hyperlink{ev_8h_a8ac42969e0a499b8c1367f0ad85dbba9}{\-E\-V\-\_\-\-P\-\_\-} \hyperlink{structev__embed}{ev\-\_\-embed} $\ast$w) \hyperlink{ev_8h_a473b5b606fdd3d484227542605e80bcf}{\-E\-V\-\_\-\-T\-H\-R\-O\-W}
+\item 
+\hyperlink{ev_8h_a8cd4ac9d91eee2b97ad3bfcd23518774}{\-E\-V\-\_\-\-A\-P\-I\-\_\-\-D\-E\-C\-L} void \hyperlink{ev_8h_a16db73d525f294bcf8ec65b3877bbc6b}{ev\-\_\-embed\-\_\-stop} (\hyperlink{ev_8h_a8ac42969e0a499b8c1367f0ad85dbba9}{\-E\-V\-\_\-\-P\-\_\-} \hyperlink{structev__embed}{ev\-\_\-embed} $\ast$w) \hyperlink{ev_8h_a473b5b606fdd3d484227542605e80bcf}{\-E\-V\-\_\-\-T\-H\-R\-O\-W}
+\item 
+\hyperlink{ev_8h_a8cd4ac9d91eee2b97ad3bfcd23518774}{\-E\-V\-\_\-\-A\-P\-I\-\_\-\-D\-E\-C\-L} void \hyperlink{ev_8h_a629607356458bceb1e36c19a5c74faa3}{ev\-\_\-embed\-\_\-sweep} (\hyperlink{ev_8h_a8ac42969e0a499b8c1367f0ad85dbba9}{\-E\-V\-\_\-\-P\-\_\-} \hyperlink{structev__embed}{ev\-\_\-embed} $\ast$w) \hyperlink{ev_8h_a473b5b606fdd3d484227542605e80bcf}{\-E\-V\-\_\-\-T\-H\-R\-O\-W}
+\item 
+\hyperlink{ev_8h_a8cd4ac9d91eee2b97ad3bfcd23518774}{\-E\-V\-\_\-\-A\-P\-I\-\_\-\-D\-E\-C\-L} void \hyperlink{ev_8h_a9a92667c29ef8fb1fe178a2ab9dc97df}{ev\-\_\-async\-\_\-start} (\hyperlink{ev_8h_a8ac42969e0a499b8c1367f0ad85dbba9}{\-E\-V\-\_\-\-P\-\_\-} \hyperlink{structev__async}{ev\-\_\-async} $\ast$w) \hyperlink{ev_8h_a473b5b606fdd3d484227542605e80bcf}{\-E\-V\-\_\-\-T\-H\-R\-O\-W}
+\item 
+\hyperlink{ev_8h_a8cd4ac9d91eee2b97ad3bfcd23518774}{\-E\-V\-\_\-\-A\-P\-I\-\_\-\-D\-E\-C\-L} void \hyperlink{ev_8h_a292fc9f311b7b28b022b391085d401fb}{ev\-\_\-async\-\_\-stop} (\hyperlink{ev_8h_a8ac42969e0a499b8c1367f0ad85dbba9}{\-E\-V\-\_\-\-P\-\_\-} \hyperlink{structev__async}{ev\-\_\-async} $\ast$w) \hyperlink{ev_8h_a473b5b606fdd3d484227542605e80bcf}{\-E\-V\-\_\-\-T\-H\-R\-O\-W}
+\item 
+\hyperlink{ev_8h_a8cd4ac9d91eee2b97ad3bfcd23518774}{\-E\-V\-\_\-\-A\-P\-I\-\_\-\-D\-E\-C\-L} void \hyperlink{ev_8h_a335bbebed40c8441b9d2f1bec023f2d5}{ev\-\_\-async\-\_\-send} (\hyperlink{ev_8h_a8ac42969e0a499b8c1367f0ad85dbba9}{\-E\-V\-\_\-\-P\-\_\-} \hyperlink{structev__async}{ev\-\_\-async} $\ast$w) \hyperlink{ev_8h_a473b5b606fdd3d484227542605e80bcf}{\-E\-V\-\_\-\-T\-H\-R\-O\-W}
+\item 
+\hyperlink{ev_8h_ac5b317e52904cdfbe2332e6460ace504}{\-E\-V\-\_\-\-I\-N\-L\-I\-N\-E} void \hyperlink{ev_8h_a76f89b1a402c811c57a456bb6e6ab6d7}{ev\-\_\-loop} (\hyperlink{ev_8h_a8ac42969e0a499b8c1367f0ad85dbba9}{\-E\-V\-\_\-\-P\-\_\-} int flags)
+\item 
+\hyperlink{ev_8h_ac5b317e52904cdfbe2332e6460ace504}{\-E\-V\-\_\-\-I\-N\-L\-I\-N\-E} void \hyperlink{ev_8h_a2416678834fb6f0e9941599cc4b38165}{ev\-\_\-unloop} (\hyperlink{ev_8h_a8ac42969e0a499b8c1367f0ad85dbba9}{\-E\-V\-\_\-\-P\-\_\-} int how)
+\item 
+\hyperlink{ev_8h_ac5b317e52904cdfbe2332e6460ace504}{\-E\-V\-\_\-\-I\-N\-L\-I\-N\-E} void \hyperlink{ev_8h_ae002183dba9501cb34ce149073932005}{ev\-\_\-default\-\_\-destroy} (void)
+\item 
+\hyperlink{ev_8h_ac5b317e52904cdfbe2332e6460ace504}{\-E\-V\-\_\-\-I\-N\-L\-I\-N\-E} void \hyperlink{ev_8h_a170b6d189c1d887bf2e68995458dd4b0}{ev\-\_\-default\-\_\-fork} (void)
+\item 
+\hyperlink{ev_8h_ac5b317e52904cdfbe2332e6460ace504}{\-E\-V\-\_\-\-I\-N\-L\-I\-N\-E} unsigned int \hyperlink{ev_8h_a00aadaac4614f423020c0c7a911ac40c}{ev\-\_\-loop\-\_\-count} (\hyperlink{ev_8h_a6e6c6b499d18513c01cf4bde00121617}{\-E\-V\-\_\-\-P})
+\item 
+\hyperlink{ev_8h_ac5b317e52904cdfbe2332e6460ace504}{\-E\-V\-\_\-\-I\-N\-L\-I\-N\-E} unsigned int \hyperlink{ev_8h_a92580c34533ee3430d9de47a20929c23}{ev\-\_\-loop\-\_\-depth} (\hyperlink{ev_8h_a6e6c6b499d18513c01cf4bde00121617}{\-E\-V\-\_\-\-P})
+\item 
+\hyperlink{ev_8h_ac5b317e52904cdfbe2332e6460ace504}{\-E\-V\-\_\-\-I\-N\-L\-I\-N\-E} void \hyperlink{ev_8h_aa18798f51653d426d2bed98759ff744d}{ev\-\_\-loop\-\_\-verify} (\hyperlink{ev_8h_a6e6c6b499d18513c01cf4bde00121617}{\-E\-V\-\_\-\-P})
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Define \-Documentation}
+\hypertarget{ev_8h_a383ea0dc8239cccecd730d5034abaab8}{\index{ev.\-h@{ev.\-h}!\-E\-V\-\_\-\-A@{\-E\-V\-\_\-\-A}}
+\index{\-E\-V\-\_\-\-A@{\-E\-V\-\_\-\-A}!ev.h@{ev.\-h}}
+\subsubsection[{\-E\-V\-\_\-\-A}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-E\-V\-\_\-\-A}~loop                               /$\ast$ a loop as sole argument to a function call $\ast$/}}\label{ev_8h_a383ea0dc8239cccecd730d5034abaab8}
+
+
+\-Definition at line 169 of file ev.\-h.
+
+\hypertarget{ev_8h_ac0fea9e1f8c3efe427907d4cad8dbc7a}{\index{ev.\-h@{ev.\-h}!\-E\-V\-\_\-\-A\-\_\-@{\-E\-V\-\_\-\-A\-\_\-}}
+\index{\-E\-V\-\_\-\-A\-\_\-@{\-E\-V\-\_\-\-A\-\_\-}!ev.h@{ev.\-h}}
+\subsubsection[{\-E\-V\-\_\-\-A\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-E\-V\-\_\-\-A\-\_\-}~{\bf \-E\-V\-\_\-\-A},                              /$\ast$ a loop as first of multiple arguments $\ast$/}}\label{ev_8h_ac0fea9e1f8c3efe427907d4cad8dbc7a}
+
+
+\-Definition at line 170 of file ev.\-h.
+
+\hypertarget{ev_8h_a8cd4ac9d91eee2b97ad3bfcd23518774}{\index{ev.\-h@{ev.\-h}!\-E\-V\-\_\-\-A\-P\-I\-\_\-\-D\-E\-C\-L@{\-E\-V\-\_\-\-A\-P\-I\-\_\-\-D\-E\-C\-L}}
+\index{\-E\-V\-\_\-\-A\-P\-I\-\_\-\-D\-E\-C\-L@{\-E\-V\-\_\-\-A\-P\-I\-\_\-\-D\-E\-C\-L}!ev.h@{ev.\-h}}
+\subsubsection[{\-E\-V\-\_\-\-A\-P\-I\-\_\-\-D\-E\-C\-L}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-E\-V\-\_\-\-A\-P\-I\-\_\-\-D\-E\-C\-L}~extern}}\label{ev_8h_a8cd4ac9d91eee2b97ad3bfcd23518774}
+
+
+\-Definition at line 197 of file ev.\-h.
+
+\hypertarget{ev_8h_a2e63ac302a0ed3c93a202cd5cf9877d1}{\index{ev.\-h@{ev.\-h}!ev\-\_\-async\-\_\-init@{ev\-\_\-async\-\_\-init}}
+\index{ev\-\_\-async\-\_\-init@{ev\-\_\-async\-\_\-init}!ev.h@{ev.\-h}}
+\subsubsection[{ev\-\_\-async\-\_\-init}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf ev\-\_\-async\-\_\-init}(
+\begin{DoxyParamCaption}
+\item[{}]{ev, }
+\item[{}]{cb}
+\end{DoxyParamCaption}
+)~do \{ {\bf ev\-\_\-init} ((ev), (cb)); {\bf ev\-\_\-async\-\_\-set} ((ev)); \} while (0)}}\label{ev_8h_a2e63ac302a0ed3c93a202cd5cf9877d1}
+
+
+\-Definition at line 713 of file ev.\-h.
+
+\hypertarget{ev_8h_ac5883ba29d04a74e07d37fa181203d23}{\index{ev.\-h@{ev.\-h}!ev\-\_\-async\-\_\-pending@{ev\-\_\-async\-\_\-pending}}
+\index{ev\-\_\-async\-\_\-pending@{ev\-\_\-async\-\_\-pending}!ev.h@{ev.\-h}}
+\subsubsection[{ev\-\_\-async\-\_\-pending}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf ev\-\_\-async\-\_\-pending}(
+\begin{DoxyParamCaption}
+\item[{}]{w}
+\end{DoxyParamCaption}
+)~(+(w)-\/$>$sent)}}\label{ev_8h_ac5883ba29d04a74e07d37fa181203d23}
+
+
+\-Definition at line 458 of file ev.\-h.
+
+\hypertarget{ev_8h_a5a6cf323cbb47d2c5fa52bbb85f48bc5}{\index{ev.\-h@{ev.\-h}!ev\-\_\-async\-\_\-set@{ev\-\_\-async\-\_\-set}}
+\index{ev\-\_\-async\-\_\-set@{ev\-\_\-async\-\_\-set}!ev.h@{ev.\-h}}
+\subsubsection[{ev\-\_\-async\-\_\-set}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf ev\-\_\-async\-\_\-set}(
+\begin{DoxyParamCaption}
+\item[{}]{ev}
+\end{DoxyParamCaption}
+)~/$\ast$ nop, yes, this is a serious in-\/joke $\ast$/}}\label{ev_8h_a5a6cf323cbb47d2c5fa52bbb85f48bc5}
+
+
+\-Definition at line 699 of file ev.\-h.
+
+\hypertarget{ev_8h_ac242261c5628b4207bf778eed8d0828a}{\index{ev.\-h@{ev.\-h}!\-E\-V\-\_\-\-C\-B@{\-E\-V\-\_\-\-C\-B}}
+\index{\-E\-V\-\_\-\-C\-B@{\-E\-V\-\_\-\-C\-B}!ev.h@{ev.\-h}}
+\subsubsection[{\-E\-V\-\_\-\-C\-B}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-E\-V\-\_\-\-C\-B}(
+\begin{DoxyParamCaption}
+\item[{}]{type, }
+\item[{}]{name}
+\end{DoxyParamCaption}
+)~void name ({\bf \-E\-V\-\_\-\-P\-\_\-} struct ev\-\_\- \#\# type $\ast$w, int revents)}}\label{ev_8h_ac242261c5628b4207bf778eed8d0828a}
+
+
+\-Definition at line 250 of file ev.\-h.
+
+\hypertarget{ev_8h_a0c98def6e9cd6939b97bdf21c5599e75}{\index{ev.\-h@{ev.\-h}!ev\-\_\-cb@{ev\-\_\-cb}}
+\index{ev\-\_\-cb@{ev\-\_\-cb}!ev.h@{ev.\-h}}
+\subsubsection[{ev\-\_\-cb}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf ev\-\_\-cb}(
+\begin{DoxyParamCaption}
+\item[{}]{ev}
+\end{DoxyParamCaption}
+)~(ev)-\/$>$cb /$\ast$ rw $\ast$/}}\label{ev_8h_a0c98def6e9cd6939b97bdf21c5599e75}
+
+
+\-Definition at line 718 of file ev.\-h.
+
+\hypertarget{ev_8h_aac51ad15b009a9a8f58fa2031942c5b8}{\index{ev.\-h@{ev.\-h}!ev\-\_\-check\-\_\-init@{ev\-\_\-check\-\_\-init}}
+\index{ev\-\_\-check\-\_\-init@{ev\-\_\-check\-\_\-init}!ev.h@{ev.\-h}}
+\subsubsection[{ev\-\_\-check\-\_\-init}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf ev\-\_\-check\-\_\-init}(
+\begin{DoxyParamCaption}
+\item[{}]{ev, }
+\item[{}]{cb}
+\end{DoxyParamCaption}
+)~do \{ {\bf ev\-\_\-init} ((ev), (cb)); {\bf ev\-\_\-check\-\_\-set} ((ev)); \} while (0)}}\label{ev_8h_aac51ad15b009a9a8f58fa2031942c5b8}
+
+
+\-Definition at line 709 of file ev.\-h.
+
+\hypertarget{ev_8h_aecc749c133be0689f0d39a247761dac1}{\index{ev.\-h@{ev.\-h}!ev\-\_\-check\-\_\-set@{ev\-\_\-check\-\_\-set}}
+\index{ev\-\_\-check\-\_\-set@{ev\-\_\-check\-\_\-set}!ev.h@{ev.\-h}}
+\subsubsection[{ev\-\_\-check\-\_\-set}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf ev\-\_\-check\-\_\-set}(
+\begin{DoxyParamCaption}
+\item[{}]{ev}
+\end{DoxyParamCaption}
+)~/$\ast$ nop, yes, this is a serious in-\/joke $\ast$/}}\label{ev_8h_aecc749c133be0689f0d39a247761dac1}
+
+
+\-Definition at line 695 of file ev.\-h.
+
+\hypertarget{ev_8h_acef2763338b7dca2c5bae4232a10bbda}{\index{ev.\-h@{ev.\-h}!ev\-\_\-child\-\_\-init@{ev\-\_\-child\-\_\-init}}
+\index{ev\-\_\-child\-\_\-init@{ev\-\_\-child\-\_\-init}!ev.h@{ev.\-h}}
+\subsubsection[{ev\-\_\-child\-\_\-init}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf ev\-\_\-child\-\_\-init}(
+\begin{DoxyParamCaption}
+\item[{}]{ev, }
+\item[{}]{cb, }
+\item[{}]{pid, }
+\item[{}]{trace}
+\end{DoxyParamCaption}
+)~do \{ {\bf ev\-\_\-init} ((ev), (cb)); {\bf ev\-\_\-child\-\_\-set} ((ev),(pid),(trace)); \} while (0)}}\label{ev_8h_acef2763338b7dca2c5bae4232a10bbda}
+
+
+\-Definition at line 705 of file ev.\-h.
+
+\hypertarget{ev_8h_af9a17a290301c0ec7aae247f6f82411e}{\index{ev.\-h@{ev.\-h}!ev\-\_\-child\-\_\-set@{ev\-\_\-child\-\_\-set}}
+\index{ev\-\_\-child\-\_\-set@{ev\-\_\-child\-\_\-set}!ev.h@{ev.\-h}}
+\subsubsection[{ev\-\_\-child\-\_\-set}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf ev\-\_\-child\-\_\-set}(
+\begin{DoxyParamCaption}
+\item[{}]{ev, }
+\item[{}]{pid\-\_\-, }
+\item[{}]{trace\-\_\-}
+\end{DoxyParamCaption}
+)~do \{ (ev)-\/$>$pid = (pid\-\_\-); (ev)-\/$>$flags = !!(trace\-\_\-); \} while (0)}}\label{ev_8h_af9a17a290301c0ec7aae247f6f82411e}
+
+
+\-Definition at line 691 of file ev.\-h.
+
+\hypertarget{ev_8h_a46264cc88c963086a5bcf82a7b6396cd}{\index{ev.\-h@{ev.\-h}!ev\-\_\-cleanup\-\_\-init@{ev\-\_\-cleanup\-\_\-init}}
+\index{ev\-\_\-cleanup\-\_\-init@{ev\-\_\-cleanup\-\_\-init}!ev.h@{ev.\-h}}
+\subsubsection[{ev\-\_\-cleanup\-\_\-init}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf ev\-\_\-cleanup\-\_\-init}(
+\begin{DoxyParamCaption}
+\item[{}]{ev, }
+\item[{}]{cb}
+\end{DoxyParamCaption}
+)~do \{ {\bf ev\-\_\-init} ((ev), (cb)); {\bf ev\-\_\-cleanup\-\_\-set} ((ev)); \} while (0)}}\label{ev_8h_a46264cc88c963086a5bcf82a7b6396cd}
+
+
+\-Definition at line 712 of file ev.\-h.
+
+\hypertarget{ev_8h_a8e8b0d7fdb6993e15761f2c749d18ef4}{\index{ev.\-h@{ev.\-h}!ev\-\_\-cleanup\-\_\-set@{ev\-\_\-cleanup\-\_\-set}}
+\index{ev\-\_\-cleanup\-\_\-set@{ev\-\_\-cleanup\-\_\-set}!ev.h@{ev.\-h}}
+\subsubsection[{ev\-\_\-cleanup\-\_\-set}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf ev\-\_\-cleanup\-\_\-set}(
+\begin{DoxyParamCaption}
+\item[{}]{ev}
+\end{DoxyParamCaption}
+)~/$\ast$ nop, yes, this is a serious in-\/joke $\ast$/}}\label{ev_8h_a8e8b0d7fdb6993e15761f2c749d18ef4}
+
+
+\-Definition at line 698 of file ev.\-h.
+
+\hypertarget{ev_8h_ad93be303cf5157adefdaa90d8f76d09a}{\index{ev.\-h@{ev.\-h}!\-E\-V\-\_\-\-C\-P\-P@{\-E\-V\-\_\-\-C\-P\-P}}
+\index{\-E\-V\-\_\-\-C\-P\-P@{\-E\-V\-\_\-\-C\-P\-P}!ev.h@{ev.\-h}}
+\subsubsection[{\-E\-V\-\_\-\-C\-P\-P}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-E\-V\-\_\-\-C\-P\-P}(
+\begin{DoxyParamCaption}
+\item[{}]{x}
+\end{DoxyParamCaption}
+)}}\label{ev_8h_ad93be303cf5157adefdaa90d8f76d09a}
+
+
+\-Definition at line 46 of file ev.\-h.
+
+\hypertarget{ev_8h_a4da807dc9ecbfce6b5446d0e4d7e423e}{\index{ev.\-h@{ev.\-h}!\-E\-V\-\_\-\-D\-E\-F\-A\-U\-L\-T@{\-E\-V\-\_\-\-D\-E\-F\-A\-U\-L\-T}}
+\index{\-E\-V\-\_\-\-D\-E\-F\-A\-U\-L\-T@{\-E\-V\-\_\-\-D\-E\-F\-A\-U\-L\-T}!ev.h@{ev.\-h}}
+\subsubsection[{\-E\-V\-\_\-\-D\-E\-F\-A\-U\-L\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-E\-V\-\_\-\-D\-E\-F\-A\-U\-L\-T}~{\bf ev\-\_\-default\-\_\-loop} (0)          /$\ast$ the default loop as sole arg $\ast$/}}\label{ev_8h_a4da807dc9ecbfce6b5446d0e4d7e423e}
+
+
+\-Definition at line 173 of file ev.\-h.
+
+\hypertarget{ev_8h_a0b0ef45041d126c1024c0ea9f09820a2}{\index{ev.\-h@{ev.\-h}!\-E\-V\-\_\-\-D\-E\-F\-A\-U\-L\-T\-\_\-@{\-E\-V\-\_\-\-D\-E\-F\-A\-U\-L\-T\-\_\-}}
+\index{\-E\-V\-\_\-\-D\-E\-F\-A\-U\-L\-T\-\_\-@{\-E\-V\-\_\-\-D\-E\-F\-A\-U\-L\-T\-\_\-}!ev.h@{ev.\-h}}
+\subsubsection[{\-E\-V\-\_\-\-D\-E\-F\-A\-U\-L\-T\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-E\-V\-\_\-\-D\-E\-F\-A\-U\-L\-T\-\_\-}~{\bf \-E\-V\-\_\-\-D\-E\-F\-A\-U\-L\-T},                  /$\ast$ the default loop as first of multiple arguments $\ast$/}}\label{ev_8h_a0b0ef45041d126c1024c0ea9f09820a2}
+
+
+\-Definition at line 174 of file ev.\-h.
+
+\hypertarget{ev_8h_a9adf91debf265c4e9bbd9010d2c8653c}{\index{ev.\-h@{ev.\-h}!\-E\-V\-\_\-\-D\-E\-F\-A\-U\-L\-T\-\_\-\-U\-C@{\-E\-V\-\_\-\-D\-E\-F\-A\-U\-L\-T\-\_\-\-U\-C}}
+\index{\-E\-V\-\_\-\-D\-E\-F\-A\-U\-L\-T\-\_\-\-U\-C@{\-E\-V\-\_\-\-D\-E\-F\-A\-U\-L\-T\-\_\-\-U\-C}!ev.h@{ev.\-h}}
+\subsubsection[{\-E\-V\-\_\-\-D\-E\-F\-A\-U\-L\-T\-\_\-\-U\-C}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-E\-V\-\_\-\-D\-E\-F\-A\-U\-L\-T\-\_\-\-U\-C}~{\bf ev\-\_\-default\-\_\-loop\-\_\-uc\-\_\-} ()    /$\ast$ the default loop, if initialised, as sole arg $\ast$/}}\label{ev_8h_a9adf91debf265c4e9bbd9010d2c8653c}
+
+
+\-Definition at line 171 of file ev.\-h.
+
+\hypertarget{ev_8h_a7531fb3e3b5f0fe3bdc3ba4c610af924}{\index{ev.\-h@{ev.\-h}!\-E\-V\-\_\-\-D\-E\-F\-A\-U\-L\-T\-\_\-\-U\-C\-\_\-@{\-E\-V\-\_\-\-D\-E\-F\-A\-U\-L\-T\-\_\-\-U\-C\-\_\-}}
+\index{\-E\-V\-\_\-\-D\-E\-F\-A\-U\-L\-T\-\_\-\-U\-C\-\_\-@{\-E\-V\-\_\-\-D\-E\-F\-A\-U\-L\-T\-\_\-\-U\-C\-\_\-}!ev.h@{ev.\-h}}
+\subsubsection[{\-E\-V\-\_\-\-D\-E\-F\-A\-U\-L\-T\-\_\-\-U\-C\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-E\-V\-\_\-\-D\-E\-F\-A\-U\-L\-T\-\_\-\-U\-C\-\_\-}~{\bf \-E\-V\-\_\-\-D\-E\-F\-A\-U\-L\-T\-\_\-\-U\-C},            /$\ast$ the default loop as first of multiple arguments $\ast$/}}\label{ev_8h_a7531fb3e3b5f0fe3bdc3ba4c610af924}
+
+
+\-Definition at line 172 of file ev.\-h.
+
+\hypertarget{ev_8h_aad1b5a070516d5e3b06c8d293fa6de60}{\index{ev.\-h@{ev.\-h}!ev\-\_\-embed\-\_\-init@{ev\-\_\-embed\-\_\-init}}
+\index{ev\-\_\-embed\-\_\-init@{ev\-\_\-embed\-\_\-init}!ev.h@{ev.\-h}}
+\subsubsection[{ev\-\_\-embed\-\_\-init}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf ev\-\_\-embed\-\_\-init}(
+\begin{DoxyParamCaption}
+\item[{}]{ev, }
+\item[{}]{cb, }
+\item[{}]{other}
+\end{DoxyParamCaption}
+)~do \{ {\bf ev\-\_\-init} ((ev), (cb)); {\bf ev\-\_\-embed\-\_\-set} ((ev),(other)); \} while (0)}}\label{ev_8h_aad1b5a070516d5e3b06c8d293fa6de60}
+
+
+\-Definition at line 710 of file ev.\-h.
+
+\hypertarget{ev_8h_acfe12eec8b4aa2bc9dc92eef625909c5}{\index{ev.\-h@{ev.\-h}!ev\-\_\-embed\-\_\-set@{ev\-\_\-embed\-\_\-set}}
+\index{ev\-\_\-embed\-\_\-set@{ev\-\_\-embed\-\_\-set}!ev.h@{ev.\-h}}
+\subsubsection[{ev\-\_\-embed\-\_\-set}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf ev\-\_\-embed\-\_\-set}(
+\begin{DoxyParamCaption}
+\item[{}]{ev, }
+\item[{}]{other\-\_\-}
+\end{DoxyParamCaption}
+)~do \{ (ev)-\/$>$other = (other\-\_\-); \} while (0)}}\label{ev_8h_acfe12eec8b4aa2bc9dc92eef625909c5}
+
+
+\-Definition at line 696 of file ev.\-h.
+
+\hypertarget{ev_8h_a5f6b7c382d676f2005892b9036f23f49}{\index{ev.\-h@{ev.\-h}!\-E\-V\-\_\-\-F\-E\-A\-T\-U\-R\-E\-\_\-\-A\-P\-I@{\-E\-V\-\_\-\-F\-E\-A\-T\-U\-R\-E\-\_\-\-A\-P\-I}}
+\index{\-E\-V\-\_\-\-F\-E\-A\-T\-U\-R\-E\-\_\-\-A\-P\-I@{\-E\-V\-\_\-\-F\-E\-A\-T\-U\-R\-E\-\_\-\-A\-P\-I}!ev.h@{ev.\-h}}
+\subsubsection[{\-E\-V\-\_\-\-F\-E\-A\-T\-U\-R\-E\-\_\-\-A\-P\-I}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-E\-V\-\_\-\-F\-E\-A\-T\-U\-R\-E\-\_\-\-A\-P\-I}~((\-E\-V\-\_\-\-F\-E\-A\-T\-U\-R\-E\-S) \&  8)}}\label{ev_8h_a5f6b7c382d676f2005892b9036f23f49}
+
+
+\-Definition at line 71 of file ev.\-h.
+
+\hypertarget{ev_8h_ae4d289af44f03c4186ecf05ffea22832}{\index{ev.\-h@{ev.\-h}!\-E\-V\-\_\-\-F\-E\-A\-T\-U\-R\-E\-\_\-\-B\-A\-C\-K\-E\-N\-D\-S@{\-E\-V\-\_\-\-F\-E\-A\-T\-U\-R\-E\-\_\-\-B\-A\-C\-K\-E\-N\-D\-S}}
+\index{\-E\-V\-\_\-\-F\-E\-A\-T\-U\-R\-E\-\_\-\-B\-A\-C\-K\-E\-N\-D\-S@{\-E\-V\-\_\-\-F\-E\-A\-T\-U\-R\-E\-\_\-\-B\-A\-C\-K\-E\-N\-D\-S}!ev.h@{ev.\-h}}
+\subsubsection[{\-E\-V\-\_\-\-F\-E\-A\-T\-U\-R\-E\-\_\-\-B\-A\-C\-K\-E\-N\-D\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-E\-V\-\_\-\-F\-E\-A\-T\-U\-R\-E\-\_\-\-B\-A\-C\-K\-E\-N\-D\-S}~((\-E\-V\-\_\-\-F\-E\-A\-T\-U\-R\-E\-S) \& 32)}}\label{ev_8h_ae4d289af44f03c4186ecf05ffea22832}
+
+
+\-Definition at line 73 of file ev.\-h.
+
+\hypertarget{ev_8h_a0700d231d90ef577985f7c3cc3cf3e22}{\index{ev.\-h@{ev.\-h}!\-E\-V\-\_\-\-F\-E\-A\-T\-U\-R\-E\-\_\-\-C\-O\-D\-E@{\-E\-V\-\_\-\-F\-E\-A\-T\-U\-R\-E\-\_\-\-C\-O\-D\-E}}
+\index{\-E\-V\-\_\-\-F\-E\-A\-T\-U\-R\-E\-\_\-\-C\-O\-D\-E@{\-E\-V\-\_\-\-F\-E\-A\-T\-U\-R\-E\-\_\-\-C\-O\-D\-E}!ev.h@{ev.\-h}}
+\subsubsection[{\-E\-V\-\_\-\-F\-E\-A\-T\-U\-R\-E\-\_\-\-C\-O\-D\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-E\-V\-\_\-\-F\-E\-A\-T\-U\-R\-E\-\_\-\-C\-O\-D\-E}~((\-E\-V\-\_\-\-F\-E\-A\-T\-U\-R\-E\-S) \&  1)}}\label{ev_8h_a0700d231d90ef577985f7c3cc3cf3e22}
+
+
+\-Definition at line 68 of file ev.\-h.
+
+\hypertarget{ev_8h_a2848b181235e82a3bab72d3ad177812a}{\index{ev.\-h@{ev.\-h}!\-E\-V\-\_\-\-F\-E\-A\-T\-U\-R\-E\-\_\-\-C\-O\-N\-F\-I\-G@{\-E\-V\-\_\-\-F\-E\-A\-T\-U\-R\-E\-\_\-\-C\-O\-N\-F\-I\-G}}
+\index{\-E\-V\-\_\-\-F\-E\-A\-T\-U\-R\-E\-\_\-\-C\-O\-N\-F\-I\-G@{\-E\-V\-\_\-\-F\-E\-A\-T\-U\-R\-E\-\_\-\-C\-O\-N\-F\-I\-G}!ev.h@{ev.\-h}}
+\subsubsection[{\-E\-V\-\_\-\-F\-E\-A\-T\-U\-R\-E\-\_\-\-C\-O\-N\-F\-I\-G}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-E\-V\-\_\-\-F\-E\-A\-T\-U\-R\-E\-\_\-\-C\-O\-N\-F\-I\-G}~((\-E\-V\-\_\-\-F\-E\-A\-T\-U\-R\-E\-S) \&  4)}}\label{ev_8h_a2848b181235e82a3bab72d3ad177812a}
+
+
+\-Definition at line 70 of file ev.\-h.
+
+\hypertarget{ev_8h_a4110905306df98bc6b758ae0ec6bc677}{\index{ev.\-h@{ev.\-h}!\-E\-V\-\_\-\-F\-E\-A\-T\-U\-R\-E\-\_\-\-D\-A\-T\-A@{\-E\-V\-\_\-\-F\-E\-A\-T\-U\-R\-E\-\_\-\-D\-A\-T\-A}}
+\index{\-E\-V\-\_\-\-F\-E\-A\-T\-U\-R\-E\-\_\-\-D\-A\-T\-A@{\-E\-V\-\_\-\-F\-E\-A\-T\-U\-R\-E\-\_\-\-D\-A\-T\-A}!ev.h@{ev.\-h}}
+\subsubsection[{\-E\-V\-\_\-\-F\-E\-A\-T\-U\-R\-E\-\_\-\-D\-A\-T\-A}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-E\-V\-\_\-\-F\-E\-A\-T\-U\-R\-E\-\_\-\-D\-A\-T\-A}~((\-E\-V\-\_\-\-F\-E\-A\-T\-U\-R\-E\-S) \&  2)}}\label{ev_8h_a4110905306df98bc6b758ae0ec6bc677}
+
+
+\-Definition at line 69 of file ev.\-h.
+
+\hypertarget{ev_8h_aaea054009d1db29e1552f1bfad585385}{\index{ev.\-h@{ev.\-h}!\-E\-V\-\_\-\-F\-E\-A\-T\-U\-R\-E\-\_\-\-O\-S@{\-E\-V\-\_\-\-F\-E\-A\-T\-U\-R\-E\-\_\-\-O\-S}}
+\index{\-E\-V\-\_\-\-F\-E\-A\-T\-U\-R\-E\-\_\-\-O\-S@{\-E\-V\-\_\-\-F\-E\-A\-T\-U\-R\-E\-\_\-\-O\-S}!ev.h@{ev.\-h}}
+\subsubsection[{\-E\-V\-\_\-\-F\-E\-A\-T\-U\-R\-E\-\_\-\-O\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-E\-V\-\_\-\-F\-E\-A\-T\-U\-R\-E\-\_\-\-O\-S}~((\-E\-V\-\_\-\-F\-E\-A\-T\-U\-R\-E\-S) \& 64)}}\label{ev_8h_aaea054009d1db29e1552f1bfad585385}
+
+
+\-Definition at line 74 of file ev.\-h.
+
+\hypertarget{ev_8h_aa144474dba376a42cc6259fbd2401461}{\index{ev.\-h@{ev.\-h}!\-E\-V\-\_\-\-F\-E\-A\-T\-U\-R\-E\-\_\-\-W\-A\-T\-C\-H\-E\-R\-S@{\-E\-V\-\_\-\-F\-E\-A\-T\-U\-R\-E\-\_\-\-W\-A\-T\-C\-H\-E\-R\-S}}
+\index{\-E\-V\-\_\-\-F\-E\-A\-T\-U\-R\-E\-\_\-\-W\-A\-T\-C\-H\-E\-R\-S@{\-E\-V\-\_\-\-F\-E\-A\-T\-U\-R\-E\-\_\-\-W\-A\-T\-C\-H\-E\-R\-S}!ev.h@{ev.\-h}}
+\subsubsection[{\-E\-V\-\_\-\-F\-E\-A\-T\-U\-R\-E\-\_\-\-W\-A\-T\-C\-H\-E\-R\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-E\-V\-\_\-\-F\-E\-A\-T\-U\-R\-E\-\_\-\-W\-A\-T\-C\-H\-E\-R\-S}~((\-E\-V\-\_\-\-F\-E\-A\-T\-U\-R\-E\-S) \& 16)}}\label{ev_8h_aa144474dba376a42cc6259fbd2401461}
+
+
+\-Definition at line 72 of file ev.\-h.
+
+\hypertarget{ev_8h_a2a164a86cbb5e7249e1e2d634572138d}{\index{ev.\-h@{ev.\-h}!ev\-\_\-fork\-\_\-init@{ev\-\_\-fork\-\_\-init}}
+\index{ev\-\_\-fork\-\_\-init@{ev\-\_\-fork\-\_\-init}!ev.h@{ev.\-h}}
+\subsubsection[{ev\-\_\-fork\-\_\-init}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf ev\-\_\-fork\-\_\-init}(
+\begin{DoxyParamCaption}
+\item[{}]{ev, }
+\item[{}]{cb}
+\end{DoxyParamCaption}
+)~do \{ {\bf ev\-\_\-init} ((ev), (cb)); {\bf ev\-\_\-fork\-\_\-set} ((ev)); \} while (0)}}\label{ev_8h_a2a164a86cbb5e7249e1e2d634572138d}
+
+
+\-Definition at line 711 of file ev.\-h.
+
+\hypertarget{ev_8h_a3c9880a05981c93a9041255da9f5eb63}{\index{ev.\-h@{ev.\-h}!ev\-\_\-fork\-\_\-set@{ev\-\_\-fork\-\_\-set}}
+\index{ev\-\_\-fork\-\_\-set@{ev\-\_\-fork\-\_\-set}!ev.h@{ev.\-h}}
+\subsubsection[{ev\-\_\-fork\-\_\-set}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf ev\-\_\-fork\-\_\-set}(
+\begin{DoxyParamCaption}
+\item[{}]{ev}
+\end{DoxyParamCaption}
+)~/$\ast$ nop, yes, this is a serious in-\/joke $\ast$/}}\label{ev_8h_a3c9880a05981c93a9041255da9f5eb63}
+
+
+\-Definition at line 697 of file ev.\-h.
+
+\hypertarget{ev_8h_ab65d51ee3b074504f446cd7e58b7bfc9}{\index{ev.\-h@{ev.\-h}!ev\-\_\-idle\-\_\-init@{ev\-\_\-idle\-\_\-init}}
+\index{ev\-\_\-idle\-\_\-init@{ev\-\_\-idle\-\_\-init}!ev.h@{ev.\-h}}
+\subsubsection[{ev\-\_\-idle\-\_\-init}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf ev\-\_\-idle\-\_\-init}(
+\begin{DoxyParamCaption}
+\item[{}]{ev, }
+\item[{}]{cb}
+\end{DoxyParamCaption}
+)~do \{ {\bf ev\-\_\-init} ((ev), (cb)); {\bf ev\-\_\-idle\-\_\-set} ((ev)); \} while (0)}}\label{ev_8h_ab65d51ee3b074504f446cd7e58b7bfc9}
+
+
+\-Definition at line 707 of file ev.\-h.
+
+\hypertarget{ev_8h_a0a92944d00749dad567364d405ba3fc7}{\index{ev.\-h@{ev.\-h}!ev\-\_\-idle\-\_\-set@{ev\-\_\-idle\-\_\-set}}
+\index{ev\-\_\-idle\-\_\-set@{ev\-\_\-idle\-\_\-set}!ev.h@{ev.\-h}}
+\subsubsection[{ev\-\_\-idle\-\_\-set}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf ev\-\_\-idle\-\_\-set}(
+\begin{DoxyParamCaption}
+\item[{}]{ev}
+\end{DoxyParamCaption}
+)~/$\ast$ nop, yes, this is a serious in-\/joke $\ast$/}}\label{ev_8h_a0a92944d00749dad567364d405ba3fc7}
+
+
+\-Definition at line 693 of file ev.\-h.
+
+\hypertarget{ev_8h_afce00f29401e939a5fd361969a22b367}{\index{ev.\-h@{ev.\-h}!ev\-\_\-init@{ev\-\_\-init}}
+\index{ev\-\_\-init@{ev\-\_\-init}!ev.h@{ev.\-h}}
+\subsubsection[{ev\-\_\-init}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf ev\-\_\-init}(
+\begin{DoxyParamCaption}
+\item[{}]{ev, }
+\item[{}]{cb\-\_\-}
+\end{DoxyParamCaption}
+)}}\label{ev_8h_afce00f29401e939a5fd361969a22b367}
+{\bfseries \-Value\-:}
+\begin{DoxyCode}
+do {            \
+  ((ev_watcher *)(void *)(ev))->active  =   \
+  ((ev_watcher *)(void *)(ev))->pending = 0;    \
+  ev_set_priority ((ev), 0);            \
+  ev_set_cb ((ev), cb_);            \
+} while (0)
+\end{DoxyCode}
+
+
+\-Definition at line 680 of file ev.\-h.
+
+\hypertarget{ev_8h_ac5b317e52904cdfbe2332e6460ace504}{\index{ev.\-h@{ev.\-h}!\-E\-V\-\_\-\-I\-N\-L\-I\-N\-E@{\-E\-V\-\_\-\-I\-N\-L\-I\-N\-E}}
+\index{\-E\-V\-\_\-\-I\-N\-L\-I\-N\-E@{\-E\-V\-\_\-\-I\-N\-L\-I\-N\-E}!ev.h@{ev.\-h}}
+\subsubsection[{\-E\-V\-\_\-\-I\-N\-L\-I\-N\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-E\-V\-\_\-\-I\-N\-L\-I\-N\-E}~static}}\label{ev_8h_ac5b317e52904cdfbe2332e6460ace504}
+
+
+\-Definition at line 191 of file ev.\-h.
+
+\hypertarget{ev_8h_ad029e4a7a0fdfafc298a4db8b53683f1}{\index{ev.\-h@{ev.\-h}!ev\-\_\-io\-\_\-init@{ev\-\_\-io\-\_\-init}}
+\index{ev\-\_\-io\-\_\-init@{ev\-\_\-io\-\_\-init}!ev.h@{ev.\-h}}
+\subsubsection[{ev\-\_\-io\-\_\-init}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf ev\-\_\-io\-\_\-init}(
+\begin{DoxyParamCaption}
+\item[{}]{ev, }
+\item[{}]{cb, }
+\item[{}]{fd, }
+\item[{}]{events}
+\end{DoxyParamCaption}
+)~do \{ {\bf ev\-\_\-init} ((ev), (cb)); {\bf ev\-\_\-io\-\_\-set} ((ev),(fd),(events)); \} while (0)}}\label{ev_8h_ad029e4a7a0fdfafc298a4db8b53683f1}
+
+
+\-Definition at line 701 of file ev.\-h.
+
+\hypertarget{ev_8h_a3b38f73216cf66a0cbd8faffec61f1bb}{\index{ev.\-h@{ev.\-h}!ev\-\_\-io\-\_\-set@{ev\-\_\-io\-\_\-set}}
+\index{ev\-\_\-io\-\_\-set@{ev\-\_\-io\-\_\-set}!ev.h@{ev.\-h}}
+\subsubsection[{ev\-\_\-io\-\_\-set}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf ev\-\_\-io\-\_\-set}(
+\begin{DoxyParamCaption}
+\item[{}]{ev, }
+\item[{}]{fd\-\_\-, }
+\item[{}]{events\-\_\-}
+\end{DoxyParamCaption}
+)~do \{ (ev)-\/$>$fd = (fd\-\_\-); (ev)-\/$>$events = (events\-\_\-) $|$ {\bf \-E\-V\-\_\-\-\_\-\-I\-O\-F\-D\-S\-E\-T}; \} while (0)}}\label{ev_8h_a3b38f73216cf66a0cbd8faffec61f1bb}
+
+
+\-Definition at line 687 of file ev.\-h.
+
+\hypertarget{ev_8h_a00d37feaf24edc639b8399001ff691e1}{\index{ev.\-h@{ev.\-h}!ev\-\_\-is\-\_\-active@{ev\-\_\-is\-\_\-active}}
+\index{ev\-\_\-is\-\_\-active@{ev\-\_\-is\-\_\-active}!ev.h@{ev.\-h}}
+\subsubsection[{ev\-\_\-is\-\_\-active}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf ev\-\_\-is\-\_\-active}(
+\begin{DoxyParamCaption}
+\item[{}]{ev}
+\end{DoxyParamCaption}
+)~(0 + (({\bf ev\-\_\-watcher} $\ast$)(void $\ast$)(ev))-\/$>$active) /$\ast$ ro, true when the watcher has been started $\ast$/}}\label{ev_8h_a00d37feaf24edc639b8399001ff691e1}
+
+
+\-Definition at line 716 of file ev.\-h.
+
+\hypertarget{ev_8h_ae61ecda498e618f0f5305e377739ec52}{\index{ev.\-h@{ev.\-h}!ev\-\_\-is\-\_\-pending@{ev\-\_\-is\-\_\-pending}}
+\index{ev\-\_\-is\-\_\-pending@{ev\-\_\-is\-\_\-pending}!ev.h@{ev.\-h}}
+\subsubsection[{ev\-\_\-is\-\_\-pending}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf ev\-\_\-is\-\_\-pending}(
+\begin{DoxyParamCaption}
+\item[{}]{ev}
+\end{DoxyParamCaption}
+)~(0 + (({\bf ev\-\_\-watcher} $\ast$)(void $\ast$)(ev))-\/$>$pending) /$\ast$ ro, true when watcher is waiting for callback invocation $\ast$/}}\label{ev_8h_ae61ecda498e618f0f5305e377739ec52}
+
+
+\-Definition at line 715 of file ev.\-h.
+
+\hypertarget{ev_8h_a6e6c6b499d18513c01cf4bde00121617}{\index{ev.\-h@{ev.\-h}!\-E\-V\-\_\-\-P@{\-E\-V\-\_\-\-P}}
+\index{\-E\-V\-\_\-\-P@{\-E\-V\-\_\-\-P}!ev.h@{ev.\-h}}
+\subsubsection[{\-E\-V\-\_\-\-P}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-E\-V\-\_\-\-P}~struct {\bf ev\-\_\-loop} $\ast$loop               /$\ast$ a loop as sole parameter in a declaration $\ast$/}}\label{ev_8h_a6e6c6b499d18513c01cf4bde00121617}
+
+
+\-Definition at line 167 of file ev.\-h.
+
+\hypertarget{ev_8h_a8ac42969e0a499b8c1367f0ad85dbba9}{\index{ev.\-h@{ev.\-h}!\-E\-V\-\_\-\-P\-\_\-@{\-E\-V\-\_\-\-P\-\_\-}}
+\index{\-E\-V\-\_\-\-P\-\_\-@{\-E\-V\-\_\-\-P\-\_\-}!ev.h@{ev.\-h}}
+\subsubsection[{\-E\-V\-\_\-\-P\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-E\-V\-\_\-\-P\-\_\-}~{\bf \-E\-V\-\_\-\-P},                              /$\ast$ a loop as first of multiple parameters $\ast$/}}\label{ev_8h_a8ac42969e0a499b8c1367f0ad85dbba9}
+
+
+\-Definition at line 168 of file ev.\-h.
+
+\hypertarget{ev_8h_aaff6ccc8f151e78def0491d350380574}{\index{ev.\-h@{ev.\-h}!ev\-\_\-periodic\-\_\-at@{ev\-\_\-periodic\-\_\-at}}
+\index{ev\-\_\-periodic\-\_\-at@{ev\-\_\-periodic\-\_\-at}!ev.h@{ev.\-h}}
+\subsubsection[{ev\-\_\-periodic\-\_\-at}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf ev\-\_\-periodic\-\_\-at}(
+\begin{DoxyParamCaption}
+\item[{}]{ev}
+\end{DoxyParamCaption}
+)~(+(({\bf ev\-\_\-watcher\-\_\-time} $\ast$)(ev))-\/$>$at)}}\label{ev_8h_aaff6ccc8f151e78def0491d350380574}
+
+
+\-Definition at line 728 of file ev.\-h.
+
+\hypertarget{ev_8h_a78d7c9d5857dc202e0c2b032a8ca3091}{\index{ev.\-h@{ev.\-h}!ev\-\_\-periodic\-\_\-init@{ev\-\_\-periodic\-\_\-init}}
+\index{ev\-\_\-periodic\-\_\-init@{ev\-\_\-periodic\-\_\-init}!ev.h@{ev.\-h}}
+\subsubsection[{ev\-\_\-periodic\-\_\-init}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf ev\-\_\-periodic\-\_\-init}(
+\begin{DoxyParamCaption}
+\item[{}]{ev, }
+\item[{}]{cb, }
+\item[{}]{ofs, }
+\item[{}]{ival, }
+\item[{}]{rcb}
+\end{DoxyParamCaption}
+)~do \{ {\bf ev\-\_\-init} ((ev), (cb)); {\bf ev\-\_\-periodic\-\_\-set} ((ev),(ofs),(ival),(rcb)); \} while (0)}}\label{ev_8h_a78d7c9d5857dc202e0c2b032a8ca3091}
+
+
+\-Definition at line 703 of file ev.\-h.
+
+\hypertarget{ev_8h_a98113929e3ebdc9b987cc99536f784d5}{\index{ev.\-h@{ev.\-h}!ev\-\_\-periodic\-\_\-set@{ev\-\_\-periodic\-\_\-set}}
+\index{ev\-\_\-periodic\-\_\-set@{ev\-\_\-periodic\-\_\-set}!ev.h@{ev.\-h}}
+\subsubsection[{ev\-\_\-periodic\-\_\-set}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf ev\-\_\-periodic\-\_\-set}(
+\begin{DoxyParamCaption}
+\item[{}]{ev, }
+\item[{}]{ofs\-\_\-, }
+\item[{}]{ival\-\_\-, }
+\item[{}]{rcb\-\_\-}
+\end{DoxyParamCaption}
+)~do \{ (ev)-\/$>$offset = (ofs\-\_\-); (ev)-\/$>$interval = (ival\-\_\-); (ev)-\/$>$reschedule\-\_\-cb = (rcb\-\_\-); \} while (0)}}\label{ev_8h_a98113929e3ebdc9b987cc99536f784d5}
+
+
+\-Definition at line 689 of file ev.\-h.
+
+\hypertarget{ev_8h_a7f53767dd05a6c79358a7dd707d81cef}{\index{ev.\-h@{ev.\-h}!ev\-\_\-prepare\-\_\-init@{ev\-\_\-prepare\-\_\-init}}
+\index{ev\-\_\-prepare\-\_\-init@{ev\-\_\-prepare\-\_\-init}!ev.h@{ev.\-h}}
+\subsubsection[{ev\-\_\-prepare\-\_\-init}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf ev\-\_\-prepare\-\_\-init}(
+\begin{DoxyParamCaption}
+\item[{}]{ev, }
+\item[{}]{cb}
+\end{DoxyParamCaption}
+)~do \{ {\bf ev\-\_\-init} ((ev), (cb)); {\bf ev\-\_\-prepare\-\_\-set} ((ev)); \} while (0)}}\label{ev_8h_a7f53767dd05a6c79358a7dd707d81cef}
+
+
+\-Definition at line 708 of file ev.\-h.
+
+\hypertarget{ev_8h_ad6b3fb99eaef9882be66609bea9351e5}{\index{ev.\-h@{ev.\-h}!ev\-\_\-prepare\-\_\-set@{ev\-\_\-prepare\-\_\-set}}
+\index{ev\-\_\-prepare\-\_\-set@{ev\-\_\-prepare\-\_\-set}!ev.h@{ev.\-h}}
+\subsubsection[{ev\-\_\-prepare\-\_\-set}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf ev\-\_\-prepare\-\_\-set}(
+\begin{DoxyParamCaption}
+\item[{}]{ev}
+\end{DoxyParamCaption}
+)~/$\ast$ nop, yes, this is a serious in-\/joke $\ast$/}}\label{ev_8h_ad6b3fb99eaef9882be66609bea9351e5}
+
+
+\-Definition at line 694 of file ev.\-h.
+
+\hypertarget{ev_8h_a8aba222af78ca946cde63b0c41b7c3bb}{\index{ev.\-h@{ev.\-h}!ev\-\_\-priority@{ev\-\_\-priority}}
+\index{ev\-\_\-priority@{ev\-\_\-priority}!ev.h@{ev.\-h}}
+\subsubsection[{ev\-\_\-priority}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf ev\-\_\-priority}(
+\begin{DoxyParamCaption}
+\item[{}]{ev}
+\end{DoxyParamCaption}
+)~(+((({\bf ev\-\_\-watcher} $\ast$)(void $\ast$)(ev))-\/$>$priority))}}\label{ev_8h_a8aba222af78ca946cde63b0c41b7c3bb}
+
+
+\-Definition at line 724 of file ev.\-h.
+
+\hypertarget{ev_8h_af330134df02d6cedec85c3481c4967fa}{\index{ev.\-h@{ev.\-h}!ev\-\_\-set\-\_\-priority@{ev\-\_\-set\-\_\-priority}}
+\index{ev\-\_\-set\-\_\-priority@{ev\-\_\-set\-\_\-priority}!ev.h@{ev.\-h}}
+\subsubsection[{ev\-\_\-set\-\_\-priority}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf ev\-\_\-set\-\_\-priority}(
+\begin{DoxyParamCaption}
+\item[{}]{ev, }
+\item[{}]{pri}
+\end{DoxyParamCaption}
+)~(   ({\bf ev\-\_\-watcher} $\ast$)(void $\ast$)(ev))-\/$>$priority = (pri)}}\label{ev_8h_af330134df02d6cedec85c3481c4967fa}
+
+
+\-Definition at line 725 of file ev.\-h.
+
+\hypertarget{ev_8h_acbc2cda0665b2951e5535d183445d827}{\index{ev.\-h@{ev.\-h}!ev\-\_\-signal\-\_\-init@{ev\-\_\-signal\-\_\-init}}
+\index{ev\-\_\-signal\-\_\-init@{ev\-\_\-signal\-\_\-init}!ev.h@{ev.\-h}}
+\subsubsection[{ev\-\_\-signal\-\_\-init}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf ev\-\_\-signal\-\_\-init}(
+\begin{DoxyParamCaption}
+\item[{}]{ev, }
+\item[{}]{cb, }
+\item[{}]{signum}
+\end{DoxyParamCaption}
+)~do \{ {\bf ev\-\_\-init} ((ev), (cb)); {\bf ev\-\_\-signal\-\_\-set} ((ev), (signum)); \} while (0)}}\label{ev_8h_acbc2cda0665b2951e5535d183445d827}
+
+
+\-Definition at line 704 of file ev.\-h.
+
+\hypertarget{ev_8h_afa1ef10683f201267e65f49eb1a7cee8}{\index{ev.\-h@{ev.\-h}!ev\-\_\-signal\-\_\-set@{ev\-\_\-signal\-\_\-set}}
+\index{ev\-\_\-signal\-\_\-set@{ev\-\_\-signal\-\_\-set}!ev.h@{ev.\-h}}
+\subsubsection[{ev\-\_\-signal\-\_\-set}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf ev\-\_\-signal\-\_\-set}(
+\begin{DoxyParamCaption}
+\item[{}]{ev, }
+\item[{}]{signum\-\_\-}
+\end{DoxyParamCaption}
+)~do \{ (ev)-\/$>$signum = (signum\-\_\-); \} while (0)}}\label{ev_8h_afa1ef10683f201267e65f49eb1a7cee8}
+
+
+\-Definition at line 690 of file ev.\-h.
+
+\hypertarget{ev_8h_abb681c2ed0683c556febcff127438746}{\index{ev.\-h@{ev.\-h}!ev\-\_\-stat\-\_\-init@{ev\-\_\-stat\-\_\-init}}
+\index{ev\-\_\-stat\-\_\-init@{ev\-\_\-stat\-\_\-init}!ev.h@{ev.\-h}}
+\subsubsection[{ev\-\_\-stat\-\_\-init}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf ev\-\_\-stat\-\_\-init}(
+\begin{DoxyParamCaption}
+\item[{}]{ev, }
+\item[{}]{cb, }
+\item[{}]{path, }
+\item[{}]{interval}
+\end{DoxyParamCaption}
+)~do \{ {\bf ev\-\_\-init} ((ev), (cb)); {\bf ev\-\_\-stat\-\_\-set} ((ev),(path),(interval)); \} while (0)}}\label{ev_8h_abb681c2ed0683c556febcff127438746}
+
+
+\-Definition at line 706 of file ev.\-h.
+
+\hypertarget{ev_8h_a651c002839ae3cab734c683e702b4ce0}{\index{ev.\-h@{ev.\-h}!ev\-\_\-stat\-\_\-set@{ev\-\_\-stat\-\_\-set}}
+\index{ev\-\_\-stat\-\_\-set@{ev\-\_\-stat\-\_\-set}!ev.h@{ev.\-h}}
+\subsubsection[{ev\-\_\-stat\-\_\-set}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf ev\-\_\-stat\-\_\-set}(
+\begin{DoxyParamCaption}
+\item[{}]{ev, }
+\item[{}]{path\-\_\-, }
+\item[{}]{interval\-\_\-}
+\end{DoxyParamCaption}
+)~do \{ (ev)-\/$>$path = (path\-\_\-); (ev)-\/$>$interval = (interval\-\_\-); (ev)-\/$>$wd = -\/2; \} while (0)}}\label{ev_8h_a651c002839ae3cab734c683e702b4ce0}
+
+
+\-Definition at line 692 of file ev.\-h.
+
+\hypertarget{ev_8h_a473b5b606fdd3d484227542605e80bcf}{\index{ev.\-h@{ev.\-h}!\-E\-V\-\_\-\-T\-H\-R\-O\-W@{\-E\-V\-\_\-\-T\-H\-R\-O\-W}}
+\index{\-E\-V\-\_\-\-T\-H\-R\-O\-W@{\-E\-V\-\_\-\-T\-H\-R\-O\-W}!ev.h@{ev.\-h}}
+\subsubsection[{\-E\-V\-\_\-\-T\-H\-R\-O\-W}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-E\-V\-\_\-\-T\-H\-R\-O\-W}~{\bf \-E\-V\-\_\-\-C\-P\-P}(throw())}}\label{ev_8h_a473b5b606fdd3d484227542605e80bcf}
+
+
+\-Definition at line 49 of file ev.\-h.
+
+\hypertarget{ev_8h_a1eba8817493d641fc74aa193c0ffbd14}{\index{ev.\-h@{ev.\-h}!ev\-\_\-timer\-\_\-init@{ev\-\_\-timer\-\_\-init}}
+\index{ev\-\_\-timer\-\_\-init@{ev\-\_\-timer\-\_\-init}!ev.h@{ev.\-h}}
+\subsubsection[{ev\-\_\-timer\-\_\-init}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf ev\-\_\-timer\-\_\-init}(
+\begin{DoxyParamCaption}
+\item[{}]{ev, }
+\item[{}]{cb, }
+\item[{}]{after, }
+\item[{}]{repeat}
+\end{DoxyParamCaption}
+)~do \{ {\bf ev\-\_\-init} ((ev), (cb)); {\bf ev\-\_\-timer\-\_\-set} ((ev),(after),(repeat)); \} while (0)}}\label{ev_8h_a1eba8817493d641fc74aa193c0ffbd14}
+
+
+\-Definition at line 702 of file ev.\-h.
+
+\hypertarget{ev_8h_aa9dd7da938caa9b4d01ef1387203e616}{\index{ev.\-h@{ev.\-h}!ev\-\_\-timer\-\_\-set@{ev\-\_\-timer\-\_\-set}}
+\index{ev\-\_\-timer\-\_\-set@{ev\-\_\-timer\-\_\-set}!ev.h@{ev.\-h}}
+\subsubsection[{ev\-\_\-timer\-\_\-set}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf ev\-\_\-timer\-\_\-set}(
+\begin{DoxyParamCaption}
+\item[{}]{ev, }
+\item[{}]{after\-\_\-, }
+\item[{}]{repeat\-\_\-}
+\end{DoxyParamCaption}
+)~do \{ (({\bf ev\-\_\-watcher\-\_\-time} $\ast$)(ev))-\/$>$at = (after\-\_\-); (ev)-\/$>$repeat = (repeat\-\_\-); \} while (0)}}\label{ev_8h_aa9dd7da938caa9b4d01ef1387203e616}
+
+
+\-Definition at line 688 of file ev.\-h.
+
+\hypertarget{ev_8h_a1420af17e257e580fc929f9334caeebf}{\index{ev.\-h@{ev.\-h}!\-E\-V\-\_\-\-V\-E\-R\-S\-I\-O\-N\-\_\-\-M\-A\-J\-O\-R@{\-E\-V\-\_\-\-V\-E\-R\-S\-I\-O\-N\-\_\-\-M\-A\-J\-O\-R}}
+\index{\-E\-V\-\_\-\-V\-E\-R\-S\-I\-O\-N\-\_\-\-M\-A\-J\-O\-R@{\-E\-V\-\_\-\-V\-E\-R\-S\-I\-O\-N\-\_\-\-M\-A\-J\-O\-R}!ev.h@{ev.\-h}}
+\subsubsection[{\-E\-V\-\_\-\-V\-E\-R\-S\-I\-O\-N\-\_\-\-M\-A\-J\-O\-R}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-E\-V\-\_\-\-V\-E\-R\-S\-I\-O\-N\-\_\-\-M\-A\-J\-O\-R}~4}}\label{ev_8h_a1420af17e257e580fc929f9334caeebf}
+
+
+\-Definition at line 207 of file ev.\-h.
+
+\hypertarget{ev_8h_af9e05ec52a1ce71b51555fa5dcf026bd}{\index{ev.\-h@{ev.\-h}!\-E\-V\-\_\-\-V\-E\-R\-S\-I\-O\-N\-\_\-\-M\-I\-N\-O\-R@{\-E\-V\-\_\-\-V\-E\-R\-S\-I\-O\-N\-\_\-\-M\-I\-N\-O\-R}}
+\index{\-E\-V\-\_\-\-V\-E\-R\-S\-I\-O\-N\-\_\-\-M\-I\-N\-O\-R@{\-E\-V\-\_\-\-V\-E\-R\-S\-I\-O\-N\-\_\-\-M\-I\-N\-O\-R}!ev.h@{ev.\-h}}
+\subsubsection[{\-E\-V\-\_\-\-V\-E\-R\-S\-I\-O\-N\-\_\-\-M\-I\-N\-O\-R}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-E\-V\-\_\-\-V\-E\-R\-S\-I\-O\-N\-\_\-\-M\-I\-N\-O\-R}~19}}\label{ev_8h_af9e05ec52a1ce71b51555fa5dcf026bd}
+
+
+\-Definition at line 208 of file ev.\-h.
+
+\hypertarget{ev_8h_ad75c5fc9b1600de6109dfced9cbca1ac}{\index{ev.\-h@{ev.\-h}!\-E\-V\-\_\-\-W\-A\-T\-C\-H\-E\-R@{\-E\-V\-\_\-\-W\-A\-T\-C\-H\-E\-R}}
+\index{\-E\-V\-\_\-\-W\-A\-T\-C\-H\-E\-R@{\-E\-V\-\_\-\-W\-A\-T\-C\-H\-E\-R}!ev.h@{ev.\-h}}
+\subsubsection[{\-E\-V\-\_\-\-W\-A\-T\-C\-H\-E\-R}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-E\-V\-\_\-\-W\-A\-T\-C\-H\-E\-R}(
+\begin{DoxyParamCaption}
+\item[{}]{type}
+\end{DoxyParamCaption}
+)}}\label{ev_8h_ad75c5fc9b1600de6109dfced9cbca1ac}
+{\bfseries \-Value\-:}
+\begin{DoxyCode}
+int active; /* private */           \
+  int pending; /* private */            \
+  EV_DECL_PRIORITY /* private */        \
+  EV_COMMON /* rw */                \
+  EV_CB_DECLARE (type) /* private */
+\end{DoxyCode}
+
+
+\-Definition at line 276 of file ev.\-h.
+
+\hypertarget{ev_8h_a48fb83f5d9ef4bf54199680286454e14}{\index{ev.\-h@{ev.\-h}!\-E\-V\-\_\-\-W\-A\-T\-C\-H\-E\-R\-\_\-\-L\-I\-S\-T@{\-E\-V\-\_\-\-W\-A\-T\-C\-H\-E\-R\-\_\-\-L\-I\-S\-T}}
+\index{\-E\-V\-\_\-\-W\-A\-T\-C\-H\-E\-R\-\_\-\-L\-I\-S\-T@{\-E\-V\-\_\-\-W\-A\-T\-C\-H\-E\-R\-\_\-\-L\-I\-S\-T}!ev.h@{ev.\-h}}
+\subsubsection[{\-E\-V\-\_\-\-W\-A\-T\-C\-H\-E\-R\-\_\-\-L\-I\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-E\-V\-\_\-\-W\-A\-T\-C\-H\-E\-R\-\_\-\-L\-I\-S\-T}(
+\begin{DoxyParamCaption}
+\item[{}]{type}
+\end{DoxyParamCaption}
+)}}\label{ev_8h_a48fb83f5d9ef4bf54199680286454e14}
+{\bfseries \-Value\-:}
+\begin{DoxyCode}
+EV_WATCHER (type)               \
+  struct ev_watcher_list *next; /* private */
+\end{DoxyCode}
+
+
+\-Definition at line 283 of file ev.\-h.
+
+\hypertarget{ev_8h_acce22ad2bfb8b43bf4a77500fe429a1f}{\index{ev.\-h@{ev.\-h}!\-E\-V\-\_\-\-W\-A\-T\-C\-H\-E\-R\-\_\-\-T\-I\-M\-E@{\-E\-V\-\_\-\-W\-A\-T\-C\-H\-E\-R\-\_\-\-T\-I\-M\-E}}
+\index{\-E\-V\-\_\-\-W\-A\-T\-C\-H\-E\-R\-\_\-\-T\-I\-M\-E@{\-E\-V\-\_\-\-W\-A\-T\-C\-H\-E\-R\-\_\-\-T\-I\-M\-E}!ev.h@{ev.\-h}}
+\subsubsection[{\-E\-V\-\_\-\-W\-A\-T\-C\-H\-E\-R\-\_\-\-T\-I\-M\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-E\-V\-\_\-\-W\-A\-T\-C\-H\-E\-R\-\_\-\-T\-I\-M\-E}(
+\begin{DoxyParamCaption}
+\item[{}]{type}
+\end{DoxyParamCaption}
+)}}\label{ev_8h_acce22ad2bfb8b43bf4a77500fe429a1f}
+{\bfseries \-Value\-:}
+\begin{DoxyCode}
+EV_WATCHER (type)               \
+  ev_tstamp at;     /* private */
+\end{DoxyCode}
+
+
+\-Definition at line 287 of file ev.\-h.
+
+\hypertarget{ev_8h_a10b9c102337d0ece8607c9c01bc4f7c8}{\index{ev.\-h@{ev.\-h}!\-E\-V\-L\-O\-O\-P\-\_\-\-N\-O\-N\-B\-L\-O\-C\-K@{\-E\-V\-L\-O\-O\-P\-\_\-\-N\-O\-N\-B\-L\-O\-C\-K}}
+\index{\-E\-V\-L\-O\-O\-P\-\_\-\-N\-O\-N\-B\-L\-O\-C\-K@{\-E\-V\-L\-O\-O\-P\-\_\-\-N\-O\-N\-B\-L\-O\-C\-K}!ev.h@{ev.\-h}}
+\subsubsection[{\-E\-V\-L\-O\-O\-P\-\_\-\-N\-O\-N\-B\-L\-O\-C\-K}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-E\-V\-L\-O\-O\-P\-\_\-\-N\-O\-N\-B\-L\-O\-C\-K}~{\bf \-E\-V\-R\-U\-N\-\_\-\-N\-O\-W\-A\-I\-T}}}\label{ev_8h_a10b9c102337d0ece8607c9c01bc4f7c8}
+
+
+\-Definition at line 822 of file ev.\-h.
+
+\hypertarget{ev_8h_a793e265da56758aad50a34562da2ee56}{\index{ev.\-h@{ev.\-h}!\-E\-V\-L\-O\-O\-P\-\_\-\-O\-N\-E\-S\-H\-O\-T@{\-E\-V\-L\-O\-O\-P\-\_\-\-O\-N\-E\-S\-H\-O\-T}}
+\index{\-E\-V\-L\-O\-O\-P\-\_\-\-O\-N\-E\-S\-H\-O\-T@{\-E\-V\-L\-O\-O\-P\-\_\-\-O\-N\-E\-S\-H\-O\-T}!ev.h@{ev.\-h}}
+\subsubsection[{\-E\-V\-L\-O\-O\-P\-\_\-\-O\-N\-E\-S\-H\-O\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-E\-V\-L\-O\-O\-P\-\_\-\-O\-N\-E\-S\-H\-O\-T}~{\bf \-E\-V\-R\-U\-N\-\_\-\-O\-N\-C\-E}}}\label{ev_8h_a793e265da56758aad50a34562da2ee56}
+
+
+\-Definition at line 823 of file ev.\-h.
+
+\hypertarget{ev_8h_aa5c21122bf9bbc6950b24c6a8bccb68c}{\index{ev.\-h@{ev.\-h}!\-E\-V\-U\-N\-L\-O\-O\-P\-\_\-\-A\-L\-L@{\-E\-V\-U\-N\-L\-O\-O\-P\-\_\-\-A\-L\-L}}
+\index{\-E\-V\-U\-N\-L\-O\-O\-P\-\_\-\-A\-L\-L@{\-E\-V\-U\-N\-L\-O\-O\-P\-\_\-\-A\-L\-L}!ev.h@{ev.\-h}}
+\subsubsection[{\-E\-V\-U\-N\-L\-O\-O\-P\-\_\-\-A\-L\-L}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-E\-V\-U\-N\-L\-O\-O\-P\-\_\-\-A\-L\-L}~{\bf \-E\-V\-B\-R\-E\-A\-K\-\_\-\-A\-L\-L}}}\label{ev_8h_aa5c21122bf9bbc6950b24c6a8bccb68c}
+
+
+\-Definition at line 826 of file ev.\-h.
+
+\hypertarget{ev_8h_a4eaa043451f3a33b0218e2d7cf7db40d}{\index{ev.\-h@{ev.\-h}!\-E\-V\-U\-N\-L\-O\-O\-P\-\_\-\-C\-A\-N\-C\-E\-L@{\-E\-V\-U\-N\-L\-O\-O\-P\-\_\-\-C\-A\-N\-C\-E\-L}}
+\index{\-E\-V\-U\-N\-L\-O\-O\-P\-\_\-\-C\-A\-N\-C\-E\-L@{\-E\-V\-U\-N\-L\-O\-O\-P\-\_\-\-C\-A\-N\-C\-E\-L}!ev.h@{ev.\-h}}
+\subsubsection[{\-E\-V\-U\-N\-L\-O\-O\-P\-\_\-\-C\-A\-N\-C\-E\-L}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-E\-V\-U\-N\-L\-O\-O\-P\-\_\-\-C\-A\-N\-C\-E\-L}~{\bf \-E\-V\-B\-R\-E\-A\-K\-\_\-\-C\-A\-N\-C\-E\-L}}}\label{ev_8h_a4eaa043451f3a33b0218e2d7cf7db40d}
+
+
+\-Definition at line 824 of file ev.\-h.
+
+\hypertarget{ev_8h_a61fd259e234950d2db1d28b5e319f841}{\index{ev.\-h@{ev.\-h}!\-E\-V\-U\-N\-L\-O\-O\-P\-\_\-\-O\-N\-E@{\-E\-V\-U\-N\-L\-O\-O\-P\-\_\-\-O\-N\-E}}
+\index{\-E\-V\-U\-N\-L\-O\-O\-P\-\_\-\-O\-N\-E@{\-E\-V\-U\-N\-L\-O\-O\-P\-\_\-\-O\-N\-E}!ev.h@{ev.\-h}}
+\subsubsection[{\-E\-V\-U\-N\-L\-O\-O\-P\-\_\-\-O\-N\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-E\-V\-U\-N\-L\-O\-O\-P\-\_\-\-O\-N\-E}~{\bf \-E\-V\-B\-R\-E\-A\-K\-\_\-\-O\-N\-E}}}\label{ev_8h_a61fd259e234950d2db1d28b5e319f841}
+
+
+\-Definition at line 825 of file ev.\-h.
+
+
+
+\subsection{\-Typedef \-Documentation}
+\hypertarget{ev_8h_ad63509b156e81a42d83dd0bba8f397e8}{\index{ev.\-h@{ev.\-h}!ev\-\_\-async@{ev\-\_\-async}}
+\index{ev\-\_\-async@{ev\-\_\-async}!ev.h@{ev.\-h}}
+\subsubsection[{ev\-\_\-async}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf ev\-\_\-async}  {\bf ev\-\_\-async}}}\label{ev_8h_ad63509b156e81a42d83dd0bba8f397e8}
+\hypertarget{ev_8h_abc3a4ab75d0a33b8af66d0e750604f36}{\index{ev.\-h@{ev.\-h}!ev\-\_\-check@{ev\-\_\-check}}
+\index{ev\-\_\-check@{ev\-\_\-check}!ev.h@{ev.\-h}}
+\subsubsection[{ev\-\_\-check}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf ev\-\_\-check}  {\bf ev\-\_\-check}}}\label{ev_8h_abc3a4ab75d0a33b8af66d0e750604f36}
+\hypertarget{ev_8h_a37646363840dd094d5bb737f6c4361cc}{\index{ev.\-h@{ev.\-h}!ev\-\_\-child@{ev\-\_\-child}}
+\index{ev\-\_\-child@{ev\-\_\-child}!ev.h@{ev.\-h}}
+\subsubsection[{ev\-\_\-child}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf ev\-\_\-child}  {\bf ev\-\_\-child}}}\label{ev_8h_a37646363840dd094d5bb737f6c4361cc}
+\hypertarget{ev_8h_a4866f225b2fb654501ae36637822ce48}{\index{ev.\-h@{ev.\-h}!ev\-\_\-cleanup@{ev\-\_\-cleanup}}
+\index{ev\-\_\-cleanup@{ev\-\_\-cleanup}!ev.h@{ev.\-h}}
+\subsubsection[{ev\-\_\-cleanup}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf ev\-\_\-cleanup}  {\bf ev\-\_\-cleanup}}}\label{ev_8h_a4866f225b2fb654501ae36637822ce48}
+\hypertarget{ev_8h_a9cfb18de4da72f22581bfa2ddbb96395}{\index{ev.\-h@{ev.\-h}!ev\-\_\-embed@{ev\-\_\-embed}}
+\index{ev\-\_\-embed@{ev\-\_\-embed}!ev.h@{ev.\-h}}
+\subsubsection[{ev\-\_\-embed}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf ev\-\_\-embed}  {\bf ev\-\_\-embed}}}\label{ev_8h_a9cfb18de4da72f22581bfa2ddbb96395}
+\hypertarget{ev_8h_a34e50beb3fb56c17e1bf4ad5ce8bd1f6}{\index{ev.\-h@{ev.\-h}!ev\-\_\-fork@{ev\-\_\-fork}}
+\index{ev\-\_\-fork@{ev\-\_\-fork}!ev.h@{ev.\-h}}
+\subsubsection[{ev\-\_\-fork}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf ev\-\_\-fork}  {\bf ev\-\_\-fork}}}\label{ev_8h_a34e50beb3fb56c17e1bf4ad5ce8bd1f6}
+\hypertarget{ev_8h_a8ef20a44467d34d7aaf0258c4cea478e}{\index{ev.\-h@{ev.\-h}!ev\-\_\-idle@{ev\-\_\-idle}}
+\index{ev\-\_\-idle@{ev\-\_\-idle}!ev.h@{ev.\-h}}
+\subsubsection[{ev\-\_\-idle}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf ev\-\_\-idle}  {\bf ev\-\_\-idle}}}\label{ev_8h_a8ef20a44467d34d7aaf0258c4cea478e}
+\hypertarget{ev_8h_a91fd48f4e9368c122235b3530c525aac}{\index{ev.\-h@{ev.\-h}!ev\-\_\-io@{ev\-\_\-io}}
+\index{ev\-\_\-io@{ev\-\_\-io}!ev.h@{ev.\-h}}
+\subsubsection[{ev\-\_\-io}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf ev\-\_\-io}  {\bf ev\-\_\-io}}}\label{ev_8h_a91fd48f4e9368c122235b3530c525aac}
+\hypertarget{ev_8h_ac89d96d28c5acaff89a5e973cb8e3087}{\index{ev.\-h@{ev.\-h}!ev\-\_\-loop\-\_\-callback@{ev\-\_\-loop\-\_\-callback}}
+\index{ev\-\_\-loop\-\_\-callback@{ev\-\_\-loop\-\_\-callback}!ev.h@{ev.\-h}}
+\subsubsection[{ev\-\_\-loop\-\_\-callback}]{\setlength{\rightskip}{0pt plus 5cm}typedef void($\ast$ {\bf ev\-\_\-loop\-\_\-callback})({\bf \-E\-V\-\_\-\-P})}}\label{ev_8h_ac89d96d28c5acaff89a5e973cb8e3087}
+
+
+\-Definition at line 661 of file ev.\-h.
+
+\hypertarget{ev_8h_a18edacf68959ce969d3919660e13c4a5}{\index{ev.\-h@{ev.\-h}!ev\-\_\-periodic@{ev\-\_\-periodic}}
+\index{ev\-\_\-periodic@{ev\-\_\-periodic}!ev.h@{ev.\-h}}
+\subsubsection[{ev\-\_\-periodic}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf ev\-\_\-periodic}  {\bf ev\-\_\-periodic}}}\label{ev_8h_a18edacf68959ce969d3919660e13c4a5}
+\hypertarget{ev_8h_ab441c085d15f37fa8dd3678e6ef29ef1}{\index{ev.\-h@{ev.\-h}!ev\-\_\-prepare@{ev\-\_\-prepare}}
+\index{ev\-\_\-prepare@{ev\-\_\-prepare}!ev.h@{ev.\-h}}
+\subsubsection[{ev\-\_\-prepare}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf ev\-\_\-prepare}  {\bf ev\-\_\-prepare}}}\label{ev_8h_ab441c085d15f37fa8dd3678e6ef29ef1}
+\hypertarget{ev_8h_a9b17f14bae54bdc26fc98019e4313364}{\index{ev.\-h@{ev.\-h}!ev\-\_\-signal@{ev\-\_\-signal}}
+\index{ev\-\_\-signal@{ev\-\_\-signal}!ev.h@{ev.\-h}}
+\subsubsection[{ev\-\_\-signal}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf ev\-\_\-signal}  {\bf ev\-\_\-signal}}}\label{ev_8h_a9b17f14bae54bdc26fc98019e4313364}
+\hypertarget{ev_8h_a2517f66cb03dc98ed3dc4abde8c660f8}{\index{ev.\-h@{ev.\-h}!ev\-\_\-stat@{ev\-\_\-stat}}
+\index{ev\-\_\-stat@{ev\-\_\-stat}!ev.h@{ev.\-h}}
+\subsubsection[{ev\-\_\-stat}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf ev\-\_\-stat}  {\bf ev\-\_\-stat}}}\label{ev_8h_a2517f66cb03dc98ed3dc4abde8c660f8}
+\hypertarget{ev_8h_af7665657cb718a911fd591bc0613db83}{\index{ev.\-h@{ev.\-h}!ev\-\_\-statdata@{ev\-\_\-statdata}}
+\index{ev\-\_\-statdata@{ev\-\_\-statdata}!ev.h@{ev.\-h}}
+\subsubsection[{ev\-\_\-statdata}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct stat {\bf ev\-\_\-statdata}}}\label{ev_8h_af7665657cb718a911fd591bc0613db83}
+
+
+\-Definition at line 366 of file ev.\-h.
+
+\hypertarget{ev_8h_a413902256d85441a7cae68be83f05f1e}{\index{ev.\-h@{ev.\-h}!ev\-\_\-timer@{ev\-\_\-timer}}
+\index{ev\-\_\-timer@{ev\-\_\-timer}!ev.h@{ev.\-h}}
+\subsubsection[{ev\-\_\-timer}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf ev\-\_\-timer}  {\bf ev\-\_\-timer}}}\label{ev_8h_a413902256d85441a7cae68be83f05f1e}
+\hypertarget{ev_8h_add71e34ce2b04bbf7eb6f31a850814e8}{\index{ev.\-h@{ev.\-h}!ev\-\_\-tstamp@{ev\-\_\-tstamp}}
+\index{ev\-\_\-tstamp@{ev\-\_\-tstamp}!ev.h@{ev.\-h}}
+\subsubsection[{ev\-\_\-tstamp}]{\setlength{\rightskip}{0pt plus 5cm}typedef double {\bf ev\-\_\-tstamp}}}\label{ev_8h_add71e34ce2b04bbf7eb6f31a850814e8}
+
+
+\-Definition at line 149 of file ev.\-h.
+
+\hypertarget{ev_8h_a01b286ddf47faf1dc10ffe3261e9b937}{\index{ev.\-h@{ev.\-h}!ev\-\_\-watcher@{ev\-\_\-watcher}}
+\index{ev\-\_\-watcher@{ev\-\_\-watcher}!ev.h@{ev.\-h}}
+\subsubsection[{ev\-\_\-watcher}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf ev\-\_\-watcher}  {\bf ev\-\_\-watcher}}}\label{ev_8h_a01b286ddf47faf1dc10ffe3261e9b937}
+\hypertarget{ev_8h_abc06a38d6eb4abb0e6acedefb66fe214}{\index{ev.\-h@{ev.\-h}!ev\-\_\-watcher\-\_\-list@{ev\-\_\-watcher\-\_\-list}}
+\index{ev\-\_\-watcher\-\_\-list@{ev\-\_\-watcher\-\_\-list}!ev.h@{ev.\-h}}
+\subsubsection[{ev\-\_\-watcher\-\_\-list}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf ev\-\_\-watcher\-\_\-list}  {\bf ev\-\_\-watcher\-\_\-list}}}\label{ev_8h_abc06a38d6eb4abb0e6acedefb66fe214}
+\hypertarget{ev_8h_a98a87d95ebc9a45467754f7ee1273e0e}{\index{ev.\-h@{ev.\-h}!ev\-\_\-watcher\-\_\-time@{ev\-\_\-watcher\-\_\-time}}
+\index{ev\-\_\-watcher\-\_\-time@{ev\-\_\-watcher\-\_\-time}!ev.h@{ev.\-h}}
+\subsubsection[{ev\-\_\-watcher\-\_\-time}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf ev\-\_\-watcher\-\_\-time}  {\bf ev\-\_\-watcher\-\_\-time}}}\label{ev_8h_a98a87d95ebc9a45467754f7ee1273e0e}
+
+
+\subsection{\-Enumeration \-Type \-Documentation}
+\hypertarget{ev_8h_abc6126af1d45847bc59afa0aa3216b04}{\subsubsection[{anonymous enum}]{\setlength{\rightskip}{0pt plus 5cm}anonymous enum}}\label{ev_8h_abc6126af1d45847bc59afa0aa3216b04}
+\begin{Desc}
+\item[\-Enumerator\-: ]\par
+\begin{description}
+\index{\-E\-V\-\_\-\-U\-N\-D\-E\-F@{\-E\-V\-\_\-\-U\-N\-D\-E\-F}!ev.\-h@{ev.\-h}}\index{ev.\-h@{ev.\-h}!\-E\-V\-\_\-\-U\-N\-D\-E\-F@{\-E\-V\-\_\-\-U\-N\-D\-E\-F}}\item[{\em 
+\hypertarget{ev_8h_abc6126af1d45847bc59afa0aa3216b04ad1171dcfff57cf1425e53bd38d69999d}{\-E\-V\-\_\-\-U\-N\-D\-E\-F}\label{ev_8h_abc6126af1d45847bc59afa0aa3216b04ad1171dcfff57cf1425e53bd38d69999d}
+}]\index{\-E\-V\-\_\-\-N\-O\-N\-E@{\-E\-V\-\_\-\-N\-O\-N\-E}!ev.\-h@{ev.\-h}}\index{ev.\-h@{ev.\-h}!\-E\-V\-\_\-\-N\-O\-N\-E@{\-E\-V\-\_\-\-N\-O\-N\-E}}\item[{\em 
+\hypertarget{ev_8h_abc6126af1d45847bc59afa0aa3216b04aed55dd6c8ee040c948acb2c7cfad9b5e}{\-E\-V\-\_\-\-N\-O\-N\-E}\label{ev_8h_abc6126af1d45847bc59afa0aa3216b04aed55dd6c8ee040c948acb2c7cfad9b5e}
+}]\index{\-E\-V\-\_\-\-R\-E\-A\-D@{\-E\-V\-\_\-\-R\-E\-A\-D}!ev.\-h@{ev.\-h}}\index{ev.\-h@{ev.\-h}!\-E\-V\-\_\-\-R\-E\-A\-D@{\-E\-V\-\_\-\-R\-E\-A\-D}}\item[{\em 
+\hypertarget{ev_8h_abc6126af1d45847bc59afa0aa3216b04a16263f50341e34fb1beb08ec01d41d84}{\-E\-V\-\_\-\-R\-E\-A\-D}\label{ev_8h_abc6126af1d45847bc59afa0aa3216b04a16263f50341e34fb1beb08ec01d41d84}
+}]\index{\-E\-V\-\_\-\-W\-R\-I\-T\-E@{\-E\-V\-\_\-\-W\-R\-I\-T\-E}!ev.\-h@{ev.\-h}}\index{ev.\-h@{ev.\-h}!\-E\-V\-\_\-\-W\-R\-I\-T\-E@{\-E\-V\-\_\-\-W\-R\-I\-T\-E}}\item[{\em 
+\hypertarget{ev_8h_abc6126af1d45847bc59afa0aa3216b04ab7bc8ec04ddc725eeaa6251ade9cb7fa}{\-E\-V\-\_\-\-W\-R\-I\-T\-E}\label{ev_8h_abc6126af1d45847bc59afa0aa3216b04ab7bc8ec04ddc725eeaa6251ade9cb7fa}
+}]\index{\-E\-V\-\_\-\-\_\-\-I\-O\-F\-D\-S\-E\-T@{\-E\-V\-\_\-\-\_\-\-I\-O\-F\-D\-S\-E\-T}!ev.\-h@{ev.\-h}}\index{ev.\-h@{ev.\-h}!\-E\-V\-\_\-\-\_\-\-I\-O\-F\-D\-S\-E\-T@{\-E\-V\-\_\-\-\_\-\-I\-O\-F\-D\-S\-E\-T}}\item[{\em 
+\hypertarget{ev_8h_abc6126af1d45847bc59afa0aa3216b04a68c22e838de9f43f108efa01b0034443}{\-E\-V\-\_\-\-\_\-\-I\-O\-F\-D\-S\-E\-T}\label{ev_8h_abc6126af1d45847bc59afa0aa3216b04a68c22e838de9f43f108efa01b0034443}
+}]\index{\-E\-V\-\_\-\-I\-O@{\-E\-V\-\_\-\-I\-O}!ev.\-h@{ev.\-h}}\index{ev.\-h@{ev.\-h}!\-E\-V\-\_\-\-I\-O@{\-E\-V\-\_\-\-I\-O}}\item[{\em 
+\hypertarget{ev_8h_abc6126af1d45847bc59afa0aa3216b04afbf2b617a6e230f4e4b312f20e400d5b}{\-E\-V\-\_\-\-I\-O}\label{ev_8h_abc6126af1d45847bc59afa0aa3216b04afbf2b617a6e230f4e4b312f20e400d5b}
+}]\index{\-E\-V\-\_\-\-T\-I\-M\-E\-R@{\-E\-V\-\_\-\-T\-I\-M\-E\-R}!ev.\-h@{ev.\-h}}\index{ev.\-h@{ev.\-h}!\-E\-V\-\_\-\-T\-I\-M\-E\-R@{\-E\-V\-\_\-\-T\-I\-M\-E\-R}}\item[{\em 
+\hypertarget{ev_8h_abc6126af1d45847bc59afa0aa3216b04aa739ea483262fc0a00558019b3070ddf}{\-E\-V\-\_\-\-T\-I\-M\-E\-R}\label{ev_8h_abc6126af1d45847bc59afa0aa3216b04aa739ea483262fc0a00558019b3070ddf}
+}]\index{\-E\-V\-\_\-\-T\-I\-M\-E\-O\-U\-T@{\-E\-V\-\_\-\-T\-I\-M\-E\-O\-U\-T}!ev.\-h@{ev.\-h}}\index{ev.\-h@{ev.\-h}!\-E\-V\-\_\-\-T\-I\-M\-E\-O\-U\-T@{\-E\-V\-\_\-\-T\-I\-M\-E\-O\-U\-T}}\item[{\em 
+\hypertarget{ev_8h_abc6126af1d45847bc59afa0aa3216b04a9b445cfad2fb0cd03aa69105e79c0e8a}{\-E\-V\-\_\-\-T\-I\-M\-E\-O\-U\-T}\label{ev_8h_abc6126af1d45847bc59afa0aa3216b04a9b445cfad2fb0cd03aa69105e79c0e8a}
+}]\index{\-E\-V\-\_\-\-P\-E\-R\-I\-O\-D\-I\-C@{\-E\-V\-\_\-\-P\-E\-R\-I\-O\-D\-I\-C}!ev.\-h@{ev.\-h}}\index{ev.\-h@{ev.\-h}!\-E\-V\-\_\-\-P\-E\-R\-I\-O\-D\-I\-C@{\-E\-V\-\_\-\-P\-E\-R\-I\-O\-D\-I\-C}}\item[{\em 
+\hypertarget{ev_8h_abc6126af1d45847bc59afa0aa3216b04aac30252c1747fc7cac95e890b4f5faca}{\-E\-V\-\_\-\-P\-E\-R\-I\-O\-D\-I\-C}\label{ev_8h_abc6126af1d45847bc59afa0aa3216b04aac30252c1747fc7cac95e890b4f5faca}
+}]\index{\-E\-V\-\_\-\-S\-I\-G\-N\-A\-L@{\-E\-V\-\_\-\-S\-I\-G\-N\-A\-L}!ev.\-h@{ev.\-h}}\index{ev.\-h@{ev.\-h}!\-E\-V\-\_\-\-S\-I\-G\-N\-A\-L@{\-E\-V\-\_\-\-S\-I\-G\-N\-A\-L}}\item[{\em 
+\hypertarget{ev_8h_abc6126af1d45847bc59afa0aa3216b04a5591733bb6dd2baeb9a308dcbae83669}{\-E\-V\-\_\-\-S\-I\-G\-N\-A\-L}\label{ev_8h_abc6126af1d45847bc59afa0aa3216b04a5591733bb6dd2baeb9a308dcbae83669}
+}]\index{\-E\-V\-\_\-\-C\-H\-I\-L\-D@{\-E\-V\-\_\-\-C\-H\-I\-L\-D}!ev.\-h@{ev.\-h}}\index{ev.\-h@{ev.\-h}!\-E\-V\-\_\-\-C\-H\-I\-L\-D@{\-E\-V\-\_\-\-C\-H\-I\-L\-D}}\item[{\em 
+\hypertarget{ev_8h_abc6126af1d45847bc59afa0aa3216b04a7f134ef3af785804ed9539430cbdf751}{\-E\-V\-\_\-\-C\-H\-I\-L\-D}\label{ev_8h_abc6126af1d45847bc59afa0aa3216b04a7f134ef3af785804ed9539430cbdf751}
+}]\index{\-E\-V\-\_\-\-S\-T\-A\-T@{\-E\-V\-\_\-\-S\-T\-A\-T}!ev.\-h@{ev.\-h}}\index{ev.\-h@{ev.\-h}!\-E\-V\-\_\-\-S\-T\-A\-T@{\-E\-V\-\_\-\-S\-T\-A\-T}}\item[{\em 
+\hypertarget{ev_8h_abc6126af1d45847bc59afa0aa3216b04a7b7ee965ca86c3403c71eceb80a8c2f5}{\-E\-V\-\_\-\-S\-T\-A\-T}\label{ev_8h_abc6126af1d45847bc59afa0aa3216b04a7b7ee965ca86c3403c71eceb80a8c2f5}
+}]\index{\-E\-V\-\_\-\-I\-D\-L\-E@{\-E\-V\-\_\-\-I\-D\-L\-E}!ev.\-h@{ev.\-h}}\index{ev.\-h@{ev.\-h}!\-E\-V\-\_\-\-I\-D\-L\-E@{\-E\-V\-\_\-\-I\-D\-L\-E}}\item[{\em 
+\hypertarget{ev_8h_abc6126af1d45847bc59afa0aa3216b04a7189bc403262499e97971c4b5fd47b3f}{\-E\-V\-\_\-\-I\-D\-L\-E}\label{ev_8h_abc6126af1d45847bc59afa0aa3216b04a7189bc403262499e97971c4b5fd47b3f}
+}]\index{\-E\-V\-\_\-\-P\-R\-E\-P\-A\-R\-E@{\-E\-V\-\_\-\-P\-R\-E\-P\-A\-R\-E}!ev.\-h@{ev.\-h}}\index{ev.\-h@{ev.\-h}!\-E\-V\-\_\-\-P\-R\-E\-P\-A\-R\-E@{\-E\-V\-\_\-\-P\-R\-E\-P\-A\-R\-E}}\item[{\em 
+\hypertarget{ev_8h_abc6126af1d45847bc59afa0aa3216b04a1cc878a2c8b99db2ce8ab2e54ea7607e}{\-E\-V\-\_\-\-P\-R\-E\-P\-A\-R\-E}\label{ev_8h_abc6126af1d45847bc59afa0aa3216b04a1cc878a2c8b99db2ce8ab2e54ea7607e}
+}]\index{\-E\-V\-\_\-\-C\-H\-E\-C\-K@{\-E\-V\-\_\-\-C\-H\-E\-C\-K}!ev.\-h@{ev.\-h}}\index{ev.\-h@{ev.\-h}!\-E\-V\-\_\-\-C\-H\-E\-C\-K@{\-E\-V\-\_\-\-C\-H\-E\-C\-K}}\item[{\em 
+\hypertarget{ev_8h_abc6126af1d45847bc59afa0aa3216b04a63c97e6118e58eac97001417bed8e671}{\-E\-V\-\_\-\-C\-H\-E\-C\-K}\label{ev_8h_abc6126af1d45847bc59afa0aa3216b04a63c97e6118e58eac97001417bed8e671}
+}]\index{\-E\-V\-\_\-\-E\-M\-B\-E\-D@{\-E\-V\-\_\-\-E\-M\-B\-E\-D}!ev.\-h@{ev.\-h}}\index{ev.\-h@{ev.\-h}!\-E\-V\-\_\-\-E\-M\-B\-E\-D@{\-E\-V\-\_\-\-E\-M\-B\-E\-D}}\item[{\em 
+\hypertarget{ev_8h_abc6126af1d45847bc59afa0aa3216b04a9d27b29cb6b0e656214e4f9e8854155b}{\-E\-V\-\_\-\-E\-M\-B\-E\-D}\label{ev_8h_abc6126af1d45847bc59afa0aa3216b04a9d27b29cb6b0e656214e4f9e8854155b}
+}]\index{\-E\-V\-\_\-\-F\-O\-R\-K@{\-E\-V\-\_\-\-F\-O\-R\-K}!ev.\-h@{ev.\-h}}\index{ev.\-h@{ev.\-h}!\-E\-V\-\_\-\-F\-O\-R\-K@{\-E\-V\-\_\-\-F\-O\-R\-K}}\item[{\em 
+\hypertarget{ev_8h_abc6126af1d45847bc59afa0aa3216b04a1377899c2fa20ec6f6d69bcceb72e2d4}{\-E\-V\-\_\-\-F\-O\-R\-K}\label{ev_8h_abc6126af1d45847bc59afa0aa3216b04a1377899c2fa20ec6f6d69bcceb72e2d4}
+}]\index{\-E\-V\-\_\-\-C\-L\-E\-A\-N\-U\-P@{\-E\-V\-\_\-\-C\-L\-E\-A\-N\-U\-P}!ev.\-h@{ev.\-h}}\index{ev.\-h@{ev.\-h}!\-E\-V\-\_\-\-C\-L\-E\-A\-N\-U\-P@{\-E\-V\-\_\-\-C\-L\-E\-A\-N\-U\-P}}\item[{\em 
+\hypertarget{ev_8h_abc6126af1d45847bc59afa0aa3216b04a697706744241b2ccf6b7ec90d9d0f2f9}{\-E\-V\-\_\-\-C\-L\-E\-A\-N\-U\-P}\label{ev_8h_abc6126af1d45847bc59afa0aa3216b04a697706744241b2ccf6b7ec90d9d0f2f9}
+}]\index{\-E\-V\-\_\-\-A\-S\-Y\-N\-C@{\-E\-V\-\_\-\-A\-S\-Y\-N\-C}!ev.\-h@{ev.\-h}}\index{ev.\-h@{ev.\-h}!\-E\-V\-\_\-\-A\-S\-Y\-N\-C@{\-E\-V\-\_\-\-A\-S\-Y\-N\-C}}\item[{\em 
+\hypertarget{ev_8h_abc6126af1d45847bc59afa0aa3216b04aade4a90fd3e753ad9542d126798022f2}{\-E\-V\-\_\-\-A\-S\-Y\-N\-C}\label{ev_8h_abc6126af1d45847bc59afa0aa3216b04aade4a90fd3e753ad9542d126798022f2}
+}]\index{\-E\-V\-\_\-\-C\-U\-S\-T\-O\-M@{\-E\-V\-\_\-\-C\-U\-S\-T\-O\-M}!ev.\-h@{ev.\-h}}\index{ev.\-h@{ev.\-h}!\-E\-V\-\_\-\-C\-U\-S\-T\-O\-M@{\-E\-V\-\_\-\-C\-U\-S\-T\-O\-M}}\item[{\em 
+\hypertarget{ev_8h_abc6126af1d45847bc59afa0aa3216b04ad09a3e427026b6fe463796c5cb038573}{\-E\-V\-\_\-\-C\-U\-S\-T\-O\-M}\label{ev_8h_abc6126af1d45847bc59afa0aa3216b04ad09a3e427026b6fe463796c5cb038573}
+}]\index{\-E\-V\-\_\-\-E\-R\-R\-O\-R@{\-E\-V\-\_\-\-E\-R\-R\-O\-R}!ev.\-h@{ev.\-h}}\index{ev.\-h@{ev.\-h}!\-E\-V\-\_\-\-E\-R\-R\-O\-R@{\-E\-V\-\_\-\-E\-R\-R\-O\-R}}\item[{\em 
+\hypertarget{ev_8h_abc6126af1d45847bc59afa0aa3216b04ae4cf1f27fd4b75d24098e931f2e93bd9}{\-E\-V\-\_\-\-E\-R\-R\-O\-R}\label{ev_8h_abc6126af1d45847bc59afa0aa3216b04ae4cf1f27fd4b75d24098e931f2e93bd9}
+}]\end{description}
+\end{Desc}
+
+
+
+\-Definition at line 211 of file ev.\-h.
+
+\hypertarget{ev_8h_adc29c2ff13d900c2f185ee95427fb06c}{\subsubsection[{anonymous enum}]{\setlength{\rightskip}{0pt plus 5cm}anonymous enum}}\label{ev_8h_adc29c2ff13d900c2f185ee95427fb06c}
+\begin{Desc}
+\item[\-Enumerator\-: ]\par
+\begin{description}
+\index{\-E\-V\-F\-L\-A\-G\-\_\-\-A\-U\-T\-O@{\-E\-V\-F\-L\-A\-G\-\_\-\-A\-U\-T\-O}!ev.\-h@{ev.\-h}}\index{ev.\-h@{ev.\-h}!\-E\-V\-F\-L\-A\-G\-\_\-\-A\-U\-T\-O@{\-E\-V\-F\-L\-A\-G\-\_\-\-A\-U\-T\-O}}\item[{\em 
+\hypertarget{ev_8h_adc29c2ff13d900c2f185ee95427fb06caecc851bf761b8c7fd772b7b69dca4ab4}{\-E\-V\-F\-L\-A\-G\-\_\-\-A\-U\-T\-O}\label{ev_8h_adc29c2ff13d900c2f185ee95427fb06caecc851bf761b8c7fd772b7b69dca4ab4}
+}]\index{\-E\-V\-F\-L\-A\-G\-\_\-\-N\-O\-E\-N\-V@{\-E\-V\-F\-L\-A\-G\-\_\-\-N\-O\-E\-N\-V}!ev.\-h@{ev.\-h}}\index{ev.\-h@{ev.\-h}!\-E\-V\-F\-L\-A\-G\-\_\-\-N\-O\-E\-N\-V@{\-E\-V\-F\-L\-A\-G\-\_\-\-N\-O\-E\-N\-V}}\item[{\em 
+\hypertarget{ev_8h_adc29c2ff13d900c2f185ee95427fb06caa9609b04005897921117f0a37a11eb70}{\-E\-V\-F\-L\-A\-G\-\_\-\-N\-O\-E\-N\-V}\label{ev_8h_adc29c2ff13d900c2f185ee95427fb06caa9609b04005897921117f0a37a11eb70}
+}]\index{\-E\-V\-F\-L\-A\-G\-\_\-\-F\-O\-R\-K\-C\-H\-E\-C\-K@{\-E\-V\-F\-L\-A\-G\-\_\-\-F\-O\-R\-K\-C\-H\-E\-C\-K}!ev.\-h@{ev.\-h}}\index{ev.\-h@{ev.\-h}!\-E\-V\-F\-L\-A\-G\-\_\-\-F\-O\-R\-K\-C\-H\-E\-C\-K@{\-E\-V\-F\-L\-A\-G\-\_\-\-F\-O\-R\-K\-C\-H\-E\-C\-K}}\item[{\em 
+\hypertarget{ev_8h_adc29c2ff13d900c2f185ee95427fb06ca78e94655d79812c42eb49450a834f0ef}{\-E\-V\-F\-L\-A\-G\-\_\-\-F\-O\-R\-K\-C\-H\-E\-C\-K}\label{ev_8h_adc29c2ff13d900c2f185ee95427fb06ca78e94655d79812c42eb49450a834f0ef}
+}]\index{\-E\-V\-F\-L\-A\-G\-\_\-\-N\-O\-I\-N\-O\-T\-I\-F\-Y@{\-E\-V\-F\-L\-A\-G\-\_\-\-N\-O\-I\-N\-O\-T\-I\-F\-Y}!ev.\-h@{ev.\-h}}\index{ev.\-h@{ev.\-h}!\-E\-V\-F\-L\-A\-G\-\_\-\-N\-O\-I\-N\-O\-T\-I\-F\-Y@{\-E\-V\-F\-L\-A\-G\-\_\-\-N\-O\-I\-N\-O\-T\-I\-F\-Y}}\item[{\em 
+\hypertarget{ev_8h_adc29c2ff13d900c2f185ee95427fb06ca166f714b5d20f3d98b27f6b4f9ef6737}{\-E\-V\-F\-L\-A\-G\-\_\-\-N\-O\-I\-N\-O\-T\-I\-F\-Y}\label{ev_8h_adc29c2ff13d900c2f185ee95427fb06ca166f714b5d20f3d98b27f6b4f9ef6737}
+}]\index{\-E\-V\-F\-L\-A\-G\-\_\-\-N\-O\-S\-I\-G\-F\-D@{\-E\-V\-F\-L\-A\-G\-\_\-\-N\-O\-S\-I\-G\-F\-D}!ev.\-h@{ev.\-h}}\index{ev.\-h@{ev.\-h}!\-E\-V\-F\-L\-A\-G\-\_\-\-N\-O\-S\-I\-G\-F\-D@{\-E\-V\-F\-L\-A\-G\-\_\-\-N\-O\-S\-I\-G\-F\-D}}\item[{\em 
+\hypertarget{ev_8h_adc29c2ff13d900c2f185ee95427fb06cac311e9fc99cac8c9565dc4cb785492f3}{\-E\-V\-F\-L\-A\-G\-\_\-\-N\-O\-S\-I\-G\-F\-D}\label{ev_8h_adc29c2ff13d900c2f185ee95427fb06cac311e9fc99cac8c9565dc4cb785492f3}
+}]\index{\-E\-V\-F\-L\-A\-G\-\_\-\-S\-I\-G\-N\-A\-L\-F\-D@{\-E\-V\-F\-L\-A\-G\-\_\-\-S\-I\-G\-N\-A\-L\-F\-D}!ev.\-h@{ev.\-h}}\index{ev.\-h@{ev.\-h}!\-E\-V\-F\-L\-A\-G\-\_\-\-S\-I\-G\-N\-A\-L\-F\-D@{\-E\-V\-F\-L\-A\-G\-\_\-\-S\-I\-G\-N\-A\-L\-F\-D}}\item[{\em 
+\hypertarget{ev_8h_adc29c2ff13d900c2f185ee95427fb06ca5fabb14ec8b4d85517441d7d438dc383}{\-E\-V\-F\-L\-A\-G\-\_\-\-S\-I\-G\-N\-A\-L\-F\-D}\label{ev_8h_adc29c2ff13d900c2f185ee95427fb06ca5fabb14ec8b4d85517441d7d438dc383}
+}]\index{\-E\-V\-F\-L\-A\-G\-\_\-\-N\-O\-S\-I\-G\-M\-A\-S\-K@{\-E\-V\-F\-L\-A\-G\-\_\-\-N\-O\-S\-I\-G\-M\-A\-S\-K}!ev.\-h@{ev.\-h}}\index{ev.\-h@{ev.\-h}!\-E\-V\-F\-L\-A\-G\-\_\-\-N\-O\-S\-I\-G\-M\-A\-S\-K@{\-E\-V\-F\-L\-A\-G\-\_\-\-N\-O\-S\-I\-G\-M\-A\-S\-K}}\item[{\em 
+\hypertarget{ev_8h_adc29c2ff13d900c2f185ee95427fb06ca4ea9a4fbe56c08cf4fb9ec999aa1b107}{\-E\-V\-F\-L\-A\-G\-\_\-\-N\-O\-S\-I\-G\-M\-A\-S\-K}\label{ev_8h_adc29c2ff13d900c2f185ee95427fb06ca4ea9a4fbe56c08cf4fb9ec999aa1b107}
+}]\end{description}
+\end{Desc}
+
+
+
+\-Definition at line 495 of file ev.\-h.
+
+\hypertarget{ev_8h_a61dadd085c1777f559549e05962b2c9e}{\subsubsection[{anonymous enum}]{\setlength{\rightskip}{0pt plus 5cm}anonymous enum}}\label{ev_8h_a61dadd085c1777f559549e05962b2c9e}
+\begin{Desc}
+\item[\-Enumerator\-: ]\par
+\begin{description}
+\index{\-E\-V\-B\-A\-C\-K\-E\-N\-D\-\_\-\-S\-E\-L\-E\-C\-T@{\-E\-V\-B\-A\-C\-K\-E\-N\-D\-\_\-\-S\-E\-L\-E\-C\-T}!ev.\-h@{ev.\-h}}\index{ev.\-h@{ev.\-h}!\-E\-V\-B\-A\-C\-K\-E\-N\-D\-\_\-\-S\-E\-L\-E\-C\-T@{\-E\-V\-B\-A\-C\-K\-E\-N\-D\-\_\-\-S\-E\-L\-E\-C\-T}}\item[{\em 
+\hypertarget{ev_8h_a61dadd085c1777f559549e05962b2c9ea95a4838cd47bb2dfe4b8ab307db2f005}{\-E\-V\-B\-A\-C\-K\-E\-N\-D\-\_\-\-S\-E\-L\-E\-C\-T}\label{ev_8h_a61dadd085c1777f559549e05962b2c9ea95a4838cd47bb2dfe4b8ab307db2f005}
+}]\index{\-E\-V\-B\-A\-C\-K\-E\-N\-D\-\_\-\-P\-O\-L\-L@{\-E\-V\-B\-A\-C\-K\-E\-N\-D\-\_\-\-P\-O\-L\-L}!ev.\-h@{ev.\-h}}\index{ev.\-h@{ev.\-h}!\-E\-V\-B\-A\-C\-K\-E\-N\-D\-\_\-\-P\-O\-L\-L@{\-E\-V\-B\-A\-C\-K\-E\-N\-D\-\_\-\-P\-O\-L\-L}}\item[{\em 
+\hypertarget{ev_8h_a61dadd085c1777f559549e05962b2c9eaa8f85d4c47549668b5e1b7ee04ddbfed}{\-E\-V\-B\-A\-C\-K\-E\-N\-D\-\_\-\-P\-O\-L\-L}\label{ev_8h_a61dadd085c1777f559549e05962b2c9eaa8f85d4c47549668b5e1b7ee04ddbfed}
+}]\index{\-E\-V\-B\-A\-C\-K\-E\-N\-D\-\_\-\-E\-P\-O\-L\-L@{\-E\-V\-B\-A\-C\-K\-E\-N\-D\-\_\-\-E\-P\-O\-L\-L}!ev.\-h@{ev.\-h}}\index{ev.\-h@{ev.\-h}!\-E\-V\-B\-A\-C\-K\-E\-N\-D\-\_\-\-E\-P\-O\-L\-L@{\-E\-V\-B\-A\-C\-K\-E\-N\-D\-\_\-\-E\-P\-O\-L\-L}}\item[{\em 
+\hypertarget{ev_8h_a61dadd085c1777f559549e05962b2c9ea84c51aeecca15d34d8c67edc6f0b976b}{\-E\-V\-B\-A\-C\-K\-E\-N\-D\-\_\-\-E\-P\-O\-L\-L}\label{ev_8h_a61dadd085c1777f559549e05962b2c9ea84c51aeecca15d34d8c67edc6f0b976b}
+}]\index{\-E\-V\-B\-A\-C\-K\-E\-N\-D\-\_\-\-K\-Q\-U\-E\-U\-E@{\-E\-V\-B\-A\-C\-K\-E\-N\-D\-\_\-\-K\-Q\-U\-E\-U\-E}!ev.\-h@{ev.\-h}}\index{ev.\-h@{ev.\-h}!\-E\-V\-B\-A\-C\-K\-E\-N\-D\-\_\-\-K\-Q\-U\-E\-U\-E@{\-E\-V\-B\-A\-C\-K\-E\-N\-D\-\_\-\-K\-Q\-U\-E\-U\-E}}\item[{\em 
+\hypertarget{ev_8h_a61dadd085c1777f559549e05962b2c9ea472aa93b93eb7272fd010a7e93d0d679}{\-E\-V\-B\-A\-C\-K\-E\-N\-D\-\_\-\-K\-Q\-U\-E\-U\-E}\label{ev_8h_a61dadd085c1777f559549e05962b2c9ea472aa93b93eb7272fd010a7e93d0d679}
+}]\index{\-E\-V\-B\-A\-C\-K\-E\-N\-D\-\_\-\-D\-E\-V\-P\-O\-L\-L@{\-E\-V\-B\-A\-C\-K\-E\-N\-D\-\_\-\-D\-E\-V\-P\-O\-L\-L}!ev.\-h@{ev.\-h}}\index{ev.\-h@{ev.\-h}!\-E\-V\-B\-A\-C\-K\-E\-N\-D\-\_\-\-D\-E\-V\-P\-O\-L\-L@{\-E\-V\-B\-A\-C\-K\-E\-N\-D\-\_\-\-D\-E\-V\-P\-O\-L\-L}}\item[{\em 
+\hypertarget{ev_8h_a61dadd085c1777f559549e05962b2c9eac94b8228869d115bd36ad37a1c1a7323}{\-E\-V\-B\-A\-C\-K\-E\-N\-D\-\_\-\-D\-E\-V\-P\-O\-L\-L}\label{ev_8h_a61dadd085c1777f559549e05962b2c9eac94b8228869d115bd36ad37a1c1a7323}
+}]\index{\-E\-V\-B\-A\-C\-K\-E\-N\-D\-\_\-\-P\-O\-R\-T@{\-E\-V\-B\-A\-C\-K\-E\-N\-D\-\_\-\-P\-O\-R\-T}!ev.\-h@{ev.\-h}}\index{ev.\-h@{ev.\-h}!\-E\-V\-B\-A\-C\-K\-E\-N\-D\-\_\-\-P\-O\-R\-T@{\-E\-V\-B\-A\-C\-K\-E\-N\-D\-\_\-\-P\-O\-R\-T}}\item[{\em 
+\hypertarget{ev_8h_a61dadd085c1777f559549e05962b2c9eaccd031573a9fd37301808a913f8312c4}{\-E\-V\-B\-A\-C\-K\-E\-N\-D\-\_\-\-P\-O\-R\-T}\label{ev_8h_a61dadd085c1777f559549e05962b2c9eaccd031573a9fd37301808a913f8312c4}
+}]\index{\-E\-V\-B\-A\-C\-K\-E\-N\-D\-\_\-\-A\-L\-L@{\-E\-V\-B\-A\-C\-K\-E\-N\-D\-\_\-\-A\-L\-L}!ev.\-h@{ev.\-h}}\index{ev.\-h@{ev.\-h}!\-E\-V\-B\-A\-C\-K\-E\-N\-D\-\_\-\-A\-L\-L@{\-E\-V\-B\-A\-C\-K\-E\-N\-D\-\_\-\-A\-L\-L}}\item[{\em 
+\hypertarget{ev_8h_a61dadd085c1777f559549e05962b2c9eae88126f66c1cc6d9e1d8944d6ac1713a}{\-E\-V\-B\-A\-C\-K\-E\-N\-D\-\_\-\-A\-L\-L}\label{ev_8h_a61dadd085c1777f559549e05962b2c9eae88126f66c1cc6d9e1d8944d6ac1713a}
+}]\index{\-E\-V\-B\-A\-C\-K\-E\-N\-D\-\_\-\-M\-A\-S\-K@{\-E\-V\-B\-A\-C\-K\-E\-N\-D\-\_\-\-M\-A\-S\-K}!ev.\-h@{ev.\-h}}\index{ev.\-h@{ev.\-h}!\-E\-V\-B\-A\-C\-K\-E\-N\-D\-\_\-\-M\-A\-S\-K@{\-E\-V\-B\-A\-C\-K\-E\-N\-D\-\_\-\-M\-A\-S\-K}}\item[{\em 
+\hypertarget{ev_8h_a61dadd085c1777f559549e05962b2c9eadd56b3e4be5bc0652f415de095f691cc}{\-E\-V\-B\-A\-C\-K\-E\-N\-D\-\_\-\-M\-A\-S\-K}\label{ev_8h_a61dadd085c1777f559549e05962b2c9eadd56b3e4be5bc0652f415de095f691cc}
+}]\end{description}
+\end{Desc}
+
+
+
+\-Definition at line 511 of file ev.\-h.
+
+\hypertarget{ev_8h_a726ca809ffd3d67ab4b8476646f26635}{\subsubsection[{anonymous enum}]{\setlength{\rightskip}{0pt plus 5cm}anonymous enum}}\label{ev_8h_a726ca809ffd3d67ab4b8476646f26635}
+\begin{Desc}
+\item[\-Enumerator\-: ]\par
+\begin{description}
+\index{\-E\-V\-R\-U\-N\-\_\-\-N\-O\-W\-A\-I\-T@{\-E\-V\-R\-U\-N\-\_\-\-N\-O\-W\-A\-I\-T}!ev.\-h@{ev.\-h}}\index{ev.\-h@{ev.\-h}!\-E\-V\-R\-U\-N\-\_\-\-N\-O\-W\-A\-I\-T@{\-E\-V\-R\-U\-N\-\_\-\-N\-O\-W\-A\-I\-T}}\item[{\em 
+\hypertarget{ev_8h_a726ca809ffd3d67ab4b8476646f26635ac75ab37896e4d3fb4164594a41fc357a}{\-E\-V\-R\-U\-N\-\_\-\-N\-O\-W\-A\-I\-T}\label{ev_8h_a726ca809ffd3d67ab4b8476646f26635ac75ab37896e4d3fb4164594a41fc357a}
+}]\index{\-E\-V\-R\-U\-N\-\_\-\-O\-N\-C\-E@{\-E\-V\-R\-U\-N\-\_\-\-O\-N\-C\-E}!ev.\-h@{ev.\-h}}\index{ev.\-h@{ev.\-h}!\-E\-V\-R\-U\-N\-\_\-\-O\-N\-C\-E@{\-E\-V\-R\-U\-N\-\_\-\-O\-N\-C\-E}}\item[{\em 
+\hypertarget{ev_8h_a726ca809ffd3d67ab4b8476646f26635aaa2a9275f457925739a29b0a9b8a2b9a}{\-E\-V\-R\-U\-N\-\_\-\-O\-N\-C\-E}\label{ev_8h_a726ca809ffd3d67ab4b8476646f26635aaa2a9275f457925739a29b0a9b8a2b9a}
+}]\end{description}
+\end{Desc}
+
+
+
+\-Definition at line 620 of file ev.\-h.
+
+\hypertarget{ev_8h_a0411cd49bb5b71852cecd93bcbf0ca2d}{\subsubsection[{anonymous enum}]{\setlength{\rightskip}{0pt plus 5cm}anonymous enum}}\label{ev_8h_a0411cd49bb5b71852cecd93bcbf0ca2d}
+\begin{Desc}
+\item[\-Enumerator\-: ]\par
+\begin{description}
+\index{\-E\-V\-B\-R\-E\-A\-K\-\_\-\-C\-A\-N\-C\-E\-L@{\-E\-V\-B\-R\-E\-A\-K\-\_\-\-C\-A\-N\-C\-E\-L}!ev.\-h@{ev.\-h}}\index{ev.\-h@{ev.\-h}!\-E\-V\-B\-R\-E\-A\-K\-\_\-\-C\-A\-N\-C\-E\-L@{\-E\-V\-B\-R\-E\-A\-K\-\_\-\-C\-A\-N\-C\-E\-L}}\item[{\em 
+\hypertarget{ev_8h_a0411cd49bb5b71852cecd93bcbf0ca2da4ca00cefda44cfc4e87e9396dca8dbfb}{\-E\-V\-B\-R\-E\-A\-K\-\_\-\-C\-A\-N\-C\-E\-L}\label{ev_8h_a0411cd49bb5b71852cecd93bcbf0ca2da4ca00cefda44cfc4e87e9396dca8dbfb}
+}]\index{\-E\-V\-B\-R\-E\-A\-K\-\_\-\-O\-N\-E@{\-E\-V\-B\-R\-E\-A\-K\-\_\-\-O\-N\-E}!ev.\-h@{ev.\-h}}\index{ev.\-h@{ev.\-h}!\-E\-V\-B\-R\-E\-A\-K\-\_\-\-O\-N\-E@{\-E\-V\-B\-R\-E\-A\-K\-\_\-\-O\-N\-E}}\item[{\em 
+\hypertarget{ev_8h_a0411cd49bb5b71852cecd93bcbf0ca2dac841fbcf2a25bbc53c1096c75bc3700a}{\-E\-V\-B\-R\-E\-A\-K\-\_\-\-O\-N\-E}\label{ev_8h_a0411cd49bb5b71852cecd93bcbf0ca2dac841fbcf2a25bbc53c1096c75bc3700a}
+}]\index{\-E\-V\-B\-R\-E\-A\-K\-\_\-\-A\-L\-L@{\-E\-V\-B\-R\-E\-A\-K\-\_\-\-A\-L\-L}!ev.\-h@{ev.\-h}}\index{ev.\-h@{ev.\-h}!\-E\-V\-B\-R\-E\-A\-K\-\_\-\-A\-L\-L@{\-E\-V\-B\-R\-E\-A\-K\-\_\-\-A\-L\-L}}\item[{\em 
+\hypertarget{ev_8h_a0411cd49bb5b71852cecd93bcbf0ca2da40079975b839818a78ba756fc92cf769}{\-E\-V\-B\-R\-E\-A\-K\-\_\-\-A\-L\-L}\label{ev_8h_a0411cd49bb5b71852cecd93bcbf0ca2da40079975b839818a78ba756fc92cf769}
+}]\end{description}
+\end{Desc}
+
+
+
+\-Definition at line 626 of file ev.\-h.
+
+
+
+\subsection{\-Function \-Documentation}
+\hypertarget{ev_8h_a335bbebed40c8441b9d2f1bec023f2d5}{\index{ev.\-h@{ev.\-h}!ev\-\_\-async\-\_\-send@{ev\-\_\-async\-\_\-send}}
+\index{ev\-\_\-async\-\_\-send@{ev\-\_\-async\-\_\-send}!ev.h@{ev.\-h}}
+\subsubsection[{ev\-\_\-async\-\_\-send}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-E\-V\-\_\-\-A\-P\-I\-\_\-\-D\-E\-C\-L} void {\bf ev\-\_\-async\-\_\-send} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-E\-V\-\_\-\-P\-\_\-} {\bf ev\-\_\-async} $\ast$}]{w}
+\end{DoxyParamCaption}
+)}}\label{ev_8h_a335bbebed40c8441b9d2f1bec023f2d5}
+
+
+\-Definition at line 4704 of file ev.\-c.
+
+
+
+\-Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=274pt]{ev_8h_a335bbebed40c8441b9d2f1bec023f2d5_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\-Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=256pt]{ev_8h_a335bbebed40c8441b9d2f1bec023f2d5_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ev_8h_a9a92667c29ef8fb1fe178a2ab9dc97df}{\index{ev.\-h@{ev.\-h}!ev\-\_\-async\-\_\-start@{ev\-\_\-async\-\_\-start}}
+\index{ev\-\_\-async\-\_\-start@{ev\-\_\-async\-\_\-start}!ev.h@{ev.\-h}}
+\subsubsection[{ev\-\_\-async\-\_\-start}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-E\-V\-\_\-\-A\-P\-I\-\_\-\-D\-E\-C\-L} void {\bf ev\-\_\-async\-\_\-start} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-E\-V\-\_\-\-P\-\_\-} {\bf ev\-\_\-async} $\ast$}]{w}
+\end{DoxyParamCaption}
+)}}\label{ev_8h_a9a92667c29ef8fb1fe178a2ab9dc97df}
+
+
+\-Definition at line 4664 of file ev.\-c.
+
+
+
+\-Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ev_8h_a9a92667c29ef8fb1fe178a2ab9dc97df_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ev_8h_a292fc9f311b7b28b022b391085d401fb}{\index{ev.\-h@{ev.\-h}!ev\-\_\-async\-\_\-stop@{ev\-\_\-async\-\_\-stop}}
+\index{ev\-\_\-async\-\_\-stop@{ev\-\_\-async\-\_\-stop}!ev.h@{ev.\-h}}
+\subsubsection[{ev\-\_\-async\-\_\-stop}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-E\-V\-\_\-\-A\-P\-I\-\_\-\-D\-E\-C\-L} void {\bf ev\-\_\-async\-\_\-stop} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-E\-V\-\_\-\-P\-\_\-} {\bf ev\-\_\-async} $\ast$}]{w}
+\end{DoxyParamCaption}
+)}}\label{ev_8h_a292fc9f311b7b28b022b391085d401fb}
+
+
+\-Definition at line 4683 of file ev.\-c.
+
+
+
+\-Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ev_8h_a292fc9f311b7b28b022b391085d401fb_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ev_8h_a44a3950d2de0a1fafe5d21f90812ef4c}{\index{ev.\-h@{ev.\-h}!ev\-\_\-backend@{ev\-\_\-backend}}
+\index{ev\-\_\-backend@{ev\-\_\-backend}!ev.h@{ev.\-h}}
+\subsubsection[{ev\-\_\-backend}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-E\-V\-\_\-\-A\-P\-I\-\_\-\-D\-E\-C\-L} unsigned int {\bf ev\-\_\-backend} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-E\-V\-\_\-\-P}}]{}
+\end{DoxyParamCaption}
+)}}\label{ev_8h_a44a3950d2de0a1fafe5d21f90812ef4c}
+
+
+\-Definition at line 2569 of file ev.\-c.
+
+
+
+\-Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ev_8h_a44a3950d2de0a1fafe5d21f90812ef4c_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ev_8h_a2c4e380d49cff0fb9b5968d232b29113}{\index{ev.\-h@{ev.\-h}!ev\-\_\-break@{ev\-\_\-break}}
+\index{ev\-\_\-break@{ev\-\_\-break}!ev.h@{ev.\-h}}
+\subsubsection[{ev\-\_\-break}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-E\-V\-\_\-\-A\-P\-I\-\_\-\-D\-E\-C\-L} void {\bf ev\-\_\-break} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-E\-V\-\_\-\-P\-\_\-} int how }]{\-E\-V\-\_\-\-C\-P\-P=\-E\-V\-B\-R\-E\-A\-K\-\_\-\-O\-N\-E}
+\end{DoxyParamCaption}
+)}}\label{ev_8h_a2c4e380d49cff0fb9b5968d232b29113}
+\hypertarget{ev_8h_a348e9a1d375ea004142209a55a40f8bd}{\index{ev.\-h@{ev.\-h}!ev\-\_\-check\-\_\-start@{ev\-\_\-check\-\_\-start}}
+\index{ev\-\_\-check\-\_\-start@{ev\-\_\-check\-\_\-start}!ev.h@{ev.\-h}}
+\subsubsection[{ev\-\_\-check\-\_\-start}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-E\-V\-\_\-\-A\-P\-I\-\_\-\-D\-E\-C\-L} void {\bf ev\-\_\-check\-\_\-start} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-E\-V\-\_\-\-P\-\_\-} {\bf ev\-\_\-check} $\ast$}]{w}
+\end{DoxyParamCaption}
+)}}\label{ev_8h_a348e9a1d375ea004142209a55a40f8bd}
+
+
+\-Definition at line 4438 of file ev.\-c.
+
+
+
+\-Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=348pt]{ev_8h_a348e9a1d375ea004142209a55a40f8bd_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ev_8h_a0174b19babfd44d2483817bef4a1949d}{\index{ev.\-h@{ev.\-h}!ev\-\_\-check\-\_\-stop@{ev\-\_\-check\-\_\-stop}}
+\index{ev\-\_\-check\-\_\-stop@{ev\-\_\-check\-\_\-stop}!ev.h@{ev.\-h}}
+\subsubsection[{ev\-\_\-check\-\_\-stop}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-E\-V\-\_\-\-A\-P\-I\-\_\-\-D\-E\-C\-L} void {\bf ev\-\_\-check\-\_\-stop} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-E\-V\-\_\-\-P\-\_\-} {\bf ev\-\_\-check} $\ast$}]{w}
+\end{DoxyParamCaption}
+)}}\label{ev_8h_a0174b19babfd44d2483817bef4a1949d}
+
+
+\-Definition at line 4453 of file ev.\-c.
+
+
+
+\-Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ev_8h_a0174b19babfd44d2483817bef4a1949d_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ev_8h_ae30c5be8f00796697b24ff236f4438c1}{\index{ev.\-h@{ev.\-h}!ev\-\_\-child\-\_\-start@{ev\-\_\-child\-\_\-start}}
+\index{ev\-\_\-child\-\_\-start@{ev\-\_\-child\-\_\-start}!ev.h@{ev.\-h}}
+\subsubsection[{ev\-\_\-child\-\_\-start}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-E\-V\-\_\-\-A\-P\-I\-\_\-\-D\-E\-C\-L} void {\bf ev\-\_\-child\-\_\-start} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-E\-V\-\_\-\-P\-\_\-} {\bf ev\-\_\-child} $\ast$}]{w}
+\end{DoxyParamCaption}
+)}}\label{ev_8h_ae30c5be8f00796697b24ff236f4438c1}
+
+
+\-Definition at line 3959 of file ev.\-c.
+
+
+
+\-Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=348pt]{ev_8h_ae30c5be8f00796697b24ff236f4438c1_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ev_8h_a6c02fca23fc33412e69e0f4d5ea84f6a}{\index{ev.\-h@{ev.\-h}!ev\-\_\-child\-\_\-stop@{ev\-\_\-child\-\_\-stop}}
+\index{ev\-\_\-child\-\_\-stop@{ev\-\_\-child\-\_\-stop}!ev.h@{ev.\-h}}
+\subsubsection[{ev\-\_\-child\-\_\-stop}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-E\-V\-\_\-\-A\-P\-I\-\_\-\-D\-E\-C\-L} void {\bf ev\-\_\-child\-\_\-stop} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-E\-V\-\_\-\-P\-\_\-} {\bf ev\-\_\-child} $\ast$}]{w}
+\end{DoxyParamCaption}
+)}}\label{ev_8h_a6c02fca23fc33412e69e0f4d5ea84f6a}
+
+
+\-Definition at line 3976 of file ev.\-c.
+
+
+
+\-Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ev_8h_a6c02fca23fc33412e69e0f4d5ea84f6a_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ev_8h_aafa08f8c064a12dafa32a92d375d1b21}{\index{ev.\-h@{ev.\-h}!ev\-\_\-cleanup\-\_\-start@{ev\-\_\-cleanup\-\_\-start}}
+\index{ev\-\_\-cleanup\-\_\-start@{ev\-\_\-cleanup\-\_\-start}!ev.h@{ev.\-h}}
+\subsubsection[{ev\-\_\-cleanup\-\_\-start}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-E\-V\-\_\-\-A\-P\-I\-\_\-\-D\-E\-C\-L} void {\bf ev\-\_\-cleanup\-\_\-start} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-E\-V\-\_\-\-P\-\_\-} {\bf ev\-\_\-cleanup} $\ast$}]{w}
+\end{DoxyParamCaption}
+)}}\label{ev_8h_aafa08f8c064a12dafa32a92d375d1b21}
+
+
+\-Definition at line 4623 of file ev.\-c.
+
+
+
+\-Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ev_8h_aafa08f8c064a12dafa32a92d375d1b21_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ev_8h_a51fd32f237a82bdc5caadbbd43e11c2c}{\index{ev.\-h@{ev.\-h}!ev\-\_\-cleanup\-\_\-stop@{ev\-\_\-cleanup\-\_\-stop}}
+\index{ev\-\_\-cleanup\-\_\-stop@{ev\-\_\-cleanup\-\_\-stop}!ev.h@{ev.\-h}}
+\subsubsection[{ev\-\_\-cleanup\-\_\-stop}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-E\-V\-\_\-\-A\-P\-I\-\_\-\-D\-E\-C\-L} void {\bf ev\-\_\-cleanup\-\_\-stop} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-E\-V\-\_\-\-P\-\_\-} {\bf ev\-\_\-cleanup} $\ast$}]{w}
+\end{DoxyParamCaption}
+)}}\label{ev_8h_a51fd32f237a82bdc5caadbbd43e11c2c}
+
+
+\-Definition at line 4640 of file ev.\-c.
+
+
+
+\-Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ev_8h_a51fd32f237a82bdc5caadbbd43e11c2c_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ev_8h_ad25fdb961bfa55665a23660db02e46ca}{\index{ev.\-h@{ev.\-h}!ev\-\_\-clear\-\_\-pending@{ev\-\_\-clear\-\_\-pending}}
+\index{ev\-\_\-clear\-\_\-pending@{ev\-\_\-clear\-\_\-pending}!ev.h@{ev.\-h}}
+\subsubsection[{ev\-\_\-clear\-\_\-pending}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-E\-V\-\_\-\-A\-P\-I\-\_\-\-D\-E\-C\-L} int {\bf ev\-\_\-clear\-\_\-pending} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-E\-V\-\_\-\-P\-\_\-} void $\ast$}]{w}
+\end{DoxyParamCaption}
+)}}\label{ev_8h_ad25fdb961bfa55665a23660db02e46ca}
+
+
+\-Definition at line 3586 of file ev.\-c.
+
+
+
+\-Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ev_8h_ad25fdb961bfa55665a23660db02e46ca_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ev_8h_ae002183dba9501cb34ce149073932005}{\index{ev.\-h@{ev.\-h}!ev\-\_\-default\-\_\-destroy@{ev\-\_\-default\-\_\-destroy}}
+\index{ev\-\_\-default\-\_\-destroy@{ev\-\_\-default\-\_\-destroy}!ev.h@{ev.\-h}}
+\subsubsection[{ev\-\_\-default\-\_\-destroy}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-E\-V\-\_\-\-I\-N\-L\-I\-N\-E} void {\bf ev\-\_\-default\-\_\-destroy} (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{ev_8h_ae002183dba9501cb34ce149073932005}
+
+
+\-Definition at line 830 of file ev.\-h.
+
+
+
+\-Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ev_8h_ae002183dba9501cb34ce149073932005_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ev_8h_a170b6d189c1d887bf2e68995458dd4b0}{\index{ev.\-h@{ev.\-h}!ev\-\_\-default\-\_\-fork@{ev\-\_\-default\-\_\-fork}}
+\index{ev\-\_\-default\-\_\-fork@{ev\-\_\-default\-\_\-fork}!ev.h@{ev.\-h}}
+\subsubsection[{ev\-\_\-default\-\_\-fork}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-E\-V\-\_\-\-I\-N\-L\-I\-N\-E} void {\bf ev\-\_\-default\-\_\-fork} (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{ev_8h_a170b6d189c1d887bf2e68995458dd4b0}
+
+
+\-Definition at line 831 of file ev.\-h.
+
+
+
+\-Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=272pt]{ev_8h_a170b6d189c1d887bf2e68995458dd4b0_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ev_8h_a48fd511f5f2aa7af7d8738c149cfa8f6}{\index{ev.\-h@{ev.\-h}!ev\-\_\-default\-\_\-loop@{ev\-\_\-default\-\_\-loop}}
+\index{ev\-\_\-default\-\_\-loop@{ev\-\_\-default\-\_\-loop}!ev.h@{ev.\-h}}
+\subsubsection[{ev\-\_\-default\-\_\-loop}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-E\-V\-\_\-\-A\-P\-I\-\_\-\-D\-E\-C\-L} struct {\bf ev\-\_\-loop}$\ast$ {\bf ev\-\_\-default\-\_\-loop} (
+\begin{DoxyParamCaption}
+\item[{unsigned int flags }]{\-E\-V\-\_\-\-C\-P\-P=0}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}read\mbox{]}}}}\label{ev_8h_a48fd511f5f2aa7af7d8738c149cfa8f6}
+\hypertarget{ev_8h_aa54ecf88e3cb67c3de954caff7013b13}{\index{ev.\-h@{ev.\-h}!ev\-\_\-default\-\_\-loop\-\_\-uc\-\_\-@{ev\-\_\-default\-\_\-loop\-\_\-uc\-\_\-}}
+\index{ev\-\_\-default\-\_\-loop\-\_\-uc\-\_\-@{ev\-\_\-default\-\_\-loop\-\_\-uc\-\_\-}!ev.h@{ev.\-h}}
+\subsubsection[{ev\-\_\-default\-\_\-loop\-\_\-uc\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-E\-V\-\_\-\-I\-N\-L\-I\-N\-E} struct {\bf ev\-\_\-loop}$\ast$ {\bf ev\-\_\-default\-\_\-loop\-\_\-uc\-\_\-} (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}read\mbox{]}}}}\label{ev_8h_aa54ecf88e3cb67c3de954caff7013b13}
+
+
+\-Definition at line 558 of file ev.\-h.
+
+\hypertarget{ev_8h_a79f74f25f9e9875803fd5f9c9502464f}{\index{ev.\-h@{ev.\-h}!ev\-\_\-depth@{ev\-\_\-depth}}
+\index{ev\-\_\-depth@{ev\-\_\-depth}!ev.h@{ev.\-h}}
+\subsubsection[{ev\-\_\-depth}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-E\-V\-\_\-\-A\-P\-I\-\_\-\-D\-E\-C\-L} unsigned int {\bf ev\-\_\-depth} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-E\-V\-\_\-\-P}}]{}
+\end{DoxyParamCaption}
+)}}\label{ev_8h_a79f74f25f9e9875803fd5f9c9502464f}
+
+
+\-Definition at line 2582 of file ev.\-c.
+
+
+
+\-Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=270pt]{ev_8h_a79f74f25f9e9875803fd5f9c9502464f_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ev_8h_a16dc9ccd4350d7280a0d3ee26cf5dc25}{\index{ev.\-h@{ev.\-h}!ev\-\_\-embed\-\_\-start@{ev\-\_\-embed\-\_\-start}}
+\index{ev\-\_\-embed\-\_\-start@{ev\-\_\-embed\-\_\-start}!ev.h@{ev.\-h}}
+\subsubsection[{ev\-\_\-embed\-\_\-start}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-E\-V\-\_\-\-A\-P\-I\-\_\-\-D\-E\-C\-L} void {\bf ev\-\_\-embed\-\_\-start} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-E\-V\-\_\-\-P\-\_\-} {\bf ev\-\_\-embed} $\ast$}]{w}
+\end{DoxyParamCaption}
+)}}\label{ev_8h_a16dc9ccd4350d7280a0d3ee26cf5dc25}
+
+
+\-Definition at line 4534 of file ev.\-c.
+
+
+
+\-Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ev_8h_a16dc9ccd4350d7280a0d3ee26cf5dc25_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\-Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=286pt]{ev_8h_a16dc9ccd4350d7280a0d3ee26cf5dc25_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ev_8h_a16db73d525f294bcf8ec65b3877bbc6b}{\index{ev.\-h@{ev.\-h}!ev\-\_\-embed\-\_\-stop@{ev\-\_\-embed\-\_\-stop}}
+\index{ev\-\_\-embed\-\_\-stop@{ev\-\_\-embed\-\_\-stop}!ev.h@{ev.\-h}}
+\subsubsection[{ev\-\_\-embed\-\_\-stop}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-E\-V\-\_\-\-A\-P\-I\-\_\-\-D\-E\-C\-L} void {\bf ev\-\_\-embed\-\_\-stop} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-E\-V\-\_\-\-P\-\_\-} {\bf ev\-\_\-embed} $\ast$}]{w}
+\end{DoxyParamCaption}
+)}}\label{ev_8h_a16db73d525f294bcf8ec65b3877bbc6b}
+
+
+\-Definition at line 4565 of file ev.\-c.
+
+
+
+\-Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ev_8h_a16db73d525f294bcf8ec65b3877bbc6b_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\-Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ev_8h_a16db73d525f294bcf8ec65b3877bbc6b_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ev_8h_a629607356458bceb1e36c19a5c74faa3}{\index{ev.\-h@{ev.\-h}!ev\-\_\-embed\-\_\-sweep@{ev\-\_\-embed\-\_\-sweep}}
+\index{ev\-\_\-embed\-\_\-sweep@{ev\-\_\-embed\-\_\-sweep}!ev.h@{ev.\-h}}
+\subsubsection[{ev\-\_\-embed\-\_\-sweep}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-E\-V\-\_\-\-A\-P\-I\-\_\-\-D\-E\-C\-L} void {\bf ev\-\_\-embed\-\_\-sweep} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-E\-V\-\_\-\-P\-\_\-} {\bf ev\-\_\-embed} $\ast$}]{w}
+\end{DoxyParamCaption}
+)}}\label{ev_8h_a629607356458bceb1e36c19a5c74faa3}
+
+
+\-Definition at line 4476 of file ev.\-c.
+
+
+
+\-Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ev_8h_a629607356458bceb1e36c19a5c74faa3_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\-Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=274pt]{ev_8h_a629607356458bceb1e36c19a5c74faa3_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ev_8h_adb589abbf7cbe3f587915573a57880b7}{\index{ev.\-h@{ev.\-h}!ev\-\_\-embeddable\-\_\-backends@{ev\-\_\-embeddable\-\_\-backends}}
+\index{ev\-\_\-embeddable\-\_\-backends@{ev\-\_\-embeddable\-\_\-backends}!ev.h@{ev.\-h}}
+\subsubsection[{ev\-\_\-embeddable\-\_\-backends}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-E\-V\-\_\-\-A\-P\-I\-\_\-\-D\-E\-C\-L} unsigned int {\bf ev\-\_\-embeddable\-\_\-backends} (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{ev_8h_adb589abbf7cbe3f587915573a57880b7}
+
+
+\-Definition at line 2557 of file ev.\-c.
+
+
+
+\-Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=338pt]{ev_8h_adb589abbf7cbe3f587915573a57880b7_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\-Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ev_8h_adb589abbf7cbe3f587915573a57880b7_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ev_8h_a9beed1dcd442c0862a3106b5880d64c3}{\index{ev.\-h@{ev.\-h}!ev\-\_\-feed\-\_\-event@{ev\-\_\-feed\-\_\-event}}
+\index{ev\-\_\-feed\-\_\-event@{ev\-\_\-feed\-\_\-event}!ev.h@{ev.\-h}}
+\subsubsection[{ev\-\_\-feed\-\_\-event}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-E\-V\-\_\-\-A\-P\-I\-\_\-\-D\-E\-C\-L} void {\bf ev\-\_\-feed\-\_\-event} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-E\-V\-\_\-\-P\-\_\-} void $\ast$}]{w, }
+\item[{int}]{revents}
+\end{DoxyParamCaption}
+)}}\label{ev_8h_a9beed1dcd442c0862a3106b5880d64c3}
+
+
+\-Definition at line 1786 of file ev.\-c.
+
+
+
+\-Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ev_8h_a9beed1dcd442c0862a3106b5880d64c3_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ev_8h_aaf24f85779456ff40a967d7cc13c60a2}{\index{ev.\-h@{ev.\-h}!ev\-\_\-feed\-\_\-fd\-\_\-event@{ev\-\_\-feed\-\_\-fd\-\_\-event}}
+\index{ev\-\_\-feed\-\_\-fd\-\_\-event@{ev\-\_\-feed\-\_\-fd\-\_\-event}!ev.h@{ev.\-h}}
+\subsubsection[{ev\-\_\-feed\-\_\-fd\-\_\-event}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-E\-V\-\_\-\-A\-P\-I\-\_\-\-D\-E\-C\-L} void {\bf ev\-\_\-feed\-\_\-fd\-\_\-event} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-E\-V\-\_\-\-P\-\_\-} int}]{fd, }
+\item[{int}]{revents}
+\end{DoxyParamCaption}
+)}}\label{ev_8h_aaf24f85779456ff40a967d7cc13c60a2}
+
+
+\-Definition at line 1857 of file ev.\-c.
+
+
+
+\-Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ev_8h_aaf24f85779456ff40a967d7cc13c60a2_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\-Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=346pt]{ev_8h_aaf24f85779456ff40a967d7cc13c60a2_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ev_8h_a329a30cfba2f9bb96d56a2c42c969b46}{\index{ev.\-h@{ev.\-h}!ev\-\_\-feed\-\_\-signal@{ev\-\_\-feed\-\_\-signal}}
+\index{ev\-\_\-feed\-\_\-signal@{ev\-\_\-feed\-\_\-signal}!ev.h@{ev.\-h}}
+\subsubsection[{ev\-\_\-feed\-\_\-signal}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-E\-V\-\_\-\-A\-P\-I\-\_\-\-D\-E\-C\-L} void {\bf ev\-\_\-feed\-\_\-signal} (
+\begin{DoxyParamCaption}
+\item[{int}]{signum}
+\end{DoxyParamCaption}
+)}}\label{ev_8h_a329a30cfba2f9bb96d56a2c42c969b46}
+
+
+\-Definition at line 2344 of file ev.\-c.
+
+
+
+\-Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=270pt]{ev_8h_a329a30cfba2f9bb96d56a2c42c969b46_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\-Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ev_8h_a329a30cfba2f9bb96d56a2c42c969b46_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ev_8h_acd564834f90d7274091af8bc3008ff4f}{\index{ev.\-h@{ev.\-h}!ev\-\_\-feed\-\_\-signal\-\_\-event@{ev\-\_\-feed\-\_\-signal\-\_\-event}}
+\index{ev\-\_\-feed\-\_\-signal\-\_\-event@{ev\-\_\-feed\-\_\-signal\-\_\-event}!ev.h@{ev.\-h}}
+\subsubsection[{ev\-\_\-feed\-\_\-signal\-\_\-event}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-E\-V\-\_\-\-A\-P\-I\-\_\-\-D\-E\-C\-L} void {\bf ev\-\_\-feed\-\_\-signal\-\_\-event} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-E\-V\-\_\-\-P\-\_\-} int}]{signum}
+\end{DoxyParamCaption}
+)}}\label{ev_8h_acd564834f90d7274091af8bc3008ff4f}
+
+
+\-Definition at line 2370 of file ev.\-c.
+
+
+
+\-Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=308pt]{ev_8h_acd564834f90d7274091af8bc3008ff4f_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\-Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ev_8h_acd564834f90d7274091af8bc3008ff4f_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ev_8h_a84e83828b9be7636c12de746d3016209}{\index{ev.\-h@{ev.\-h}!ev\-\_\-fork\-\_\-start@{ev\-\_\-fork\-\_\-start}}
+\index{ev\-\_\-fork\-\_\-start@{ev\-\_\-fork\-\_\-start}!ev.h@{ev.\-h}}
+\subsubsection[{ev\-\_\-fork\-\_\-start}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-E\-V\-\_\-\-A\-P\-I\-\_\-\-D\-E\-C\-L} void {\bf ev\-\_\-fork\-\_\-start} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-E\-V\-\_\-\-P\-\_\-} {\bf ev\-\_\-fork} $\ast$}]{w}
+\end{DoxyParamCaption}
+)}}\label{ev_8h_a84e83828b9be7636c12de746d3016209}
+
+
+\-Definition at line 4585 of file ev.\-c.
+
+
+
+\-Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=338pt]{ev_8h_a84e83828b9be7636c12de746d3016209_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\-Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ev_8h_a84e83828b9be7636c12de746d3016209_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ev_8h_aeccf8a578c3b5006f662f02528a4cf63}{\index{ev.\-h@{ev.\-h}!ev\-\_\-fork\-\_\-stop@{ev\-\_\-fork\-\_\-stop}}
+\index{ev\-\_\-fork\-\_\-stop@{ev\-\_\-fork\-\_\-stop}!ev.h@{ev.\-h}}
+\subsubsection[{ev\-\_\-fork\-\_\-stop}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-E\-V\-\_\-\-A\-P\-I\-\_\-\-D\-E\-C\-L} void {\bf ev\-\_\-fork\-\_\-stop} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-E\-V\-\_\-\-P\-\_\-} {\bf ev\-\_\-fork} $\ast$}]{w}
+\end{DoxyParamCaption}
+)}}\label{ev_8h_aeccf8a578c3b5006f662f02528a4cf63}
+
+
+\-Definition at line 4600 of file ev.\-c.
+
+
+
+\-Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ev_8h_aeccf8a578c3b5006f662f02528a4cf63_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\-Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ev_8h_aeccf8a578c3b5006f662f02528a4cf63_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ev_8h_a37d1f736a527b1b75581e5eba48114f1}{\index{ev.\-h@{ev.\-h}!ev\-\_\-idle\-\_\-start@{ev\-\_\-idle\-\_\-start}}
+\index{ev\-\_\-idle\-\_\-start@{ev\-\_\-idle\-\_\-start}!ev.h@{ev.\-h}}
+\subsubsection[{ev\-\_\-idle\-\_\-start}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-E\-V\-\_\-\-A\-P\-I\-\_\-\-D\-E\-C\-L} void {\bf ev\-\_\-idle\-\_\-start} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-E\-V\-\_\-\-P\-\_\-} {\bf ev\-\_\-idle} $\ast$}]{w}
+\end{DoxyParamCaption}
+)}}\label{ev_8h_a37d1f736a527b1b75581e5eba48114f1}
+
+
+\-Definition at line 4353 of file ev.\-c.
+
+
+
+\-Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=336pt]{ev_8h_a37d1f736a527b1b75581e5eba48114f1_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ev_8h_a84447c2553ab6db5bd2194e893349115}{\index{ev.\-h@{ev.\-h}!ev\-\_\-idle\-\_\-stop@{ev\-\_\-idle\-\_\-stop}}
+\index{ev\-\_\-idle\-\_\-stop@{ev\-\_\-idle\-\_\-stop}!ev.h@{ev.\-h}}
+\subsubsection[{ev\-\_\-idle\-\_\-stop}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-E\-V\-\_\-\-A\-P\-I\-\_\-\-D\-E\-C\-L} void {\bf ev\-\_\-idle\-\_\-stop} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-E\-V\-\_\-\-P\-\_\-} {\bf ev\-\_\-idle} $\ast$}]{w}
+\end{DoxyParamCaption}
+)}}\label{ev_8h_a84447c2553ab6db5bd2194e893349115}
+
+
+\-Definition at line 4376 of file ev.\-c.
+
+
+
+\-Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ev_8h_a84447c2553ab6db5bd2194e893349115_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ev_8h_aabd181573b92f2c532a87449598c01db}{\index{ev.\-h@{ev.\-h}!ev\-\_\-invoke@{ev\-\_\-invoke}}
+\index{ev\-\_\-invoke@{ev\-\_\-invoke}!ev.h@{ev.\-h}}
+\subsubsection[{ev\-\_\-invoke}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-E\-V\-\_\-\-A\-P\-I\-\_\-\-D\-E\-C\-L} void {\bf ev\-\_\-invoke} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-E\-V\-\_\-\-P\-\_\-} void $\ast$}]{w, }
+\item[{int}]{revents}
+\end{DoxyParamCaption}
+)}}\label{ev_8h_aabd181573b92f2c532a87449598c01db}
+
+
+\-Definition at line 3057 of file ev.\-c.
+
+\hypertarget{ev_8h_ace06e06473c889eeb88f1d0542cdc299}{\index{ev.\-h@{ev.\-h}!ev\-\_\-invoke\-\_\-pending@{ev\-\_\-invoke\-\_\-pending}}
+\index{ev\-\_\-invoke\-\_\-pending@{ev\-\_\-invoke\-\_\-pending}!ev.h@{ev.\-h}}
+\subsubsection[{ev\-\_\-invoke\-\_\-pending}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-E\-V\-\_\-\-A\-P\-I\-\_\-\-D\-E\-C\-L} void {\bf ev\-\_\-invoke\-\_\-pending} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-E\-V\-\_\-\-P}}]{}
+\end{DoxyParamCaption}
+)}}\label{ev_8h_ace06e06473c889eeb88f1d0542cdc299}
+
+
+\-Definition at line 3075 of file ev.\-c.
+
+
+
+\-Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ev_8h_ace06e06473c889eeb88f1d0542cdc299_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ev_8h_ac6ab0a227a1d14be9e4dcd8d70d83d30}{\index{ev.\-h@{ev.\-h}!ev\-\_\-io\-\_\-start@{ev\-\_\-io\-\_\-start}}
+\index{ev\-\_\-io\-\_\-start@{ev\-\_\-io\-\_\-start}!ev.h@{ev.\-h}}
+\subsubsection[{ev\-\_\-io\-\_\-start}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-E\-V\-\_\-\-A\-P\-I\-\_\-\-D\-E\-C\-L} void {\bf ev\-\_\-io\-\_\-start} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-E\-V\-\_\-\-P\-\_\-} {\bf ev\-\_\-io} $\ast$}]{w}
+\end{DoxyParamCaption}
+)}}\label{ev_8h_ac6ab0a227a1d14be9e4dcd8d70d83d30}
+
+
+\-Definition at line 3629 of file ev.\-c.
+
+
+
+\-Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=340pt]{ev_8h_ac6ab0a227a1d14be9e4dcd8d70d83d30_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\-Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ev_8h_ac6ab0a227a1d14be9e4dcd8d70d83d30_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ev_8h_a6081593bf08f23d733f701faae734f81}{\index{ev.\-h@{ev.\-h}!ev\-\_\-io\-\_\-stop@{ev\-\_\-io\-\_\-stop}}
+\index{ev\-\_\-io\-\_\-stop@{ev\-\_\-io\-\_\-stop}!ev.h@{ev.\-h}}
+\subsubsection[{ev\-\_\-io\-\_\-stop}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-E\-V\-\_\-\-A\-P\-I\-\_\-\-D\-E\-C\-L} void {\bf ev\-\_\-io\-\_\-stop} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-E\-V\-\_\-\-P\-\_\-} {\bf ev\-\_\-io} $\ast$}]{w}
+\end{DoxyParamCaption}
+)}}\label{ev_8h_a6081593bf08f23d733f701faae734f81}
+
+
+\-Definition at line 3655 of file ev.\-c.
+
+
+
+\-Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=348pt]{ev_8h_a6081593bf08f23d733f701faae734f81_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\-Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ev_8h_a6081593bf08f23d733f701faae734f81_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ev_8h_a7330a0474a3157b00beb72e97ef554d0}{\index{ev.\-h@{ev.\-h}!ev\-\_\-is\-\_\-default\-\_\-loop@{ev\-\_\-is\-\_\-default\-\_\-loop}}
+\index{ev\-\_\-is\-\_\-default\-\_\-loop@{ev\-\_\-is\-\_\-default\-\_\-loop}!ev.h@{ev.\-h}}
+\subsubsection[{ev\-\_\-is\-\_\-default\-\_\-loop}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-E\-V\-\_\-\-I\-N\-L\-I\-N\-E} int {\bf ev\-\_\-is\-\_\-default\-\_\-loop} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-E\-V\-\_\-\-P}}]{}
+\end{DoxyParamCaption}
+)}}\label{ev_8h_a7330a0474a3157b00beb72e97ef554d0}
+
+
+\-Definition at line 566 of file ev.\-h.
+
+
+
+\-Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ev_8h_a7330a0474a3157b00beb72e97ef554d0_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ev_8h_a1b771a54716a8dd6ee1a05755e890d55}{\index{ev.\-h@{ev.\-h}!ev\-\_\-iteration@{ev\-\_\-iteration}}
+\index{ev\-\_\-iteration@{ev\-\_\-iteration}!ev.h@{ev.\-h}}
+\subsubsection[{ev\-\_\-iteration}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-E\-V\-\_\-\-A\-P\-I\-\_\-\-D\-E\-C\-L} unsigned int {\bf ev\-\_\-iteration} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-E\-V\-\_\-\-P}}]{}
+\end{DoxyParamCaption}
+)}}\label{ev_8h_a1b771a54716a8dd6ee1a05755e890d55}
+
+
+\-Definition at line 2576 of file ev.\-c.
+
+
+
+\-Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=292pt]{ev_8h_a1b771a54716a8dd6ee1a05755e890d55_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ev_8h_a76f89b1a402c811c57a456bb6e6ab6d7}{\index{ev.\-h@{ev.\-h}!ev\-\_\-loop@{ev\-\_\-loop}}
+\index{ev\-\_\-loop@{ev\-\_\-loop}!ev.h@{ev.\-h}}
+\subsubsection[{ev\-\_\-loop}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-E\-V\-\_\-\-I\-N\-L\-I\-N\-E} void {\bf ev\-\_\-loop} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-E\-V\-\_\-\-P\-\_\-} int}]{flags}
+\end{DoxyParamCaption}
+)}}\label{ev_8h_a76f89b1a402c811c57a456bb6e6ab6d7}
+
+
+\-Definition at line 828 of file ev.\-h.
+
+
+
+\-Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ev_8h_a76f89b1a402c811c57a456bb6e6ab6d7_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ev_8h_a00aadaac4614f423020c0c7a911ac40c}{\index{ev.\-h@{ev.\-h}!ev\-\_\-loop\-\_\-count@{ev\-\_\-loop\-\_\-count}}
+\index{ev\-\_\-loop\-\_\-count@{ev\-\_\-loop\-\_\-count}!ev.h@{ev.\-h}}
+\subsubsection[{ev\-\_\-loop\-\_\-count}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-E\-V\-\_\-\-I\-N\-L\-I\-N\-E} unsigned int {\bf ev\-\_\-loop\-\_\-count} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-E\-V\-\_\-\-P}}]{}
+\end{DoxyParamCaption}
+)}}\label{ev_8h_a00aadaac4614f423020c0c7a911ac40c}
+
+
+\-Definition at line 833 of file ev.\-h.
+
+
+
+\-Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=264pt]{ev_8h_a00aadaac4614f423020c0c7a911ac40c_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ev_8h_a92580c34533ee3430d9de47a20929c23}{\index{ev.\-h@{ev.\-h}!ev\-\_\-loop\-\_\-depth@{ev\-\_\-loop\-\_\-depth}}
+\index{ev\-\_\-loop\-\_\-depth@{ev\-\_\-loop\-\_\-depth}!ev.h@{ev.\-h}}
+\subsubsection[{ev\-\_\-loop\-\_\-depth}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-E\-V\-\_\-\-I\-N\-L\-I\-N\-E} unsigned int {\bf ev\-\_\-loop\-\_\-depth} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-E\-V\-\_\-\-P}}]{}
+\end{DoxyParamCaption}
+)}}\label{ev_8h_a92580c34533ee3430d9de47a20929c23}
+
+
+\-Definition at line 834 of file ev.\-h.
+
+
+
+\-Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=252pt]{ev_8h_a92580c34533ee3430d9de47a20929c23_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ev_8h_a90f663e3b068cfd82d7abcb1774bc307}{\index{ev.\-h@{ev.\-h}!ev\-\_\-loop\-\_\-destroy@{ev\-\_\-loop\-\_\-destroy}}
+\index{ev\-\_\-loop\-\_\-destroy@{ev\-\_\-loop\-\_\-destroy}!ev.h@{ev.\-h}}
+\subsubsection[{ev\-\_\-loop\-\_\-destroy}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-E\-V\-\_\-\-A\-P\-I\-\_\-\-D\-E\-C\-L} void {\bf ev\-\_\-loop\-\_\-destroy} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-E\-V\-\_\-\-P}}]{}
+\end{DoxyParamCaption}
+)}}\label{ev_8h_a90f663e3b068cfd82d7abcb1774bc307}
+
+
+\-Definition at line 2724 of file ev.\-c.
+
+
+
+\-Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ev_8h_a90f663e3b068cfd82d7abcb1774bc307_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\-Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ev_8h_a90f663e3b068cfd82d7abcb1774bc307_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ev_8h_adbd3570da80e38ac0baee98c0db05a40}{\index{ev.\-h@{ev.\-h}!ev\-\_\-loop\-\_\-fork@{ev\-\_\-loop\-\_\-fork}}
+\index{ev\-\_\-loop\-\_\-fork@{ev\-\_\-loop\-\_\-fork}!ev.h@{ev.\-h}}
+\subsubsection[{ev\-\_\-loop\-\_\-fork}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-E\-V\-\_\-\-A\-P\-I\-\_\-\-D\-E\-C\-L} void {\bf ev\-\_\-loop\-\_\-fork} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-E\-V\-\_\-\-P}}]{}
+\end{DoxyParamCaption}
+)}}\label{ev_8h_adbd3570da80e38ac0baee98c0db05a40}
+
+
+\-Definition at line 3049 of file ev.\-c.
+
+
+
+\-Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ev_8h_adbd3570da80e38ac0baee98c0db05a40_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ev_8h_a57aefba41ed2c4f0220ab951bf8a76f3}{\index{ev.\-h@{ev.\-h}!ev\-\_\-loop\-\_\-new@{ev\-\_\-loop\-\_\-new}}
+\index{ev\-\_\-loop\-\_\-new@{ev\-\_\-loop\-\_\-new}!ev.h@{ev.\-h}}
+\subsubsection[{ev\-\_\-loop\-\_\-new}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-E\-V\-\_\-\-A\-P\-I\-\_\-\-D\-E\-C\-L} struct {\bf ev\-\_\-loop}$\ast$ {\bf ev\-\_\-loop\-\_\-new} (
+\begin{DoxyParamCaption}
+\item[{unsigned int flags }]{\-E\-V\-\_\-\-C\-P\-P=0}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}read\mbox{]}}}}\label{ev_8h_a57aefba41ed2c4f0220ab951bf8a76f3}
+\hypertarget{ev_8h_aa18798f51653d426d2bed98759ff744d}{\index{ev.\-h@{ev.\-h}!ev\-\_\-loop\-\_\-verify@{ev\-\_\-loop\-\_\-verify}}
+\index{ev\-\_\-loop\-\_\-verify@{ev\-\_\-loop\-\_\-verify}!ev.h@{ev.\-h}}
+\subsubsection[{ev\-\_\-loop\-\_\-verify}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-E\-V\-\_\-\-I\-N\-L\-I\-N\-E} void {\bf ev\-\_\-loop\-\_\-verify} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-E\-V\-\_\-\-P}}]{}
+\end{DoxyParamCaption}
+)}}\label{ev_8h_aa18798f51653d426d2bed98759ff744d}
+
+
+\-Definition at line 835 of file ev.\-h.
+
+
+
+\-Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ev_8h_aa18798f51653d426d2bed98759ff744d_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ev_8h_adef78707ed544f0328d03927a5209fb8}{\index{ev.\-h@{ev.\-h}!ev\-\_\-now@{ev\-\_\-now}}
+\index{ev\-\_\-now@{ev\-\_\-now}!ev.h@{ev.\-h}}
+\subsubsection[{ev\-\_\-now}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-E\-V\-\_\-\-A\-P\-I\-\_\-\-D\-E\-C\-L} {\bf ev\-\_\-tstamp} {\bf ev\-\_\-now} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-E\-V\-\_\-\-P}}]{}
+\end{DoxyParamCaption}
+)}}\label{ev_8h_adef78707ed544f0328d03927a5209fb8}
+
+
+\-Definition at line 1688 of file ev.\-c.
+
+
+
+\-Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=258pt]{ev_8h_adef78707ed544f0328d03927a5209fb8_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ev_8h_a6743be85bd913998ef987c1c62892387}{\index{ev.\-h@{ev.\-h}!ev\-\_\-now\-\_\-update@{ev\-\_\-now\-\_\-update}}
+\index{ev\-\_\-now\-\_\-update@{ev\-\_\-now\-\_\-update}!ev.h@{ev.\-h}}
+\subsubsection[{ev\-\_\-now\-\_\-update}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-E\-V\-\_\-\-A\-P\-I\-\_\-\-D\-E\-C\-L} void {\bf ev\-\_\-now\-\_\-update} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-E\-V\-\_\-\-P}}]{}
+\end{DoxyParamCaption}
+)}}\label{ev_8h_a6743be85bd913998ef987c1c62892387}
+
+
+\-Definition at line 3525 of file ev.\-c.
+
+
+
+\-Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ev_8h_a6743be85bd913998ef987c1c62892387_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\-Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=272pt]{ev_8h_a6743be85bd913998ef987c1c62892387_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ev_8h_a77e2b9085f39447aec919e6a789e257f}{\index{ev.\-h@{ev.\-h}!ev\-\_\-once@{ev\-\_\-once}}
+\index{ev\-\_\-once@{ev\-\_\-once}!ev.h@{ev.\-h}}
+\subsubsection[{ev\-\_\-once}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-E\-V\-\_\-\-A\-P\-I\-\_\-\-D\-E\-C\-L} void {\bf ev\-\_\-once} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-E\-V\-\_\-\-P\-\_\-} int}]{fd, }
+\item[{int}]{events, }
+\item[{{\bf ev\-\_\-tstamp}}]{timeout, }
+\item[{void($\ast$)(int revents, void $\ast$arg)}]{cb, }
+\item[{void $\ast$}]{arg}
+\end{DoxyParamCaption}
+)}}\label{ev_8h_a77e2b9085f39447aec919e6a789e257f}
+
+
+\-Definition at line 4751 of file ev.\-c.
+
+
+
+\-Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ev_8h_a77e2b9085f39447aec919e6a789e257f_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\-Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ev_8h_a77e2b9085f39447aec919e6a789e257f_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ev_8h_a509e2a9c29f1ae92e5643f2bacd2a076}{\index{ev.\-h@{ev.\-h}!ev\-\_\-pending\-\_\-count@{ev\-\_\-pending\-\_\-count}}
+\index{ev\-\_\-pending\-\_\-count@{ev\-\_\-pending\-\_\-count}!ev.h@{ev.\-h}}
+\subsubsection[{ev\-\_\-pending\-\_\-count}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-E\-V\-\_\-\-A\-P\-I\-\_\-\-D\-E\-C\-L} unsigned int {\bf ev\-\_\-pending\-\_\-count} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-E\-V\-\_\-\-P}}]{}
+\end{DoxyParamCaption}
+)}}\label{ev_8h_a509e2a9c29f1ae92e5643f2bacd2a076}
+
+
+\-Definition at line 3063 of file ev.\-c.
+
+\hypertarget{ev_8h_a46107712715d36432967c7fcb03a4eac}{\index{ev.\-h@{ev.\-h}!ev\-\_\-periodic\-\_\-again@{ev\-\_\-periodic\-\_\-again}}
+\index{ev\-\_\-periodic\-\_\-again@{ev\-\_\-periodic\-\_\-again}!ev.h@{ev.\-h}}
+\subsubsection[{ev\-\_\-periodic\-\_\-again}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-E\-V\-\_\-\-A\-P\-I\-\_\-\-D\-E\-C\-L} void {\bf ev\-\_\-periodic\-\_\-again} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-E\-V\-\_\-\-P\-\_\-} {\bf ev\-\_\-periodic} $\ast$}]{w}
+\end{DoxyParamCaption}
+)}}\label{ev_8h_a46107712715d36432967c7fcb03a4eac}
+
+
+\-Definition at line 3821 of file ev.\-c.
+
+
+
+\-Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ev_8h_a46107712715d36432967c7fcb03a4eac_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ev_8h_ad7391fac547f08e45bd115ea79ca877c}{\index{ev.\-h@{ev.\-h}!ev\-\_\-periodic\-\_\-start@{ev\-\_\-periodic\-\_\-start}}
+\index{ev\-\_\-periodic\-\_\-start@{ev\-\_\-periodic\-\_\-start}!ev.h@{ev.\-h}}
+\subsubsection[{ev\-\_\-periodic\-\_\-start}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-E\-V\-\_\-\-A\-P\-I\-\_\-\-D\-E\-C\-L} void {\bf ev\-\_\-periodic\-\_\-start} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-E\-V\-\_\-\-P\-\_\-} {\bf ev\-\_\-periodic} $\ast$}]{w}
+\end{DoxyParamCaption}
+)}}\label{ev_8h_ad7391fac547f08e45bd115ea79ca877c}
+
+
+\-Definition at line 3763 of file ev.\-c.
+
+
+
+\-Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ev_8h_ad7391fac547f08e45bd115ea79ca877c_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\-Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=304pt]{ev_8h_ad7391fac547f08e45bd115ea79ca877c_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ev_8h_a369eae8025f29c7d15c0f3160c71750a}{\index{ev.\-h@{ev.\-h}!ev\-\_\-periodic\-\_\-stop@{ev\-\_\-periodic\-\_\-stop}}
+\index{ev\-\_\-periodic\-\_\-stop@{ev\-\_\-periodic\-\_\-stop}!ev.h@{ev.\-h}}
+\subsubsection[{ev\-\_\-periodic\-\_\-stop}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-E\-V\-\_\-\-A\-P\-I\-\_\-\-D\-E\-C\-L} void {\bf ev\-\_\-periodic\-\_\-stop} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-E\-V\-\_\-\-P\-\_\-} {\bf ev\-\_\-periodic} $\ast$}]{w}
+\end{DoxyParamCaption}
+)}}\label{ev_8h_a369eae8025f29c7d15c0f3160c71750a}
+
+
+\-Definition at line 3793 of file ev.\-c.
+
+
+
+\-Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ev_8h_a369eae8025f29c7d15c0f3160c71750a_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\-Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ev_8h_a369eae8025f29c7d15c0f3160c71750a_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ev_8h_a7bdd926796104730dbd7e162b9c87108}{\index{ev.\-h@{ev.\-h}!ev\-\_\-prepare\-\_\-start@{ev\-\_\-prepare\-\_\-start}}
+\index{ev\-\_\-prepare\-\_\-start@{ev\-\_\-prepare\-\_\-start}!ev.h@{ev.\-h}}
+\subsubsection[{ev\-\_\-prepare\-\_\-start}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-E\-V\-\_\-\-A\-P\-I\-\_\-\-D\-E\-C\-L} void {\bf ev\-\_\-prepare\-\_\-start} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-E\-V\-\_\-\-P\-\_\-} {\bf ev\-\_\-prepare} $\ast$}]{w}
+\end{DoxyParamCaption}
+)}}\label{ev_8h_a7bdd926796104730dbd7e162b9c87108}
+
+
+\-Definition at line 4400 of file ev.\-c.
+
+
+
+\-Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ev_8h_a7bdd926796104730dbd7e162b9c87108_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\-Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ev_8h_a7bdd926796104730dbd7e162b9c87108_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ev_8h_ab4b493a6979ebfa429827e7fdd1525c4}{\index{ev.\-h@{ev.\-h}!ev\-\_\-prepare\-\_\-stop@{ev\-\_\-prepare\-\_\-stop}}
+\index{ev\-\_\-prepare\-\_\-stop@{ev\-\_\-prepare\-\_\-stop}!ev.h@{ev.\-h}}
+\subsubsection[{ev\-\_\-prepare\-\_\-stop}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-E\-V\-\_\-\-A\-P\-I\-\_\-\-D\-E\-C\-L} void {\bf ev\-\_\-prepare\-\_\-stop} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-E\-V\-\_\-\-P\-\_\-} {\bf ev\-\_\-prepare} $\ast$}]{w}
+\end{DoxyParamCaption}
+)}}\label{ev_8h_ab4b493a6979ebfa429827e7fdd1525c4}
+
+
+\-Definition at line 4415 of file ev.\-c.
+
+
+
+\-Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ev_8h_ab4b493a6979ebfa429827e7fdd1525c4_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\-Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ev_8h_ab4b493a6979ebfa429827e7fdd1525c4_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ev_8h_a18f76972f872b29564eb98d37d9578b3}{\index{ev.\-h@{ev.\-h}!ev\-\_\-recommended\-\_\-backends@{ev\-\_\-recommended\-\_\-backends}}
+\index{ev\-\_\-recommended\-\_\-backends@{ev\-\_\-recommended\-\_\-backends}!ev.h@{ev.\-h}}
+\subsubsection[{ev\-\_\-recommended\-\_\-backends}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-E\-V\-\_\-\-A\-P\-I\-\_\-\-D\-E\-C\-L} unsigned int {\bf ev\-\_\-recommended\-\_\-backends} (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{ev_8h_a18f76972f872b29564eb98d37d9578b3}
+
+
+\-Definition at line 2535 of file ev.\-c.
+
+
+
+\-Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ev_8h_a18f76972f872b29564eb98d37d9578b3_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\-Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ev_8h_a18f76972f872b29564eb98d37d9578b3_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ev_8h_ae62e1105637ddaf9130e2c2739e8b7f8}{\index{ev.\-h@{ev.\-h}!ev\-\_\-ref@{ev\-\_\-ref}}
+\index{ev\-\_\-ref@{ev\-\_\-ref}!ev.h@{ev.\-h}}
+\subsubsection[{ev\-\_\-ref}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-E\-V\-\_\-\-A\-P\-I\-\_\-\-D\-E\-C\-L} void {\bf ev\-\_\-ref} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-E\-V\-\_\-\-P}}]{}
+\end{DoxyParamCaption}
+)}}\label{ev_8h_ae62e1105637ddaf9130e2c2739e8b7f8}
+
+
+\-Definition at line 3513 of file ev.\-c.
+
+
+
+\-Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ev_8h_ae62e1105637ddaf9130e2c2739e8b7f8_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ev_8h_ae4e8e9496a78f2a072d4e54b1ad47842}{\index{ev.\-h@{ev.\-h}!ev\-\_\-resume@{ev\-\_\-resume}}
+\index{ev\-\_\-resume@{ev\-\_\-resume}!ev.h@{ev.\-h}}
+\subsubsection[{ev\-\_\-resume}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-E\-V\-\_\-\-A\-P\-I\-\_\-\-D\-E\-C\-L} void {\bf ev\-\_\-resume} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-E\-V\-\_\-\-P}}]{}
+\end{DoxyParamCaption}
+)}}\label{ev_8h_ae4e8e9496a78f2a072d4e54b1ad47842}
+
+
+\-Definition at line 3537 of file ev.\-c.
+
+
+
+\-Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ev_8h_ae4e8e9496a78f2a072d4e54b1ad47842_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ev_8h_ad0ca9d158e39309e619c80f2a3a9e7dc}{\index{ev.\-h@{ev.\-h}!ev\-\_\-run@{ev\-\_\-run}}
+\index{ev\-\_\-run@{ev\-\_\-run}!ev.h@{ev.\-h}}
+\subsubsection[{ev\-\_\-run}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-E\-V\-\_\-\-A\-P\-I\-\_\-\-D\-E\-C\-L} int {\bf ev\-\_\-run} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-E\-V\-\_\-\-P\-\_\-} int flags }]{\-E\-V\-\_\-\-C\-P\-P=0}
+\end{DoxyParamCaption}
+)}}\label{ev_8h_ad0ca9d158e39309e619c80f2a3a9e7dc}
+\hypertarget{ev_8h_a5531dae7a5ad92679b544eb30d36c927}{\index{ev.\-h@{ev.\-h}!ev\-\_\-set\-\_\-allocator@{ev\-\_\-set\-\_\-allocator}}
+\index{ev\-\_\-set\-\_\-allocator@{ev\-\_\-set\-\_\-allocator}!ev.h@{ev.\-h}}
+\subsubsection[{ev\-\_\-set\-\_\-allocator}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-E\-V\-\_\-\-A\-P\-I\-\_\-\-D\-E\-C\-L} void {\bf ev\-\_\-set\-\_\-allocator} (
+\begin{DoxyParamCaption}
+\item[{void $\ast$($\ast$)(void $\ast$ptr, long size) {\bf \-E\-V\-\_\-\-T\-H\-R\-O\-W}}]{cb}
+\end{DoxyParamCaption}
+)}}\label{ev_8h_a5531dae7a5ad92679b544eb30d36c927}
+
+
+\-Definition at line 1527 of file ev.\-c.
+
+
+
+\-Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=294pt]{ev_8h_a5531dae7a5ad92679b544eb30d36c927_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ev_8h_a0245df41020e38c0d745a0693b2b34a5}{\index{ev.\-h@{ev.\-h}!ev\-\_\-set\-\_\-invoke\-\_\-pending\-\_\-cb@{ev\-\_\-set\-\_\-invoke\-\_\-pending\-\_\-cb}}
+\index{ev\-\_\-set\-\_\-invoke\-\_\-pending\-\_\-cb@{ev\-\_\-set\-\_\-invoke\-\_\-pending\-\_\-cb}!ev.h@{ev.\-h}}
+\subsubsection[{ev\-\_\-set\-\_\-invoke\-\_\-pending\-\_\-cb}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-E\-V\-\_\-\-A\-P\-I\-\_\-\-D\-E\-C\-L} void {\bf ev\-\_\-set\-\_\-invoke\-\_\-pending\-\_\-cb} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-E\-V\-\_\-\-P\-\_\-} {\bf ev\-\_\-loop\-\_\-callback}}]{invoke\-\_\-pending\-\_\-cb}
+\end{DoxyParamCaption}
+)}}\label{ev_8h_a0245df41020e38c0d745a0693b2b34a5}
+
+
+\-Definition at line 2612 of file ev.\-c.
+
+\hypertarget{ev_8h_a34a3889414c0cba2934c65f0a02804b3}{\index{ev.\-h@{ev.\-h}!ev\-\_\-set\-\_\-io\-\_\-collect\-\_\-interval@{ev\-\_\-set\-\_\-io\-\_\-collect\-\_\-interval}}
+\index{ev\-\_\-set\-\_\-io\-\_\-collect\-\_\-interval@{ev\-\_\-set\-\_\-io\-\_\-collect\-\_\-interval}!ev.h@{ev.\-h}}
+\subsubsection[{ev\-\_\-set\-\_\-io\-\_\-collect\-\_\-interval}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-E\-V\-\_\-\-A\-P\-I\-\_\-\-D\-E\-C\-L} void {\bf ev\-\_\-set\-\_\-io\-\_\-collect\-\_\-interval} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-E\-V\-\_\-\-P\-\_\-} {\bf ev\-\_\-tstamp}}]{interval}
+\end{DoxyParamCaption}
+)}}\label{ev_8h_a34a3889414c0cba2934c65f0a02804b3}
+
+
+\-Definition at line 2588 of file ev.\-c.
+
+
+
+\-Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ev_8h_a34a3889414c0cba2934c65f0a02804b3_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ev_8h_a8be13b1cf415f6567f13442a83317ca8}{\index{ev.\-h@{ev.\-h}!ev\-\_\-set\-\_\-loop\-\_\-release\-\_\-cb@{ev\-\_\-set\-\_\-loop\-\_\-release\-\_\-cb}}
+\index{ev\-\_\-set\-\_\-loop\-\_\-release\-\_\-cb@{ev\-\_\-set\-\_\-loop\-\_\-release\-\_\-cb}!ev.h@{ev.\-h}}
+\subsubsection[{ev\-\_\-set\-\_\-loop\-\_\-release\-\_\-cb}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-E\-V\-\_\-\-A\-P\-I\-\_\-\-D\-E\-C\-L} void {\bf ev\-\_\-set\-\_\-loop\-\_\-release\-\_\-cb} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-E\-V\-\_\-\-P\-\_\-} void($\ast$)({\bf \-E\-V\-\_\-\-P}) {\bf \-E\-V\-\_\-\-T\-H\-R\-O\-W}}]{release, }
+\item[{void($\ast$)({\bf \-E\-V\-\_\-\-P}) {\bf \-E\-V\-\_\-\-T\-H\-R\-O\-W}}]{acquire}
+\end{DoxyParamCaption}
+)}}\label{ev_8h_a8be13b1cf415f6567f13442a83317ca8}
+
+
+\-Definition at line 2618 of file ev.\-c.
+
+\hypertarget{ev_8h_a3bc01624ac6c3ab6d9549f96f735d4a5}{\index{ev.\-h@{ev.\-h}!ev\-\_\-set\-\_\-syserr\-\_\-cb@{ev\-\_\-set\-\_\-syserr\-\_\-cb}}
+\index{ev\-\_\-set\-\_\-syserr\-\_\-cb@{ev\-\_\-set\-\_\-syserr\-\_\-cb}!ev.h@{ev.\-h}}
+\subsubsection[{ev\-\_\-set\-\_\-syserr\-\_\-cb}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-E\-V\-\_\-\-A\-P\-I\-\_\-\-D\-E\-C\-L} void {\bf ev\-\_\-set\-\_\-syserr\-\_\-cb} (
+\begin{DoxyParamCaption}
+\item[{void($\ast$)(const char $\ast$msg) {\bf \-E\-V\-\_\-\-T\-H\-R\-O\-W}}]{cb}
+\end{DoxyParamCaption}
+)}}\label{ev_8h_a3bc01624ac6c3ab6d9549f96f735d4a5}
+
+
+\-Definition at line 1480 of file ev.\-c.
+
+
+
+\-Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=306pt]{ev_8h_a3bc01624ac6c3ab6d9549f96f735d4a5_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ev_8h_a461f1511d1d1148eb54806ae0b5878da}{\index{ev.\-h@{ev.\-h}!ev\-\_\-set\-\_\-timeout\-\_\-collect\-\_\-interval@{ev\-\_\-set\-\_\-timeout\-\_\-collect\-\_\-interval}}
+\index{ev\-\_\-set\-\_\-timeout\-\_\-collect\-\_\-interval@{ev\-\_\-set\-\_\-timeout\-\_\-collect\-\_\-interval}!ev.h@{ev.\-h}}
+\subsubsection[{ev\-\_\-set\-\_\-timeout\-\_\-collect\-\_\-interval}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-E\-V\-\_\-\-A\-P\-I\-\_\-\-D\-E\-C\-L} void {\bf ev\-\_\-set\-\_\-timeout\-\_\-collect\-\_\-interval} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-E\-V\-\_\-\-P\-\_\-} {\bf ev\-\_\-tstamp}}]{interval}
+\end{DoxyParamCaption}
+)}}\label{ev_8h_a461f1511d1d1148eb54806ae0b5878da}
+
+
+\-Definition at line 2594 of file ev.\-c.
+
+
+
+\-Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ev_8h_a461f1511d1d1148eb54806ae0b5878da_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ev_8h_a97191f018a00f83008c705cbc6863d73}{\index{ev.\-h@{ev.\-h}!ev\-\_\-set\-\_\-userdata@{ev\-\_\-set\-\_\-userdata}}
+\index{ev\-\_\-set\-\_\-userdata@{ev\-\_\-set\-\_\-userdata}!ev.h@{ev.\-h}}
+\subsubsection[{ev\-\_\-set\-\_\-userdata}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-E\-V\-\_\-\-A\-P\-I\-\_\-\-D\-E\-C\-L} void {\bf ev\-\_\-set\-\_\-userdata} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-E\-V\-\_\-\-P\-\_\-} void $\ast$}]{data}
+\end{DoxyParamCaption}
+)}}\label{ev_8h_a97191f018a00f83008c705cbc6863d73}
+
+
+\-Definition at line 2600 of file ev.\-c.
+
+\hypertarget{ev_8h_a9c6255b00237314f95d6b1273c5acbc7}{\index{ev.\-h@{ev.\-h}!ev\-\_\-signal\-\_\-start@{ev\-\_\-signal\-\_\-start}}
+\index{ev\-\_\-signal\-\_\-start@{ev\-\_\-signal\-\_\-start}!ev.h@{ev.\-h}}
+\subsubsection[{ev\-\_\-signal\-\_\-start}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-E\-V\-\_\-\-A\-P\-I\-\_\-\-D\-E\-C\-L} void {\bf ev\-\_\-signal\-\_\-start} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-E\-V\-\_\-\-P\-\_\-} {\bf ev\-\_\-signal} $\ast$}]{w}
+\end{DoxyParamCaption}
+)}}\label{ev_8h_a9c6255b00237314f95d6b1273c5acbc7}
+
+
+\-Definition at line 3836 of file ev.\-c.
+
+
+
+\-Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ev_8h_a9c6255b00237314f95d6b1273c5acbc7_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\-Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ev_8h_a9c6255b00237314f95d6b1273c5acbc7_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ev_8h_ae0bd793b1dbe30d2407645cde3b64485}{\index{ev.\-h@{ev.\-h}!ev\-\_\-signal\-\_\-stop@{ev\-\_\-signal\-\_\-stop}}
+\index{ev\-\_\-signal\-\_\-stop@{ev\-\_\-signal\-\_\-stop}!ev.h@{ev.\-h}}
+\subsubsection[{ev\-\_\-signal\-\_\-stop}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-E\-V\-\_\-\-A\-P\-I\-\_\-\-D\-E\-C\-L} void {\bf ev\-\_\-signal\-\_\-stop} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-E\-V\-\_\-\-P\-\_\-} {\bf ev\-\_\-signal} $\ast$}]{w}
+\end{DoxyParamCaption}
+)}}\label{ev_8h_ae0bd793b1dbe30d2407645cde3b64485}
+
+
+\-Definition at line 3918 of file ev.\-c.
+
+
+
+\-Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ev_8h_ae0bd793b1dbe30d2407645cde3b64485_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\-Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ev_8h_ae0bd793b1dbe30d2407645cde3b64485_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ev_8h_a874bf0226ae17171d6163e97c5688b36}{\index{ev.\-h@{ev.\-h}!ev\-\_\-sleep@{ev\-\_\-sleep}}
+\index{ev\-\_\-sleep@{ev\-\_\-sleep}!ev.h@{ev.\-h}}
+\subsubsection[{ev\-\_\-sleep}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-E\-V\-\_\-\-A\-P\-I\-\_\-\-D\-E\-C\-L} void {\bf ev\-\_\-sleep} (
+\begin{DoxyParamCaption}
+\item[{{\bf ev\-\_\-tstamp}}]{delay}
+\end{DoxyParamCaption}
+)}}\label{ev_8h_a874bf0226ae17171d6163e97c5688b36}
+
+
+\-Definition at line 1695 of file ev.\-c.
+
+
+
+\-Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=320pt]{ev_8h_a874bf0226ae17171d6163e97c5688b36_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\-Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ev_8h_a874bf0226ae17171d6163e97c5688b36_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ev_8h_ac87fa2509078b764d36dceb8404042a5}{\index{ev.\-h@{ev.\-h}!ev\-\_\-stat\-\_\-start@{ev\-\_\-stat\-\_\-start}}
+\index{ev\-\_\-stat\-\_\-start@{ev\-\_\-stat\-\_\-start}!ev.h@{ev.\-h}}
+\subsubsection[{ev\-\_\-stat\-\_\-start}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-E\-V\-\_\-\-A\-P\-I\-\_\-\-D\-E\-C\-L} void {\bf ev\-\_\-stat\-\_\-start} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-E\-V\-\_\-\-P\-\_\-} {\bf ev\-\_\-stat} $\ast$}]{w}
+\end{DoxyParamCaption}
+)}}\label{ev_8h_ac87fa2509078b764d36dceb8404042a5}
+
+
+\-Definition at line 4296 of file ev.\-c.
+
+
+
+\-Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ev_8h_ac87fa2509078b764d36dceb8404042a5_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ev_8h_ad188fbcf3eb9087ff378bae7cdfe8da5}{\index{ev.\-h@{ev.\-h}!ev\-\_\-stat\-\_\-stat@{ev\-\_\-stat\-\_\-stat}}
+\index{ev\-\_\-stat\-\_\-stat@{ev\-\_\-stat\-\_\-stat}!ev.h@{ev.\-h}}
+\subsubsection[{ev\-\_\-stat\-\_\-stat}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-E\-V\-\_\-\-A\-P\-I\-\_\-\-D\-E\-C\-L} void {\bf ev\-\_\-stat\-\_\-stat} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-E\-V\-\_\-\-P\-\_\-} {\bf ev\-\_\-stat} $\ast$}]{w}
+\end{DoxyParamCaption}
+)}}\label{ev_8h_ad188fbcf3eb9087ff378bae7cdfe8da5}
+
+
+\-Definition at line 4247 of file ev.\-c.
+
+
+
+\-Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ev_8h_ad188fbcf3eb9087ff378bae7cdfe8da5_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ev_8h_a3cda429cc799e55c6d2295498a9ad2b8}{\index{ev.\-h@{ev.\-h}!ev\-\_\-stat\-\_\-stop@{ev\-\_\-stat\-\_\-stop}}
+\index{ev\-\_\-stat\-\_\-stop@{ev\-\_\-stat\-\_\-stop}!ev.h@{ev.\-h}}
+\subsubsection[{ev\-\_\-stat\-\_\-stop}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-E\-V\-\_\-\-A\-P\-I\-\_\-\-D\-E\-C\-L} void {\bf ev\-\_\-stat\-\_\-stop} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-E\-V\-\_\-\-P\-\_\-} {\bf ev\-\_\-stat} $\ast$}]{w}
+\end{DoxyParamCaption}
+)}}\label{ev_8h_a3cda429cc799e55c6d2295498a9ad2b8}
+
+
+\-Definition at line 4327 of file ev.\-c.
+
+
+
+\-Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ev_8h_a3cda429cc799e55c6d2295498a9ad2b8_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ev_8h_a4ecda940ad19e9783065b65855009a63}{\index{ev.\-h@{ev.\-h}!ev\-\_\-supported\-\_\-backends@{ev\-\_\-supported\-\_\-backends}}
+\index{ev\-\_\-supported\-\_\-backends@{ev\-\_\-supported\-\_\-backends}!ev.h@{ev.\-h}}
+\subsubsection[{ev\-\_\-supported\-\_\-backends}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-E\-V\-\_\-\-A\-P\-I\-\_\-\-D\-E\-C\-L} unsigned int {\bf ev\-\_\-supported\-\_\-backends} (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{ev_8h_a4ecda940ad19e9783065b65855009a63}
+
+
+\-Definition at line 2521 of file ev.\-c.
+
+
+
+\-Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ev_8h_a4ecda940ad19e9783065b65855009a63_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ev_8h_acdc615b41ecb16e8907b4affc3fe5e86}{\index{ev.\-h@{ev.\-h}!ev\-\_\-suspend@{ev\-\_\-suspend}}
+\index{ev\-\_\-suspend@{ev\-\_\-suspend}!ev.h@{ev.\-h}}
+\subsubsection[{ev\-\_\-suspend}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-E\-V\-\_\-\-A\-P\-I\-\_\-\-D\-E\-C\-L} void {\bf ev\-\_\-suspend} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-E\-V\-\_\-\-P}}]{}
+\end{DoxyParamCaption}
+)}}\label{ev_8h_acdc615b41ecb16e8907b4affc3fe5e86}
+
+
+\-Definition at line 3531 of file ev.\-c.
+
+
+
+\-Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ev_8h_acdc615b41ecb16e8907b4affc3fe5e86_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ev_8h_a1c45ff19b8d646807464aa15d4c242b1}{\index{ev.\-h@{ev.\-h}!ev\-\_\-time@{ev\-\_\-time}}
+\index{ev\-\_\-time@{ev\-\_\-time}!ev.h@{ev.\-h}}
+\subsubsection[{ev\-\_\-time}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-E\-V\-\_\-\-A\-P\-I\-\_\-\-D\-E\-C\-L} {\bf ev\-\_\-tstamp} {\bf ev\-\_\-time} (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{ev_8h_a1c45ff19b8d646807464aa15d4c242b1}
+
+
+\-Definition at line 1654 of file ev.\-c.
+
+
+
+\-Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ev_8h_a1c45ff19b8d646807464aa15d4c242b1_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ev_8h_ad8d1a8546e3ad2d0366d9b0242dc8805}{\index{ev.\-h@{ev.\-h}!ev\-\_\-timer\-\_\-again@{ev\-\_\-timer\-\_\-again}}
+\index{ev\-\_\-timer\-\_\-again@{ev\-\_\-timer\-\_\-again}!ev.h@{ev.\-h}}
+\subsubsection[{ev\-\_\-timer\-\_\-again}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-E\-V\-\_\-\-A\-P\-I\-\_\-\-D\-E\-C\-L} void {\bf ev\-\_\-timer\-\_\-again} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-E\-V\-\_\-\-P\-\_\-} {\bf ev\-\_\-timer} $\ast$}]{w}
+\end{DoxyParamCaption}
+)}}\label{ev_8h_ad8d1a8546e3ad2d0366d9b0242dc8805}
+
+
+\-Definition at line 3729 of file ev.\-c.
+
+
+
+\-Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ev_8h_ad8d1a8546e3ad2d0366d9b0242dc8805_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\-Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=274pt]{ev_8h_ad8d1a8546e3ad2d0366d9b0242dc8805_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ev_8h_a44ab0901ea6ee17f578e7ddcea798c7a}{\index{ev.\-h@{ev.\-h}!ev\-\_\-timer\-\_\-remaining@{ev\-\_\-timer\-\_\-remaining}}
+\index{ev\-\_\-timer\-\_\-remaining@{ev\-\_\-timer\-\_\-remaining}!ev.h@{ev.\-h}}
+\subsubsection[{ev\-\_\-timer\-\_\-remaining}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-E\-V\-\_\-\-A\-P\-I\-\_\-\-D\-E\-C\-L} {\bf ev\-\_\-tstamp} {\bf ev\-\_\-timer\-\_\-remaining} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-E\-V\-\_\-\-P\-\_\-} {\bf ev\-\_\-timer} $\ast$}]{w}
+\end{DoxyParamCaption}
+)}}\label{ev_8h_a44ab0901ea6ee17f578e7ddcea798c7a}
+
+
+\-Definition at line 3756 of file ev.\-c.
+
+
+
+\-Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=294pt]{ev_8h_a44ab0901ea6ee17f578e7ddcea798c7a_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ev_8h_a1e7c7995074b1261cb3e97c8ce414e23}{\index{ev.\-h@{ev.\-h}!ev\-\_\-timer\-\_\-start@{ev\-\_\-timer\-\_\-start}}
+\index{ev\-\_\-timer\-\_\-start@{ev\-\_\-timer\-\_\-start}!ev.h@{ev.\-h}}
+\subsubsection[{ev\-\_\-timer\-\_\-start}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-E\-V\-\_\-\-A\-P\-I\-\_\-\-D\-E\-C\-L} void {\bf ev\-\_\-timer\-\_\-start} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-E\-V\-\_\-\-P\-\_\-} {\bf ev\-\_\-timer} $\ast$}]{w}
+\end{DoxyParamCaption}
+)}}\label{ev_8h_a1e7c7995074b1261cb3e97c8ce414e23}
+
+
+\-Definition at line 3674 of file ev.\-c.
+
+
+
+\-Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=344pt]{ev_8h_a1e7c7995074b1261cb3e97c8ce414e23_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\-Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ev_8h_a1e7c7995074b1261cb3e97c8ce414e23_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ev_8h_a3bf56eec01e17f3d68e282ea892c4d1b}{\index{ev.\-h@{ev.\-h}!ev\-\_\-timer\-\_\-stop@{ev\-\_\-timer\-\_\-stop}}
+\index{ev\-\_\-timer\-\_\-stop@{ev\-\_\-timer\-\_\-stop}!ev.h@{ev.\-h}}
+\subsubsection[{ev\-\_\-timer\-\_\-stop}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-E\-V\-\_\-\-A\-P\-I\-\_\-\-D\-E\-C\-L} void {\bf ev\-\_\-timer\-\_\-stop} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-E\-V\-\_\-\-P\-\_\-} {\bf ev\-\_\-timer} $\ast$}]{w}
+\end{DoxyParamCaption}
+)}}\label{ev_8h_a3bf56eec01e17f3d68e282ea892c4d1b}
+
+
+\-Definition at line 3699 of file ev.\-c.
+
+
+
+\-Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ev_8h_a3bf56eec01e17f3d68e282ea892c4d1b_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\-Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ev_8h_a3bf56eec01e17f3d68e282ea892c4d1b_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ev_8h_a2416678834fb6f0e9941599cc4b38165}{\index{ev.\-h@{ev.\-h}!ev\-\_\-unloop@{ev\-\_\-unloop}}
+\index{ev\-\_\-unloop@{ev\-\_\-unloop}!ev.h@{ev.\-h}}
+\subsubsection[{ev\-\_\-unloop}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-E\-V\-\_\-\-I\-N\-L\-I\-N\-E} void {\bf ev\-\_\-unloop} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-E\-V\-\_\-\-P\-\_\-} int}]{how}
+\end{DoxyParamCaption}
+)}}\label{ev_8h_a2416678834fb6f0e9941599cc4b38165}
+
+
+\-Definition at line 829 of file ev.\-h.
+
+
+
+\-Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=234pt]{ev_8h_a2416678834fb6f0e9941599cc4b38165_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ev_8h_a8ada7ca71dcef045d53e7f99898dec9a}{\index{ev.\-h@{ev.\-h}!ev\-\_\-unref@{ev\-\_\-unref}}
+\index{ev\-\_\-unref@{ev\-\_\-unref}!ev.h@{ev.\-h}}
+\subsubsection[{ev\-\_\-unref}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-E\-V\-\_\-\-A\-P\-I\-\_\-\-D\-E\-C\-L} void {\bf ev\-\_\-unref} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-E\-V\-\_\-\-P}}]{}
+\end{DoxyParamCaption}
+)}}\label{ev_8h_a8ada7ca71dcef045d53e7f99898dec9a}
+
+
+\-Definition at line 3519 of file ev.\-c.
+
+
+
+\-Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ev_8h_a8ada7ca71dcef045d53e7f99898dec9a_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ev_8h_a638025b4178e4f1731740f0d216db98e}{\index{ev.\-h@{ev.\-h}!ev\-\_\-userdata@{ev\-\_\-userdata}}
+\index{ev\-\_\-userdata@{ev\-\_\-userdata}!ev.h@{ev.\-h}}
+\subsubsection[{ev\-\_\-userdata}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-E\-V\-\_\-\-A\-P\-I\-\_\-\-D\-E\-C\-L} void$\ast$ {\bf ev\-\_\-userdata} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-E\-V\-\_\-\-P}}]{}
+\end{DoxyParamCaption}
+)}}\label{ev_8h_a638025b4178e4f1731740f0d216db98e}
+
+
+\-Definition at line 2606 of file ev.\-c.
+
+\hypertarget{ev_8h_a18ca7a4b689f8ed19a25919cbe28314e}{\index{ev.\-h@{ev.\-h}!ev\-\_\-verify@{ev\-\_\-verify}}
+\index{ev\-\_\-verify@{ev\-\_\-verify}!ev.h@{ev.\-h}}
+\subsubsection[{ev\-\_\-verify}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-E\-V\-\_\-\-A\-P\-I\-\_\-\-D\-E\-C\-L} void {\bf ev\-\_\-verify} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-E\-V\-\_\-\-P}}]{}
+\end{DoxyParamCaption}
+)}}\label{ev_8h_a18ca7a4b689f8ed19a25919cbe28314e}
+
+
+\-Definition at line 2930 of file ev.\-c.
+
+
+
+\-Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ev_8h_a18ca7a4b689f8ed19a25919cbe28314e_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\-Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ev_8h_a18ca7a4b689f8ed19a25919cbe28314e_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ev_8h_a2555de913f36736c4b40f299141c519a}{\index{ev.\-h@{ev.\-h}!ev\-\_\-version\-\_\-major@{ev\-\_\-version\-\_\-major}}
+\index{ev\-\_\-version\-\_\-major@{ev\-\_\-version\-\_\-major}!ev.h@{ev.\-h}}
+\subsubsection[{ev\-\_\-version\-\_\-major}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-E\-V\-\_\-\-A\-P\-I\-\_\-\-D\-E\-C\-L} int {\bf ev\-\_\-version\-\_\-major} (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{ev_8h_a2555de913f36736c4b40f299141c519a}
+
+
+\-Definition at line 2497 of file ev.\-c.
+
+
+
+\-Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=304pt]{ev_8h_a2555de913f36736c4b40f299141c519a_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ev_8h_a602e64c6fbe01ebff4211ea08c01b5fc}{\index{ev.\-h@{ev.\-h}!ev\-\_\-version\-\_\-minor@{ev\-\_\-version\-\_\-minor}}
+\index{ev\-\_\-version\-\_\-minor@{ev\-\_\-version\-\_\-minor}!ev.h@{ev.\-h}}
+\subsubsection[{ev\-\_\-version\-\_\-minor}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-E\-V\-\_\-\-A\-P\-I\-\_\-\-D\-E\-C\-L} int {\bf ev\-\_\-version\-\_\-minor} (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{ev_8h_a602e64c6fbe01ebff4211ea08c01b5fc}
+
+
+\-Definition at line 2503 of file ev.\-c.
+
+
+
+\-Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=304pt]{ev_8h_a602e64c6fbe01ebff4211ea08c01b5fc_icgraph}
+\end{center}
+\end{figure}
+
+

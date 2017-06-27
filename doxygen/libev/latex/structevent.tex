@@ -1,0 +1,141 @@
+\hypertarget{structevent}{\section{event \-Struct \-Reference}
+\label{structevent}\index{event@{event}}
+}
+
+
+{\ttfamily \#include $<$event.\-h$>$}
+
+
+
+\-Collaboration diagram for event\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structevent__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{\-Data \-Fields}
+\begin{DoxyCompactItemize}
+\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+union \{\\
+\>struct \hyperlink{structev__io}{ev\_io} \hyperlink{structevent_a8a4fa321488e67a96ad783dc24187c4c}{io}\\
+\>struct \hyperlink{structev__signal}{ev\_signal} \hyperlink{structevent_ad3d5a2f9ab72029d05b260267e08eba1}{sig}\\
+\} \hyperlink{structevent_a3fbb6fe0300dadbfebf8d1516f74082d}{iosig}\\
+
+\end{tabbing}\item 
+struct \hyperlink{structev__timer}{ev\-\_\-timer} \hyperlink{structevent_aba52a2d8ebe3e4d2e9bac349f661d509}{to}
+\item 
+struct \hyperlink{structevent__base}{event\-\_\-base} $\ast$ \hyperlink{structevent_a79005f93f769baaa5ab5d2a45b52ec62}{ev\-\_\-base}
+\item 
+\hyperlink{event_8h_a675c7b1b04923fb1b48f758222ab1333}{event\-\_\-callback\-\_\-fn} \hyperlink{structevent_a420d7cc7bf56d48aeeb1e27b52d7c829}{ev\-\_\-callback}
+\item 
+void $\ast$ \hyperlink{structevent_a680e2f70d6e4ce56b58f57e1182ffac1}{ev\-\_\-arg}
+\item 
+int \hyperlink{structevent_a7016497f14046277c71be6d4c1620890}{ev\-\_\-fd}
+\item 
+int \hyperlink{structevent_afc1b09b76d937eb994d6cdd3adf9ffcc}{ev\-\_\-pri}
+\item 
+int \hyperlink{structevent_acea2638a9075ad5d22ee179fda2fb8bc}{ev\-\_\-res}
+\item 
+int \hyperlink{structevent_a7facfe0f28541f092cd123c21e89c6c4}{ev\-\_\-flags}
+\item 
+short \hyperlink{structevent_a1c8a838880f1938d9ea23dcfee0419ea}{ev\-\_\-events}
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+
+
+\-Definition at line 80 of file event.\-h.
+
+
+
+\subsection{\-Field \-Documentation}
+\hypertarget{structevent_a680e2f70d6e4ce56b58f57e1182ffac1}{\index{event@{event}!ev\-\_\-arg@{ev\-\_\-arg}}
+\index{ev\-\_\-arg@{ev\-\_\-arg}!event@{event}}
+\subsubsection[{ev\-\_\-arg}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$ {\bf ev\-\_\-arg}}}\label{structevent_a680e2f70d6e4ce56b58f57e1182ffac1}
+
+
+\-Definition at line 92 of file event.\-h.
+
+\hypertarget{structevent_a79005f93f769baaa5ab5d2a45b52ec62}{\index{event@{event}!ev\-\_\-base@{ev\-\_\-base}}
+\index{ev\-\_\-base@{ev\-\_\-base}!event@{event}}
+\subsubsection[{ev\-\_\-base}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf event\-\_\-base}$\ast$ {\bf ev\-\_\-base}}}\label{structevent_a79005f93f769baaa5ab5d2a45b52ec62}
+
+
+\-Definition at line 90 of file event.\-h.
+
+\hypertarget{structevent_a420d7cc7bf56d48aeeb1e27b52d7c829}{\index{event@{event}!ev\-\_\-callback@{ev\-\_\-callback}}
+\index{ev\-\_\-callback@{ev\-\_\-callback}!event@{event}}
+\subsubsection[{ev\-\_\-callback}]{\setlength{\rightskip}{0pt plus 5cm}{\bf event\-\_\-callback\-\_\-fn} {\bf ev\-\_\-callback}}}\label{structevent_a420d7cc7bf56d48aeeb1e27b52d7c829}
+
+
+\-Definition at line 91 of file event.\-h.
+
+\hypertarget{structevent_a1c8a838880f1938d9ea23dcfee0419ea}{\index{event@{event}!ev\-\_\-events@{ev\-\_\-events}}
+\index{ev\-\_\-events@{ev\-\_\-events}!event@{event}}
+\subsubsection[{ev\-\_\-events}]{\setlength{\rightskip}{0pt plus 5cm}short {\bf ev\-\_\-events}}}\label{structevent_a1c8a838880f1938d9ea23dcfee0419ea}
+
+
+\-Definition at line 97 of file event.\-h.
+
+\hypertarget{structevent_a7016497f14046277c71be6d4c1620890}{\index{event@{event}!ev\-\_\-fd@{ev\-\_\-fd}}
+\index{ev\-\_\-fd@{ev\-\_\-fd}!event@{event}}
+\subsubsection[{ev\-\_\-fd}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf ev\-\_\-fd}}}\label{structevent_a7016497f14046277c71be6d4c1620890}
+
+
+\-Definition at line 93 of file event.\-h.
+
+\hypertarget{structevent_a7facfe0f28541f092cd123c21e89c6c4}{\index{event@{event}!ev\-\_\-flags@{ev\-\_\-flags}}
+\index{ev\-\_\-flags@{ev\-\_\-flags}!event@{event}}
+\subsubsection[{ev\-\_\-flags}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf ev\-\_\-flags}}}\label{structevent_a7facfe0f28541f092cd123c21e89c6c4}
+
+
+\-Definition at line 96 of file event.\-h.
+
+\hypertarget{structevent_afc1b09b76d937eb994d6cdd3adf9ffcc}{\index{event@{event}!ev\-\_\-pri@{ev\-\_\-pri}}
+\index{ev\-\_\-pri@{ev\-\_\-pri}!event@{event}}
+\subsubsection[{ev\-\_\-pri}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf ev\-\_\-pri}}}\label{structevent_afc1b09b76d937eb994d6cdd3adf9ffcc}
+
+
+\-Definition at line 94 of file event.\-h.
+
+\hypertarget{structevent_acea2638a9075ad5d22ee179fda2fb8bc}{\index{event@{event}!ev\-\_\-res@{ev\-\_\-res}}
+\index{ev\-\_\-res@{ev\-\_\-res}!event@{event}}
+\subsubsection[{ev\-\_\-res}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf ev\-\_\-res}}}\label{structevent_acea2638a9075ad5d22ee179fda2fb8bc}
+
+
+\-Definition at line 95 of file event.\-h.
+
+\hypertarget{structevent_a8a4fa321488e67a96ad783dc24187c4c}{\index{event@{event}!io@{io}}
+\index{io@{io}!event@{event}}
+\subsubsection[{io}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf ev\-\_\-io} {\bf io}}}\label{structevent_a8a4fa321488e67a96ad783dc24187c4c}
+
+
+\-Definition at line 84 of file event.\-h.
+
+\hypertarget{structevent_a3fbb6fe0300dadbfebf8d1516f74082d}{\index{event@{event}!iosig@{iosig}}
+\index{iosig@{iosig}!event@{event}}
+\subsubsection[{iosig}]{\setlength{\rightskip}{0pt plus 5cm}union \{ ... \}   {\bf iosig}}}\label{structevent_a3fbb6fe0300dadbfebf8d1516f74082d}
+\hypertarget{structevent_ad3d5a2f9ab72029d05b260267e08eba1}{\index{event@{event}!sig@{sig}}
+\index{sig@{sig}!event@{event}}
+\subsubsection[{sig}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf ev\-\_\-signal} {\bf sig}}}\label{structevent_ad3d5a2f9ab72029d05b260267e08eba1}
+
+
+\-Definition at line 85 of file event.\-h.
+
+\hypertarget{structevent_aba52a2d8ebe3e4d2e9bac349f661d509}{\index{event@{event}!to@{to}}
+\index{to@{to}!event@{event}}
+\subsubsection[{to}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf ev\-\_\-timer} {\bf to}}}\label{structevent_aba52a2d8ebe3e4d2e9bac349f661d509}
+
+
+\-Definition at line 87 of file event.\-h.
+
+
+
+\-The documentation for this struct was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+/home/jaymiao/workstation/github/libev-\/4.\-19/\hyperlink{event_8h}{event.\-h}\end{DoxyCompactItemize}

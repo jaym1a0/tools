@@ -1,0 +1,216 @@
+\hypertarget{ev__epoll_8c}{\section{/home/jaymiao/workstation/github/libev-\/4.19/ev\-\_\-epoll.c \-File \-Reference}
+\label{ev__epoll_8c}\index{/home/jaymiao/workstation/github/libev-\/4.\-19/ev\-\_\-epoll.\-c@{/home/jaymiao/workstation/github/libev-\/4.\-19/ev\-\_\-epoll.\-c}}
+}
+{\ttfamily \#include $<$sys/epoll.\-h$>$}\*
+\-Include dependency graph for ev\-\_\-epoll.\-c\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=334pt]{ev__epoll_8c__incl}
+\end{center}
+\end{figure}
+\-This graph shows which files directly or indirectly include this file\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=334pt]{ev__epoll_8c__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{\-Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{ev__epoll_8c_a7dc522e10f17f31f4e8295c09bed4c79}{\-E\-V\-\_\-\-E\-M\-A\-S\-K\-\_\-\-E\-P\-E\-R\-M}~0x80
+\end{DoxyCompactItemize}
+\subsection*{\-Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{ev__epoll_8c_a29b8657d6f88d38f31202ed0e4cdd45b}{epoll\-\_\-modify} (\hyperlink{ev_8h_a8ac42969e0a499b8c1367f0ad85dbba9}{\-E\-V\-\_\-\-P\-\_\-} int fd, int oev, int nev)
+\item 
+static void \hyperlink{ev__epoll_8c_a71fcc7c4360e6657793068e6b042d41c}{epoll\-\_\-poll} (\hyperlink{ev_8h_a8ac42969e0a499b8c1367f0ad85dbba9}{\-E\-V\-\_\-\-P\-\_\-} \hyperlink{ev_8h_add71e34ce2b04bbf7eb6f31a850814e8}{ev\-\_\-tstamp} timeout)
+\item 
+int \hyperlink{ev_8c_aaf118126fdc735d3ba2232e65353a9d5}{inline\-\_\-size} \hyperlink{ev__epoll_8c_a516d4d405971d44529fcc95906d976c3}{epoll\-\_\-init} (\hyperlink{ev_8h_a8ac42969e0a499b8c1367f0ad85dbba9}{\-E\-V\-\_\-\-P\-\_\-} int flags)
+\item 
+void \hyperlink{ev_8c_aaf118126fdc735d3ba2232e65353a9d5}{inline\-\_\-size} \hyperlink{ev__epoll_8c_a6083dc3144531d6860daabece08e7a3a}{epoll\-\_\-destroy} (\hyperlink{ev_8h_a6e6c6b499d18513c01cf4bde00121617}{\-E\-V\-\_\-\-P})
+\item 
+void \hyperlink{ev_8c_aaf118126fdc735d3ba2232e65353a9d5}{inline\-\_\-size} \hyperlink{ev__epoll_8c_aa07bab63f96aa274f4b394d660a10aca}{epoll\-\_\-fork} (\hyperlink{ev_8h_a6e6c6b499d18513c01cf4bde00121617}{\-E\-V\-\_\-\-P})
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Define \-Documentation}
+\hypertarget{ev__epoll_8c_a7dc522e10f17f31f4e8295c09bed4c79}{\index{ev\-\_\-epoll.\-c@{ev\-\_\-epoll.\-c}!\-E\-V\-\_\-\-E\-M\-A\-S\-K\-\_\-\-E\-P\-E\-R\-M@{\-E\-V\-\_\-\-E\-M\-A\-S\-K\-\_\-\-E\-P\-E\-R\-M}}
+\index{\-E\-V\-\_\-\-E\-M\-A\-S\-K\-\_\-\-E\-P\-E\-R\-M@{\-E\-V\-\_\-\-E\-M\-A\-S\-K\-\_\-\-E\-P\-E\-R\-M}!ev_epoll.c@{ev\-\_\-epoll.\-c}}
+\subsubsection[{\-E\-V\-\_\-\-E\-M\-A\-S\-K\-\_\-\-E\-P\-E\-R\-M}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-E\-V\-\_\-\-E\-M\-A\-S\-K\-\_\-\-E\-P\-E\-R\-M}~0x80}}\label{ev__epoll_8c_a7dc522e10f17f31f4e8295c09bed4c79}
+
+
+\-Definition at line 68 of file ev\-\_\-epoll.\-c.
+
+
+
+\subsection{\-Function \-Documentation}
+\hypertarget{ev__epoll_8c_a6083dc3144531d6860daabece08e7a3a}{\index{ev\-\_\-epoll.\-c@{ev\-\_\-epoll.\-c}!epoll\-\_\-destroy@{epoll\-\_\-destroy}}
+\index{epoll\-\_\-destroy@{epoll\-\_\-destroy}!ev_epoll.c@{ev\-\_\-epoll.\-c}}
+\subsubsection[{epoll\-\_\-destroy}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf inline\-\_\-size} {\bf epoll\-\_\-destroy} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-E\-V\-\_\-\-P}}]{}
+\end{DoxyParamCaption}
+)}}\label{ev__epoll_8c_a6083dc3144531d6860daabece08e7a3a}
+
+
+\-Definition at line 264 of file ev\-\_\-epoll.\-c.
+
+
+
+\-Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ev__epoll_8c_a6083dc3144531d6860daabece08e7a3a_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ev__epoll_8c_aa07bab63f96aa274f4b394d660a10aca}{\index{ev\-\_\-epoll.\-c@{ev\-\_\-epoll.\-c}!epoll\-\_\-fork@{epoll\-\_\-fork}}
+\index{epoll\-\_\-fork@{epoll\-\_\-fork}!ev_epoll.c@{ev\-\_\-epoll.\-c}}
+\subsubsection[{epoll\-\_\-fork}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf inline\-\_\-size} {\bf epoll\-\_\-fork} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-E\-V\-\_\-\-P}}]{}
+\end{DoxyParamCaption}
+)}}\label{ev__epoll_8c_aa07bab63f96aa274f4b394d660a10aca}
+
+
+\-Definition at line 271 of file ev\-\_\-epoll.\-c.
+
+
+
+\-Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=344pt]{ev__epoll_8c_aa07bab63f96aa274f4b394d660a10aca_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\-Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ev__epoll_8c_aa07bab63f96aa274f4b394d660a10aca_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ev__epoll_8c_a516d4d405971d44529fcc95906d976c3}{\index{ev\-\_\-epoll.\-c@{ev\-\_\-epoll.\-c}!epoll\-\_\-init@{epoll\-\_\-init}}
+\index{epoll\-\_\-init@{epoll\-\_\-init}!ev_epoll.c@{ev\-\_\-epoll.\-c}}
+\subsubsection[{epoll\-\_\-init}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf inline\-\_\-size} {\bf epoll\-\_\-init} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-E\-V\-\_\-\-P\-\_\-} int}]{flags}
+\end{DoxyParamCaption}
+)}}\label{ev__epoll_8c_a516d4d405971d44529fcc95906d976c3}
+
+
+\-Definition at line 239 of file ev\-\_\-epoll.\-c.
+
+
+
+\-Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ev__epoll_8c_a516d4d405971d44529fcc95906d976c3_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\-Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ev__epoll_8c_a516d4d405971d44529fcc95906d976c3_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ev__epoll_8c_a29b8657d6f88d38f31202ed0e4cdd45b}{\index{ev\-\_\-epoll.\-c@{ev\-\_\-epoll.\-c}!epoll\-\_\-modify@{epoll\-\_\-modify}}
+\index{epoll\-\_\-modify@{epoll\-\_\-modify}!ev_epoll.c@{ev\-\_\-epoll.\-c}}
+\subsubsection[{epoll\-\_\-modify}]{\setlength{\rightskip}{0pt plus 5cm}static void {\bf epoll\-\_\-modify} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-E\-V\-\_\-\-P\-\_\-} int}]{fd, }
+\item[{int}]{oev, }
+\item[{int}]{nev}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{ev__epoll_8c_a29b8657d6f88d38f31202ed0e4cdd45b}
+
+
+\-Definition at line 71 of file ev\-\_\-epoll.\-c.
+
+
+
+\-Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ev__epoll_8c_a29b8657d6f88d38f31202ed0e4cdd45b_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\-Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ev__epoll_8c_a29b8657d6f88d38f31202ed0e4cdd45b_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ev__epoll_8c_a71fcc7c4360e6657793068e6b042d41c}{\index{ev\-\_\-epoll.\-c@{ev\-\_\-epoll.\-c}!epoll\-\_\-poll@{epoll\-\_\-poll}}
+\index{epoll\-\_\-poll@{epoll\-\_\-poll}!ev_epoll.c@{ev\-\_\-epoll.\-c}}
+\subsubsection[{epoll\-\_\-poll}]{\setlength{\rightskip}{0pt plus 5cm}static void {\bf epoll\-\_\-poll} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-E\-V\-\_\-\-P\-\_\-} {\bf ev\-\_\-tstamp}}]{timeout}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{ev__epoll_8c_a71fcc7c4360e6657793068e6b042d41c}
+
+
+\-Definition at line 142 of file ev\-\_\-epoll.\-c.
+
+
+
+\-Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ev__epoll_8c_a71fcc7c4360e6657793068e6b042d41c_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\-Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ev__epoll_8c_a71fcc7c4360e6657793068e6b042d41c_icgraph}
+\end{center}
+\end{figure}
+
+

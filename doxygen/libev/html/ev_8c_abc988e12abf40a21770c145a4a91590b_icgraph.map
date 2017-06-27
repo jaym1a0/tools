@@ -1,0 +1,30 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$ev_8c.html#abf54b7f50de2dbf095394a906cf750f4" title="get_clock" alt="" coords="124,261,201,291"/>
+<area shape="rect" id="node5" href="$ev_8c.html#ae00f89f666f2b6d315722777ef5e5e9c" title="loop_init" alt="" coords="263,169,332,199"/>
+<area shape="rect" id="node22" href="$ev_8c.html#a628937c917c9a8774969f0f1331fa390" title="time_update" alt="" coords="251,475,344,504"/>
+<area shape="rect" id="node7" href="$ev_8c.html#a2036fdd84bea3b0fcae227ec3355a48b" title="ev_loop_new" alt="" coords="400,59,499,88"/>
+<area shape="rect" id="node13" href="$ev_8c.html#afc6871f153291d788d507b141f400a3c" title="ev_default_loop" alt="" coords="393,165,505,195"/>
+<area shape="rect" id="node9" href="$event_8h.html#abcbfb7ebf11703931628ba9d94b390ac" title="event_init" alt="" coords="612,59,689,88"/>
+<area shape="rect" id="node11" href="$event_8h.html#a4c16f1203aebc67f94791ae0240b7353" title="event_base_new" alt="" coords="591,5,711,35"/>
+<area shape="rect" id="node15" href="$structev_1_1loop__ref.html#aa9b92fe88733a9bd5be8b42301459b13" title="ev::loop_ref::is_default" alt="" coords="573,112,728,141"/>
+<area shape="rect" id="node17" href="$structev_1_1default__loop.html#a3269f4b0cc758d91739d8184956b0461" title="ev::default_loop::default_loop" alt="" coords="555,165,747,195"/>
+<area shape="rect" id="node19" href="$namespaceev.html#ac0c096b0140f59d5c5abea256f0c75c4" title="ev::get_default_loop" alt="" coords="581,219,720,248"/>
+<area shape="rect" id="node24" href="$ev_8c.html#a0f5b7abf810c3bbff4ef5fe7260b4f83" title="ev_run" alt="" coords="419,481,480,511"/>
+<area shape="rect" id="node57" href="$ev_8h.html#a6743be85bd913998ef987c1c62892387" title="ev_now_update" alt="" coords="393,749,505,779"/>
+<area shape="rect" id="node26" href="$structev_1_1loop__ref.html#a52fa73aeb9b8f6319d2041baf5a8bd58" title="ev::loop_ref::loop" alt="" coords="589,272,712,301"/>
+<area shape="rect" id="node28" href="$structev_1_1loop__ref.html#a64fe8b8a12ce7308a7f5fb9399d36757" title="ev::loop_ref::run" alt="" coords="593,325,708,355"/>
+<area shape="rect" id="node30" href="$ev_8h.html#a629607356458bceb1e36c19a5c74faa3" title="ev_embed_sweep" alt="" coords="588,379,713,408"/>
+<area shape="rect" id="node34" href="$ev_8c.html#a1a9134dd6698f2268422ed36143fdaa4" title="embed_io_cb" alt="" coords="601,432,700,461"/>
+<area shape="rect" id="node38" href="$ev_8c.html#ae80d7b5ed4ceb3b9254a6f452dba21d2" title="embed_fork_cb" alt="" coords="991,485,1100,515"/>
+<area shape="rect" id="node41" href="$ev_8c.html#ae6b51f4ad732cb5e83de19d7fc77bc33" title="embed_prepare_cb" alt="" coords="585,485,716,515"/>
+<area shape="rect" id="node45" href="$ev_8h.html#a76f89b1a402c811c57a456bb6e6ab6d7" title="ev_loop" alt="" coords="617,589,684,619"/>
+<area shape="rect" id="node47" href="$event_8h.html#a8044ef907066368f3173ccfef41d5d53" title="event_base_loop" alt="" coords="591,643,711,672"/>
+<area shape="rect" id="node55" href="$test_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="main" alt="" coords="625,696,676,725"/>
+<area shape="rect" id="node32" href="$namespaceev.html#adb7cfbaaf2a233e8b17711e118c8987a" title="ev::sweep" alt="" coords="827,379,909,408"/>
+<area shape="rect" id="node36" href="$ev_8h.html#a16dc9ccd4350d7280a0d3ee26cf5dc25" title="ev_embed_start" alt="" coords="811,485,925,515"/>
+<area shape="rect" id="node49" href="$event_8h.html#a765c1875642fc730addf04e9433f6448" title="event_loop" alt="" coords="825,616,911,645"/>
+<area shape="rect" id="node51" href="$event_8h.html#a02d3c95fc69fcc8e08f63064d2442f15" title="event_base_dispatch" alt="" coords="796,669,940,699"/>
+<area shape="rect" id="node53" href="$event_8h.html#a1f4991bceb8aaf33545d1fc857230b51" title="event_dispatch" alt="" coords="991,669,1100,699"/>
+<area shape="rect" id="node59" href="$ev_8h.html#acdc615b41ecb16e8907b4affc3fe5e86" title="ev_suspend" alt="" coords="605,749,696,779"/>
+<area shape="rect" id="node61" href="$ev_8h.html#ae4e8e9496a78f2a072d4e54b1ad47842" title="ev_resume" alt="" coords="608,803,693,832"/>
+</map>

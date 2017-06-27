@@ -1,0 +1,249 @@
+\hypertarget{ev__kqueue_8c}{\section{/home/jaymiao/workstation/github/libev-\/4.19/ev\-\_\-kqueue.c \-File \-Reference}
+\label{ev__kqueue_8c}\index{/home/jaymiao/workstation/github/libev-\/4.\-19/ev\-\_\-kqueue.\-c@{/home/jaymiao/workstation/github/libev-\/4.\-19/ev\-\_\-kqueue.\-c}}
+}
+{\ttfamily \#include $<$sys/types.\-h$>$}\*
+{\ttfamily \#include $<$sys/time.\-h$>$}\*
+{\ttfamily \#include $<$sys/event.\-h$>$}\*
+{\ttfamily \#include $<$string.\-h$>$}\*
+{\ttfamily \#include $<$errno.\-h$>$}\*
+\-Include dependency graph for ev\-\_\-kqueue.\-c\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ev__kqueue_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{\-Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{ev__kqueue_8c_a543ff24c970cf233a8288f0d9048f4e2}{\-E\-V\-\_\-\-E\-N\-A\-B\-L\-E}~0
+\item 
+\#define \hyperlink{ev__kqueue_8c_ac39e2952d3cd47bd8b0c26e34b35240d}{\-N\-O\-T\-E\-\_\-\-E\-O\-F}~0
+\end{DoxyCompactItemize}
+\subsection*{\-Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{ev_8c_a192c7771b07a2ad5a84c28f6a79e8a69}{inline\-\_\-speed} \hyperlink{ev__kqueue_8c_a9d93b9bd5f7449defd7628e088927d68}{kqueue\-\_\-change} (\hyperlink{ev_8h_a8ac42969e0a499b8c1367f0ad85dbba9}{\-E\-V\-\_\-\-P\-\_\-} int fd, int filter, int flags, int fflags)
+\item 
+static void \hyperlink{ev__kqueue_8c_a33ed4679e5713b7f8bcb3e3ae523295c}{kqueue\-\_\-modify} (\hyperlink{ev_8h_a8ac42969e0a499b8c1367f0ad85dbba9}{\-E\-V\-\_\-\-P\-\_\-} int fd, int oev, int nev)
+\item 
+static void \hyperlink{ev__kqueue_8c_a321f2a1db43a5f3bf677c3d79100b3cd}{kqueue\-\_\-poll} (\hyperlink{ev_8h_a8ac42969e0a499b8c1367f0ad85dbba9}{\-E\-V\-\_\-\-P\-\_\-} \hyperlink{ev_8h_add71e34ce2b04bbf7eb6f31a850814e8}{ev\-\_\-tstamp} timeout)
+\item 
+int \hyperlink{ev_8c_aaf118126fdc735d3ba2232e65353a9d5}{inline\-\_\-size} \hyperlink{ev__kqueue_8c_ac8bf8dffbbc7c43ab84bb3c9e630cff4}{kqueue\-\_\-init} (\hyperlink{ev_8h_a8ac42969e0a499b8c1367f0ad85dbba9}{\-E\-V\-\_\-\-P\-\_\-} int flags)
+\item 
+void \hyperlink{ev_8c_aaf118126fdc735d3ba2232e65353a9d5}{inline\-\_\-size} \hyperlink{ev__kqueue_8c_af5f1fef8577b33b5d7e99080378f6653}{kqueue\-\_\-destroy} (\hyperlink{ev_8h_a6e6c6b499d18513c01cf4bde00121617}{\-E\-V\-\_\-\-P})
+\item 
+void \hyperlink{ev_8c_aaf118126fdc735d3ba2232e65353a9d5}{inline\-\_\-size} \hyperlink{ev__kqueue_8c_abbbbf07ddf5430bb12d84d12533c9ab9}{kqueue\-\_\-fork} (\hyperlink{ev_8h_a6e6c6b499d18513c01cf4bde00121617}{\-E\-V\-\_\-\-P})
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Define \-Documentation}
+\hypertarget{ev__kqueue_8c_a543ff24c970cf233a8288f0d9048f4e2}{\index{ev\-\_\-kqueue.\-c@{ev\-\_\-kqueue.\-c}!\-E\-V\-\_\-\-E\-N\-A\-B\-L\-E@{\-E\-V\-\_\-\-E\-N\-A\-B\-L\-E}}
+\index{\-E\-V\-\_\-\-E\-N\-A\-B\-L\-E@{\-E\-V\-\_\-\-E\-N\-A\-B\-L\-E}!ev_kqueue.c@{ev\-\_\-kqueue.\-c}}
+\subsubsection[{\-E\-V\-\_\-\-E\-N\-A\-B\-L\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-E\-V\-\_\-\-E\-N\-A\-B\-L\-E}~0}}\label{ev__kqueue_8c_a543ff24c970cf233a8288f0d9048f4e2}
+
+
+\-Definition at line 57 of file ev\-\_\-kqueue.\-c.
+
+\hypertarget{ev__kqueue_8c_ac39e2952d3cd47bd8b0c26e34b35240d}{\index{ev\-\_\-kqueue.\-c@{ev\-\_\-kqueue.\-c}!\-N\-O\-T\-E\-\_\-\-E\-O\-F@{\-N\-O\-T\-E\-\_\-\-E\-O\-F}}
+\index{\-N\-O\-T\-E\-\_\-\-E\-O\-F@{\-N\-O\-T\-E\-\_\-\-E\-O\-F}!ev_kqueue.c@{ev\-\_\-kqueue.\-c}}
+\subsubsection[{\-N\-O\-T\-E\-\_\-\-E\-O\-F}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-N\-O\-T\-E\-\_\-\-E\-O\-F}~0}}\label{ev__kqueue_8c_ac39e2952d3cd47bd8b0c26e34b35240d}
+
+
+\-Definition at line 60 of file ev\-\_\-kqueue.\-c.
+
+
+
+\subsection{\-Function \-Documentation}
+\hypertarget{ev__kqueue_8c_a9d93b9bd5f7449defd7628e088927d68}{\index{ev\-\_\-kqueue.\-c@{ev\-\_\-kqueue.\-c}!kqueue\-\_\-change@{kqueue\-\_\-change}}
+\index{kqueue\-\_\-change@{kqueue\-\_\-change}!ev_kqueue.c@{ev\-\_\-kqueue.\-c}}
+\subsubsection[{kqueue\-\_\-change}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf inline\-\_\-speed} {\bf kqueue\-\_\-change} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-E\-V\-\_\-\-P\-\_\-} int}]{fd, }
+\item[{int}]{filter, }
+\item[{int}]{flags, }
+\item[{int}]{fflags}
+\end{DoxyParamCaption}
+)}}\label{ev__kqueue_8c_a9d93b9bd5f7449defd7628e088927d68}
+
+
+\-Definition at line 47 of file ev\-\_\-kqueue.\-c.
+
+
+
+\-Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ev__kqueue_8c_a9d93b9bd5f7449defd7628e088927d68_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ev__kqueue_8c_af5f1fef8577b33b5d7e99080378f6653}{\index{ev\-\_\-kqueue.\-c@{ev\-\_\-kqueue.\-c}!kqueue\-\_\-destroy@{kqueue\-\_\-destroy}}
+\index{kqueue\-\_\-destroy@{kqueue\-\_\-destroy}!ev_kqueue.c@{ev\-\_\-kqueue.\-c}}
+\subsubsection[{kqueue\-\_\-destroy}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf inline\-\_\-size} {\bf kqueue\-\_\-destroy} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-E\-V\-\_\-\-P}}]{}
+\end{DoxyParamCaption}
+)}}\label{ev__kqueue_8c_af5f1fef8577b33b5d7e99080378f6653}
+
+
+\-Definition at line 180 of file ev\-\_\-kqueue.\-c.
+
+
+
+\-Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ev__kqueue_8c_af5f1fef8577b33b5d7e99080378f6653_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ev__kqueue_8c_abbbbf07ddf5430bb12d84d12533c9ab9}{\index{ev\-\_\-kqueue.\-c@{ev\-\_\-kqueue.\-c}!kqueue\-\_\-fork@{kqueue\-\_\-fork}}
+\index{kqueue\-\_\-fork@{kqueue\-\_\-fork}!ev_kqueue.c@{ev\-\_\-kqueue.\-c}}
+\subsubsection[{kqueue\-\_\-fork}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf inline\-\_\-size} {\bf kqueue\-\_\-fork} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-E\-V\-\_\-\-P}}]{}
+\end{DoxyParamCaption}
+)}}\label{ev__kqueue_8c_abbbbf07ddf5430bb12d84d12533c9ab9}
+
+
+\-Definition at line 187 of file ev\-\_\-kqueue.\-c.
+
+
+
+\-Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ev__kqueue_8c_abbbbf07ddf5430bb12d84d12533c9ab9_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\-Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ev__kqueue_8c_abbbbf07ddf5430bb12d84d12533c9ab9_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ev__kqueue_8c_ac8bf8dffbbc7c43ab84bb3c9e630cff4}{\index{ev\-\_\-kqueue.\-c@{ev\-\_\-kqueue.\-c}!kqueue\-\_\-init@{kqueue\-\_\-init}}
+\index{kqueue\-\_\-init@{kqueue\-\_\-init}!ev_kqueue.c@{ev\-\_\-kqueue.\-c}}
+\subsubsection[{kqueue\-\_\-init}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf inline\-\_\-size} {\bf kqueue\-\_\-init} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-E\-V\-\_\-\-P\-\_\-} int}]{flags}
+\end{DoxyParamCaption}
+)}}\label{ev__kqueue_8c_ac8bf8dffbbc7c43ab84bb3c9e630cff4}
+
+
+\-Definition at line 156 of file ev\-\_\-kqueue.\-c.
+
+
+
+\-Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ev__kqueue_8c_ac8bf8dffbbc7c43ab84bb3c9e630cff4_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\-Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ev__kqueue_8c_ac8bf8dffbbc7c43ab84bb3c9e630cff4_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ev__kqueue_8c_a33ed4679e5713b7f8bcb3e3ae523295c}{\index{ev\-\_\-kqueue.\-c@{ev\-\_\-kqueue.\-c}!kqueue\-\_\-modify@{kqueue\-\_\-modify}}
+\index{kqueue\-\_\-modify@{kqueue\-\_\-modify}!ev_kqueue.c@{ev\-\_\-kqueue.\-c}}
+\subsubsection[{kqueue\-\_\-modify}]{\setlength{\rightskip}{0pt plus 5cm}static void {\bf kqueue\-\_\-modify} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-E\-V\-\_\-\-P\-\_\-} int}]{fd, }
+\item[{int}]{oev, }
+\item[{int}]{nev}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{ev__kqueue_8c_a33ed4679e5713b7f8bcb3e3ae523295c}
+
+
+\-Definition at line 64 of file ev\-\_\-kqueue.\-c.
+
+
+
+\-Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=286pt]{ev__kqueue_8c_a33ed4679e5713b7f8bcb3e3ae523295c_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\-Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ev__kqueue_8c_a33ed4679e5713b7f8bcb3e3ae523295c_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ev__kqueue_8c_a321f2a1db43a5f3bf677c3d79100b3cd}{\index{ev\-\_\-kqueue.\-c@{ev\-\_\-kqueue.\-c}!kqueue\-\_\-poll@{kqueue\-\_\-poll}}
+\index{kqueue\-\_\-poll@{kqueue\-\_\-poll}!ev_kqueue.c@{ev\-\_\-kqueue.\-c}}
+\subsubsection[{kqueue\-\_\-poll}]{\setlength{\rightskip}{0pt plus 5cm}static void {\bf kqueue\-\_\-poll} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-E\-V\-\_\-\-P\-\_\-} {\bf ev\-\_\-tstamp}}]{timeout}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{ev__kqueue_8c_a321f2a1db43a5f3bf677c3d79100b3cd}
+
+
+\-Definition at line 86 of file ev\-\_\-kqueue.\-c.
+
+
+
+\-Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ev__kqueue_8c_a321f2a1db43a5f3bf677c3d79100b3cd_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\-Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ev__kqueue_8c_a321f2a1db43a5f3bf677c3d79100b3cd_icgraph}
+\end{center}
+\end{figure}
+
+

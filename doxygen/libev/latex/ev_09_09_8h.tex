@@ -1,0 +1,306 @@
+\hypertarget{ev_09_09_8h}{\section{/home/jaymiao/workstation/github/libev-\/4.19/ev++.h \-File \-Reference}
+\label{ev_09_09_8h}\index{/home/jaymiao/workstation/github/libev-\/4.\-19/ev++.\-h@{/home/jaymiao/workstation/github/libev-\/4.\-19/ev++.\-h}}
+}
+{\ttfamily \#include \char`\"{}ev.\-h\char`\"{}}\*
+{\ttfamily \#include $<$stdexcept$>$}\*
+\-Include dependency graph for ev++.h\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=322pt]{ev_09_09_8h__incl}
+\end{center}
+\end{figure}
+\subsection*{\-Data \-Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structev_1_1bad__loop}{bad\-\_\-loop}
+\item 
+struct \hyperlink{structev_1_1loop__ref}{loop\-\_\-ref}
+\item 
+struct \hyperlink{structev_1_1dynamic__loop}{dynamic\-\_\-loop}
+\item 
+struct \hyperlink{structev_1_1default__loop}{default\-\_\-loop}
+\item 
+struct \hyperlink{structev_1_1base}{base$<$ ev\-\_\-watcher, watcher $>$}
+\end{DoxyCompactItemize}
+\subsection*{\-Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \hyperlink{namespaceev}{ev}
+\end{DoxyCompactItemize}
+\subsection*{\-Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{ev_09_09_8h_add8f7535b88bfc84a2a510c36c9483e6}{\-E\-V\-\_\-\-U\-S\-E\-\_\-\-S\-T\-D\-E\-X\-C\-E\-P\-T}~1
+\item 
+\#define \hyperlink{ev_09_09_8h_a09145a418bb5b9bdbdfc990751df5ba3}{\-E\-V\-\_\-\-A\-X}~raw\-\_\-loop
+\item 
+\#define \hyperlink{ev_09_09_8h_a42682a06d372dcf270005ccfff41433e}{\-E\-V\-\_\-\-A\-X\-\_\-}~raw\-\_\-loop,
+\item 
+\#define \hyperlink{ev_09_09_8h_aad63f899c1136b86d0d6cb86aec3fc4d}{\-E\-V\-\_\-\-P\-X}~loop\-\_\-ref \hyperlink{ev_8h_a383ea0dc8239cccecd730d5034abaab8}{\-E\-V\-\_\-\-A}
+\item 
+\#define \hyperlink{ev_09_09_8h_a46c307261296c0b8499914e3dae1b661}{\-E\-V\-\_\-\-P\-X\-\_\-}~loop\-\_\-ref \hyperlink{ev_8h_ac0fea9e1f8c3efe427907d4cad8dbc7a}{\-E\-V\-\_\-\-A\-\_\-}
+\item 
+\#define \hyperlink{ev_09_09_8h_a33b31eed6691034ccacc058050ee11ad}{\-E\-V\-\_\-\-C\-O\-N\-S\-T\-R\-U\-C\-T}(cppstem, cstem)
+\item 
+\#define \hyperlink{ev_09_09_8h_a728f99815d41f3a51905b10931a0eb31}{\-E\-V\-\_\-\-B\-E\-G\-I\-N\-\_\-\-W\-A\-T\-C\-H\-E\-R}(cppstem, cstem)
+\item 
+\#define \hyperlink{ev_09_09_8h_aebf9657e02d6705e2bf8094cac1cac2c}{\-E\-V\-\_\-\-E\-N\-D\-\_\-\-W\-A\-T\-C\-H\-E\-R}(cppstem, cstem)~\};
+\end{DoxyCompactItemize}
+\subsection*{\-Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef \hyperlink{ev_8h_add71e34ce2b04bbf7eb6f31a850814e8}{ev\-\_\-tstamp} \hyperlink{namespaceev_a9853823b701944a8a5ce179d10a24b97}{tstamp}
+\end{DoxyCompactItemize}
+\subsection*{\-Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ \*
+\hyperlink{namespaceev_a06fc87d81c62e9abb8790b6e5713c55ba632fa39438c1676b435ec43e6a0f9647}{\-U\-N\-D\-E\-F} =  \-E\-V\-\_\-\-U\-N\-D\-E\-F, 
+\hyperlink{namespaceev_a06fc87d81c62e9abb8790b6e5713c55bac157bdf0b85a40d2619cbc8bc1ae5fe2}{\-N\-O\-N\-E} =  \-E\-V\-\_\-\-N\-O\-N\-E, 
+\hyperlink{namespaceev_a06fc87d81c62e9abb8790b6e5713c55bacb9be765f361bb7efb9073730aac92c6}{\-R\-E\-A\-D} =  \-E\-V\-\_\-\-R\-E\-A\-D, 
+\hyperlink{namespaceev_a06fc87d81c62e9abb8790b6e5713c55ba61aa7ff70b76bff0fda378cf61d6afbc}{\-W\-R\-I\-T\-E} =  \-E\-V\-\_\-\-W\-R\-I\-T\-E, 
+\*
+\hyperlink{namespaceev_a06fc87d81c62e9abb8790b6e5713c55baad9dee005a3d0f9137b2ac1e0869f89b}{\-T\-I\-M\-E\-O\-U\-T} =  \-E\-V\-\_\-\-T\-I\-M\-E\-O\-U\-T, 
+\hyperlink{namespaceev_a06fc87d81c62e9abb8790b6e5713c55ba17ba9bae1b8d7e8d6c12d46ec58e0769}{\-T\-I\-M\-E\-R} =  \-E\-V\-\_\-\-T\-I\-M\-E\-R, 
+\hyperlink{namespaceev_a06fc87d81c62e9abb8790b6e5713c55bae4379d044711537d9ce3b3b58c575c58}{\-P\-E\-R\-I\-O\-D\-I\-C} =  \-E\-V\-\_\-\-P\-E\-R\-I\-O\-D\-I\-C, 
+\hyperlink{namespaceev_a06fc87d81c62e9abb8790b6e5713c55ba480882f626731b7fa7fc7caf12d8cb66}{\-S\-I\-G\-N\-A\-L} =  \-E\-V\-\_\-\-S\-I\-G\-N\-A\-L, 
+\*
+\hyperlink{namespaceev_a06fc87d81c62e9abb8790b6e5713c55ba1fbfc6416a0d78a967e48395e021d7c7}{\-C\-H\-I\-L\-D} =  \-E\-V\-\_\-\-C\-H\-I\-L\-D, 
+\hyperlink{namespaceev_a06fc87d81c62e9abb8790b6e5713c55bace7da58f17f29e67dcc1cb799bccd457}{\-S\-T\-A\-T} =  \-E\-V\-\_\-\-S\-T\-A\-T, 
+\hyperlink{namespaceev_a06fc87d81c62e9abb8790b6e5713c55bafd6a0e4343048b10646dd2976cc5ad18}{\-I\-D\-L\-E} =  \-E\-V\-\_\-\-I\-D\-L\-E, 
+\hyperlink{namespaceev_a06fc87d81c62e9abb8790b6e5713c55baed65b7dfe470f4e500b15f7074bb7fa2}{\-C\-H\-E\-C\-K} =  \-E\-V\-\_\-\-C\-H\-E\-C\-K, 
+\*
+\hyperlink{namespaceev_a06fc87d81c62e9abb8790b6e5713c55ba2a23715bd09dbb75914453ec3ba4ccee}{\-P\-R\-E\-P\-A\-R\-E} =  \-E\-V\-\_\-\-P\-R\-E\-P\-A\-R\-E, 
+\hyperlink{namespaceev_a06fc87d81c62e9abb8790b6e5713c55baeb5838b12f5849b4544c2d9d10dc6548}{\-F\-O\-R\-K} =  \-E\-V\-\_\-\-F\-O\-R\-K, 
+\hyperlink{namespaceev_a06fc87d81c62e9abb8790b6e5713c55bab5468e005ffe03733c26f12419ff0a94}{\-A\-S\-Y\-N\-C} =  \-E\-V\-\_\-\-A\-S\-Y\-N\-C, 
+\hyperlink{namespaceev_a06fc87d81c62e9abb8790b6e5713c55ba5ee0af6274ed7767130dbe0985ef0555}{\-E\-M\-B\-E\-D} =  \-E\-V\-\_\-\-E\-M\-B\-E\-D, 
+\*
+\hyperlink{namespaceev_a06fc87d81c62e9abb8790b6e5713c55ba2fd6f336d08340583bd620a7f5694c90}{\-E\-R\-R\-O\-R} =  \-E\-V\-\_\-\-E\-R\-R\-O\-R
+ \}
+\item 
+enum \{ \*
+\hyperlink{namespaceev_adf764cbdea00d65edcd07bb9953ad2b7aeef9468d1b98bca652a04bf5063fd9d6}{\-A\-U\-T\-O} =  \-E\-V\-F\-L\-A\-G\-\_\-\-A\-U\-T\-O, 
+\hyperlink{namespaceev_adf764cbdea00d65edcd07bb9953ad2b7ab703394363c80a257ea8e9f86dd4ac22}{\-N\-O\-E\-N\-V} =  \-E\-V\-F\-L\-A\-G\-\_\-\-N\-O\-E\-N\-V, 
+\hyperlink{namespaceev_adf764cbdea00d65edcd07bb9953ad2b7a4539f2df8d7f564de95599274b8052d0}{\-F\-O\-R\-K\-C\-H\-E\-C\-K} =  \-E\-V\-F\-L\-A\-G\-\_\-\-F\-O\-R\-K\-C\-H\-E\-C\-K, 
+\hyperlink{namespaceev_adf764cbdea00d65edcd07bb9953ad2b7a1697a91b22c2369eb2ba427c2d193329}{\-S\-E\-L\-E\-C\-T} =  \-E\-V\-B\-A\-C\-K\-E\-N\-D\-\_\-\-S\-E\-L\-E\-C\-T, 
+\*
+\hyperlink{namespaceev_adf764cbdea00d65edcd07bb9953ad2b7a3995e28e73357bc6b7744f226af95a14}{\-P\-O\-L\-L} =  \-E\-V\-B\-A\-C\-K\-E\-N\-D\-\_\-\-P\-O\-L\-L, 
+\hyperlink{namespaceev_adf764cbdea00d65edcd07bb9953ad2b7af477fdbebb57b5d578b9bb2611b45d63}{\-E\-P\-O\-L\-L} =  \-E\-V\-B\-A\-C\-K\-E\-N\-D\-\_\-\-E\-P\-O\-L\-L, 
+\hyperlink{namespaceev_adf764cbdea00d65edcd07bb9953ad2b7a7399eaa7d2ee196e9e403dfc85dd51cc}{\-K\-Q\-U\-E\-U\-E} =  \-E\-V\-B\-A\-C\-K\-E\-N\-D\-\_\-\-K\-Q\-U\-E\-U\-E, 
+\hyperlink{namespaceev_adf764cbdea00d65edcd07bb9953ad2b7ab39902254c664f2aa1364006f6e1f48a}{\-D\-E\-V\-P\-O\-L\-L} =  \-E\-V\-B\-A\-C\-K\-E\-N\-D\-\_\-\-D\-E\-V\-P\-O\-L\-L, 
+\*
+\hyperlink{namespaceev_adf764cbdea00d65edcd07bb9953ad2b7a8268527d969e4ef493d3f35844a0b841}{\-P\-O\-R\-T} =  \-E\-V\-B\-A\-C\-K\-E\-N\-D\-\_\-\-P\-O\-R\-T
+ \}
+\item 
+enum \{ \hyperlink{namespaceev_a99fb83031ce9923c84392b4e92f956b5ab7c5736e0e002c269ae31959e24f43f5}{\-N\-O\-N\-B\-L\-O\-C\-K} =  \-E\-V\-L\-O\-O\-P\-\_\-\-N\-O\-N\-B\-L\-O\-C\-K, 
+\hyperlink{namespaceev_a99fb83031ce9923c84392b4e92f956b5a2724fa87f252403cd2c93f7437f34fd5}{\-O\-N\-E\-S\-H\-O\-T} =  \-E\-V\-L\-O\-O\-P\-\_\-\-O\-N\-E\-S\-H\-O\-T, 
+\hyperlink{namespaceev_a99fb83031ce9923c84392b4e92f956b5af87c9acad460167ab03fa54af4f85ad1}{\-N\-O\-W\-A\-I\-T} =  \-E\-V\-R\-U\-N\-\_\-\-N\-O\-W\-A\-I\-T, 
+\hyperlink{namespaceev_a99fb83031ce9923c84392b4e92f956b5af1110c378b0b40a4b5bd04fdd92220c4}{\-O\-N\-C\-E} =  \-E\-V\-R\-U\-N\-\_\-\-O\-N\-C\-E
+ \}
+\item 
+enum \hyperlink{namespaceev_aca7e42bfd95674ad51c82b41e0c3329e}{how\-\_\-t} \{ \hyperlink{namespaceev_aca7e42bfd95674ad51c82b41e0c3329ea7a725f13af144bdef532d0389ba75e0d}{\-O\-N\-E} =  \-E\-V\-B\-R\-E\-A\-K\-\_\-\-O\-N\-E, 
+\hyperlink{namespaceev_aca7e42bfd95674ad51c82b41e0c3329eab1d5eac4b1dca480c8056eaea7663b7a}{\-A\-L\-L} =  \-E\-V\-B\-R\-E\-A\-K\-\_\-\-A\-L\-L
+ \}
+\end{DoxyCompactItemize}
+\subsection*{\-Functions}
+\begin{DoxyCompactItemize}
+\item 
+loop\-\_\-ref \hyperlink{namespaceev_ac0c096b0140f59d5c5abea256f0c75c4}{get\-\_\-default\-\_\-loop} ()  throw ()
+\item 
+tstamp \hyperlink{namespaceev_a260a36d42568d9d1820af7537fc1bae2}{now} (\hyperlink{ev_8h_a6e6c6b499d18513c01cf4bde00121617}{\-E\-V\-\_\-\-P})  throw ()
+\item 
+void \hyperlink{namespaceev_aea693915baceb9cb7517a52c578a4a94}{delay} (tstamp interval)  throw ()
+\item 
+int \hyperlink{namespaceev_a0d3917d61c37bb24db1d864e2ac4552f}{version\-\_\-major} ()  throw ()
+\item 
+int \hyperlink{namespaceev_abfc4ac781668b20171841d8dda0317a0}{version\-\_\-minor} ()  throw ()
+\item 
+unsigned int \hyperlink{namespaceev_ae3ffb75868e8c2922a0f4a2f67593093}{supported\-\_\-backends} ()  throw ()
+\item 
+unsigned int \hyperlink{namespaceev_a8cb5adc662fb62112386efd00b0af595}{recommended\-\_\-backends} ()  throw ()
+\item 
+unsigned int \hyperlink{namespaceev_a0a9dd6a12517dc1d8ece8100eab7b28c}{embeddable\-\_\-backends} ()  throw ()
+\item 
+void \hyperlink{namespaceev_a7ff6e0fbf0cd740f0065b73588dbe7b4}{set\-\_\-allocator} (void $\ast$($\ast$cb)(void $\ast$ptr, long size) throw())  throw ()
+\item 
+void \hyperlink{namespaceev_abca03339e2d94adc78a0bcf0acf6ccae}{set\-\_\-syserr\-\_\-cb} (void($\ast$cb)(const char $\ast$msg) throw())  throw ()
+\item 
+void \hyperlink{namespaceev_a6b46afd8229a5e1c940c265127857088}{set} (int fd, int events)  throw ()
+\item 
+void \hyperlink{namespaceev_a08ae4b9113645a19793a0b12eea43939}{set} (int events)  throw ()
+\item 
+void \hyperlink{namespaceev_a1dd5727612e83d2114a052325db53cff}{start} (int fd, int events)  throw ()
+\item 
+void \hyperlink{namespaceev_a62e8d4db09755b6ac44bc00f8a79f947}{set} (\hyperlink{ev_8h_add71e34ce2b04bbf7eb6f31a850814e8}{ev\-\_\-tstamp} after, \hyperlink{ev_8h_add71e34ce2b04bbf7eb6f31a850814e8}{ev\-\_\-tstamp} repeat=0.)  throw ()
+\item 
+void \hyperlink{namespaceev_a8c79d5364cc6a464e5e43978894e2e65}{start} (\hyperlink{ev_8h_add71e34ce2b04bbf7eb6f31a850814e8}{ev\-\_\-tstamp} after, \hyperlink{ev_8h_add71e34ce2b04bbf7eb6f31a850814e8}{ev\-\_\-tstamp} repeat=0.)  throw ()
+\item 
+void \hyperlink{namespaceev_ab7c9a87739679053f1cc8d9924997e88}{again} ()  throw ()
+\item 
+\hyperlink{ev_8h_add71e34ce2b04bbf7eb6f31a850814e8}{ev\-\_\-tstamp} \hyperlink{namespaceev_a5fd889d801efabfac0945b37392e1c80}{remaining} ()
+\item 
+void \hyperlink{namespaceev_adc6909ad912a1dcadd1c6057bb22abd2}{start} (int signum)  throw ()
+\item 
+void \hyperlink{namespaceev_ac769b7c626617c8c488674381a409ef3}{set} (const char $\ast$path, \hyperlink{ev_8h_add71e34ce2b04bbf7eb6f31a850814e8}{ev\-\_\-tstamp} interval=0.)  throw ()
+\item 
+void \hyperlink{namespaceev_ad301ec74ae585578be337d2cd1c4c306}{start} (const char $\ast$path, \hyperlink{ev_8h_add71e34ce2b04bbf7eb6f31a850814e8}{ev\-\_\-tstamp} interval=0.)  throw ()
+\item 
+void \hyperlink{namespaceev_a5bb641560ccc45a778d39c887887c354}{update} ()  throw ()
+\item 
+void \hyperlink{namespaceev_a62bbebcdc34a8056c32d0b1a26026717}{set} ()  throw ()
+\item 
+void \hyperlink{namespaceev_ad1c1e455ba2c264935c5067bd382cade}{set\-\_\-embed} (struct \hyperlink{structev__loop}{ev\-\_\-loop} $\ast$embedded\-\_\-loop)  throw ()
+\item 
+void \hyperlink{namespaceev_a6a90facb9d608bdabb83b7cb4416b110}{start} (struct \hyperlink{structev__loop}{ev\-\_\-loop} $\ast$embedded\-\_\-loop)  throw ()
+\item 
+void \hyperlink{namespaceev_adb7cfbaaf2a233e8b17711e118c8987a}{sweep} ()
+\item 
+void \hyperlink{namespaceev_a28510b06b8f37de1192b841d5eec8d8c}{send} ()  throw ()
+\item 
+bool \hyperlink{namespaceev_af6be39a41980f0e42ffb968bee09889b}{async\-\_\-pending} ()  throw ()
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Define \-Documentation}
+\hypertarget{ev_09_09_8h_a09145a418bb5b9bdbdfc990751df5ba3}{\index{ev++.\-h@{ev++.\-h}!\-E\-V\-\_\-\-A\-X@{\-E\-V\-\_\-\-A\-X}}
+\index{\-E\-V\-\_\-\-A\-X@{\-E\-V\-\_\-\-A\-X}!ev++.h@{ev++.\-h}}
+\subsubsection[{\-E\-V\-\_\-\-A\-X}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-E\-V\-\_\-\-A\-X}~raw\-\_\-loop}}\label{ev_09_09_8h_a09145a418bb5b9bdbdfc990751df5ba3}
+
+
+\-Definition at line 136 of file ev++.\-h.
+
+\hypertarget{ev_09_09_8h_a42682a06d372dcf270005ccfff41433e}{\index{ev++.\-h@{ev++.\-h}!\-E\-V\-\_\-\-A\-X\-\_\-@{\-E\-V\-\_\-\-A\-X\-\_\-}}
+\index{\-E\-V\-\_\-\-A\-X\-\_\-@{\-E\-V\-\_\-\-A\-X\-\_\-}!ev++.h@{ev++.\-h}}
+\subsubsection[{\-E\-V\-\_\-\-A\-X\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-E\-V\-\_\-\-A\-X\-\_\-}~raw\-\_\-loop,}}\label{ev_09_09_8h_a42682a06d372dcf270005ccfff41433e}
+
+
+\-Definition at line 137 of file ev++.\-h.
+
+\hypertarget{ev_09_09_8h_a728f99815d41f3a51905b10931a0eb31}{\index{ev++.\-h@{ev++.\-h}!\-E\-V\-\_\-\-B\-E\-G\-I\-N\-\_\-\-W\-A\-T\-C\-H\-E\-R@{\-E\-V\-\_\-\-B\-E\-G\-I\-N\-\_\-\-W\-A\-T\-C\-H\-E\-R}}
+\index{\-E\-V\-\_\-\-B\-E\-G\-I\-N\-\_\-\-W\-A\-T\-C\-H\-E\-R@{\-E\-V\-\_\-\-B\-E\-G\-I\-N\-\_\-\-W\-A\-T\-C\-H\-E\-R}!ev++.h@{ev++.\-h}}
+\subsubsection[{\-E\-V\-\_\-\-B\-E\-G\-I\-N\-\_\-\-W\-A\-T\-C\-H\-E\-R}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-E\-V\-\_\-\-B\-E\-G\-I\-N\-\_\-\-W\-A\-T\-C\-H\-E\-R}(
+\begin{DoxyParamCaption}
+\item[{}]{cppstem, }
+\item[{}]{cstem}
+\end{DoxyParamCaption}
+)}}\label{ev_09_09_8h_a728f99815d41f3a51905b10931a0eb31}
+{\bfseries \-Value\-:}
+\begin{DoxyCode}
+\
+  struct cppstem : base<ev_ ## cstem, cppstem>                                 
+               \
+  {                                                                            
+               \
+    void start () throw ()                                                     
+               \
+    {                                                                          
+               \
+      ev_ ## cstem ## _start (EV_A_ static_cast<ev_ ## cstem *>(this));        
+               \
+    }                                                                          
+               \
+                                                                               
+               \
+    void stop () throw ()                                                      
+               \
+    {                                                                          
+               \
+      ev_ ## cstem ## _stop (EV_A_ static_cast<ev_ ## cstem *>(this));         
+               \
+    }                                                                          
+               \
+                                                                               
+               \
+    cppstem EV_CONSTRUCT(cppstem,cstem)                                        
+               \
+                                                                               
+               \
+    ~cppstem () throw ()                                                       
+               \
+    {                                                                          
+               \
+      stop ();                                                                 
+               \
+    }                                                                          
+               \
+                                                                               
+               \
+    using base<ev_ ## cstem, cppstem>::set;                                    
+               \
+                                                                               
+               \
+  private:                                                                     
+               \
+                                                                               
+               \
+    cppstem (const cppstem &o);                                                
+               \
+                                                                               
+               \
+    cppstem &operator =(const cppstem &o);                                     
+               \
+                                                                               
+               \
+  public:
+\end{DoxyCode}
+
+
+\-Definition at line 580 of file ev++.\-h.
+
+\hypertarget{ev_09_09_8h_a33b31eed6691034ccacc058050ee11ad}{\index{ev++.\-h@{ev++.\-h}!\-E\-V\-\_\-\-C\-O\-N\-S\-T\-R\-U\-C\-T@{\-E\-V\-\_\-\-C\-O\-N\-S\-T\-R\-U\-C\-T}}
+\index{\-E\-V\-\_\-\-C\-O\-N\-S\-T\-R\-U\-C\-T@{\-E\-V\-\_\-\-C\-O\-N\-S\-T\-R\-U\-C\-T}!ev++.h@{ev++.\-h}}
+\subsubsection[{\-E\-V\-\_\-\-C\-O\-N\-S\-T\-R\-U\-C\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-E\-V\-\_\-\-C\-O\-N\-S\-T\-R\-U\-C\-T}(
+\begin{DoxyParamCaption}
+\item[{}]{cppstem, }
+\item[{}]{cstem}
+\end{DoxyParamCaption}
+)}}\label{ev_09_09_8h_a33b31eed6691034ccacc058050ee11ad}
+{\bfseries \-Value\-:}
+\begin{DoxyCode}
+(EV_PX = get_default_loop ()) throw ()                                         
+         \
+        : base<ev_ ## cstem, cppstem> (EV_A)                                   
+               \
+      {                                                                        
+               \
+      }
+\end{DoxyCode}
+
+
+\-Definition at line 566 of file ev++.\-h.
+
+\hypertarget{ev_09_09_8h_aebf9657e02d6705e2bf8094cac1cac2c}{\index{ev++.\-h@{ev++.\-h}!\-E\-V\-\_\-\-E\-N\-D\-\_\-\-W\-A\-T\-C\-H\-E\-R@{\-E\-V\-\_\-\-E\-N\-D\-\_\-\-W\-A\-T\-C\-H\-E\-R}}
+\index{\-E\-V\-\_\-\-E\-N\-D\-\_\-\-W\-A\-T\-C\-H\-E\-R@{\-E\-V\-\_\-\-E\-N\-D\-\_\-\-W\-A\-T\-C\-H\-E\-R}!ev++.h@{ev++.\-h}}
+\subsubsection[{\-E\-V\-\_\-\-E\-N\-D\-\_\-\-W\-A\-T\-C\-H\-E\-R}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-E\-V\-\_\-\-E\-N\-D\-\_\-\-W\-A\-T\-C\-H\-E\-R}(
+\begin{DoxyParamCaption}
+\item[{}]{cppstem, }
+\item[{}]{cstem}
+\end{DoxyParamCaption}
+)~\};}}\label{ev_09_09_8h_aebf9657e02d6705e2bf8094cac1cac2c}
+
+
+\-Definition at line 611 of file ev++.\-h.
+
+\hypertarget{ev_09_09_8h_aad63f899c1136b86d0d6cb86aec3fc4d}{\index{ev++.\-h@{ev++.\-h}!\-E\-V\-\_\-\-P\-X@{\-E\-V\-\_\-\-P\-X}}
+\index{\-E\-V\-\_\-\-P\-X@{\-E\-V\-\_\-\-P\-X}!ev++.h@{ev++.\-h}}
+\subsubsection[{\-E\-V\-\_\-\-P\-X}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-E\-V\-\_\-\-P\-X}~loop\-\_\-ref {\bf \-E\-V\-\_\-\-A}}}\label{ev_09_09_8h_aad63f899c1136b86d0d6cb86aec3fc4d}
+
+
+\-Definition at line 414 of file ev++.\-h.
+
+\hypertarget{ev_09_09_8h_a46c307261296c0b8499914e3dae1b661}{\index{ev++.\-h@{ev++.\-h}!\-E\-V\-\_\-\-P\-X\-\_\-@{\-E\-V\-\_\-\-P\-X\-\_\-}}
+\index{\-E\-V\-\_\-\-P\-X\-\_\-@{\-E\-V\-\_\-\-P\-X\-\_\-}!ev++.h@{ev++.\-h}}
+\subsubsection[{\-E\-V\-\_\-\-P\-X\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-E\-V\-\_\-\-P\-X\-\_\-}~loop\-\_\-ref {\bf \-E\-V\-\_\-\-A\-\_\-}}}\label{ev_09_09_8h_a46c307261296c0b8499914e3dae1b661}
+
+
+\-Definition at line 415 of file ev++.\-h.
+
+\hypertarget{ev_09_09_8h_add8f7535b88bfc84a2a510c36c9483e6}{\index{ev++.\-h@{ev++.\-h}!\-E\-V\-\_\-\-U\-S\-E\-\_\-\-S\-T\-D\-E\-X\-C\-E\-P\-T@{\-E\-V\-\_\-\-U\-S\-E\-\_\-\-S\-T\-D\-E\-X\-C\-E\-P\-T}}
+\index{\-E\-V\-\_\-\-U\-S\-E\-\_\-\-S\-T\-D\-E\-X\-C\-E\-P\-T@{\-E\-V\-\_\-\-U\-S\-E\-\_\-\-S\-T\-D\-E\-X\-C\-E\-P\-T}!ev++.h@{ev++.\-h}}
+\subsubsection[{\-E\-V\-\_\-\-U\-S\-E\-\_\-\-S\-T\-D\-E\-X\-C\-E\-P\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-E\-V\-\_\-\-U\-S\-E\-\_\-\-S\-T\-D\-E\-X\-C\-E\-P\-T}~1}}\label{ev_09_09_8h_add8f7535b88bfc84a2a510c36c9483e6}
+
+
+\-Definition at line 50 of file ev++.\-h.
+

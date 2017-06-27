@@ -1,0 +1,190 @@
+\hypertarget{ev__poll_8c}{\section{/home/jaymiao/workstation/github/libev-\/4.19/ev\-\_\-poll.c \-File \-Reference}
+\label{ev__poll_8c}\index{/home/jaymiao/workstation/github/libev-\/4.\-19/ev\-\_\-poll.\-c@{/home/jaymiao/workstation/github/libev-\/4.\-19/ev\-\_\-poll.\-c}}
+}
+{\ttfamily \#include $<$poll.\-h$>$}\*
+\-Include dependency graph for ev\-\_\-poll.\-c\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=330pt]{ev__poll_8c__incl}
+\end{center}
+\end{figure}
+\-This graph shows which files directly or indirectly include this file\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=330pt]{ev__poll_8c__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{\-Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{ev_8c_aaf118126fdc735d3ba2232e65353a9d5}{inline\-\_\-size} \hyperlink{ev__poll_8c_a0fdfbd19e89760e041e33e020e97addf}{pollidx\-\_\-init} (int $\ast$base, int count)
+\item 
+static void \hyperlink{ev__poll_8c_a9cd1c4d698378fb018812703890299f8}{poll\-\_\-modify} (\hyperlink{ev_8h_a8ac42969e0a499b8c1367f0ad85dbba9}{\-E\-V\-\_\-\-P\-\_\-} int fd, int oev, int nev)
+\item 
+static void \hyperlink{ev__poll_8c_a2f2bbb33b072afeb63414695669068b4}{poll\-\_\-poll} (\hyperlink{ev_8h_a8ac42969e0a499b8c1367f0ad85dbba9}{\-E\-V\-\_\-\-P\-\_\-} \hyperlink{ev_8h_add71e34ce2b04bbf7eb6f31a850814e8}{ev\-\_\-tstamp} timeout)
+\item 
+int \hyperlink{ev_8c_aaf118126fdc735d3ba2232e65353a9d5}{inline\-\_\-size} \hyperlink{ev__poll_8c_aac00a106a521101c29cccc44f6431a2c}{poll\-\_\-init} (\hyperlink{ev_8h_a8ac42969e0a499b8c1367f0ad85dbba9}{\-E\-V\-\_\-\-P\-\_\-} int flags)
+\item 
+void \hyperlink{ev_8c_aaf118126fdc735d3ba2232e65353a9d5}{inline\-\_\-size} \hyperlink{ev__poll_8c_a9147020393869e9898fea714ba292a12}{poll\-\_\-destroy} (\hyperlink{ev_8h_a6e6c6b499d18513c01cf4bde00121617}{\-E\-V\-\_\-\-P})
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Function \-Documentation}
+\hypertarget{ev__poll_8c_a9147020393869e9898fea714ba292a12}{\index{ev\-\_\-poll.\-c@{ev\-\_\-poll.\-c}!poll\-\_\-destroy@{poll\-\_\-destroy}}
+\index{poll\-\_\-destroy@{poll\-\_\-destroy}!ev_poll.c@{ev\-\_\-poll.\-c}}
+\subsubsection[{poll\-\_\-destroy}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf inline\-\_\-size} {\bf poll\-\_\-destroy} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-E\-V\-\_\-\-P}}]{}
+\end{DoxyParamCaption}
+)}}\label{ev__poll_8c_a9147020393869e9898fea714ba292a12}
+
+
+\-Definition at line 143 of file ev\-\_\-poll.\-c.
+
+
+
+\-Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ev__poll_8c_a9147020393869e9898fea714ba292a12_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ev__poll_8c_aac00a106a521101c29cccc44f6431a2c}{\index{ev\-\_\-poll.\-c@{ev\-\_\-poll.\-c}!poll\-\_\-init@{poll\-\_\-init}}
+\index{poll\-\_\-init@{poll\-\_\-init}!ev_poll.c@{ev\-\_\-poll.\-c}}
+\subsubsection[{poll\-\_\-init}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf inline\-\_\-size} {\bf poll\-\_\-init} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-E\-V\-\_\-\-P\-\_\-} int}]{flags}
+\end{DoxyParamCaption}
+)}}\label{ev__poll_8c_aac00a106a521101c29cccc44f6431a2c}
+
+
+\-Definition at line 130 of file ev\-\_\-poll.\-c.
+
+
+
+\-Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ev__poll_8c_aac00a106a521101c29cccc44f6431a2c_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\-Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ev__poll_8c_aac00a106a521101c29cccc44f6431a2c_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ev__poll_8c_a9cd1c4d698378fb018812703890299f8}{\index{ev\-\_\-poll.\-c@{ev\-\_\-poll.\-c}!poll\-\_\-modify@{poll\-\_\-modify}}
+\index{poll\-\_\-modify@{poll\-\_\-modify}!ev_poll.c@{ev\-\_\-poll.\-c}}
+\subsubsection[{poll\-\_\-modify}]{\setlength{\rightskip}{0pt plus 5cm}static void {\bf poll\-\_\-modify} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-E\-V\-\_\-\-P\-\_\-} int}]{fd, }
+\item[{int}]{oev, }
+\item[{int}]{nev}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{ev__poll_8c_a9cd1c4d698378fb018812703890299f8}
+
+
+\-Definition at line 52 of file ev\-\_\-poll.\-c.
+
+
+
+\-Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=244pt]{ev__poll_8c_a9cd1c4d698378fb018812703890299f8_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\-Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ev__poll_8c_a9cd1c4d698378fb018812703890299f8_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ev__poll_8c_a2f2bbb33b072afeb63414695669068b4}{\index{ev\-\_\-poll.\-c@{ev\-\_\-poll.\-c}!poll\-\_\-poll@{poll\-\_\-poll}}
+\index{poll\-\_\-poll@{poll\-\_\-poll}!ev_poll.c@{ev\-\_\-poll.\-c}}
+\subsubsection[{poll\-\_\-poll}]{\setlength{\rightskip}{0pt plus 5cm}static void {\bf poll\-\_\-poll} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-E\-V\-\_\-\-P\-\_\-} {\bf ev\-\_\-tstamp}}]{timeout}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{ev__poll_8c_a2f2bbb33b072afeb63414695669068b4}
+
+
+\-Definition at line 89 of file ev\-\_\-poll.\-c.
+
+
+
+\-Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ev__poll_8c_a2f2bbb33b072afeb63414695669068b4_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\-Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ev__poll_8c_a2f2bbb33b072afeb63414695669068b4_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ev__poll_8c_a0fdfbd19e89760e041e33e020e97addf}{\index{ev\-\_\-poll.\-c@{ev\-\_\-poll.\-c}!pollidx\-\_\-init@{pollidx\-\_\-init}}
+\index{pollidx\-\_\-init@{pollidx\-\_\-init}!ev_poll.c@{ev\-\_\-poll.\-c}}
+\subsubsection[{pollidx\-\_\-init}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf inline\-\_\-size} {\bf pollidx\-\_\-init} (
+\begin{DoxyParamCaption}
+\item[{int $\ast$}]{base, }
+\item[{int}]{count}
+\end{DoxyParamCaption}
+)}}\label{ev__poll_8c_a0fdfbd19e89760e041e33e020e97addf}
+
+
+\-Definition at line 43 of file ev\-\_\-poll.\-c.
+
+
+
+\-Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ev__poll_8c_a0fdfbd19e89760e041e33e020e97addf_icgraph}
+\end{center}
+\end{figure}
+
+

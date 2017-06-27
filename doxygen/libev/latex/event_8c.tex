@@ -1,0 +1,934 @@
+\hypertarget{event_8c}{\section{/home/jaymiao/workstation/github/libev-\/4.19/event.c \-File \-Reference}
+\label{event_8c}\index{/home/jaymiao/workstation/github/libev-\/4.\-19/event.\-c@{/home/jaymiao/workstation/github/libev-\/4.\-19/event.\-c}}
+}
+{\ttfamily \#include $<$stddef.\-h$>$}\*
+{\ttfamily \#include $<$stdlib.\-h$>$}\*
+{\ttfamily \#include $<$assert.\-h$>$}\*
+{\ttfamily \#include \char`\"{}event.\-h\char`\"{}}\*
+\-Include dependency graph for event.\-c\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{event_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{\-Data \-Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structevent__base}{event\-\_\-base}
+\item 
+struct \hyperlink{structev__x__once}{ev\-\_\-x\-\_\-once}
+\end{DoxyCompactItemize}
+\subsection*{\-Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{event_8c_a7121f8c5101528c135d3892d3c0c5c49}{d\-L\-O\-O\-Pev}~struct \hyperlink{structev__loop}{ev\-\_\-loop} $\ast$loop = (struct \hyperlink{structev__loop}{ev\-\_\-loop} $\ast$)ev-\/$>$ev\-\_\-base
+\item 
+\#define \hyperlink{event_8c_a025c8903da26850b43c8d382ed8bb041}{d\-L\-O\-O\-Pbase}~struct \hyperlink{structev__loop}{ev\-\_\-loop} $\ast$loop = (struct \hyperlink{structev__loop}{ev\-\_\-loop} $\ast$)base
+\item 
+\#define \hyperlink{event_8c_ac3b0636cea6ca9ca0b12145d6cb88b85}{\-E\-V\-E\-N\-T\-\_\-\-S\-T\-R\-I\-N\-G\-I\-F\-Y}(s)~\# s
+\item 
+\#define \hyperlink{event_8c_aad52e21ac58bcb8b0aba598645618507}{\-E\-V\-E\-N\-T\-\_\-\-V\-E\-R\-S\-I\-O\-N}(a, b)~\hyperlink{event_8c_ac3b0636cea6ca9ca0b12145d6cb88b85}{\-E\-V\-E\-N\-T\-\_\-\-S\-T\-R\-I\-N\-G\-I\-F\-Y} (a) \char`\"{}.\char`\"{} \hyperlink{event_8c_ac3b0636cea6ca9ca0b12145d6cb88b85}{\-E\-V\-E\-N\-T\-\_\-\-S\-T\-R\-I\-N\-G\-I\-F\-Y} (b)
+\end{DoxyCompactItemize}
+\subsection*{\-Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{ev_8h_add71e34ce2b04bbf7eb6f31a850814e8}{ev\-\_\-tstamp} \hyperlink{event_8c_a3171c104dc0be160189f847fe10c4624}{ev\-\_\-tv\-\_\-get} (struct timeval $\ast$tv)
+\item 
+const char $\ast$ \hyperlink{event_8c_a43d7feed94477cf0a7e3e062cc17b7e1}{event\-\_\-get\-\_\-version} (void)
+\item 
+const char $\ast$ \hyperlink{event_8c_a8a03c9175e0578017a384b4c039b090f}{event\-\_\-get\-\_\-method} (void)
+\item 
+void $\ast$ \hyperlink{event_8c_abcbfb7ebf11703931628ba9d94b390ac}{event\-\_\-init} (void)
+\item 
+const char $\ast$ \hyperlink{event_8c_a0c640450025d114753e6f1e6cbe69010}{event\-\_\-base\-\_\-get\-\_\-method} (const struct \hyperlink{structevent__base}{event\-\_\-base} $\ast$base)
+\item 
+struct \hyperlink{structevent__base}{event\-\_\-base} $\ast$ \hyperlink{event_8c_a4c16f1203aebc67f94791ae0240b7353}{event\-\_\-base\-\_\-new} (void)
+\item 
+void \hyperlink{event_8c_acb4f9733901aefc1a4ed1ac6b423d79d}{event\-\_\-base\-\_\-free} (struct \hyperlink{structevent__base}{event\-\_\-base} $\ast$base)
+\item 
+int \hyperlink{event_8c_a1f4991bceb8aaf33545d1fc857230b51}{event\-\_\-dispatch} (void)
+\item 
+int \hyperlink{event_8c_aa57cb63396305d98350e4eff3720b1c7}{event\-\_\-loop} (int flags)
+\item 
+int \hyperlink{event_8c_a3b707de1be2964be15283381b8ae971b}{event\-\_\-loopexit} (struct timeval $\ast$tv)
+\item 
+\hyperlink{event_8h_a675c7b1b04923fb1b48f758222ab1333}{event\-\_\-callback\-\_\-fn} \hyperlink{event_8c_a6cdb0a8dbf7efa9be7b65914ed5c6821}{event\-\_\-get\-\_\-callback} (const struct \hyperlink{structevent}{event} $\ast$ev)
+\item 
+static void \hyperlink{event_8c_ae57f033ca3f5350b4fe2011fe01a7e26}{ev\-\_\-x\-\_\-cb} (struct \hyperlink{structevent}{event} $\ast$ev, int revents)
+\item 
+static void \hyperlink{event_8c_a1a98be3a988d22635c8cc500fe5f598d}{ev\-\_\-x\-\_\-cb\-\_\-sig} (\hyperlink{ev_8h_a8ac42969e0a499b8c1367f0ad85dbba9}{\-E\-V\-\_\-\-P\-\_\-} struct \hyperlink{structev__signal}{ev\-\_\-signal} $\ast$w, int revents)
+\item 
+static void \hyperlink{event_8c_a51fd46c2d857f7ecc4b66dc0f6a156c5}{ev\-\_\-x\-\_\-cb\-\_\-io} (\hyperlink{ev_8h_a8ac42969e0a499b8c1367f0ad85dbba9}{\-E\-V\-\_\-\-P\-\_\-} struct \hyperlink{structev__io}{ev\-\_\-io} $\ast$w, int revents)
+\item 
+static void \hyperlink{event_8c_ac8cef833973e96b8abceba3bd4c56b93}{ev\-\_\-x\-\_\-cb\-\_\-to} (\hyperlink{ev_8h_a8ac42969e0a499b8c1367f0ad85dbba9}{\-E\-V\-\_\-\-P\-\_\-} struct \hyperlink{structev__timer}{ev\-\_\-timer} $\ast$w, int revents)
+\item 
+void \hyperlink{event_8c_a6988732eb4ac6cabe81ab6c88803b127}{event\-\_\-set} (struct \hyperlink{structevent}{event} $\ast$ev, int fd, short events, void($\ast$cb)(int, short, void $\ast$), void $\ast$arg)
+\item 
+int \hyperlink{event_8c_a97aedebb1398f2f43dc8462766f4fae9}{event\-\_\-once} (int fd, short events, void($\ast$cb)(int, short, void $\ast$), void $\ast$arg, struct timeval $\ast$tv)
+\item 
+int \hyperlink{event_8c_a786510c4fb5646985bb04db2fd77374a}{event\-\_\-add} (struct \hyperlink{structevent}{event} $\ast$ev, struct timeval $\ast$tv)
+\item 
+int \hyperlink{event_8c_a4d01ab982328facb6ce4b584390b86ab}{event\-\_\-del} (struct \hyperlink{structevent}{event} $\ast$ev)
+\item 
+void \hyperlink{event_8c_a3262ae1dc7fe51516b43412d61301e4f}{event\-\_\-active} (struct \hyperlink{structevent}{event} $\ast$ev, int res, short ncalls)
+\item 
+int \hyperlink{event_8c_a54f7a7f0714229243f5834df14826193}{event\-\_\-pending} (struct \hyperlink{structevent}{event} $\ast$ev, short events, struct timeval $\ast$tv)
+\item 
+int \hyperlink{event_8c_a9250404778b2c4e18bbb72817f45ff09}{event\-\_\-priority\-\_\-init} (int npri)
+\item 
+int \hyperlink{event_8c_a4b6b70a0e975a4ab48b1bb4abecded0f}{event\-\_\-priority\-\_\-set} (struct \hyperlink{structevent}{event} $\ast$ev, int pri)
+\item 
+int \hyperlink{event_8c_a27536fe9e78d400460ce6db34dfdabb6}{event\-\_\-base\-\_\-set} (struct \hyperlink{structevent__base}{event\-\_\-base} $\ast$base, struct \hyperlink{structevent}{event} $\ast$ev)
+\item 
+int \hyperlink{event_8c_a83e0d97da18820d78eac87b1dc76638d}{event\-\_\-base\-\_\-loop} (struct \hyperlink{structevent__base}{event\-\_\-base} $\ast$base, int flags)
+\item 
+int \hyperlink{event_8c_a02d3c95fc69fcc8e08f63064d2442f15}{event\-\_\-base\-\_\-dispatch} (struct \hyperlink{structevent__base}{event\-\_\-base} $\ast$base)
+\item 
+static void \hyperlink{event_8c_abc2d97e0c96ce635fd1815e33ec4900f}{ev\-\_\-x\-\_\-loopexit\-\_\-cb} (int revents, void $\ast$base)
+\item 
+int \hyperlink{event_8c_a590eef987f8b5df59e087c10b6fcda32}{event\-\_\-base\-\_\-loopexit} (struct \hyperlink{structevent__base}{event\-\_\-base} $\ast$base, struct timeval $\ast$tv)
+\item 
+static void \hyperlink{event_8c_aba940bd8ab1297ba3bb76cfcb581feee}{ev\-\_\-x\-\_\-once\-\_\-cb} (int revents, void $\ast$arg)
+\item 
+int \hyperlink{event_8c_a42c88025ad8afde8d13513b384011bee}{event\-\_\-base\-\_\-once} (struct \hyperlink{structevent__base}{event\-\_\-base} $\ast$base, int fd, short events, void($\ast$cb)(int, short, void $\ast$), void $\ast$arg, struct timeval $\ast$tv)
+\item 
+int \hyperlink{event_8c_a97b5cc231723049fc520c284b5b766a9}{event\-\_\-base\-\_\-priority\-\_\-init} (struct \hyperlink{structevent__base}{event\-\_\-base} $\ast$base, int npri)
+\end{DoxyCompactItemize}
+\subsection*{\-Variables}
+\begin{DoxyCompactItemize}
+\item 
+static struct \hyperlink{structevent__base}{event\-\_\-base} $\ast$ \hyperlink{event_8c_a00f1e6e24903c286cb5ad0495648608c}{ev\-\_\-x\-\_\-cur}
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Define \-Documentation}
+\hypertarget{event_8c_a025c8903da26850b43c8d382ed8bb041}{\index{event.\-c@{event.\-c}!d\-L\-O\-O\-Pbase@{d\-L\-O\-O\-Pbase}}
+\index{d\-L\-O\-O\-Pbase@{d\-L\-O\-O\-Pbase}!event.c@{event.\-c}}
+\subsubsection[{d\-L\-O\-O\-Pbase}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf d\-L\-O\-O\-Pbase}~struct {\bf ev\-\_\-loop} $\ast$loop = (struct {\bf ev\-\_\-loop} $\ast$)base}}\label{event_8c_a025c8903da26850b43c8d382ed8bb041}
+
+
+\-Definition at line 52 of file event.\-c.
+
+\hypertarget{event_8c_a7121f8c5101528c135d3892d3c0c5c49}{\index{event.\-c@{event.\-c}!d\-L\-O\-O\-Pev@{d\-L\-O\-O\-Pev}}
+\index{d\-L\-O\-O\-Pev@{d\-L\-O\-O\-Pev}!event.c@{event.\-c}}
+\subsubsection[{d\-L\-O\-O\-Pev}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf d\-L\-O\-O\-Pev}~struct {\bf ev\-\_\-loop} $\ast$loop = (struct {\bf ev\-\_\-loop} $\ast$)ev-\/$>$ev\-\_\-base}}\label{event_8c_a7121f8c5101528c135d3892d3c0c5c49}
+
+
+\-Definition at line 51 of file event.\-c.
+
+\hypertarget{event_8c_ac3b0636cea6ca9ca0b12145d6cb88b85}{\index{event.\-c@{event.\-c}!\-E\-V\-E\-N\-T\-\_\-\-S\-T\-R\-I\-N\-G\-I\-F\-Y@{\-E\-V\-E\-N\-T\-\_\-\-S\-T\-R\-I\-N\-G\-I\-F\-Y}}
+\index{\-E\-V\-E\-N\-T\-\_\-\-S\-T\-R\-I\-N\-G\-I\-F\-Y@{\-E\-V\-E\-N\-T\-\_\-\-S\-T\-R\-I\-N\-G\-I\-F\-Y}!event.c@{event.\-c}}
+\subsubsection[{\-E\-V\-E\-N\-T\-\_\-\-S\-T\-R\-I\-N\-G\-I\-F\-Y}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-E\-V\-E\-N\-T\-\_\-\-S\-T\-R\-I\-N\-G\-I\-F\-Y}(
+\begin{DoxyParamCaption}
+\item[{}]{s}
+\end{DoxyParamCaption}
+)~\# s}}\label{event_8c_ac3b0636cea6ca9ca0b12145d6cb88b85}
+
+
+\-Definition at line 78 of file event.\-c.
+
+\hypertarget{event_8c_aad52e21ac58bcb8b0aba598645618507}{\index{event.\-c@{event.\-c}!\-E\-V\-E\-N\-T\-\_\-\-V\-E\-R\-S\-I\-O\-N@{\-E\-V\-E\-N\-T\-\_\-\-V\-E\-R\-S\-I\-O\-N}}
+\index{\-E\-V\-E\-N\-T\-\_\-\-V\-E\-R\-S\-I\-O\-N@{\-E\-V\-E\-N\-T\-\_\-\-V\-E\-R\-S\-I\-O\-N}!event.c@{event.\-c}}
+\subsubsection[{\-E\-V\-E\-N\-T\-\_\-\-V\-E\-R\-S\-I\-O\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-E\-V\-E\-N\-T\-\_\-\-V\-E\-R\-S\-I\-O\-N}(
+\begin{DoxyParamCaption}
+\item[{}]{a, }
+\item[{}]{b}
+\end{DoxyParamCaption}
+)~{\bf \-E\-V\-E\-N\-T\-\_\-\-S\-T\-R\-I\-N\-G\-I\-F\-Y} (a) \char`\"{}.\char`\"{} {\bf \-E\-V\-E\-N\-T\-\_\-\-S\-T\-R\-I\-N\-G\-I\-F\-Y} (b)}}\label{event_8c_aad52e21ac58bcb8b0aba598645618507}
+
+
+\-Definition at line 79 of file event.\-c.
+
+
+
+\subsection{\-Function \-Documentation}
+\hypertarget{event_8c_a3171c104dc0be160189f847fe10c4624}{\index{event.\-c@{event.\-c}!ev\-\_\-tv\-\_\-get@{ev\-\_\-tv\-\_\-get}}
+\index{ev\-\_\-tv\-\_\-get@{ev\-\_\-tv\-\_\-get}!event.c@{event.\-c}}
+\subsubsection[{ev\-\_\-tv\-\_\-get}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf ev\-\_\-tstamp} {\bf ev\-\_\-tv\-\_\-get} (
+\begin{DoxyParamCaption}
+\item[{struct timeval $\ast$}]{tv}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{event_8c_a3171c104dc0be160189f847fe10c4624}
+
+
+\-Definition at line 67 of file event.\-c.
+
+
+
+\-Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{event_8c_a3171c104dc0be160189f847fe10c4624_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{event_8c_ae57f033ca3f5350b4fe2011fe01a7e26}{\index{event.\-c@{event.\-c}!ev\-\_\-x\-\_\-cb@{ev\-\_\-x\-\_\-cb}}
+\index{ev\-\_\-x\-\_\-cb@{ev\-\_\-x\-\_\-cb}!event.c@{event.\-c}}
+\subsubsection[{ev\-\_\-x\-\_\-cb}]{\setlength{\rightskip}{0pt plus 5cm}static void {\bf ev\-\_\-x\-\_\-cb} (
+\begin{DoxyParamCaption}
+\item[{struct {\bf event} $\ast$}]{ev, }
+\item[{int}]{revents}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{event_8c_ae57f033ca3f5350b4fe2011fe01a7e26}
+
+
+\-Definition at line 166 of file event.\-c.
+
+
+
+\-Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=338pt]{event_8c_ae57f033ca3f5350b4fe2011fe01a7e26_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{event_8c_a51fd46c2d857f7ecc4b66dc0f6a156c5}{\index{event.\-c@{event.\-c}!ev\-\_\-x\-\_\-cb\-\_\-io@{ev\-\_\-x\-\_\-cb\-\_\-io}}
+\index{ev\-\_\-x\-\_\-cb\-\_\-io@{ev\-\_\-x\-\_\-cb\-\_\-io}!event.c@{event.\-c}}
+\subsubsection[{ev\-\_\-x\-\_\-cb\-\_\-io}]{\setlength{\rightskip}{0pt plus 5cm}static void {\bf ev\-\_\-x\-\_\-cb\-\_\-io} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-E\-V\-\_\-\-P\-\_\-} struct {\bf ev\-\_\-io} $\ast$}]{w, }
+\item[{int}]{revents}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{event_8c_a51fd46c2d857f7ecc4b66dc0f6a156c5}
+
+
+\-Definition at line 186 of file event.\-c.
+
+
+
+\-Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{event_8c_a51fd46c2d857f7ecc4b66dc0f6a156c5_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\-Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=242pt]{event_8c_a51fd46c2d857f7ecc4b66dc0f6a156c5_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{event_8c_a1a98be3a988d22635c8cc500fe5f598d}{\index{event.\-c@{event.\-c}!ev\-\_\-x\-\_\-cb\-\_\-sig@{ev\-\_\-x\-\_\-cb\-\_\-sig}}
+\index{ev\-\_\-x\-\_\-cb\-\_\-sig@{ev\-\_\-x\-\_\-cb\-\_\-sig}!event.c@{event.\-c}}
+\subsubsection[{ev\-\_\-x\-\_\-cb\-\_\-sig}]{\setlength{\rightskip}{0pt plus 5cm}static void {\bf ev\-\_\-x\-\_\-cb\-\_\-sig} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-E\-V\-\_\-\-P\-\_\-} struct {\bf ev\-\_\-signal} $\ast$}]{w, }
+\item[{int}]{revents}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{event_8c_a1a98be3a988d22635c8cc500fe5f598d}
+
+
+\-Definition at line 175 of file event.\-c.
+
+
+
+\-Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{event_8c_a1a98be3a988d22635c8cc500fe5f598d_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\-Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=248pt]{event_8c_a1a98be3a988d22635c8cc500fe5f598d_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{event_8c_ac8cef833973e96b8abceba3bd4c56b93}{\index{event.\-c@{event.\-c}!ev\-\_\-x\-\_\-cb\-\_\-to@{ev\-\_\-x\-\_\-cb\-\_\-to}}
+\index{ev\-\_\-x\-\_\-cb\-\_\-to@{ev\-\_\-x\-\_\-cb\-\_\-to}!event.c@{event.\-c}}
+\subsubsection[{ev\-\_\-x\-\_\-cb\-\_\-to}]{\setlength{\rightskip}{0pt plus 5cm}static void {\bf ev\-\_\-x\-\_\-cb\-\_\-to} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-E\-V\-\_\-\-P\-\_\-} struct {\bf ev\-\_\-timer} $\ast$}]{w, }
+\item[{int}]{revents}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{event_8c_ac8cef833973e96b8abceba3bd4c56b93}
+
+
+\-Definition at line 197 of file event.\-c.
+
+
+
+\-Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{event_8c_ac8cef833973e96b8abceba3bd4c56b93_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\-Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=244pt]{event_8c_ac8cef833973e96b8abceba3bd4c56b93_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{event_8c_abc2d97e0c96ce635fd1815e33ec4900f}{\index{event.\-c@{event.\-c}!ev\-\_\-x\-\_\-loopexit\-\_\-cb@{ev\-\_\-x\-\_\-loopexit\-\_\-cb}}
+\index{ev\-\_\-x\-\_\-loopexit\-\_\-cb@{ev\-\_\-x\-\_\-loopexit\-\_\-cb}!event.c@{event.\-c}}
+\subsubsection[{ev\-\_\-x\-\_\-loopexit\-\_\-cb}]{\setlength{\rightskip}{0pt plus 5cm}static void {\bf ev\-\_\-x\-\_\-loopexit\-\_\-cb} (
+\begin{DoxyParamCaption}
+\item[{int}]{revents, }
+\item[{void $\ast$}]{base}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{event_8c_abc2d97e0c96ce635fd1815e33ec4900f}
+
+
+\-Definition at line 369 of file event.\-c.
+
+
+
+\-Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=264pt]{event_8c_abc2d97e0c96ce635fd1815e33ec4900f_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\-Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{event_8c_abc2d97e0c96ce635fd1815e33ec4900f_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{event_8c_aba940bd8ab1297ba3bb76cfcb581feee}{\index{event.\-c@{event.\-c}!ev\-\_\-x\-\_\-once\-\_\-cb@{ev\-\_\-x\-\_\-once\-\_\-cb}}
+\index{ev\-\_\-x\-\_\-once\-\_\-cb@{ev\-\_\-x\-\_\-once\-\_\-cb}!event.c@{event.\-c}}
+\subsubsection[{ev\-\_\-x\-\_\-once\-\_\-cb}]{\setlength{\rightskip}{0pt plus 5cm}static void {\bf ev\-\_\-x\-\_\-once\-\_\-cb} (
+\begin{DoxyParamCaption}
+\item[{int}]{revents, }
+\item[{void $\ast$}]{arg}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{event_8c_aba940bd8ab1297ba3bb76cfcb581feee}
+
+
+\-Definition at line 394 of file event.\-c.
+
+
+
+\-Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{event_8c_aba940bd8ab1297ba3bb76cfcb581feee_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{event_8c_a3262ae1dc7fe51516b43412d61301e4f}{\index{event.\-c@{event.\-c}!event\-\_\-active@{event\-\_\-active}}
+\index{event\-\_\-active@{event\-\_\-active}!event.c@{event.\-c}}
+\subsubsection[{event\-\_\-active}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf event\-\_\-active} (
+\begin{DoxyParamCaption}
+\item[{struct {\bf event} $\ast$}]{ev, }
+\item[{int}]{res, }
+\item[{short}]{ncalls}
+\end{DoxyParamCaption}
+)}}\label{event_8c_a3262ae1dc7fe51516b43412d61301e4f}
+
+
+\-Definition at line 289 of file event.\-c.
+
+
+
+\-Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=268pt]{event_8c_a3262ae1dc7fe51516b43412d61301e4f_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{event_8c_a786510c4fb5646985bb04db2fd77374a}{\index{event.\-c@{event.\-c}!event\-\_\-add@{event\-\_\-add}}
+\index{event\-\_\-add@{event\-\_\-add}!event.c@{event.\-c}}
+\subsubsection[{event\-\_\-add}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf event\-\_\-add} (
+\begin{DoxyParamCaption}
+\item[{struct {\bf event} $\ast$}]{ev, }
+\item[{struct timeval $\ast$}]{tv}
+\end{DoxyParamCaption}
+)}}\label{event_8c_a786510c4fb5646985bb04db2fd77374a}
+
+
+\-Definition at line 230 of file event.\-c.
+
+
+
+\-Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{event_8c_a786510c4fb5646985bb04db2fd77374a_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{event_8c_a02d3c95fc69fcc8e08f63064d2442f15}{\index{event.\-c@{event.\-c}!event\-\_\-base\-\_\-dispatch@{event\-\_\-base\-\_\-dispatch}}
+\index{event\-\_\-base\-\_\-dispatch@{event\-\_\-base\-\_\-dispatch}!event.c@{event.\-c}}
+\subsubsection[{event\-\_\-base\-\_\-dispatch}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf event\-\_\-base\-\_\-dispatch} (
+\begin{DoxyParamCaption}
+\item[{struct {\bf event\-\_\-base} $\ast$}]{base}
+\end{DoxyParamCaption}
+)}}\label{event_8c_a02d3c95fc69fcc8e08f63064d2442f15}
+
+
+\-Definition at line 363 of file event.\-c.
+
+
+
+\-Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{event_8c_a02d3c95fc69fcc8e08f63064d2442f15_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\-Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=310pt]{event_8c_a02d3c95fc69fcc8e08f63064d2442f15_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{event_8c_acb4f9733901aefc1a4ed1ac6b423d79d}{\index{event.\-c@{event.\-c}!event\-\_\-base\-\_\-free@{event\-\_\-base\-\_\-free}}
+\index{event\-\_\-base\-\_\-free@{event\-\_\-base\-\_\-free}!event.c@{event.\-c}}
+\subsubsection[{event\-\_\-base\-\_\-free}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf event\-\_\-base\-\_\-free} (
+\begin{DoxyParamCaption}
+\item[{struct {\bf event\-\_\-base} $\ast$}]{base}
+\end{DoxyParamCaption}
+)}}\label{event_8c_acb4f9733901aefc1a4ed1ac6b423d79d}
+
+
+\-Definition at line 127 of file event.\-c.
+
+
+
+\-Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{event_8c_acb4f9733901aefc1a4ed1ac6b423d79d_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{event_8c_a0c640450025d114753e6f1e6cbe69010}{\index{event.\-c@{event.\-c}!event\-\_\-base\-\_\-get\-\_\-method@{event\-\_\-base\-\_\-get\-\_\-method}}
+\index{event\-\_\-base\-\_\-get\-\_\-method@{event\-\_\-base\-\_\-get\-\_\-method}!event.c@{event.\-c}}
+\subsubsection[{event\-\_\-base\-\_\-get\-\_\-method}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ {\bf event\-\_\-base\-\_\-get\-\_\-method} (
+\begin{DoxyParamCaption}
+\item[{const struct {\bf event\-\_\-base} $\ast$}]{base}
+\end{DoxyParamCaption}
+)}}\label{event_8c_a0c640450025d114753e6f1e6cbe69010}
+
+
+\-Definition at line 111 of file event.\-c.
+
+\hypertarget{event_8c_a83e0d97da18820d78eac87b1dc76638d}{\index{event.\-c@{event.\-c}!event\-\_\-base\-\_\-loop@{event\-\_\-base\-\_\-loop}}
+\index{event\-\_\-base\-\_\-loop@{event\-\_\-base\-\_\-loop}!event.c@{event.\-c}}
+\subsubsection[{event\-\_\-base\-\_\-loop}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf event\-\_\-base\-\_\-loop} (
+\begin{DoxyParamCaption}
+\item[{struct {\bf event\-\_\-base} $\ast$}]{base, }
+\item[{int}]{flags}
+\end{DoxyParamCaption}
+)}}\label{event_8c_a83e0d97da18820d78eac87b1dc76638d}
+
+
+\-Definition at line 356 of file event.\-c.
+
+
+
+\-Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{event_8c_a83e0d97da18820d78eac87b1dc76638d_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\-Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{event_8c_a83e0d97da18820d78eac87b1dc76638d_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{event_8c_a590eef987f8b5df59e087c10b6fcda32}{\index{event.\-c@{event.\-c}!event\-\_\-base\-\_\-loopexit@{event\-\_\-base\-\_\-loopexit}}
+\index{event\-\_\-base\-\_\-loopexit@{event\-\_\-base\-\_\-loopexit}!event.c@{event.\-c}}
+\subsubsection[{event\-\_\-base\-\_\-loopexit}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf event\-\_\-base\-\_\-loopexit} (
+\begin{DoxyParamCaption}
+\item[{struct {\bf event\-\_\-base} $\ast$}]{base, }
+\item[{struct timeval $\ast$}]{tv}
+\end{DoxyParamCaption}
+)}}\label{event_8c_a590eef987f8b5df59e087c10b6fcda32}
+
+
+\-Definition at line 376 of file event.\-c.
+
+
+
+\-Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{event_8c_a590eef987f8b5df59e087c10b6fcda32_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\-Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=302pt]{event_8c_a590eef987f8b5df59e087c10b6fcda32_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{event_8c_a4c16f1203aebc67f94791ae0240b7353}{\index{event.\-c@{event.\-c}!event\-\_\-base\-\_\-new@{event\-\_\-base\-\_\-new}}
+\index{event\-\_\-base\-\_\-new@{event\-\_\-base\-\_\-new}!event.c@{event.\-c}}
+\subsubsection[{event\-\_\-base\-\_\-new}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf event\-\_\-base}$\ast$ {\bf event\-\_\-base\-\_\-new} (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}read\mbox{]}}}}\label{event_8c_a4c16f1203aebc67f94791ae0240b7353}
+
+
+\-Definition at line 117 of file event.\-c.
+
+
+
+\-Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{event_8c_a4c16f1203aebc67f94791ae0240b7353_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{event_8c_a42c88025ad8afde8d13513b384011bee}{\index{event.\-c@{event.\-c}!event\-\_\-base\-\_\-once@{event\-\_\-base\-\_\-once}}
+\index{event\-\_\-base\-\_\-once@{event\-\_\-base\-\_\-once}!event.c@{event.\-c}}
+\subsubsection[{event\-\_\-base\-\_\-once}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf event\-\_\-base\-\_\-once} (
+\begin{DoxyParamCaption}
+\item[{struct {\bf event\-\_\-base} $\ast$}]{base, }
+\item[{int}]{fd, }
+\item[{short}]{events, }
+\item[{void($\ast$)(int, short, void $\ast$)}]{cb, }
+\item[{void $\ast$}]{arg, }
+\item[{struct timeval $\ast$}]{tv}
+\end{DoxyParamCaption}
+)}}\label{event_8c_a42c88025ad8afde8d13513b384011bee}
+
+
+\-Definition at line 402 of file event.\-c.
+
+
+
+\-Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{event_8c_a42c88025ad8afde8d13513b384011bee_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\-Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=278pt]{event_8c_a42c88025ad8afde8d13513b384011bee_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{event_8c_a97b5cc231723049fc520c284b5b766a9}{\index{event.\-c@{event.\-c}!event\-\_\-base\-\_\-priority\-\_\-init@{event\-\_\-base\-\_\-priority\-\_\-init}}
+\index{event\-\_\-base\-\_\-priority\-\_\-init@{event\-\_\-base\-\_\-priority\-\_\-init}!event.c@{event.\-c}}
+\subsubsection[{event\-\_\-base\-\_\-priority\-\_\-init}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf event\-\_\-base\-\_\-priority\-\_\-init} (
+\begin{DoxyParamCaption}
+\item[{struct {\bf event\-\_\-base} $\ast$}]{base, }
+\item[{int}]{npri}
+\end{DoxyParamCaption}
+)}}\label{event_8c_a97b5cc231723049fc520c284b5b766a9}
+
+
+\-Definition at line 419 of file event.\-c.
+
+
+
+\-Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=330pt]{event_8c_a97b5cc231723049fc520c284b5b766a9_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{event_8c_a27536fe9e78d400460ce6db34dfdabb6}{\index{event.\-c@{event.\-c}!event\-\_\-base\-\_\-set@{event\-\_\-base\-\_\-set}}
+\index{event\-\_\-base\-\_\-set@{event\-\_\-base\-\_\-set}!event.c@{event.\-c}}
+\subsubsection[{event\-\_\-base\-\_\-set}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf event\-\_\-base\-\_\-set} (
+\begin{DoxyParamCaption}
+\item[{struct {\bf event\-\_\-base} $\ast$}]{base, }
+\item[{struct {\bf event} $\ast$}]{ev}
+\end{DoxyParamCaption}
+)}}\label{event_8c_a27536fe9e78d400460ce6db34dfdabb6}
+
+
+\-Definition at line 349 of file event.\-c.
+
+\hypertarget{event_8c_a4d01ab982328facb6ce4b584390b86ab}{\index{event.\-c@{event.\-c}!event\-\_\-del@{event\-\_\-del}}
+\index{event\-\_\-del@{event\-\_\-del}!event.c@{event.\-c}}
+\subsubsection[{event\-\_\-del}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf event\-\_\-del} (
+\begin{DoxyParamCaption}
+\item[{struct {\bf event} $\ast$}]{ev}
+\end{DoxyParamCaption}
+)}}\label{event_8c_a4d01ab982328facb6ce4b584390b86ab}
+
+
+\-Definition at line 272 of file event.\-c.
+
+
+
+\-Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{event_8c_a4d01ab982328facb6ce4b584390b86ab_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\-Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=344pt]{event_8c_a4d01ab982328facb6ce4b584390b86ab_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{event_8c_a1f4991bceb8aaf33545d1fc857230b51}{\index{event.\-c@{event.\-c}!event\-\_\-dispatch@{event\-\_\-dispatch}}
+\index{event\-\_\-dispatch@{event\-\_\-dispatch}!event.c@{event.\-c}}
+\subsubsection[{event\-\_\-dispatch}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf event\-\_\-dispatch} (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{event_8c_a1f4991bceb8aaf33545d1fc857230b51}
+
+
+\-Definition at line 137 of file event.\-c.
+
+
+
+\-Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{event_8c_a1f4991bceb8aaf33545d1fc857230b51_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{event_8c_a6cdb0a8dbf7efa9be7b65914ed5c6821}{\index{event.\-c@{event.\-c}!event\-\_\-get\-\_\-callback@{event\-\_\-get\-\_\-callback}}
+\index{event\-\_\-get\-\_\-callback@{event\-\_\-get\-\_\-callback}!event.c@{event.\-c}}
+\subsubsection[{event\-\_\-get\-\_\-callback}]{\setlength{\rightskip}{0pt plus 5cm}{\bf event\-\_\-callback\-\_\-fn} {\bf event\-\_\-get\-\_\-callback} (
+\begin{DoxyParamCaption}
+\item[{const struct {\bf event} $\ast$}]{ev}
+\end{DoxyParamCaption}
+)}}\label{event_8c_a6cdb0a8dbf7efa9be7b65914ed5c6821}
+
+
+\-Definition at line 160 of file event.\-c.
+
+\hypertarget{event_8c_a8a03c9175e0578017a384b4c039b090f}{\index{event.\-c@{event.\-c}!event\-\_\-get\-\_\-method@{event\-\_\-get\-\_\-method}}
+\index{event\-\_\-get\-\_\-method@{event\-\_\-get\-\_\-method}!event.c@{event.\-c}}
+\subsubsection[{event\-\_\-get\-\_\-method}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ {\bf event\-\_\-get\-\_\-method} (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{event_8c_a8a03c9175e0578017a384b4c039b090f}
+
+
+\-Definition at line 89 of file event.\-c.
+
+\hypertarget{event_8c_a43d7feed94477cf0a7e3e062cc17b7e1}{\index{event.\-c@{event.\-c}!event\-\_\-get\-\_\-version@{event\-\_\-get\-\_\-version}}
+\index{event\-\_\-get\-\_\-version@{event\-\_\-get\-\_\-version}!event.c@{event.\-c}}
+\subsubsection[{event\-\_\-get\-\_\-version}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ {\bf event\-\_\-get\-\_\-version} (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{event_8c_a43d7feed94477cf0a7e3e062cc17b7e1}
+
+
+\-Definition at line 82 of file event.\-c.
+
+\hypertarget{event_8c_abcbfb7ebf11703931628ba9d94b390ac}{\index{event.\-c@{event.\-c}!event\-\_\-init@{event\-\_\-init}}
+\index{event\-\_\-init@{event\-\_\-init}!event.c@{event.\-c}}
+\subsubsection[{event\-\_\-init}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$ {\bf event\-\_\-init} (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{event_8c_abcbfb7ebf11703931628ba9d94b390ac}
+
+
+\-Definition at line 94 of file event.\-c.
+
+
+
+\-Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{event_8c_abcbfb7ebf11703931628ba9d94b390ac_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{event_8c_aa57cb63396305d98350e4eff3720b1c7}{\index{event.\-c@{event.\-c}!event\-\_\-loop@{event\-\_\-loop}}
+\index{event\-\_\-loop@{event\-\_\-loop}!event.c@{event.\-c}}
+\subsubsection[{event\-\_\-loop}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf event\-\_\-loop} (
+\begin{DoxyParamCaption}
+\item[{int}]{flags}
+\end{DoxyParamCaption}
+)}}\label{event_8c_aa57cb63396305d98350e4eff3720b1c7}
+
+
+\-Definition at line 149 of file event.\-c.
+
+
+
+\-Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{event_8c_aa57cb63396305d98350e4eff3720b1c7_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{event_8c_a3b707de1be2964be15283381b8ae971b}{\index{event.\-c@{event.\-c}!event\-\_\-loopexit@{event\-\_\-loopexit}}
+\index{event\-\_\-loopexit@{event\-\_\-loopexit}!event.c@{event.\-c}}
+\subsubsection[{event\-\_\-loopexit}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf event\-\_\-loopexit} (
+\begin{DoxyParamCaption}
+\item[{struct timeval $\ast$}]{tv}
+\end{DoxyParamCaption}
+)}}\label{event_8c_a3b707de1be2964be15283381b8ae971b}
+
+
+\-Definition at line 154 of file event.\-c.
+
+
+
+\-Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{event_8c_a3b707de1be2964be15283381b8ae971b_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{event_8c_a97aedebb1398f2f43dc8462766f4fae9}{\index{event.\-c@{event.\-c}!event\-\_\-once@{event\-\_\-once}}
+\index{event\-\_\-once@{event\-\_\-once}!event.c@{event.\-c}}
+\subsubsection[{event\-\_\-once}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf event\-\_\-once} (
+\begin{DoxyParamCaption}
+\item[{int}]{fd, }
+\item[{short}]{events, }
+\item[{void($\ast$)(int, short, void $\ast$)}]{cb, }
+\item[{void $\ast$}]{arg, }
+\item[{struct timeval $\ast$}]{tv}
+\end{DoxyParamCaption}
+)}}\label{event_8c_a97aedebb1398f2f43dc8462766f4fae9}
+
+
+\-Definition at line 225 of file event.\-c.
+
+
+
+\-Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{event_8c_a97aedebb1398f2f43dc8462766f4fae9_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{event_8c_a54f7a7f0714229243f5834df14826193}{\index{event.\-c@{event.\-c}!event\-\_\-pending@{event\-\_\-pending}}
+\index{event\-\_\-pending@{event\-\_\-pending}!event.c@{event.\-c}}
+\subsubsection[{event\-\_\-pending}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf event\-\_\-pending} (
+\begin{DoxyParamCaption}
+\item[{struct {\bf event} $\ast$}]{ev, }
+\item[{short}]{events, }
+\item[{struct timeval $\ast$}]{tv}
+\end{DoxyParamCaption}
+)}}\label{event_8c_a54f7a7f0714229243f5834df14826193}
+
+
+\-Definition at line 303 of file event.\-c.
+
+
+
+\-Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=246pt]{event_8c_a54f7a7f0714229243f5834df14826193_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{event_8c_a9250404778b2c4e18bbb72817f45ff09}{\index{event.\-c@{event.\-c}!event\-\_\-priority\-\_\-init@{event\-\_\-priority\-\_\-init}}
+\index{event\-\_\-priority\-\_\-init@{event\-\_\-priority\-\_\-init}!event.c@{event.\-c}}
+\subsubsection[{event\-\_\-priority\-\_\-init}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf event\-\_\-priority\-\_\-init} (
+\begin{DoxyParamCaption}
+\item[{int}]{npri}
+\end{DoxyParamCaption}
+)}}\label{event_8c_a9250404778b2c4e18bbb72817f45ff09}
+
+
+\-Definition at line 337 of file event.\-c.
+
+
+
+\-Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=330pt]{event_8c_a9250404778b2c4e18bbb72817f45ff09_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{event_8c_a4b6b70a0e975a4ab48b1bb4abecded0f}{\index{event.\-c@{event.\-c}!event\-\_\-priority\-\_\-set@{event\-\_\-priority\-\_\-set}}
+\index{event\-\_\-priority\-\_\-set@{event\-\_\-priority\-\_\-set}!event.c@{event.\-c}}
+\subsubsection[{event\-\_\-priority\-\_\-set}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf event\-\_\-priority\-\_\-set} (
+\begin{DoxyParamCaption}
+\item[{struct {\bf event} $\ast$}]{ev, }
+\item[{int}]{pri}
+\end{DoxyParamCaption}
+)}}\label{event_8c_a4b6b70a0e975a4ab48b1bb4abecded0f}
+
+
+\-Definition at line 342 of file event.\-c.
+
+\hypertarget{event_8c_a6988732eb4ac6cabe81ab6c88803b127}{\index{event.\-c@{event.\-c}!event\-\_\-set@{event\-\_\-set}}
+\index{event\-\_\-set@{event\-\_\-set}!event.c@{event.\-c}}
+\subsubsection[{event\-\_\-set}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf event\-\_\-set} (
+\begin{DoxyParamCaption}
+\item[{struct {\bf event} $\ast$}]{ev, }
+\item[{int}]{fd, }
+\item[{short}]{events, }
+\item[{void($\ast$)(int, short, void $\ast$)}]{cb, }
+\item[{void $\ast$}]{arg}
+\end{DoxyParamCaption}
+)}}\label{event_8c_a6988732eb4ac6cabe81ab6c88803b127}
+
+
+\-Definition at line 206 of file event.\-c.
+
+
+
+\-Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{event_8c_a6988732eb4ac6cabe81ab6c88803b127_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{\-Variable \-Documentation}
+\hypertarget{event_8c_a00f1e6e24903c286cb5ad0495648608c}{\index{event.\-c@{event.\-c}!ev\-\_\-x\-\_\-cur@{ev\-\_\-x\-\_\-cur}}
+\index{ev\-\_\-x\-\_\-cur@{ev\-\_\-x\-\_\-cur}!event.c@{event.\-c}}
+\subsubsection[{ev\-\_\-x\-\_\-cur}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf event\-\_\-base}$\ast$ {\bf ev\-\_\-x\-\_\-cur}\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{event_8c_a00f1e6e24903c286cb5ad0495648608c}
+
+
+\-Definition at line 64 of file event.\-c.
+

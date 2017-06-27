@@ -1,0 +1,650 @@
+\hypertarget{structev__loop}{\section{ev\-\_\-loop \-Struct \-Reference}
+\label{structev__loop}\index{ev\-\_\-loop@{ev\-\_\-loop}}
+}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structev__loop_a1d7ebd768a98eb8a14a1576ef3312cd4}{\-V\-A\-Rx} (\hyperlink{ev_8h_add71e34ce2b04bbf7eb6f31a850814e8}{ev\-\_\-tstamp}, \hyperlink{ev__wrap_8h_aa4bff23174631181701c9a1e29bde184}{now\-\_\-floor}) \hyperlink{structev__loop_ab4710db67bbb58f2502416b96745b404}{\-V\-A\-Rx}(\hyperlink{ev_8h_add71e34ce2b04bbf7eb6f31a850814e8}{ev\-\_\-tstamp}
+\item 
+\hyperlink{ev__wrap_8h_a13d32fd5b8e9174e15dc882c00cd8b56}{mn\-\_\-now} \hyperlink{structev__loop_a1f599397e40ec502dd72782230eae2b5}{\-V\-A\-Rx} (\hyperlink{ev_8h_add71e34ce2b04bbf7eb6f31a850814e8}{ev\-\_\-tstamp}, \hyperlink{ev__wrap_8h_aa574a8b51956c152cc7926ad6b39d828}{rtmn\-\_\-diff}) \hyperlink{structev__loop_ab4710db67bbb58f2502416b96745b404}{\-V\-A\-Rx}(\hyperlink{ev_8c_a1d5a98f4500d54b812947ada8c7d517f}{\-W} $\ast$
+\item 
+\hyperlink{ev__wrap_8h_a13d32fd5b8e9174e15dc882c00cd8b56}{mn\-\_\-now} \hyperlink{ev__wrap_8h_acc5033089a37bb992d8c3e8eaae46e2e}{rfeeds} \hyperlink{structev__loop_adedb82454f3e68e6bb6f5b3eaaf128fe}{\-V\-A\-Rx} (int, \hyperlink{ev__wrap_8h_a3b48ac30127da85b9f4c0b921eca15bc}{rfeedmax}) \hyperlink{structev__loop_ab4710db67bbb58f2502416b96745b404}{\-V\-A\-Rx}(int
+\item 
+\hyperlink{ev__wrap_8h_a13d32fd5b8e9174e15dc882c00cd8b56}{mn\-\_\-now} \hyperlink{ev__wrap_8h_acc5033089a37bb992d8c3e8eaae46e2e}{rfeeds} \hyperlink{ev__wrap_8h_a1b4898488eed271e73387b6fb447afa8}{rfeedcnt} \hyperlink{structev__loop_ac5272fbdea7cf951bb16a9531fb8dc66}{\-V\-A\-Rx} (int, \hyperlink{ev__wrap_8h_af2a84d42c15af786e245e848e194685e}{pendingpri}) \hyperlink{structev__loop_ab4710db67bbb58f2502416b96745b404}{\-V\-A\-Rx}(\hyperlink{structev__prepare}{ev\-\_\-prepare}
+\item 
+\hyperlink{ev__wrap_8h_a13d32fd5b8e9174e15dc882c00cd8b56}{mn\-\_\-now} \hyperlink{ev__wrap_8h_acc5033089a37bb992d8c3e8eaae46e2e}{rfeeds} \hyperlink{ev__wrap_8h_a1b4898488eed271e73387b6fb447afa8}{rfeedcnt} \hyperlink{ev__wrap_8h_a2df31e042905049ce69a85286ce86683}{pending\-\_\-w} \hyperlink{structev__loop_a76f29853a6dd1c9d2942713108750462}{\-V\-A\-Rx} (\hyperlink{ev_8h_add71e34ce2b04bbf7eb6f31a850814e8}{ev\-\_\-tstamp}, \hyperlink{ev__wrap_8h_a20ec4d26419f97ae2af673adeecc804c}{io\-\_\-blocktime}) \hyperlink{structev__loop_ab4710db67bbb58f2502416b96745b404}{\-V\-A\-Rx}(\hyperlink{ev_8h_add71e34ce2b04bbf7eb6f31a850814e8}{ev\-\_\-tstamp}
+\item 
+\hyperlink{ev__wrap_8h_a13d32fd5b8e9174e15dc882c00cd8b56}{mn\-\_\-now} \hyperlink{ev__wrap_8h_acc5033089a37bb992d8c3e8eaae46e2e}{rfeeds} \hyperlink{ev__wrap_8h_a1b4898488eed271e73387b6fb447afa8}{rfeedcnt} \*
+\hyperlink{ev__wrap_8h_a2df31e042905049ce69a85286ce86683}{pending\-\_\-w} \hyperlink{ev__wrap_8h_a0b9126213bf4d775128cef76e2ef99ea}{timeout\-\_\-blocktime} \hyperlink{structev__loop_a36d8ccfe3b0a90dc6e2c9b4624480fcf}{\-V\-A\-Rx} (int, \hyperlink{ev__wrap_8h_ad2976a4a7a5e0af00052427cba0851b2}{backend}) \hyperlink{structev__loop_ab4710db67bbb58f2502416b96745b404}{\-V\-A\-Rx}(int
+\item 
+\hyperlink{ev__wrap_8h_a13d32fd5b8e9174e15dc882c00cd8b56}{mn\-\_\-now} \hyperlink{ev__wrap_8h_acc5033089a37bb992d8c3e8eaae46e2e}{rfeeds} \hyperlink{ev__wrap_8h_a1b4898488eed271e73387b6fb447afa8}{rfeedcnt} \*
+\hyperlink{ev__wrap_8h_a2df31e042905049ce69a85286ce86683}{pending\-\_\-w} \hyperlink{ev__wrap_8h_a0b9126213bf4d775128cef76e2ef99ea}{timeout\-\_\-blocktime} \*
+\hyperlink{ev__wrap_8h_ab88079beba1e9e774fa23bf4147d01a6}{activecnt} \hyperlink{structev__loop_afe664d107d3394d3c7c5599d49b0014d}{\-V\-A\-Rx} (\-E\-V\-\_\-\-A\-T\-O\-M\-I\-C\-\_\-\-T, \hyperlink{ev__wrap_8h_a027cd4475bb2f8e5e2aa1a66ddee2bb5}{loop\-\_\-done}) \hyperlink{structev__loop_ab4710db67bbb58f2502416b96745b404}{\-V\-A\-Rx}(int
+\item 
+\hyperlink{ev__wrap_8h_a13d32fd5b8e9174e15dc882c00cd8b56}{mn\-\_\-now} \hyperlink{ev__wrap_8h_acc5033089a37bb992d8c3e8eaae46e2e}{rfeeds} \hyperlink{ev__wrap_8h_a1b4898488eed271e73387b6fb447afa8}{rfeedcnt} \*
+\hyperlink{ev__wrap_8h_a2df31e042905049ce69a85286ce86683}{pending\-\_\-w} \hyperlink{ev__wrap_8h_a0b9126213bf4d775128cef76e2ef99ea}{timeout\-\_\-blocktime} \*
+\hyperlink{ev__wrap_8h_ab88079beba1e9e774fa23bf4147d01a6}{activecnt} \hyperlink{ev__wrap_8h_a990f21802305065d4ceec6d7a41dd7e5}{backend\-\_\-fd} \hyperlink{structev__loop_ae23c4b47e59215085cc9f0652cec2d0a}{\-V\-A\-Rx} (\hyperlink{ev_8h_add71e34ce2b04bbf7eb6f31a850814e8}{ev\-\_\-tstamp}, \hyperlink{ev__wrap_8h_ac4334651de34481550861f5e748cbd91}{backend\-\_\-mintime}) \hyperlink{ev_8c_af9e709c26770dce4b5180c0a51aa4c21}{\-V\-A\-R}(\hyperlink{structev__loop_ae6ba045cdd474f63e8f543e5b95bf25e}{backend\-\_\-modify}
+\end{DoxyCompactItemize}
+\subsection*{\-Data \-Fields}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{ev_8h_add71e34ce2b04bbf7eb6f31a850814e8}{ev\-\_\-tstamp} \hyperlink{structev__loop_a775f0f0bd69e3d84a7804b2db59494df}{ev\-\_\-rt\-\_\-now}
+\item 
+\hyperlink{ev__wrap_8h_a13d32fd5b8e9174e15dc882c00cd8b56}{mn\-\_\-now} \hyperlink{ev__wrap_8h_acc5033089a37bb992d8c3e8eaae46e2e}{rfeeds} \hyperlink{ev__wrap_8h_a1b4898488eed271e73387b6fb447afa8}{rfeedcnt} \*
+\hyperlink{ev__wrap_8h_a2df31e042905049ce69a85286ce86683}{pending\-\_\-w} \hyperlink{ev__wrap_8h_a0b9126213bf4d775128cef76e2ef99ea}{timeout\-\_\-blocktime} \*
+\hyperlink{ev__wrap_8h_ab88079beba1e9e774fa23bf4147d01a6}{activecnt} \hyperlink{ev__wrap_8h_a990f21802305065d4ceec6d7a41dd7e5}{backend\-\_\-fd} void($\ast$ \hyperlink{structev__loop_ae6ba045cdd474f63e8f543e5b95bf25e}{backend\-\_\-modify} )(\hyperlink{ev_8h_a8ac42969e0a499b8c1367f0ad85dbba9}{\-E\-V\-\_\-\-P\-\_\-} int fd, int oev, int nev)) \hyperlink{ev_8c_af9e709c26770dce4b5180c0a51aa4c21}{\-V\-A\-R}(\hyperlink{structev__loop_abcffdc59e6043598edf7d8f6faadbcc6}{backend\-\_\-poll}
+\item 
+\hyperlink{ev__wrap_8h_a13d32fd5b8e9174e15dc882c00cd8b56}{mn\-\_\-now} \hyperlink{ev__wrap_8h_acc5033089a37bb992d8c3e8eaae46e2e}{rfeeds} \hyperlink{ev__wrap_8h_a1b4898488eed271e73387b6fb447afa8}{rfeedcnt} \*
+\hyperlink{ev__wrap_8h_a2df31e042905049ce69a85286ce86683}{pending\-\_\-w} \hyperlink{ev__wrap_8h_a0b9126213bf4d775128cef76e2ef99ea}{timeout\-\_\-blocktime} \*
+\hyperlink{ev__wrap_8h_ab88079beba1e9e774fa23bf4147d01a6}{activecnt} \hyperlink{ev__wrap_8h_a990f21802305065d4ceec6d7a41dd7e5}{backend\-\_\-fd} void($\ast$) \*
+void($\ast$ \hyperlink{structev__loop_abcffdc59e6043598edf7d8f6faadbcc6}{backend\-\_\-poll} )(\hyperlink{ev_8h_a8ac42969e0a499b8c1367f0ad85dbba9}{\-E\-V\-\_\-\-P\-\_\-} \hyperlink{ev_8h_add71e34ce2b04bbf7eb6f31a850814e8}{ev\-\_\-tstamp} timeout)) \hyperlink{structev__loop_ab4710db67bbb58f2502416b96745b404}{\-V\-A\-Rx}(\hyperlink{struct_a_n_f_d}{\-A\-N\-F\-D} $\ast$
+\item 
+\hyperlink{ev__wrap_8h_a13d32fd5b8e9174e15dc882c00cd8b56}{mn\-\_\-now} \hyperlink{ev__wrap_8h_acc5033089a37bb992d8c3e8eaae46e2e}{rfeeds} \hyperlink{ev__wrap_8h_a1b4898488eed271e73387b6fb447afa8}{rfeedcnt} \*
+\hyperlink{ev__wrap_8h_a2df31e042905049ce69a85286ce86683}{pending\-\_\-w} \hyperlink{ev__wrap_8h_a0b9126213bf4d775128cef76e2ef99ea}{timeout\-\_\-blocktime} \*
+\hyperlink{ev__wrap_8h_ab88079beba1e9e774fa23bf4147d01a6}{activecnt} \hyperlink{ev__wrap_8h_a990f21802305065d4ceec6d7a41dd7e5}{backend\-\_\-fd} void($\ast$) \*
+void($\ast$) anfd \hyperlink{structev__loop_ab4710db67bbb58f2502416b96745b404}{\-V\-A\-Rx} )(int, \hyperlink{ev__wrap_8h_aa0520319db0912c45c0646f2f98ca0e8}{anfdmax}) \hyperlink{structev__loop_ab4710db67bbb58f2502416b96745b404}{\-V\-A\-Rx}(\hyperlink{structev__io}{ev\-\_\-io}
+\item 
+\hyperlink{ev__wrap_8h_a13d32fd5b8e9174e15dc882c00cd8b56}{mn\-\_\-now} \hyperlink{ev__wrap_8h_acc5033089a37bb992d8c3e8eaae46e2e}{rfeeds} \hyperlink{ev__wrap_8h_a1b4898488eed271e73387b6fb447afa8}{rfeedcnt} \*
+\hyperlink{ev__wrap_8h_a2df31e042905049ce69a85286ce86683}{pending\-\_\-w} \hyperlink{ev__wrap_8h_a0b9126213bf4d775128cef76e2ef99ea}{timeout\-\_\-blocktime} \*
+\hyperlink{ev__wrap_8h_ab88079beba1e9e774fa23bf4147d01a6}{activecnt} \hyperlink{ev__wrap_8h_a990f21802305065d4ceec6d7a41dd7e5}{backend\-\_\-fd} void($\ast$) \*
+void($\ast$) \hyperlink{ev__wrap_8h_a1f30ebf57c13323cf7e9a6c48854c838}{anfds} pipe\-\_\- \hyperlink{structev__loop_a6aa51983436c29dfa320a63ec7403f0b}{\-V\-A\-Rx} )(\-E\-V\-\_\-\-A\-T\-O\-M\-I\-C\-\_\-\-T, \hyperlink{ev__wrap_8h_a27e06b7a755d6a0be4758b71c84c800a}{pipe\-\_\-write\-\_\-wanted}) \hyperlink{structev__loop_ab4710db67bbb58f2502416b96745b404}{\-V\-A\-Rx}(\-E\-V\-\_\-\-A\-T\-O\-M\-I\-C\-\_\-\-T
+\item 
+\hyperlink{ev__wrap_8h_a13d32fd5b8e9174e15dc882c00cd8b56}{mn\-\_\-now} \hyperlink{ev__wrap_8h_acc5033089a37bb992d8c3e8eaae46e2e}{rfeeds} \hyperlink{ev__wrap_8h_a1b4898488eed271e73387b6fb447afa8}{rfeedcnt} \*
+\hyperlink{ev__wrap_8h_a2df31e042905049ce69a85286ce86683}{pending\-\_\-w} \hyperlink{ev__wrap_8h_a0b9126213bf4d775128cef76e2ef99ea}{timeout\-\_\-blocktime} \*
+\hyperlink{ev__wrap_8h_ab88079beba1e9e774fa23bf4147d01a6}{activecnt} \hyperlink{ev__wrap_8h_a990f21802305065d4ceec6d7a41dd7e5}{backend\-\_\-fd} void($\ast$) \*
+void($\ast$) \hyperlink{ev__wrap_8h_a1f30ebf57c13323cf7e9a6c48854c838}{anfds} \hyperlink{ev__wrap_8h_a0f7cd0e8aa73e889500cde40885b4653}{pipe\-\_\-w} \*
+pipe\-\_\-write\-\_\-skippe \hyperlink{structev__loop_ae8420c06a798ba710eb5de5fe2d0f0d7}{\-V\-A\-Rx} )(pid\-\_\-t, \hyperlink{ev__wrap_8h_a9b70b976c963ea55f143b88684fe8609}{curpid}) \hyperlink{structev__loop_ab4710db67bbb58f2502416b96745b404}{\-V\-A\-Rx}(char
+\item 
+\hyperlink{ev__wrap_8h_a13d32fd5b8e9174e15dc882c00cd8b56}{mn\-\_\-now} \hyperlink{ev__wrap_8h_acc5033089a37bb992d8c3e8eaae46e2e}{rfeeds} \hyperlink{ev__wrap_8h_a1b4898488eed271e73387b6fb447afa8}{rfeedcnt} \*
+\hyperlink{ev__wrap_8h_a2df31e042905049ce69a85286ce86683}{pending\-\_\-w} \hyperlink{ev__wrap_8h_a0b9126213bf4d775128cef76e2ef99ea}{timeout\-\_\-blocktime} \*
+\hyperlink{ev__wrap_8h_ab88079beba1e9e774fa23bf4147d01a6}{activecnt} \hyperlink{ev__wrap_8h_a990f21802305065d4ceec6d7a41dd7e5}{backend\-\_\-fd} void($\ast$) \*
+void($\ast$) \hyperlink{ev__wrap_8h_a1f30ebf57c13323cf7e9a6c48854c838}{anfds} \hyperlink{ev__wrap_8h_a0f7cd0e8aa73e889500cde40885b4653}{pipe\-\_\-w} \*
+\hyperlink{ev__wrap_8h_a97a91e0ce1737cf40906ac955feebaae}{pipe\-\_\-write\-\_\-skipped} postfor \hyperlink{structev__loop_abbc51e970555f9c7b979955ceee24593}{\-V\-A\-Rx} )(void $\ast$, \hyperlink{ev__wrap_8h_a384e6bd366a8c0472272a918b367cca8}{vec\-\_\-ri}) \hyperlink{structev__loop_ab4710db67bbb58f2502416b96745b404}{\-V\-A\-Rx}(void $\ast$
+\item 
+\hyperlink{ev__wrap_8h_a13d32fd5b8e9174e15dc882c00cd8b56}{mn\-\_\-now} \hyperlink{ev__wrap_8h_acc5033089a37bb992d8c3e8eaae46e2e}{rfeeds} \hyperlink{ev__wrap_8h_a1b4898488eed271e73387b6fb447afa8}{rfeedcnt} \*
+\hyperlink{ev__wrap_8h_a2df31e042905049ce69a85286ce86683}{pending\-\_\-w} \hyperlink{ev__wrap_8h_a0b9126213bf4d775128cef76e2ef99ea}{timeout\-\_\-blocktime} \*
+\hyperlink{ev__wrap_8h_ab88079beba1e9e774fa23bf4147d01a6}{activecnt} \hyperlink{ev__wrap_8h_a990f21802305065d4ceec6d7a41dd7e5}{backend\-\_\-fd} void($\ast$) \*
+void($\ast$) \hyperlink{ev__wrap_8h_a1f30ebf57c13323cf7e9a6c48854c838}{anfds} \hyperlink{ev__wrap_8h_a0f7cd0e8aa73e889500cde40885b4653}{pipe\-\_\-w} \*
+\hyperlink{ev__wrap_8h_a97a91e0ce1737cf40906ac955feebaae}{pipe\-\_\-write\-\_\-skipped} \hyperlink{ev__wrap_8h_a1819401107013d9b035d38425970638f}{postfork} \*
+vec\-\_\-r \hyperlink{structev__loop_a0da6dfa7787cf08c7cc74dfa97686031}{\-V\-A\-Rx} )(void $\ast$, \hyperlink{ev__wrap_8h_ab15ce1902f266ab67836de2b4967367f}{vec\-\_\-wi}) \hyperlink{structev__loop_ab4710db67bbb58f2502416b96745b404}{\-V\-A\-Rx}(void $\ast$
+\item 
+\hyperlink{ev__wrap_8h_a13d32fd5b8e9174e15dc882c00cd8b56}{mn\-\_\-now} \hyperlink{ev__wrap_8h_acc5033089a37bb992d8c3e8eaae46e2e}{rfeeds} \hyperlink{ev__wrap_8h_a1b4898488eed271e73387b6fb447afa8}{rfeedcnt} \*
+\hyperlink{ev__wrap_8h_a2df31e042905049ce69a85286ce86683}{pending\-\_\-w} \hyperlink{ev__wrap_8h_a0b9126213bf4d775128cef76e2ef99ea}{timeout\-\_\-blocktime} \*
+\hyperlink{ev__wrap_8h_ab88079beba1e9e774fa23bf4147d01a6}{activecnt} \hyperlink{ev__wrap_8h_a990f21802305065d4ceec6d7a41dd7e5}{backend\-\_\-fd} void($\ast$) \*
+void($\ast$) \hyperlink{ev__wrap_8h_a1f30ebf57c13323cf7e9a6c48854c838}{anfds} \hyperlink{ev__wrap_8h_a0f7cd0e8aa73e889500cde40885b4653}{pipe\-\_\-w} \*
+\hyperlink{ev__wrap_8h_a97a91e0ce1737cf40906ac955feebaae}{pipe\-\_\-write\-\_\-skipped} \hyperlink{ev__wrap_8h_a1819401107013d9b035d38425970638f}{postfork} \*
+\hyperlink{ev__wrap_8h_a07f2e7a6d19873e2b3eedbb362d9df80}{vec\-\_\-ro} vec\-\_\-w \hyperlink{structev__loop_a1207f4fd0019e46e4b57c9ae96b9cdd7}{\-V\-A\-Rx} )(int, \hyperlink{ev__wrap_8h_a9d3a49ddb904c892ea6280913c0413b2}{vec\-\_\-max}) \hyperlink{structev__loop_ab4710db67bbb58f2502416b96745b404}{\-V\-A\-Rx}(struct pollfd $\ast$
+\item 
+\hyperlink{ev__wrap_8h_a13d32fd5b8e9174e15dc882c00cd8b56}{mn\-\_\-now} \hyperlink{ev__wrap_8h_acc5033089a37bb992d8c3e8eaae46e2e}{rfeeds} \hyperlink{ev__wrap_8h_a1b4898488eed271e73387b6fb447afa8}{rfeedcnt} \*
+\hyperlink{ev__wrap_8h_a2df31e042905049ce69a85286ce86683}{pending\-\_\-w} \hyperlink{ev__wrap_8h_a0b9126213bf4d775128cef76e2ef99ea}{timeout\-\_\-blocktime} \*
+\hyperlink{ev__wrap_8h_ab88079beba1e9e774fa23bf4147d01a6}{activecnt} \hyperlink{ev__wrap_8h_a990f21802305065d4ceec6d7a41dd7e5}{backend\-\_\-fd} void($\ast$) \*
+void($\ast$) \hyperlink{ev__wrap_8h_a1f30ebf57c13323cf7e9a6c48854c838}{anfds} \hyperlink{ev__wrap_8h_a0f7cd0e8aa73e889500cde40885b4653}{pipe\-\_\-w} \*
+\hyperlink{ev__wrap_8h_a97a91e0ce1737cf40906ac955feebaae}{pipe\-\_\-write\-\_\-skipped} \hyperlink{ev__wrap_8h_a1819401107013d9b035d38425970638f}{postfork} \*
+\hyperlink{ev__wrap_8h_a07f2e7a6d19873e2b3eedbb362d9df80}{vec\-\_\-ro} \hyperlink{ev__wrap_8h_ae7517957adb2dc3eeaef7fe52cc84513}{vec\-\_\-wo} poll \hyperlink{structev__loop_a0e284e844796b5ab0224266b15ef3a63}{\-V\-A\-Rx} )(int, \hyperlink{ev__wrap_8h_ad33d597a694fbcf45efc4535189958b0}{pollmax}) \hyperlink{structev__loop_ab4710db67bbb58f2502416b96745b404}{\-V\-A\-Rx}(int
+\item 
+\hyperlink{ev__wrap_8h_a13d32fd5b8e9174e15dc882c00cd8b56}{mn\-\_\-now} \hyperlink{ev__wrap_8h_acc5033089a37bb992d8c3e8eaae46e2e}{rfeeds} \hyperlink{ev__wrap_8h_a1b4898488eed271e73387b6fb447afa8}{rfeedcnt} \*
+\hyperlink{ev__wrap_8h_a2df31e042905049ce69a85286ce86683}{pending\-\_\-w} \hyperlink{ev__wrap_8h_a0b9126213bf4d775128cef76e2ef99ea}{timeout\-\_\-blocktime} \*
+\hyperlink{ev__wrap_8h_ab88079beba1e9e774fa23bf4147d01a6}{activecnt} \hyperlink{ev__wrap_8h_a990f21802305065d4ceec6d7a41dd7e5}{backend\-\_\-fd} void($\ast$) \*
+void($\ast$) \hyperlink{ev__wrap_8h_a1f30ebf57c13323cf7e9a6c48854c838}{anfds} \hyperlink{ev__wrap_8h_a0f7cd0e8aa73e889500cde40885b4653}{pipe\-\_\-w} \*
+\hyperlink{ev__wrap_8h_a97a91e0ce1737cf40906ac955feebaae}{pipe\-\_\-write\-\_\-skipped} \hyperlink{ev__wrap_8h_a1819401107013d9b035d38425970638f}{postfork} \*
+\hyperlink{ev__wrap_8h_a07f2e7a6d19873e2b3eedbb362d9df80}{vec\-\_\-ro} \hyperlink{ev__wrap_8h_ae7517957adb2dc3eeaef7fe52cc84513}{vec\-\_\-wo} \hyperlink{ev__wrap_8h_a8d9e55e3264921a6734c5de679e5645c}{polls} pollcn \hyperlink{structev__loop_a424e9709e455906e09bf1bb9c531e77c}{\-V\-A\-Rx} )(int $\ast$, \hyperlink{ev__wrap_8h_ac109979808c6e7b933d4ed94505a0e7d}{pollidxs}) \hyperlink{structev__loop_ab4710db67bbb58f2502416b96745b404}{\-V\-A\-Rx}(int
+\item 
+\hyperlink{ev__wrap_8h_a13d32fd5b8e9174e15dc882c00cd8b56}{mn\-\_\-now} \hyperlink{ev__wrap_8h_acc5033089a37bb992d8c3e8eaae46e2e}{rfeeds} \hyperlink{ev__wrap_8h_a1b4898488eed271e73387b6fb447afa8}{rfeedcnt} \*
+\hyperlink{ev__wrap_8h_a2df31e042905049ce69a85286ce86683}{pending\-\_\-w} \hyperlink{ev__wrap_8h_a0b9126213bf4d775128cef76e2ef99ea}{timeout\-\_\-blocktime} \*
+\hyperlink{ev__wrap_8h_ab88079beba1e9e774fa23bf4147d01a6}{activecnt} \hyperlink{ev__wrap_8h_a990f21802305065d4ceec6d7a41dd7e5}{backend\-\_\-fd} void($\ast$) \*
+void($\ast$) \hyperlink{ev__wrap_8h_a1f30ebf57c13323cf7e9a6c48854c838}{anfds} \hyperlink{ev__wrap_8h_a0f7cd0e8aa73e889500cde40885b4653}{pipe\-\_\-w} \*
+\hyperlink{ev__wrap_8h_a97a91e0ce1737cf40906ac955feebaae}{pipe\-\_\-write\-\_\-skipped} \hyperlink{ev__wrap_8h_a1819401107013d9b035d38425970638f}{postfork} \*
+\hyperlink{ev__wrap_8h_a07f2e7a6d19873e2b3eedbb362d9df80}{vec\-\_\-ro} \hyperlink{ev__wrap_8h_ae7517957adb2dc3eeaef7fe52cc84513}{vec\-\_\-wo} \hyperlink{ev__wrap_8h_a8d9e55e3264921a6734c5de679e5645c}{polls} \hyperlink{ev__wrap_8h_a7f400222143038738f69450fa6f598b4}{pollcnt} \*
+pollidxma \hyperlink{structev__loop_ad3d31f685363d42d641957e2281cb623}{\-V\-A\-Rx} )(struct epoll\-\_\-event $\ast$, \hyperlink{ev__wrap_8h_ad571661828ac19df63c56a2a304cba38}{epoll\-\_\-events}) \hyperlink{structev__loop_ab4710db67bbb58f2502416b96745b404}{\-V\-A\-Rx}(int
+\item 
+\hyperlink{ev__wrap_8h_a13d32fd5b8e9174e15dc882c00cd8b56}{mn\-\_\-now} \hyperlink{ev__wrap_8h_acc5033089a37bb992d8c3e8eaae46e2e}{rfeeds} \hyperlink{ev__wrap_8h_a1b4898488eed271e73387b6fb447afa8}{rfeedcnt} \*
+\hyperlink{ev__wrap_8h_a2df31e042905049ce69a85286ce86683}{pending\-\_\-w} \hyperlink{ev__wrap_8h_a0b9126213bf4d775128cef76e2ef99ea}{timeout\-\_\-blocktime} \*
+\hyperlink{ev__wrap_8h_ab88079beba1e9e774fa23bf4147d01a6}{activecnt} \hyperlink{ev__wrap_8h_a990f21802305065d4ceec6d7a41dd7e5}{backend\-\_\-fd} void($\ast$) \*
+void($\ast$) \hyperlink{ev__wrap_8h_a1f30ebf57c13323cf7e9a6c48854c838}{anfds} \hyperlink{ev__wrap_8h_a0f7cd0e8aa73e889500cde40885b4653}{pipe\-\_\-w} \*
+\hyperlink{ev__wrap_8h_a97a91e0ce1737cf40906ac955feebaae}{pipe\-\_\-write\-\_\-skipped} \hyperlink{ev__wrap_8h_a1819401107013d9b035d38425970638f}{postfork} \*
+\hyperlink{ev__wrap_8h_a07f2e7a6d19873e2b3eedbb362d9df80}{vec\-\_\-ro} \hyperlink{ev__wrap_8h_ae7517957adb2dc3eeaef7fe52cc84513}{vec\-\_\-wo} \hyperlink{ev__wrap_8h_a8d9e55e3264921a6734c5de679e5645c}{polls} \hyperlink{ev__wrap_8h_a7f400222143038738f69450fa6f598b4}{pollcnt} \*
+\hyperlink{ev__wrap_8h_af69da315f31ae068ff13778b4c544bd3}{pollidxmax} epoll\-\_\-eventma \hyperlink{structev__loop_a0949624fea57acded29e6428f687f6b6}{\-V\-A\-Rx} )(int $\ast$, \hyperlink{ev__wrap_8h_a2683703106fcac56ec1904f1b5c3489c}{epoll\-\_\-eperms}) \hyperlink{structev__loop_ab4710db67bbb58f2502416b96745b404}{\-V\-A\-Rx}(int
+\item 
+\hyperlink{ev__wrap_8h_a13d32fd5b8e9174e15dc882c00cd8b56}{mn\-\_\-now} \hyperlink{ev__wrap_8h_acc5033089a37bb992d8c3e8eaae46e2e}{rfeeds} \hyperlink{ev__wrap_8h_a1b4898488eed271e73387b6fb447afa8}{rfeedcnt} \*
+\hyperlink{ev__wrap_8h_a2df31e042905049ce69a85286ce86683}{pending\-\_\-w} \hyperlink{ev__wrap_8h_a0b9126213bf4d775128cef76e2ef99ea}{timeout\-\_\-blocktime} \*
+\hyperlink{ev__wrap_8h_ab88079beba1e9e774fa23bf4147d01a6}{activecnt} \hyperlink{ev__wrap_8h_a990f21802305065d4ceec6d7a41dd7e5}{backend\-\_\-fd} void($\ast$) \*
+void($\ast$) \hyperlink{ev__wrap_8h_a1f30ebf57c13323cf7e9a6c48854c838}{anfds} \hyperlink{ev__wrap_8h_a0f7cd0e8aa73e889500cde40885b4653}{pipe\-\_\-w} \*
+\hyperlink{ev__wrap_8h_a97a91e0ce1737cf40906ac955feebaae}{pipe\-\_\-write\-\_\-skipped} \hyperlink{ev__wrap_8h_a1819401107013d9b035d38425970638f}{postfork} \*
+\hyperlink{ev__wrap_8h_a07f2e7a6d19873e2b3eedbb362d9df80}{vec\-\_\-ro} \hyperlink{ev__wrap_8h_ae7517957adb2dc3eeaef7fe52cc84513}{vec\-\_\-wo} \hyperlink{ev__wrap_8h_a8d9e55e3264921a6734c5de679e5645c}{polls} \hyperlink{ev__wrap_8h_a7f400222143038738f69450fa6f598b4}{pollcnt} \*
+\hyperlink{ev__wrap_8h_af69da315f31ae068ff13778b4c544bd3}{pollidxmax} \hyperlink{ev__wrap_8h_ada8e434add6dfaf4c07400a8b8aa2378}{epoll\-\_\-eventmax} \*
+epoll\-\_\-epermcn \hyperlink{structev__loop_aaf1f0d776092ea9d95e0eeffa591cad7}{\-V\-A\-Rx} )(int, \hyperlink{ev__wrap_8h_a6aeb2a77c644fc75d3e2acb9330a7f59}{epoll\-\_\-epermmax}) \hyperlink{structev__loop_ab4710db67bbb58f2502416b96745b404}{\-V\-A\-Rx}(int $\ast$
+\item 
+\hyperlink{ev__wrap_8h_a13d32fd5b8e9174e15dc882c00cd8b56}{mn\-\_\-now} \hyperlink{ev__wrap_8h_acc5033089a37bb992d8c3e8eaae46e2e}{rfeeds} \hyperlink{ev__wrap_8h_a1b4898488eed271e73387b6fb447afa8}{rfeedcnt} \*
+\hyperlink{ev__wrap_8h_a2df31e042905049ce69a85286ce86683}{pending\-\_\-w} \hyperlink{ev__wrap_8h_a0b9126213bf4d775128cef76e2ef99ea}{timeout\-\_\-blocktime} \*
+\hyperlink{ev__wrap_8h_ab88079beba1e9e774fa23bf4147d01a6}{activecnt} \hyperlink{ev__wrap_8h_a990f21802305065d4ceec6d7a41dd7e5}{backend\-\_\-fd} void($\ast$) \*
+void($\ast$) \hyperlink{ev__wrap_8h_a1f30ebf57c13323cf7e9a6c48854c838}{anfds} \hyperlink{ev__wrap_8h_a0f7cd0e8aa73e889500cde40885b4653}{pipe\-\_\-w} \*
+\hyperlink{ev__wrap_8h_a97a91e0ce1737cf40906ac955feebaae}{pipe\-\_\-write\-\_\-skipped} \hyperlink{ev__wrap_8h_a1819401107013d9b035d38425970638f}{postfork} \*
+\hyperlink{ev__wrap_8h_a07f2e7a6d19873e2b3eedbb362d9df80}{vec\-\_\-ro} \hyperlink{ev__wrap_8h_ae7517957adb2dc3eeaef7fe52cc84513}{vec\-\_\-wo} \hyperlink{ev__wrap_8h_a8d9e55e3264921a6734c5de679e5645c}{polls} \hyperlink{ev__wrap_8h_a7f400222143038738f69450fa6f598b4}{pollcnt} \*
+\hyperlink{ev__wrap_8h_af69da315f31ae068ff13778b4c544bd3}{pollidxmax} \hyperlink{ev__wrap_8h_ada8e434add6dfaf4c07400a8b8aa2378}{epoll\-\_\-eventmax} \*
+\hyperlink{ev__wrap_8h_abe7fa4082e1030956913179570e3c8b3}{epoll\-\_\-epermcnt} fdchange \hyperlink{structev__loop_a9a1ed06fa2b171a02732f96b0865f396}{\-V\-A\-Rx} )(int, \hyperlink{ev__wrap_8h_a8ae761c2b32a47679a38605ffd1e3e46}{fdchangemax}) \hyperlink{structev__loop_ab4710db67bbb58f2502416b96745b404}{\-V\-A\-Rx}(int
+\item 
+\hyperlink{ev__wrap_8h_a13d32fd5b8e9174e15dc882c00cd8b56}{mn\-\_\-now} \hyperlink{ev__wrap_8h_acc5033089a37bb992d8c3e8eaae46e2e}{rfeeds} \hyperlink{ev__wrap_8h_a1b4898488eed271e73387b6fb447afa8}{rfeedcnt} \*
+\hyperlink{ev__wrap_8h_a2df31e042905049ce69a85286ce86683}{pending\-\_\-w} \hyperlink{ev__wrap_8h_a0b9126213bf4d775128cef76e2ef99ea}{timeout\-\_\-blocktime} \*
+\hyperlink{ev__wrap_8h_ab88079beba1e9e774fa23bf4147d01a6}{activecnt} \hyperlink{ev__wrap_8h_a990f21802305065d4ceec6d7a41dd7e5}{backend\-\_\-fd} void($\ast$) \*
+void($\ast$) \hyperlink{ev__wrap_8h_a1f30ebf57c13323cf7e9a6c48854c838}{anfds} \hyperlink{ev__wrap_8h_a0f7cd0e8aa73e889500cde40885b4653}{pipe\-\_\-w} \*
+\hyperlink{ev__wrap_8h_a97a91e0ce1737cf40906ac955feebaae}{pipe\-\_\-write\-\_\-skipped} \hyperlink{ev__wrap_8h_a1819401107013d9b035d38425970638f}{postfork} \*
+\hyperlink{ev__wrap_8h_a07f2e7a6d19873e2b3eedbb362d9df80}{vec\-\_\-ro} \hyperlink{ev__wrap_8h_ae7517957adb2dc3eeaef7fe52cc84513}{vec\-\_\-wo} \hyperlink{ev__wrap_8h_a8d9e55e3264921a6734c5de679e5645c}{polls} \hyperlink{ev__wrap_8h_a7f400222143038738f69450fa6f598b4}{pollcnt} \*
+\hyperlink{ev__wrap_8h_af69da315f31ae068ff13778b4c544bd3}{pollidxmax} \hyperlink{ev__wrap_8h_ada8e434add6dfaf4c07400a8b8aa2378}{epoll\-\_\-eventmax} \*
+\hyperlink{ev__wrap_8h_abe7fa4082e1030956913179570e3c8b3}{epoll\-\_\-epermcnt} \hyperlink{ev__wrap_8h_abfb52e5865ebb8a91a9b78834d24262d}{fdchanges} \*
+fdchangecn \hyperlink{structev__loop_a111b2f2e5e9b29ca107897c880cd3a66}{\-V\-A\-Rx} )(\hyperlink{struct_a_n_h_e}{\-A\-N\-H\-E} $\ast$, \hyperlink{ev__wrap_8h_a96e9cecbcf39e4f912932bc04afd5ff2}{timers}) \hyperlink{structev__loop_ab4710db67bbb58f2502416b96745b404}{\-V\-A\-Rx}(int
+\item 
+\hyperlink{ev__wrap_8h_a13d32fd5b8e9174e15dc882c00cd8b56}{mn\-\_\-now} \hyperlink{ev__wrap_8h_acc5033089a37bb992d8c3e8eaae46e2e}{rfeeds} \hyperlink{ev__wrap_8h_a1b4898488eed271e73387b6fb447afa8}{rfeedcnt} \*
+\hyperlink{ev__wrap_8h_a2df31e042905049ce69a85286ce86683}{pending\-\_\-w} \hyperlink{ev__wrap_8h_a0b9126213bf4d775128cef76e2ef99ea}{timeout\-\_\-blocktime} \*
+\hyperlink{ev__wrap_8h_ab88079beba1e9e774fa23bf4147d01a6}{activecnt} \hyperlink{ev__wrap_8h_a990f21802305065d4ceec6d7a41dd7e5}{backend\-\_\-fd} void($\ast$) \*
+void($\ast$) \hyperlink{ev__wrap_8h_a1f30ebf57c13323cf7e9a6c48854c838}{anfds} \hyperlink{ev__wrap_8h_a0f7cd0e8aa73e889500cde40885b4653}{pipe\-\_\-w} \*
+\hyperlink{ev__wrap_8h_a97a91e0ce1737cf40906ac955feebaae}{pipe\-\_\-write\-\_\-skipped} \hyperlink{ev__wrap_8h_a1819401107013d9b035d38425970638f}{postfork} \*
+\hyperlink{ev__wrap_8h_a07f2e7a6d19873e2b3eedbb362d9df80}{vec\-\_\-ro} \hyperlink{ev__wrap_8h_ae7517957adb2dc3eeaef7fe52cc84513}{vec\-\_\-wo} \hyperlink{ev__wrap_8h_a8d9e55e3264921a6734c5de679e5645c}{polls} \hyperlink{ev__wrap_8h_a7f400222143038738f69450fa6f598b4}{pollcnt} \*
+\hyperlink{ev__wrap_8h_af69da315f31ae068ff13778b4c544bd3}{pollidxmax} \hyperlink{ev__wrap_8h_ada8e434add6dfaf4c07400a8b8aa2378}{epoll\-\_\-eventmax} \*
+\hyperlink{ev__wrap_8h_abe7fa4082e1030956913179570e3c8b3}{epoll\-\_\-epermcnt} \hyperlink{ev__wrap_8h_abfb52e5865ebb8a91a9b78834d24262d}{fdchanges} \*
+\hyperlink{ev__wrap_8h_aab27b38b12503d4a0505439fba245fd9}{fdchangecnt} timerma \hyperlink{structev__loop_a126cf8d9f6e5fefd6da920905aee2244}{\-V\-A\-Rx} )(int, \hyperlink{ev__wrap_8h_af1931117c1fbe1e7cba8cdaf2b7ac3f2}{timercnt}) \hyperlink{structev__loop_ab4710db67bbb58f2502416b96745b404}{\-V\-A\-Rx}(\hyperlink{struct_a_n_h_e}{\-A\-N\-H\-E} $\ast$
+\item 
+\hyperlink{ev__wrap_8h_a13d32fd5b8e9174e15dc882c00cd8b56}{mn\-\_\-now} \hyperlink{ev__wrap_8h_acc5033089a37bb992d8c3e8eaae46e2e}{rfeeds} \hyperlink{ev__wrap_8h_a1b4898488eed271e73387b6fb447afa8}{rfeedcnt} \*
+\hyperlink{ev__wrap_8h_a2df31e042905049ce69a85286ce86683}{pending\-\_\-w} \hyperlink{ev__wrap_8h_a0b9126213bf4d775128cef76e2ef99ea}{timeout\-\_\-blocktime} \*
+\hyperlink{ev__wrap_8h_ab88079beba1e9e774fa23bf4147d01a6}{activecnt} \hyperlink{ev__wrap_8h_a990f21802305065d4ceec6d7a41dd7e5}{backend\-\_\-fd} void($\ast$) \*
+void($\ast$) \hyperlink{ev__wrap_8h_a1f30ebf57c13323cf7e9a6c48854c838}{anfds} \hyperlink{ev__wrap_8h_a0f7cd0e8aa73e889500cde40885b4653}{pipe\-\_\-w} \*
+\hyperlink{ev__wrap_8h_a97a91e0ce1737cf40906ac955feebaae}{pipe\-\_\-write\-\_\-skipped} \hyperlink{ev__wrap_8h_a1819401107013d9b035d38425970638f}{postfork} \*
+\hyperlink{ev__wrap_8h_a07f2e7a6d19873e2b3eedbb362d9df80}{vec\-\_\-ro} \hyperlink{ev__wrap_8h_ae7517957adb2dc3eeaef7fe52cc84513}{vec\-\_\-wo} \hyperlink{ev__wrap_8h_a8d9e55e3264921a6734c5de679e5645c}{polls} \hyperlink{ev__wrap_8h_a7f400222143038738f69450fa6f598b4}{pollcnt} \*
+\hyperlink{ev__wrap_8h_af69da315f31ae068ff13778b4c544bd3}{pollidxmax} \hyperlink{ev__wrap_8h_ada8e434add6dfaf4c07400a8b8aa2378}{epoll\-\_\-eventmax} \*
+\hyperlink{ev__wrap_8h_abe7fa4082e1030956913179570e3c8b3}{epoll\-\_\-epermcnt} \hyperlink{ev__wrap_8h_abfb52e5865ebb8a91a9b78834d24262d}{fdchanges} \*
+\hyperlink{ev__wrap_8h_aab27b38b12503d4a0505439fba245fd9}{fdchangecnt} \hyperlink{ev__wrap_8h_a46321db07a4b4db3912aa3f931e0389a}{timermax} periodic \hyperlink{structev__loop_ad388d5465b1ea47bb2c50cc324b219e4}{\-V\-A\-Rx} )(int, \hyperlink{ev__wrap_8h_ac286ac1fe7e019068c05d928d2b4f4f9}{periodicmax}) \hyperlink{structev__loop_ab4710db67bbb58f2502416b96745b404}{\-V\-A\-Rx}(int
+\item 
+\hyperlink{ev__wrap_8h_a13d32fd5b8e9174e15dc882c00cd8b56}{mn\-\_\-now} \hyperlink{ev__wrap_8h_acc5033089a37bb992d8c3e8eaae46e2e}{rfeeds} \hyperlink{ev__wrap_8h_a1b4898488eed271e73387b6fb447afa8}{rfeedcnt} \*
+\hyperlink{ev__wrap_8h_a2df31e042905049ce69a85286ce86683}{pending\-\_\-w} \hyperlink{ev__wrap_8h_a0b9126213bf4d775128cef76e2ef99ea}{timeout\-\_\-blocktime} \*
+\hyperlink{ev__wrap_8h_ab88079beba1e9e774fa23bf4147d01a6}{activecnt} \hyperlink{ev__wrap_8h_a990f21802305065d4ceec6d7a41dd7e5}{backend\-\_\-fd} void($\ast$) \*
+void($\ast$) \hyperlink{ev__wrap_8h_a1f30ebf57c13323cf7e9a6c48854c838}{anfds} \hyperlink{ev__wrap_8h_a0f7cd0e8aa73e889500cde40885b4653}{pipe\-\_\-w} \*
+\hyperlink{ev__wrap_8h_a97a91e0ce1737cf40906ac955feebaae}{pipe\-\_\-write\-\_\-skipped} \hyperlink{ev__wrap_8h_a1819401107013d9b035d38425970638f}{postfork} \*
+\hyperlink{ev__wrap_8h_a07f2e7a6d19873e2b3eedbb362d9df80}{vec\-\_\-ro} \hyperlink{ev__wrap_8h_ae7517957adb2dc3eeaef7fe52cc84513}{vec\-\_\-wo} \hyperlink{ev__wrap_8h_a8d9e55e3264921a6734c5de679e5645c}{polls} \hyperlink{ev__wrap_8h_a7f400222143038738f69450fa6f598b4}{pollcnt} \*
+\hyperlink{ev__wrap_8h_af69da315f31ae068ff13778b4c544bd3}{pollidxmax} \hyperlink{ev__wrap_8h_ada8e434add6dfaf4c07400a8b8aa2378}{epoll\-\_\-eventmax} \*
+\hyperlink{ev__wrap_8h_abe7fa4082e1030956913179570e3c8b3}{epoll\-\_\-epermcnt} \hyperlink{ev__wrap_8h_abfb52e5865ebb8a91a9b78834d24262d}{fdchanges} \*
+\hyperlink{ev__wrap_8h_aab27b38b12503d4a0505439fba245fd9}{fdchangecnt} \hyperlink{ev__wrap_8h_a46321db07a4b4db3912aa3f931e0389a}{timermax} \hyperlink{ev__wrap_8h_af3967e515b24de493d9ce98c27121cdf}{periodics} \*
+periodiccn \hyperlink{structev__loop_aecd3c7cef8d195c6905f198555ea82cf}{\-V\-A\-Rx} )(int, \hyperlink{ev__wrap_8h_ad85eb7bd3ccf1cd3de0f9a062404b612}{idleall}) \hyperlink{structev__loop_ab4710db67bbb58f2502416b96745b404}{\-V\-A\-Rx}(struct \hyperlink{structev__prepare}{ev\-\_\-prepare} $\ast$$\ast$
+\item 
+\hyperlink{ev__wrap_8h_a13d32fd5b8e9174e15dc882c00cd8b56}{mn\-\_\-now} \hyperlink{ev__wrap_8h_acc5033089a37bb992d8c3e8eaae46e2e}{rfeeds} \hyperlink{ev__wrap_8h_a1b4898488eed271e73387b6fb447afa8}{rfeedcnt} \*
+\hyperlink{ev__wrap_8h_a2df31e042905049ce69a85286ce86683}{pending\-\_\-w} \hyperlink{ev__wrap_8h_a0b9126213bf4d775128cef76e2ef99ea}{timeout\-\_\-blocktime} \*
+\hyperlink{ev__wrap_8h_ab88079beba1e9e774fa23bf4147d01a6}{activecnt} \hyperlink{ev__wrap_8h_a990f21802305065d4ceec6d7a41dd7e5}{backend\-\_\-fd} void($\ast$) \*
+void($\ast$) \hyperlink{ev__wrap_8h_a1f30ebf57c13323cf7e9a6c48854c838}{anfds} \hyperlink{ev__wrap_8h_a0f7cd0e8aa73e889500cde40885b4653}{pipe\-\_\-w} \*
+\hyperlink{ev__wrap_8h_a97a91e0ce1737cf40906ac955feebaae}{pipe\-\_\-write\-\_\-skipped} \hyperlink{ev__wrap_8h_a1819401107013d9b035d38425970638f}{postfork} \*
+\hyperlink{ev__wrap_8h_a07f2e7a6d19873e2b3eedbb362d9df80}{vec\-\_\-ro} \hyperlink{ev__wrap_8h_ae7517957adb2dc3eeaef7fe52cc84513}{vec\-\_\-wo} \hyperlink{ev__wrap_8h_a8d9e55e3264921a6734c5de679e5645c}{polls} \hyperlink{ev__wrap_8h_a7f400222143038738f69450fa6f598b4}{pollcnt} \*
+\hyperlink{ev__wrap_8h_af69da315f31ae068ff13778b4c544bd3}{pollidxmax} \hyperlink{ev__wrap_8h_ada8e434add6dfaf4c07400a8b8aa2378}{epoll\-\_\-eventmax} \*
+\hyperlink{ev__wrap_8h_abe7fa4082e1030956913179570e3c8b3}{epoll\-\_\-epermcnt} \hyperlink{ev__wrap_8h_abfb52e5865ebb8a91a9b78834d24262d}{fdchanges} \*
+\hyperlink{ev__wrap_8h_aab27b38b12503d4a0505439fba245fd9}{fdchangecnt} \hyperlink{ev__wrap_8h_a46321db07a4b4db3912aa3f931e0389a}{timermax} \hyperlink{ev__wrap_8h_af3967e515b24de493d9ce98c27121cdf}{periodics} \*
+\hyperlink{ev__wrap_8h_af60d87422b257a908ceb2499ccfeb744}{periodiccnt} prepare \hyperlink{structev__loop_a5890978e311cf2a6669720c5aa63aa88}{\-V\-A\-Rx} )(int, \hyperlink{ev__wrap_8h_a91cedd01034be8305aea14bca24424ab}{preparemax}) \hyperlink{structev__loop_ab4710db67bbb58f2502416b96745b404}{\-V\-A\-Rx}(int
+\item 
+\hyperlink{ev__wrap_8h_a13d32fd5b8e9174e15dc882c00cd8b56}{mn\-\_\-now} \hyperlink{ev__wrap_8h_acc5033089a37bb992d8c3e8eaae46e2e}{rfeeds} \hyperlink{ev__wrap_8h_a1b4898488eed271e73387b6fb447afa8}{rfeedcnt} \*
+\hyperlink{ev__wrap_8h_a2df31e042905049ce69a85286ce86683}{pending\-\_\-w} \hyperlink{ev__wrap_8h_a0b9126213bf4d775128cef76e2ef99ea}{timeout\-\_\-blocktime} \*
+\hyperlink{ev__wrap_8h_ab88079beba1e9e774fa23bf4147d01a6}{activecnt} \hyperlink{ev__wrap_8h_a990f21802305065d4ceec6d7a41dd7e5}{backend\-\_\-fd} void($\ast$) \*
+void($\ast$) \hyperlink{ev__wrap_8h_a1f30ebf57c13323cf7e9a6c48854c838}{anfds} \hyperlink{ev__wrap_8h_a0f7cd0e8aa73e889500cde40885b4653}{pipe\-\_\-w} \*
+\hyperlink{ev__wrap_8h_a97a91e0ce1737cf40906ac955feebaae}{pipe\-\_\-write\-\_\-skipped} \hyperlink{ev__wrap_8h_a1819401107013d9b035d38425970638f}{postfork} \*
+\hyperlink{ev__wrap_8h_a07f2e7a6d19873e2b3eedbb362d9df80}{vec\-\_\-ro} \hyperlink{ev__wrap_8h_ae7517957adb2dc3eeaef7fe52cc84513}{vec\-\_\-wo} \hyperlink{ev__wrap_8h_a8d9e55e3264921a6734c5de679e5645c}{polls} \hyperlink{ev__wrap_8h_a7f400222143038738f69450fa6f598b4}{pollcnt} \*
+\hyperlink{ev__wrap_8h_af69da315f31ae068ff13778b4c544bd3}{pollidxmax} \hyperlink{ev__wrap_8h_ada8e434add6dfaf4c07400a8b8aa2378}{epoll\-\_\-eventmax} \*
+\hyperlink{ev__wrap_8h_abe7fa4082e1030956913179570e3c8b3}{epoll\-\_\-epermcnt} \hyperlink{ev__wrap_8h_abfb52e5865ebb8a91a9b78834d24262d}{fdchanges} \*
+\hyperlink{ev__wrap_8h_aab27b38b12503d4a0505439fba245fd9}{fdchangecnt} \hyperlink{ev__wrap_8h_a46321db07a4b4db3912aa3f931e0389a}{timermax} \hyperlink{ev__wrap_8h_af3967e515b24de493d9ce98c27121cdf}{periodics} \*
+\hyperlink{ev__wrap_8h_af60d87422b257a908ceb2499ccfeb744}{periodiccnt} \hyperlink{ev__wrap_8h_af2690126acf73313dd6b09f876439f46}{prepares} preparecn \hyperlink{structev__loop_a0a8efa0251632636e727ce578ef6269a}{\-V\-A\-Rx} )(struct \hyperlink{structev__check}{ev\-\_\-check} $\ast$$\ast$, \hyperlink{ev__wrap_8h_a782e667a700accac8ddd8acf702671d6}{checks}) \hyperlink{structev__loop_ab4710db67bbb58f2502416b96745b404}{\-V\-A\-Rx}(int
+\item 
+\hyperlink{ev__wrap_8h_a13d32fd5b8e9174e15dc882c00cd8b56}{mn\-\_\-now} \hyperlink{ev__wrap_8h_acc5033089a37bb992d8c3e8eaae46e2e}{rfeeds} \hyperlink{ev__wrap_8h_a1b4898488eed271e73387b6fb447afa8}{rfeedcnt} \*
+\hyperlink{ev__wrap_8h_a2df31e042905049ce69a85286ce86683}{pending\-\_\-w} \hyperlink{ev__wrap_8h_a0b9126213bf4d775128cef76e2ef99ea}{timeout\-\_\-blocktime} \*
+\hyperlink{ev__wrap_8h_ab88079beba1e9e774fa23bf4147d01a6}{activecnt} \hyperlink{ev__wrap_8h_a990f21802305065d4ceec6d7a41dd7e5}{backend\-\_\-fd} void($\ast$) \*
+void($\ast$) \hyperlink{ev__wrap_8h_a1f30ebf57c13323cf7e9a6c48854c838}{anfds} \hyperlink{ev__wrap_8h_a0f7cd0e8aa73e889500cde40885b4653}{pipe\-\_\-w} \*
+\hyperlink{ev__wrap_8h_a97a91e0ce1737cf40906ac955feebaae}{pipe\-\_\-write\-\_\-skipped} \hyperlink{ev__wrap_8h_a1819401107013d9b035d38425970638f}{postfork} \*
+\hyperlink{ev__wrap_8h_a07f2e7a6d19873e2b3eedbb362d9df80}{vec\-\_\-ro} \hyperlink{ev__wrap_8h_ae7517957adb2dc3eeaef7fe52cc84513}{vec\-\_\-wo} \hyperlink{ev__wrap_8h_a8d9e55e3264921a6734c5de679e5645c}{polls} \hyperlink{ev__wrap_8h_a7f400222143038738f69450fa6f598b4}{pollcnt} \*
+\hyperlink{ev__wrap_8h_af69da315f31ae068ff13778b4c544bd3}{pollidxmax} \hyperlink{ev__wrap_8h_ada8e434add6dfaf4c07400a8b8aa2378}{epoll\-\_\-eventmax} \*
+\hyperlink{ev__wrap_8h_abe7fa4082e1030956913179570e3c8b3}{epoll\-\_\-epermcnt} \hyperlink{ev__wrap_8h_abfb52e5865ebb8a91a9b78834d24262d}{fdchanges} \*
+\hyperlink{ev__wrap_8h_aab27b38b12503d4a0505439fba245fd9}{fdchangecnt} \hyperlink{ev__wrap_8h_a46321db07a4b4db3912aa3f931e0389a}{timermax} \hyperlink{ev__wrap_8h_af3967e515b24de493d9ce98c27121cdf}{periodics} \*
+\hyperlink{ev__wrap_8h_af60d87422b257a908ceb2499ccfeb744}{periodiccnt} \hyperlink{ev__wrap_8h_af2690126acf73313dd6b09f876439f46}{prepares} \*
+\hyperlink{ev__wrap_8h_a11a293e3a99236b94616bf351eb6f271}{preparecnt} checkma \hyperlink{structev__loop_aae9a196e339bc7c28378d949673d68db}{\-V\-A\-Rx} )(int, \hyperlink{ev__wrap_8h_a90a06b9aa8f1fa9f9ef443c28deb652a}{checkcnt}) \hyperlink{structev__loop_ab4710db67bbb58f2502416b96745b404}{\-V\-A\-Rx}(struct \hyperlink{structev__fork}{ev\-\_\-fork} $\ast$$\ast$
+\item 
+\hyperlink{ev__wrap_8h_a13d32fd5b8e9174e15dc882c00cd8b56}{mn\-\_\-now} \hyperlink{ev__wrap_8h_acc5033089a37bb992d8c3e8eaae46e2e}{rfeeds} \hyperlink{ev__wrap_8h_a1b4898488eed271e73387b6fb447afa8}{rfeedcnt} \*
+\hyperlink{ev__wrap_8h_a2df31e042905049ce69a85286ce86683}{pending\-\_\-w} \hyperlink{ev__wrap_8h_a0b9126213bf4d775128cef76e2ef99ea}{timeout\-\_\-blocktime} \*
+\hyperlink{ev__wrap_8h_ab88079beba1e9e774fa23bf4147d01a6}{activecnt} \hyperlink{ev__wrap_8h_a990f21802305065d4ceec6d7a41dd7e5}{backend\-\_\-fd} void($\ast$) \*
+void($\ast$) \hyperlink{ev__wrap_8h_a1f30ebf57c13323cf7e9a6c48854c838}{anfds} \hyperlink{ev__wrap_8h_a0f7cd0e8aa73e889500cde40885b4653}{pipe\-\_\-w} \*
+\hyperlink{ev__wrap_8h_a97a91e0ce1737cf40906ac955feebaae}{pipe\-\_\-write\-\_\-skipped} \hyperlink{ev__wrap_8h_a1819401107013d9b035d38425970638f}{postfork} \*
+\hyperlink{ev__wrap_8h_a07f2e7a6d19873e2b3eedbb362d9df80}{vec\-\_\-ro} \hyperlink{ev__wrap_8h_ae7517957adb2dc3eeaef7fe52cc84513}{vec\-\_\-wo} \hyperlink{ev__wrap_8h_a8d9e55e3264921a6734c5de679e5645c}{polls} \hyperlink{ev__wrap_8h_a7f400222143038738f69450fa6f598b4}{pollcnt} \*
+\hyperlink{ev__wrap_8h_af69da315f31ae068ff13778b4c544bd3}{pollidxmax} \hyperlink{ev__wrap_8h_ada8e434add6dfaf4c07400a8b8aa2378}{epoll\-\_\-eventmax} \*
+\hyperlink{ev__wrap_8h_abe7fa4082e1030956913179570e3c8b3}{epoll\-\_\-epermcnt} \hyperlink{ev__wrap_8h_abfb52e5865ebb8a91a9b78834d24262d}{fdchanges} \*
+\hyperlink{ev__wrap_8h_aab27b38b12503d4a0505439fba245fd9}{fdchangecnt} \hyperlink{ev__wrap_8h_a46321db07a4b4db3912aa3f931e0389a}{timermax} \hyperlink{ev__wrap_8h_af3967e515b24de493d9ce98c27121cdf}{periodics} \*
+\hyperlink{ev__wrap_8h_af60d87422b257a908ceb2499ccfeb744}{periodiccnt} \hyperlink{ev__wrap_8h_af2690126acf73313dd6b09f876439f46}{prepares} \*
+\hyperlink{ev__wrap_8h_a11a293e3a99236b94616bf351eb6f271}{preparecnt} \hyperlink{ev__wrap_8h_a4b2d7cc7395fbd031b76a6f7a0104465}{checkmax} fork \hyperlink{structev__loop_aac7b9722eaada07e64dcabe1eb5af79f}{\-V\-A\-Rx} )(int, \hyperlink{ev__wrap_8h_a22f280c759d00c8704e5abb585d4be08}{forkmax}) \hyperlink{structev__loop_ab4710db67bbb58f2502416b96745b404}{\-V\-A\-Rx}(int
+\item 
+\hyperlink{ev__wrap_8h_a13d32fd5b8e9174e15dc882c00cd8b56}{mn\-\_\-now} \hyperlink{ev__wrap_8h_acc5033089a37bb992d8c3e8eaae46e2e}{rfeeds} \hyperlink{ev__wrap_8h_a1b4898488eed271e73387b6fb447afa8}{rfeedcnt} \*
+\hyperlink{ev__wrap_8h_a2df31e042905049ce69a85286ce86683}{pending\-\_\-w} \hyperlink{ev__wrap_8h_a0b9126213bf4d775128cef76e2ef99ea}{timeout\-\_\-blocktime} \*
+\hyperlink{ev__wrap_8h_ab88079beba1e9e774fa23bf4147d01a6}{activecnt} \hyperlink{ev__wrap_8h_a990f21802305065d4ceec6d7a41dd7e5}{backend\-\_\-fd} void($\ast$) \*
+void($\ast$) \hyperlink{ev__wrap_8h_a1f30ebf57c13323cf7e9a6c48854c838}{anfds} \hyperlink{ev__wrap_8h_a0f7cd0e8aa73e889500cde40885b4653}{pipe\-\_\-w} \*
+\hyperlink{ev__wrap_8h_a97a91e0ce1737cf40906ac955feebaae}{pipe\-\_\-write\-\_\-skipped} \hyperlink{ev__wrap_8h_a1819401107013d9b035d38425970638f}{postfork} \*
+\hyperlink{ev__wrap_8h_a07f2e7a6d19873e2b3eedbb362d9df80}{vec\-\_\-ro} \hyperlink{ev__wrap_8h_ae7517957adb2dc3eeaef7fe52cc84513}{vec\-\_\-wo} \hyperlink{ev__wrap_8h_a8d9e55e3264921a6734c5de679e5645c}{polls} \hyperlink{ev__wrap_8h_a7f400222143038738f69450fa6f598b4}{pollcnt} \*
+\hyperlink{ev__wrap_8h_af69da315f31ae068ff13778b4c544bd3}{pollidxmax} \hyperlink{ev__wrap_8h_ada8e434add6dfaf4c07400a8b8aa2378}{epoll\-\_\-eventmax} \*
+\hyperlink{ev__wrap_8h_abe7fa4082e1030956913179570e3c8b3}{epoll\-\_\-epermcnt} \hyperlink{ev__wrap_8h_abfb52e5865ebb8a91a9b78834d24262d}{fdchanges} \*
+\hyperlink{ev__wrap_8h_aab27b38b12503d4a0505439fba245fd9}{fdchangecnt} \hyperlink{ev__wrap_8h_a46321db07a4b4db3912aa3f931e0389a}{timermax} \hyperlink{ev__wrap_8h_af3967e515b24de493d9ce98c27121cdf}{periodics} \*
+\hyperlink{ev__wrap_8h_af60d87422b257a908ceb2499ccfeb744}{periodiccnt} \hyperlink{ev__wrap_8h_af2690126acf73313dd6b09f876439f46}{prepares} \*
+\hyperlink{ev__wrap_8h_a11a293e3a99236b94616bf351eb6f271}{preparecnt} \hyperlink{ev__wrap_8h_a4b2d7cc7395fbd031b76a6f7a0104465}{checkmax} \hyperlink{ev__wrap_8h_a0381116a0ccd601da72669f7ef0c1a74}{forks} \*
+forkcn \hyperlink{structev__loop_a56e34cf699004a36e5f073ed9bab52eb}{\-V\-A\-Rx} )(struct \hyperlink{structev__cleanup}{ev\-\_\-cleanup} $\ast$$\ast$, \hyperlink{ev__wrap_8h_a345b24a1c48eb5882b2e57c3ed821eef}{cleanups}) \hyperlink{structev__loop_ab4710db67bbb58f2502416b96745b404}{\-V\-A\-Rx}(int
+\item 
+\hyperlink{ev__wrap_8h_a13d32fd5b8e9174e15dc882c00cd8b56}{mn\-\_\-now} \hyperlink{ev__wrap_8h_acc5033089a37bb992d8c3e8eaae46e2e}{rfeeds} \hyperlink{ev__wrap_8h_a1b4898488eed271e73387b6fb447afa8}{rfeedcnt} \*
+\hyperlink{ev__wrap_8h_a2df31e042905049ce69a85286ce86683}{pending\-\_\-w} \hyperlink{ev__wrap_8h_a0b9126213bf4d775128cef76e2ef99ea}{timeout\-\_\-blocktime} \*
+\hyperlink{ev__wrap_8h_ab88079beba1e9e774fa23bf4147d01a6}{activecnt} \hyperlink{ev__wrap_8h_a990f21802305065d4ceec6d7a41dd7e5}{backend\-\_\-fd} void($\ast$) \*
+void($\ast$) \hyperlink{ev__wrap_8h_a1f30ebf57c13323cf7e9a6c48854c838}{anfds} \hyperlink{ev__wrap_8h_a0f7cd0e8aa73e889500cde40885b4653}{pipe\-\_\-w} \*
+\hyperlink{ev__wrap_8h_a97a91e0ce1737cf40906ac955feebaae}{pipe\-\_\-write\-\_\-skipped} \hyperlink{ev__wrap_8h_a1819401107013d9b035d38425970638f}{postfork} \*
+\hyperlink{ev__wrap_8h_a07f2e7a6d19873e2b3eedbb362d9df80}{vec\-\_\-ro} \hyperlink{ev__wrap_8h_ae7517957adb2dc3eeaef7fe52cc84513}{vec\-\_\-wo} \hyperlink{ev__wrap_8h_a8d9e55e3264921a6734c5de679e5645c}{polls} \hyperlink{ev__wrap_8h_a7f400222143038738f69450fa6f598b4}{pollcnt} \*
+\hyperlink{ev__wrap_8h_af69da315f31ae068ff13778b4c544bd3}{pollidxmax} \hyperlink{ev__wrap_8h_ada8e434add6dfaf4c07400a8b8aa2378}{epoll\-\_\-eventmax} \*
+\hyperlink{ev__wrap_8h_abe7fa4082e1030956913179570e3c8b3}{epoll\-\_\-epermcnt} \hyperlink{ev__wrap_8h_abfb52e5865ebb8a91a9b78834d24262d}{fdchanges} \*
+\hyperlink{ev__wrap_8h_aab27b38b12503d4a0505439fba245fd9}{fdchangecnt} \hyperlink{ev__wrap_8h_a46321db07a4b4db3912aa3f931e0389a}{timermax} \hyperlink{ev__wrap_8h_af3967e515b24de493d9ce98c27121cdf}{periodics} \*
+\hyperlink{ev__wrap_8h_af60d87422b257a908ceb2499ccfeb744}{periodiccnt} \hyperlink{ev__wrap_8h_af2690126acf73313dd6b09f876439f46}{prepares} \*
+\hyperlink{ev__wrap_8h_a11a293e3a99236b94616bf351eb6f271}{preparecnt} \hyperlink{ev__wrap_8h_a4b2d7cc7395fbd031b76a6f7a0104465}{checkmax} \hyperlink{ev__wrap_8h_a0381116a0ccd601da72669f7ef0c1a74}{forks} \*
+\hyperlink{ev__wrap_8h_aa068dd0de84390d7cb0f1567e6c77a01}{forkcnt} cleanupma \hyperlink{structev__loop_a8982b5b62a94b67e5d1cd0d13348423d}{\-V\-A\-Rx} )(int, \hyperlink{ev__wrap_8h_aec7fa308180c5e7a2d87050e8be79d01}{cleanupcnt}) \hyperlink{structev__loop_ab4710db67bbb58f2502416b96745b404}{\-V\-A\-Rx}(\-E\-V\-\_\-\-A\-T\-O\-M\-I\-C\-\_\-\-T
+\item 
+\hyperlink{ev__wrap_8h_a13d32fd5b8e9174e15dc882c00cd8b56}{mn\-\_\-now} \hyperlink{ev__wrap_8h_acc5033089a37bb992d8c3e8eaae46e2e}{rfeeds} \hyperlink{ev__wrap_8h_a1b4898488eed271e73387b6fb447afa8}{rfeedcnt} \*
+\hyperlink{ev__wrap_8h_a2df31e042905049ce69a85286ce86683}{pending\-\_\-w} \hyperlink{ev__wrap_8h_a0b9126213bf4d775128cef76e2ef99ea}{timeout\-\_\-blocktime} \*
+\hyperlink{ev__wrap_8h_ab88079beba1e9e774fa23bf4147d01a6}{activecnt} \hyperlink{ev__wrap_8h_a990f21802305065d4ceec6d7a41dd7e5}{backend\-\_\-fd} void($\ast$) \*
+void($\ast$) \hyperlink{ev__wrap_8h_a1f30ebf57c13323cf7e9a6c48854c838}{anfds} \hyperlink{ev__wrap_8h_a0f7cd0e8aa73e889500cde40885b4653}{pipe\-\_\-w} \*
+\hyperlink{ev__wrap_8h_a97a91e0ce1737cf40906ac955feebaae}{pipe\-\_\-write\-\_\-skipped} \hyperlink{ev__wrap_8h_a1819401107013d9b035d38425970638f}{postfork} \*
+\hyperlink{ev__wrap_8h_a07f2e7a6d19873e2b3eedbb362d9df80}{vec\-\_\-ro} \hyperlink{ev__wrap_8h_ae7517957adb2dc3eeaef7fe52cc84513}{vec\-\_\-wo} \hyperlink{ev__wrap_8h_a8d9e55e3264921a6734c5de679e5645c}{polls} \hyperlink{ev__wrap_8h_a7f400222143038738f69450fa6f598b4}{pollcnt} \*
+\hyperlink{ev__wrap_8h_af69da315f31ae068ff13778b4c544bd3}{pollidxmax} \hyperlink{ev__wrap_8h_ada8e434add6dfaf4c07400a8b8aa2378}{epoll\-\_\-eventmax} \*
+\hyperlink{ev__wrap_8h_abe7fa4082e1030956913179570e3c8b3}{epoll\-\_\-epermcnt} \hyperlink{ev__wrap_8h_abfb52e5865ebb8a91a9b78834d24262d}{fdchanges} \*
+\hyperlink{ev__wrap_8h_aab27b38b12503d4a0505439fba245fd9}{fdchangecnt} \hyperlink{ev__wrap_8h_a46321db07a4b4db3912aa3f931e0389a}{timermax} \hyperlink{ev__wrap_8h_af3967e515b24de493d9ce98c27121cdf}{periodics} \*
+\hyperlink{ev__wrap_8h_af60d87422b257a908ceb2499ccfeb744}{periodiccnt} \hyperlink{ev__wrap_8h_af2690126acf73313dd6b09f876439f46}{prepares} \*
+\hyperlink{ev__wrap_8h_a11a293e3a99236b94616bf351eb6f271}{preparecnt} \hyperlink{ev__wrap_8h_a4b2d7cc7395fbd031b76a6f7a0104465}{checkmax} \hyperlink{ev__wrap_8h_a0381116a0ccd601da72669f7ef0c1a74}{forks} \*
+\hyperlink{ev__wrap_8h_aa068dd0de84390d7cb0f1567e6c77a01}{forkcnt} \hyperlink{ev__wrap_8h_a0dfb1b595d0609e053b8ec3d04fbd4d2}{cleanupmax} \*
+async\-\_\-pendin \hyperlink{structev__loop_af018eecb87b100ac3f95a72107e78a9a}{\-V\-A\-Rx} )(struct \hyperlink{structev__async}{ev\-\_\-async} $\ast$$\ast$, \hyperlink{ev__wrap_8h_a3ae542a29b982a0d106d430942d7e2bc}{asyncs}) \hyperlink{structev__loop_ab4710db67bbb58f2502416b96745b404}{\-V\-A\-Rx}(int
+\item 
+\hyperlink{ev__wrap_8h_a13d32fd5b8e9174e15dc882c00cd8b56}{mn\-\_\-now} \hyperlink{ev__wrap_8h_acc5033089a37bb992d8c3e8eaae46e2e}{rfeeds} \hyperlink{ev__wrap_8h_a1b4898488eed271e73387b6fb447afa8}{rfeedcnt} \*
+\hyperlink{ev__wrap_8h_a2df31e042905049ce69a85286ce86683}{pending\-\_\-w} \hyperlink{ev__wrap_8h_a0b9126213bf4d775128cef76e2ef99ea}{timeout\-\_\-blocktime} \*
+\hyperlink{ev__wrap_8h_ab88079beba1e9e774fa23bf4147d01a6}{activecnt} \hyperlink{ev__wrap_8h_a990f21802305065d4ceec6d7a41dd7e5}{backend\-\_\-fd} void($\ast$) \*
+void($\ast$) \hyperlink{ev__wrap_8h_a1f30ebf57c13323cf7e9a6c48854c838}{anfds} \hyperlink{ev__wrap_8h_a0f7cd0e8aa73e889500cde40885b4653}{pipe\-\_\-w} \*
+\hyperlink{ev__wrap_8h_a97a91e0ce1737cf40906ac955feebaae}{pipe\-\_\-write\-\_\-skipped} \hyperlink{ev__wrap_8h_a1819401107013d9b035d38425970638f}{postfork} \*
+\hyperlink{ev__wrap_8h_a07f2e7a6d19873e2b3eedbb362d9df80}{vec\-\_\-ro} \hyperlink{ev__wrap_8h_ae7517957adb2dc3eeaef7fe52cc84513}{vec\-\_\-wo} \hyperlink{ev__wrap_8h_a8d9e55e3264921a6734c5de679e5645c}{polls} \hyperlink{ev__wrap_8h_a7f400222143038738f69450fa6f598b4}{pollcnt} \*
+\hyperlink{ev__wrap_8h_af69da315f31ae068ff13778b4c544bd3}{pollidxmax} \hyperlink{ev__wrap_8h_ada8e434add6dfaf4c07400a8b8aa2378}{epoll\-\_\-eventmax} \*
+\hyperlink{ev__wrap_8h_abe7fa4082e1030956913179570e3c8b3}{epoll\-\_\-epermcnt} \hyperlink{ev__wrap_8h_abfb52e5865ebb8a91a9b78834d24262d}{fdchanges} \*
+\hyperlink{ev__wrap_8h_aab27b38b12503d4a0505439fba245fd9}{fdchangecnt} \hyperlink{ev__wrap_8h_a46321db07a4b4db3912aa3f931e0389a}{timermax} \hyperlink{ev__wrap_8h_af3967e515b24de493d9ce98c27121cdf}{periodics} \*
+\hyperlink{ev__wrap_8h_af60d87422b257a908ceb2499ccfeb744}{periodiccnt} \hyperlink{ev__wrap_8h_af2690126acf73313dd6b09f876439f46}{prepares} \*
+\hyperlink{ev__wrap_8h_a11a293e3a99236b94616bf351eb6f271}{preparecnt} \hyperlink{ev__wrap_8h_a4b2d7cc7395fbd031b76a6f7a0104465}{checkmax} \hyperlink{ev__wrap_8h_a0381116a0ccd601da72669f7ef0c1a74}{forks} \*
+\hyperlink{ev__wrap_8h_aa068dd0de84390d7cb0f1567e6c77a01}{forkcnt} \hyperlink{ev__wrap_8h_a0dfb1b595d0609e053b8ec3d04fbd4d2}{cleanupmax} \*
+\hyperlink{ev__wrap_8h_af3ba235af7988521cea47a2e4aaf2424}{async\-\_\-pending} asyncma \hyperlink{structev__loop_a74a8333c5d2c0de84258507e42ec1bb7}{\-V\-A\-Rx} )(int, \hyperlink{ev__wrap_8h_a3fc7b32e6f5ae36ab531692ccac43d34}{asynccnt}) \hyperlink{structev__loop_ab4710db67bbb58f2502416b96745b404}{\-V\-A\-Rx}(\-E\-V\-\_\-\-A\-T\-O\-M\-I\-C\-\_\-\-T
+\item 
+\hyperlink{ev__wrap_8h_a13d32fd5b8e9174e15dc882c00cd8b56}{mn\-\_\-now} \hyperlink{ev__wrap_8h_acc5033089a37bb992d8c3e8eaae46e2e}{rfeeds} \hyperlink{ev__wrap_8h_a1b4898488eed271e73387b6fb447afa8}{rfeedcnt} \*
+\hyperlink{ev__wrap_8h_a2df31e042905049ce69a85286ce86683}{pending\-\_\-w} \hyperlink{ev__wrap_8h_a0b9126213bf4d775128cef76e2ef99ea}{timeout\-\_\-blocktime} \*
+\hyperlink{ev__wrap_8h_ab88079beba1e9e774fa23bf4147d01a6}{activecnt} \hyperlink{ev__wrap_8h_a990f21802305065d4ceec6d7a41dd7e5}{backend\-\_\-fd} void($\ast$) \*
+void($\ast$) \hyperlink{ev__wrap_8h_a1f30ebf57c13323cf7e9a6c48854c838}{anfds} \hyperlink{ev__wrap_8h_a0f7cd0e8aa73e889500cde40885b4653}{pipe\-\_\-w} \*
+\hyperlink{ev__wrap_8h_a97a91e0ce1737cf40906ac955feebaae}{pipe\-\_\-write\-\_\-skipped} \hyperlink{ev__wrap_8h_a1819401107013d9b035d38425970638f}{postfork} \*
+\hyperlink{ev__wrap_8h_a07f2e7a6d19873e2b3eedbb362d9df80}{vec\-\_\-ro} \hyperlink{ev__wrap_8h_ae7517957adb2dc3eeaef7fe52cc84513}{vec\-\_\-wo} \hyperlink{ev__wrap_8h_a8d9e55e3264921a6734c5de679e5645c}{polls} \hyperlink{ev__wrap_8h_a7f400222143038738f69450fa6f598b4}{pollcnt} \*
+\hyperlink{ev__wrap_8h_af69da315f31ae068ff13778b4c544bd3}{pollidxmax} \hyperlink{ev__wrap_8h_ada8e434add6dfaf4c07400a8b8aa2378}{epoll\-\_\-eventmax} \*
+\hyperlink{ev__wrap_8h_abe7fa4082e1030956913179570e3c8b3}{epoll\-\_\-epermcnt} \hyperlink{ev__wrap_8h_abfb52e5865ebb8a91a9b78834d24262d}{fdchanges} \*
+\hyperlink{ev__wrap_8h_aab27b38b12503d4a0505439fba245fd9}{fdchangecnt} \hyperlink{ev__wrap_8h_a46321db07a4b4db3912aa3f931e0389a}{timermax} \hyperlink{ev__wrap_8h_af3967e515b24de493d9ce98c27121cdf}{periodics} \*
+\hyperlink{ev__wrap_8h_af60d87422b257a908ceb2499ccfeb744}{periodiccnt} \hyperlink{ev__wrap_8h_af2690126acf73313dd6b09f876439f46}{prepares} \*
+\hyperlink{ev__wrap_8h_a11a293e3a99236b94616bf351eb6f271}{preparecnt} \hyperlink{ev__wrap_8h_a4b2d7cc7395fbd031b76a6f7a0104465}{checkmax} \hyperlink{ev__wrap_8h_a0381116a0ccd601da72669f7ef0c1a74}{forks} \*
+\hyperlink{ev__wrap_8h_aa068dd0de84390d7cb0f1567e6c77a01}{forkcnt} \hyperlink{ev__wrap_8h_a0dfb1b595d0609e053b8ec3d04fbd4d2}{cleanupmax} \*
+\hyperlink{ev__wrap_8h_af3ba235af7988521cea47a2e4aaf2424}{async\-\_\-pending} \hyperlink{ev__wrap_8h_a92a0e52e31b95366449dcd1427ebda33}{asyncmax} \*
+sig\-\_\-pendin \hyperlink{structev__loop_ab2bac6ae2cba492aac5528930e332c0f}{\-V\-A\-Rx} )(int, \hyperlink{ev__wrap_8h_a2fa7fe336a6ea01e754f6f1bdf02bf80}{sigfd}) \hyperlink{structev__loop_ab4710db67bbb58f2502416b96745b404}{\-V\-A\-Rx}(\hyperlink{structev__io}{ev\-\_\-io}
+\item 
+\hyperlink{ev__wrap_8h_a13d32fd5b8e9174e15dc882c00cd8b56}{mn\-\_\-now} \hyperlink{ev__wrap_8h_acc5033089a37bb992d8c3e8eaae46e2e}{rfeeds} \hyperlink{ev__wrap_8h_a1b4898488eed271e73387b6fb447afa8}{rfeedcnt} \*
+\hyperlink{ev__wrap_8h_a2df31e042905049ce69a85286ce86683}{pending\-\_\-w} \hyperlink{ev__wrap_8h_a0b9126213bf4d775128cef76e2ef99ea}{timeout\-\_\-blocktime} \*
+\hyperlink{ev__wrap_8h_ab88079beba1e9e774fa23bf4147d01a6}{activecnt} \hyperlink{ev__wrap_8h_a990f21802305065d4ceec6d7a41dd7e5}{backend\-\_\-fd} void($\ast$) \*
+void($\ast$) \hyperlink{ev__wrap_8h_a1f30ebf57c13323cf7e9a6c48854c838}{anfds} \hyperlink{ev__wrap_8h_a0f7cd0e8aa73e889500cde40885b4653}{pipe\-\_\-w} \*
+\hyperlink{ev__wrap_8h_a97a91e0ce1737cf40906ac955feebaae}{pipe\-\_\-write\-\_\-skipped} \hyperlink{ev__wrap_8h_a1819401107013d9b035d38425970638f}{postfork} \*
+\hyperlink{ev__wrap_8h_a07f2e7a6d19873e2b3eedbb362d9df80}{vec\-\_\-ro} \hyperlink{ev__wrap_8h_ae7517957adb2dc3eeaef7fe52cc84513}{vec\-\_\-wo} \hyperlink{ev__wrap_8h_a8d9e55e3264921a6734c5de679e5645c}{polls} \hyperlink{ev__wrap_8h_a7f400222143038738f69450fa6f598b4}{pollcnt} \*
+\hyperlink{ev__wrap_8h_af69da315f31ae068ff13778b4c544bd3}{pollidxmax} \hyperlink{ev__wrap_8h_ada8e434add6dfaf4c07400a8b8aa2378}{epoll\-\_\-eventmax} \*
+\hyperlink{ev__wrap_8h_abe7fa4082e1030956913179570e3c8b3}{epoll\-\_\-epermcnt} \hyperlink{ev__wrap_8h_abfb52e5865ebb8a91a9b78834d24262d}{fdchanges} \*
+\hyperlink{ev__wrap_8h_aab27b38b12503d4a0505439fba245fd9}{fdchangecnt} \hyperlink{ev__wrap_8h_a46321db07a4b4db3912aa3f931e0389a}{timermax} \hyperlink{ev__wrap_8h_af3967e515b24de493d9ce98c27121cdf}{periodics} \*
+\hyperlink{ev__wrap_8h_af60d87422b257a908ceb2499ccfeb744}{periodiccnt} \hyperlink{ev__wrap_8h_af2690126acf73313dd6b09f876439f46}{prepares} \*
+\hyperlink{ev__wrap_8h_a11a293e3a99236b94616bf351eb6f271}{preparecnt} \hyperlink{ev__wrap_8h_a4b2d7cc7395fbd031b76a6f7a0104465}{checkmax} \hyperlink{ev__wrap_8h_a0381116a0ccd601da72669f7ef0c1a74}{forks} \*
+\hyperlink{ev__wrap_8h_aa068dd0de84390d7cb0f1567e6c77a01}{forkcnt} \hyperlink{ev__wrap_8h_a0dfb1b595d0609e053b8ec3d04fbd4d2}{cleanupmax} \*
+\hyperlink{ev__wrap_8h_af3ba235af7988521cea47a2e4aaf2424}{async\-\_\-pending} \hyperlink{ev__wrap_8h_a92a0e52e31b95366449dcd1427ebda33}{asyncmax} \*
+\hyperlink{ev__wrap_8h_ac60bc2f50dfaee7fbbcd78d071241f6d}{sig\-\_\-pending} sigfd\-\_\- \hyperlink{structev__loop_a5d87b80eb752b431d01cfb2a5a373037}{\-V\-A\-Rx} )(sigset\-\_\-t, \hyperlink{ev__wrap_8h_a6a1e5ee48de1716de402b1a292618015}{sigfd\-\_\-set}) \hyperlink{structev__loop_ab4710db67bbb58f2502416b96745b404}{\-V\-A\-Rx}(unsigned int
+\item 
+\hyperlink{ev__wrap_8h_a13d32fd5b8e9174e15dc882c00cd8b56}{mn\-\_\-now} \hyperlink{ev__wrap_8h_acc5033089a37bb992d8c3e8eaae46e2e}{rfeeds} \hyperlink{ev__wrap_8h_a1b4898488eed271e73387b6fb447afa8}{rfeedcnt} \*
+\hyperlink{ev__wrap_8h_a2df31e042905049ce69a85286ce86683}{pending\-\_\-w} \hyperlink{ev__wrap_8h_a0b9126213bf4d775128cef76e2ef99ea}{timeout\-\_\-blocktime} \*
+\hyperlink{ev__wrap_8h_ab88079beba1e9e774fa23bf4147d01a6}{activecnt} \hyperlink{ev__wrap_8h_a990f21802305065d4ceec6d7a41dd7e5}{backend\-\_\-fd} void($\ast$) \*
+void($\ast$) \hyperlink{ev__wrap_8h_a1f30ebf57c13323cf7e9a6c48854c838}{anfds} \hyperlink{ev__wrap_8h_a0f7cd0e8aa73e889500cde40885b4653}{pipe\-\_\-w} \*
+\hyperlink{ev__wrap_8h_a97a91e0ce1737cf40906ac955feebaae}{pipe\-\_\-write\-\_\-skipped} \hyperlink{ev__wrap_8h_a1819401107013d9b035d38425970638f}{postfork} \*
+\hyperlink{ev__wrap_8h_a07f2e7a6d19873e2b3eedbb362d9df80}{vec\-\_\-ro} \hyperlink{ev__wrap_8h_ae7517957adb2dc3eeaef7fe52cc84513}{vec\-\_\-wo} \hyperlink{ev__wrap_8h_a8d9e55e3264921a6734c5de679e5645c}{polls} \hyperlink{ev__wrap_8h_a7f400222143038738f69450fa6f598b4}{pollcnt} \*
+\hyperlink{ev__wrap_8h_af69da315f31ae068ff13778b4c544bd3}{pollidxmax} \hyperlink{ev__wrap_8h_ada8e434add6dfaf4c07400a8b8aa2378}{epoll\-\_\-eventmax} \*
+\hyperlink{ev__wrap_8h_abe7fa4082e1030956913179570e3c8b3}{epoll\-\_\-epermcnt} \hyperlink{ev__wrap_8h_abfb52e5865ebb8a91a9b78834d24262d}{fdchanges} \*
+\hyperlink{ev__wrap_8h_aab27b38b12503d4a0505439fba245fd9}{fdchangecnt} \hyperlink{ev__wrap_8h_a46321db07a4b4db3912aa3f931e0389a}{timermax} \hyperlink{ev__wrap_8h_af3967e515b24de493d9ce98c27121cdf}{periodics} \*
+\hyperlink{ev__wrap_8h_af60d87422b257a908ceb2499ccfeb744}{periodiccnt} \hyperlink{ev__wrap_8h_af2690126acf73313dd6b09f876439f46}{prepares} \*
+\hyperlink{ev__wrap_8h_a11a293e3a99236b94616bf351eb6f271}{preparecnt} \hyperlink{ev__wrap_8h_a4b2d7cc7395fbd031b76a6f7a0104465}{checkmax} \hyperlink{ev__wrap_8h_a0381116a0ccd601da72669f7ef0c1a74}{forks} \*
+\hyperlink{ev__wrap_8h_aa068dd0de84390d7cb0f1567e6c77a01}{forkcnt} \hyperlink{ev__wrap_8h_a0dfb1b595d0609e053b8ec3d04fbd4d2}{cleanupmax} \*
+\hyperlink{ev__wrap_8h_af3ba235af7988521cea47a2e4aaf2424}{async\-\_\-pending} \hyperlink{ev__wrap_8h_a92a0e52e31b95366449dcd1427ebda33}{asyncmax} \*
+\hyperlink{ev__wrap_8h_ac60bc2f50dfaee7fbbcd78d071241f6d}{sig\-\_\-pending} \hyperlink{ev__wrap_8h_acfc10925c78f201e76a913f42a7423ca}{sigfd\-\_\-w} origflag \hyperlink{structev__loop_a771db3357ce44a7c079995398180ba61}{\-V\-A\-Rx} )(unsigned int, \hyperlink{ev__wrap_8h_aacda7af8b1a951c7bb204943bf884a36}{loop\-\_\-count}) \hyperlink{structev__loop_ab4710db67bbb58f2502416b96745b404}{\-V\-A\-Rx}(unsigned int
+\item 
+\hyperlink{ev__wrap_8h_a13d32fd5b8e9174e15dc882c00cd8b56}{mn\-\_\-now} \hyperlink{ev__wrap_8h_acc5033089a37bb992d8c3e8eaae46e2e}{rfeeds} \hyperlink{ev__wrap_8h_a1b4898488eed271e73387b6fb447afa8}{rfeedcnt} \*
+\hyperlink{ev__wrap_8h_a2df31e042905049ce69a85286ce86683}{pending\-\_\-w} \hyperlink{ev__wrap_8h_a0b9126213bf4d775128cef76e2ef99ea}{timeout\-\_\-blocktime} \*
+\hyperlink{ev__wrap_8h_ab88079beba1e9e774fa23bf4147d01a6}{activecnt} \hyperlink{ev__wrap_8h_a990f21802305065d4ceec6d7a41dd7e5}{backend\-\_\-fd} void($\ast$) \*
+void($\ast$) \hyperlink{ev__wrap_8h_a1f30ebf57c13323cf7e9a6c48854c838}{anfds} \hyperlink{ev__wrap_8h_a0f7cd0e8aa73e889500cde40885b4653}{pipe\-\_\-w} \*
+\hyperlink{ev__wrap_8h_a97a91e0ce1737cf40906ac955feebaae}{pipe\-\_\-write\-\_\-skipped} \hyperlink{ev__wrap_8h_a1819401107013d9b035d38425970638f}{postfork} \*
+\hyperlink{ev__wrap_8h_a07f2e7a6d19873e2b3eedbb362d9df80}{vec\-\_\-ro} \hyperlink{ev__wrap_8h_ae7517957adb2dc3eeaef7fe52cc84513}{vec\-\_\-wo} \hyperlink{ev__wrap_8h_a8d9e55e3264921a6734c5de679e5645c}{polls} \hyperlink{ev__wrap_8h_a7f400222143038738f69450fa6f598b4}{pollcnt} \*
+\hyperlink{ev__wrap_8h_af69da315f31ae068ff13778b4c544bd3}{pollidxmax} \hyperlink{ev__wrap_8h_ada8e434add6dfaf4c07400a8b8aa2378}{epoll\-\_\-eventmax} \*
+\hyperlink{ev__wrap_8h_abe7fa4082e1030956913179570e3c8b3}{epoll\-\_\-epermcnt} \hyperlink{ev__wrap_8h_abfb52e5865ebb8a91a9b78834d24262d}{fdchanges} \*
+\hyperlink{ev__wrap_8h_aab27b38b12503d4a0505439fba245fd9}{fdchangecnt} \hyperlink{ev__wrap_8h_a46321db07a4b4db3912aa3f931e0389a}{timermax} \hyperlink{ev__wrap_8h_af3967e515b24de493d9ce98c27121cdf}{periodics} \*
+\hyperlink{ev__wrap_8h_af60d87422b257a908ceb2499ccfeb744}{periodiccnt} \hyperlink{ev__wrap_8h_af2690126acf73313dd6b09f876439f46}{prepares} \*
+\hyperlink{ev__wrap_8h_a11a293e3a99236b94616bf351eb6f271}{preparecnt} \hyperlink{ev__wrap_8h_a4b2d7cc7395fbd031b76a6f7a0104465}{checkmax} \hyperlink{ev__wrap_8h_a0381116a0ccd601da72669f7ef0c1a74}{forks} \*
+\hyperlink{ev__wrap_8h_aa068dd0de84390d7cb0f1567e6c77a01}{forkcnt} \hyperlink{ev__wrap_8h_a0dfb1b595d0609e053b8ec3d04fbd4d2}{cleanupmax} \*
+\hyperlink{ev__wrap_8h_af3ba235af7988521cea47a2e4aaf2424}{async\-\_\-pending} \hyperlink{ev__wrap_8h_a92a0e52e31b95366449dcd1427ebda33}{asyncmax} \*
+\hyperlink{ev__wrap_8h_ac60bc2f50dfaee7fbbcd78d071241f6d}{sig\-\_\-pending} \hyperlink{ev__wrap_8h_acfc10925c78f201e76a913f42a7423ca}{sigfd\-\_\-w} \hyperlink{ev__wrap_8h_aee0be39901e0b0edca6f5480b973d3f4}{origflags} \*
+loop\-\_\-dept \hyperlink{structev__loop_a502f06942cf02fd47d500dc6a3655879}{\-V\-A\-Rx} )(void $\ast$, \hyperlink{ev__wrap_8h_a880273d1c006d634ca8fb677442153b4}{userdata}) \hyperlink{ev_8c_af9e709c26770dce4b5180c0a51aa4c21}{\-V\-A\-R}(\hyperlink{structev__loop_a702d520e97528376a5500c86e6c324ef}{release\-\_\-cb}
+\item 
+\hyperlink{ev__wrap_8h_a13d32fd5b8e9174e15dc882c00cd8b56}{mn\-\_\-now} \hyperlink{ev__wrap_8h_acc5033089a37bb992d8c3e8eaae46e2e}{rfeeds} \hyperlink{ev__wrap_8h_a1b4898488eed271e73387b6fb447afa8}{rfeedcnt} \*
+\hyperlink{ev__wrap_8h_a2df31e042905049ce69a85286ce86683}{pending\-\_\-w} \hyperlink{ev__wrap_8h_a0b9126213bf4d775128cef76e2ef99ea}{timeout\-\_\-blocktime} \*
+\hyperlink{ev__wrap_8h_ab88079beba1e9e774fa23bf4147d01a6}{activecnt} \hyperlink{ev__wrap_8h_a990f21802305065d4ceec6d7a41dd7e5}{backend\-\_\-fd} void($\ast$) \*
+void($\ast$) \hyperlink{ev__wrap_8h_a1f30ebf57c13323cf7e9a6c48854c838}{anfds} \hyperlink{ev__wrap_8h_a0f7cd0e8aa73e889500cde40885b4653}{pipe\-\_\-w} \*
+\hyperlink{ev__wrap_8h_a97a91e0ce1737cf40906ac955feebaae}{pipe\-\_\-write\-\_\-skipped} \hyperlink{ev__wrap_8h_a1819401107013d9b035d38425970638f}{postfork} \*
+\hyperlink{ev__wrap_8h_a07f2e7a6d19873e2b3eedbb362d9df80}{vec\-\_\-ro} \hyperlink{ev__wrap_8h_ae7517957adb2dc3eeaef7fe52cc84513}{vec\-\_\-wo} \hyperlink{ev__wrap_8h_a8d9e55e3264921a6734c5de679e5645c}{polls} \hyperlink{ev__wrap_8h_a7f400222143038738f69450fa6f598b4}{pollcnt} \*
+\hyperlink{ev__wrap_8h_af69da315f31ae068ff13778b4c544bd3}{pollidxmax} \hyperlink{ev__wrap_8h_ada8e434add6dfaf4c07400a8b8aa2378}{epoll\-\_\-eventmax} \*
+\hyperlink{ev__wrap_8h_abe7fa4082e1030956913179570e3c8b3}{epoll\-\_\-epermcnt} \hyperlink{ev__wrap_8h_abfb52e5865ebb8a91a9b78834d24262d}{fdchanges} \*
+\hyperlink{ev__wrap_8h_aab27b38b12503d4a0505439fba245fd9}{fdchangecnt} \hyperlink{ev__wrap_8h_a46321db07a4b4db3912aa3f931e0389a}{timermax} \hyperlink{ev__wrap_8h_af3967e515b24de493d9ce98c27121cdf}{periodics} \*
+\hyperlink{ev__wrap_8h_af60d87422b257a908ceb2499ccfeb744}{periodiccnt} \hyperlink{ev__wrap_8h_af2690126acf73313dd6b09f876439f46}{prepares} \*
+\hyperlink{ev__wrap_8h_a11a293e3a99236b94616bf351eb6f271}{preparecnt} \hyperlink{ev__wrap_8h_a4b2d7cc7395fbd031b76a6f7a0104465}{checkmax} \hyperlink{ev__wrap_8h_a0381116a0ccd601da72669f7ef0c1a74}{forks} \*
+\hyperlink{ev__wrap_8h_aa068dd0de84390d7cb0f1567e6c77a01}{forkcnt} \hyperlink{ev__wrap_8h_a0dfb1b595d0609e053b8ec3d04fbd4d2}{cleanupmax} \*
+\hyperlink{ev__wrap_8h_af3ba235af7988521cea47a2e4aaf2424}{async\-\_\-pending} \hyperlink{ev__wrap_8h_a92a0e52e31b95366449dcd1427ebda33}{asyncmax} \*
+\hyperlink{ev__wrap_8h_ac60bc2f50dfaee7fbbcd78d071241f6d}{sig\-\_\-pending} \hyperlink{ev__wrap_8h_acfc10925c78f201e76a913f42a7423ca}{sigfd\-\_\-w} \hyperlink{ev__wrap_8h_aee0be39901e0b0edca6f5480b973d3f4}{origflags} \*
+\hyperlink{ev__wrap_8h_ae2ed2143d9702d19bfe61c39a7d60ca3}{loop\-\_\-depth} void($\ast$ \hyperlink{structev__loop_a702d520e97528376a5500c86e6c324ef}{release\-\_\-cb} )(\hyperlink{ev_8h_a6e6c6b499d18513c01cf4bde00121617}{\-E\-V\-\_\-\-P}) \hyperlink{ev_8h_a473b5b606fdd3d484227542605e80bcf}{\-E\-V\-\_\-\-T\-H\-R\-O\-W}) \hyperlink{ev_8c_af9e709c26770dce4b5180c0a51aa4c21}{\-V\-A\-R}(\hyperlink{ev__wrap_8h_af206d87e2f546a36a2bd0065aefb8565}{acquire\-\_\-cb}
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+
+
+\-Definition at line 1614 of file ev.\-c.
+
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{structev__loop_a1d7ebd768a98eb8a14a1576ef3312cd4}{\index{ev\-\_\-loop@{ev\-\_\-loop}!\-V\-A\-Rx@{\-V\-A\-Rx}}
+\index{\-V\-A\-Rx@{\-V\-A\-Rx}!ev_loop@{ev\-\_\-loop}}
+\subsubsection[{\-V\-A\-Rx}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-V\-A\-Rx} (
+\begin{DoxyParamCaption}
+\item[{{\bf ev\-\_\-tstamp}}]{, }
+\item[{{\bf now\-\_\-floor}}]{}
+\end{DoxyParamCaption}
+)}}\label{structev__loop_a1d7ebd768a98eb8a14a1576ef3312cd4}
+\hypertarget{structev__loop_a1f599397e40ec502dd72782230eae2b5}{\index{ev\-\_\-loop@{ev\-\_\-loop}!\-V\-A\-Rx@{\-V\-A\-Rx}}
+\index{\-V\-A\-Rx@{\-V\-A\-Rx}!ev_loop@{ev\-\_\-loop}}
+\subsubsection[{\-V\-A\-Rx}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mn\-\_\-now} {\bf \-V\-A\-Rx} (
+\begin{DoxyParamCaption}
+\item[{{\bf ev\-\_\-tstamp}}]{, }
+\item[{{\bf rtmn\-\_\-diff}}]{}
+\end{DoxyParamCaption}
+)}}\label{structev__loop_a1f599397e40ec502dd72782230eae2b5}
+\hypertarget{structev__loop_adedb82454f3e68e6bb6f5b3eaaf128fe}{\index{ev\-\_\-loop@{ev\-\_\-loop}!\-V\-A\-Rx@{\-V\-A\-Rx}}
+\index{\-V\-A\-Rx@{\-V\-A\-Rx}!ev_loop@{ev\-\_\-loop}}
+\subsubsection[{\-V\-A\-Rx}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mn\-\_\-now} {\bf rfeeds} {\bf \-V\-A\-Rx} (
+\begin{DoxyParamCaption}
+\item[{int}]{, }
+\item[{{\bf rfeedmax}}]{}
+\end{DoxyParamCaption}
+)}}\label{structev__loop_adedb82454f3e68e6bb6f5b3eaaf128fe}
+\hypertarget{structev__loop_ac5272fbdea7cf951bb16a9531fb8dc66}{\index{ev\-\_\-loop@{ev\-\_\-loop}!\-V\-A\-Rx@{\-V\-A\-Rx}}
+\index{\-V\-A\-Rx@{\-V\-A\-Rx}!ev_loop@{ev\-\_\-loop}}
+\subsubsection[{\-V\-A\-Rx}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mn\-\_\-now} {\bf rfeeds} {\bf rfeedcnt} {\bf \-V\-A\-Rx} (
+\begin{DoxyParamCaption}
+\item[{int}]{, }
+\item[{{\bf pendingpri}}]{}
+\end{DoxyParamCaption}
+)}}\label{structev__loop_ac5272fbdea7cf951bb16a9531fb8dc66}
+\hypertarget{structev__loop_a76f29853a6dd1c9d2942713108750462}{\index{ev\-\_\-loop@{ev\-\_\-loop}!\-V\-A\-Rx@{\-V\-A\-Rx}}
+\index{\-V\-A\-Rx@{\-V\-A\-Rx}!ev_loop@{ev\-\_\-loop}}
+\subsubsection[{\-V\-A\-Rx}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mn\-\_\-now} {\bf rfeeds} {\bf rfeedcnt} {\bf pending\-\_\-w} {\bf \-V\-A\-Rx} (
+\begin{DoxyParamCaption}
+\item[{{\bf ev\-\_\-tstamp}}]{, }
+\item[{{\bf io\-\_\-blocktime}}]{}
+\end{DoxyParamCaption}
+)}}\label{structev__loop_a76f29853a6dd1c9d2942713108750462}
+\hypertarget{structev__loop_a36d8ccfe3b0a90dc6e2c9b4624480fcf}{\index{ev\-\_\-loop@{ev\-\_\-loop}!\-V\-A\-Rx@{\-V\-A\-Rx}}
+\index{\-V\-A\-Rx@{\-V\-A\-Rx}!ev_loop@{ev\-\_\-loop}}
+\subsubsection[{\-V\-A\-Rx}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mn\-\_\-now} {\bf rfeeds} {\bf rfeedcnt} {\bf pending\-\_\-w} {\bf timeout\-\_\-blocktime} {\bf \-V\-A\-Rx} (
+\begin{DoxyParamCaption}
+\item[{int}]{, }
+\item[{{\bf backend}}]{}
+\end{DoxyParamCaption}
+)}}\label{structev__loop_a36d8ccfe3b0a90dc6e2c9b4624480fcf}
+\hypertarget{structev__loop_afe664d107d3394d3c7c5599d49b0014d}{\index{ev\-\_\-loop@{ev\-\_\-loop}!\-V\-A\-Rx@{\-V\-A\-Rx}}
+\index{\-V\-A\-Rx@{\-V\-A\-Rx}!ev_loop@{ev\-\_\-loop}}
+\subsubsection[{\-V\-A\-Rx}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mn\-\_\-now} {\bf rfeeds} {\bf rfeedcnt} {\bf pending\-\_\-w} {\bf timeout\-\_\-blocktime} {\bf activecnt} {\bf \-V\-A\-Rx} (
+\begin{DoxyParamCaption}
+\item[{\-E\-V\-\_\-\-A\-T\-O\-M\-I\-C\-\_\-\-T}]{, }
+\item[{{\bf loop\-\_\-done}}]{}
+\end{DoxyParamCaption}
+)}}\label{structev__loop_afe664d107d3394d3c7c5599d49b0014d}
+\hypertarget{structev__loop_ae23c4b47e59215085cc9f0652cec2d0a}{\index{ev\-\_\-loop@{ev\-\_\-loop}!\-V\-A\-Rx@{\-V\-A\-Rx}}
+\index{\-V\-A\-Rx@{\-V\-A\-Rx}!ev_loop@{ev\-\_\-loop}}
+\subsubsection[{\-V\-A\-Rx}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mn\-\_\-now} {\bf rfeeds} {\bf rfeedcnt} {\bf pending\-\_\-w} {\bf timeout\-\_\-blocktime} {\bf activecnt} {\bf backend\-\_\-fd} {\bf \-V\-A\-Rx} (
+\begin{DoxyParamCaption}
+\item[{{\bf ev\-\_\-tstamp}}]{, }
+\item[{{\bf backend\-\_\-mintime}}]{}
+\end{DoxyParamCaption}
+)}}\label{structev__loop_ae23c4b47e59215085cc9f0652cec2d0a}
+
+
+\subsection{\-Field \-Documentation}
+\hypertarget{structev__loop_ae6ba045cdd474f63e8f543e5b95bf25e}{\index{ev\-\_\-loop@{ev\-\_\-loop}!backend\-\_\-modify@{backend\-\_\-modify}}
+\index{backend\-\_\-modify@{backend\-\_\-modify}!ev_loop@{ev\-\_\-loop}}
+\subsubsection[{backend\-\_\-modify}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mn\-\_\-now} {\bf rfeeds} {\bf rfeedcnt} {\bf pending\-\_\-w} {\bf timeout\-\_\-blocktime} {\bf activecnt} {\bf backend\-\_\-fd} void($\ast$ {\bf backend\-\_\-modify})({\bf \-E\-V\-\_\-\-P\-\_\-} int fd, int oev, int nev)) {\bf \-V\-A\-R}({\bf backend\-\_\-poll}}}\label{structev__loop_ae6ba045cdd474f63e8f543e5b95bf25e}
+
+
+\-Definition at line 67 of file ev.\-c.
+
+\hypertarget{structev__loop_abcffdc59e6043598edf7d8f6faadbcc6}{\index{ev\-\_\-loop@{ev\-\_\-loop}!backend\-\_\-poll@{backend\-\_\-poll}}
+\index{backend\-\_\-poll@{backend\-\_\-poll}!ev_loop@{ev\-\_\-loop}}
+\subsubsection[{backend\-\_\-poll}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mn\-\_\-now} {\bf rfeeds} {\bf rfeedcnt} {\bf pending\-\_\-w} {\bf timeout\-\_\-blocktime} {\bf activecnt} {\bf backend\-\_\-fd} void($\ast$) void($\ast$ {\bf backend\-\_\-poll})({\bf \-E\-V\-\_\-\-P\-\_\-} {\bf ev\-\_\-tstamp} timeout)) {\bf \-V\-A\-Rx}({\bf \-A\-N\-F\-D} $\ast$}}\label{structev__loop_abcffdc59e6043598edf7d8f6faadbcc6}
+
+
+\-Definition at line 68 of file ev.\-c.
+
+\hypertarget{structev__loop_a775f0f0bd69e3d84a7804b2db59494df}{\index{ev\-\_\-loop@{ev\-\_\-loop}!ev\-\_\-rt\-\_\-now@{ev\-\_\-rt\-\_\-now}}
+\index{ev\-\_\-rt\-\_\-now@{ev\-\_\-rt\-\_\-now}!ev_loop@{ev\-\_\-loop}}
+\subsubsection[{ev\-\_\-rt\-\_\-now}]{\setlength{\rightskip}{0pt plus 5cm}{\bf ev\-\_\-tstamp} {\bf ev\-\_\-rt\-\_\-now}}}\label{structev__loop_a775f0f0bd69e3d84a7804b2db59494df}
+
+
+\-Definition at line 1616 of file ev.\-c.
+
+\hypertarget{structev__loop_a702d520e97528376a5500c86e6c324ef}{\index{ev\-\_\-loop@{ev\-\_\-loop}!release\-\_\-cb@{release\-\_\-cb}}
+\index{release\-\_\-cb@{release\-\_\-cb}!ev_loop@{ev\-\_\-loop}}
+\subsubsection[{release\-\_\-cb}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mn\-\_\-now} {\bf rfeeds} {\bf rfeedcnt} {\bf pending\-\_\-w} {\bf timeout\-\_\-blocktime} {\bf activecnt} {\bf backend\-\_\-fd} void($\ast$) void($\ast$) {\bf anfds} {\bf pipe\-\_\-w} {\bf pipe\-\_\-write\-\_\-skipped} {\bf postfork} {\bf vec\-\_\-ro} {\bf vec\-\_\-wo} {\bf polls} {\bf pollcnt} {\bf pollidxmax} {\bf epoll\-\_\-eventmax} {\bf epoll\-\_\-epermcnt} {\bf fdchanges} {\bf fdchangecnt} {\bf timermax} {\bf periodics} {\bf periodiccnt} {\bf prepares} {\bf preparecnt} {\bf checkmax} {\bf forks} {\bf forkcnt} {\bf cleanupmax} {\bf async\-\_\-pending} {\bf asyncmax} {\bf sig\-\_\-pending} {\bf sigfd\-\_\-w} {\bf origflags} {\bf loop\-\_\-depth} void($\ast$ {\bf release\-\_\-cb})({\bf \-E\-V\-\_\-\-P}) {\bf \-E\-V\-\_\-\-T\-H\-R\-O\-W}) {\bf \-V\-A\-R}({\bf acquire\-\_\-cb}}}\label{structev__loop_a702d520e97528376a5500c86e6c324ef}
+
+
+\-Definition at line 199 of file ev.\-c.
+
+\hypertarget{structev__loop_ab4710db67bbb58f2502416b96745b404}{\index{ev\-\_\-loop@{ev\-\_\-loop}!\-V\-A\-Rx@{\-V\-A\-Rx}}
+\index{\-V\-A\-Rx@{\-V\-A\-Rx}!ev_loop@{ev\-\_\-loop}}
+\subsubsection[{\-V\-A\-Rx}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mn\-\_\-now} {\bf rfeeds} {\bf rfeedcnt} {\bf pending\-\_\-w} {\bf timeout\-\_\-blocktime} {\bf activecnt} {\bf backend\-\_\-fd} void($\ast$) void($\ast$) anfd {\bf \-V\-A\-Rx})(int, {\bf anfdmax}) {\bf \-V\-A\-Rx}({\bf ev\-\_\-io}}}\label{structev__loop_ab4710db67bbb58f2502416b96745b404}
+
+
+\-Definition at line 71 of file ev.\-c.
+
+\hypertarget{structev__loop_a6aa51983436c29dfa320a63ec7403f0b}{\index{ev\-\_\-loop@{ev\-\_\-loop}!\-V\-A\-Rx@{\-V\-A\-Rx}}
+\index{\-V\-A\-Rx@{\-V\-A\-Rx}!ev_loop@{ev\-\_\-loop}}
+\subsubsection[{\-V\-A\-Rx}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mn\-\_\-now} {\bf rfeeds} {\bf rfeedcnt} {\bf pending\-\_\-w} {\bf timeout\-\_\-blocktime} {\bf activecnt} {\bf backend\-\_\-fd} void($\ast$) void($\ast$) {\bf anfds} pipe\-\_\- {\bf \-V\-A\-Rx})(\-E\-V\-\_\-\-A\-T\-O\-M\-I\-C\-\_\-\-T, {\bf pipe\-\_\-write\-\_\-wanted}) {\bf \-V\-A\-Rx}(\-E\-V\-\_\-\-A\-T\-O\-M\-I\-C\-\_\-\-T}}\label{structev__loop_a6aa51983436c29dfa320a63ec7403f0b}
+
+
+\-Definition at line 75 of file ev.\-c.
+
+\hypertarget{structev__loop_ae8420c06a798ba710eb5de5fe2d0f0d7}{\index{ev\-\_\-loop@{ev\-\_\-loop}!\-V\-A\-Rx@{\-V\-A\-Rx}}
+\index{\-V\-A\-Rx@{\-V\-A\-Rx}!ev_loop@{ev\-\_\-loop}}
+\subsubsection[{\-V\-A\-Rx}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mn\-\_\-now} {\bf rfeeds} {\bf rfeedcnt} {\bf pending\-\_\-w} {\bf timeout\-\_\-blocktime} {\bf activecnt} {\bf backend\-\_\-fd} void($\ast$) void($\ast$) {\bf anfds} {\bf pipe\-\_\-w} pipe\-\_\-write\-\_\-skippe {\bf \-V\-A\-Rx})(pid\-\_\-t, {\bf curpid}) {\bf \-V\-A\-Rx}(char}}\label{structev__loop_ae8420c06a798ba710eb5de5fe2d0f0d7}
+
+
+\-Definition at line 79 of file ev.\-c.
+
+\hypertarget{structev__loop_abbc51e970555f9c7b979955ceee24593}{\index{ev\-\_\-loop@{ev\-\_\-loop}!\-V\-A\-Rx@{\-V\-A\-Rx}}
+\index{\-V\-A\-Rx@{\-V\-A\-Rx}!ev_loop@{ev\-\_\-loop}}
+\subsubsection[{\-V\-A\-Rx}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mn\-\_\-now} {\bf rfeeds} {\bf rfeedcnt} {\bf pending\-\_\-w} {\bf timeout\-\_\-blocktime} {\bf activecnt} {\bf backend\-\_\-fd} void($\ast$) void($\ast$) {\bf anfds} {\bf pipe\-\_\-w} {\bf pipe\-\_\-write\-\_\-skipped} postfor {\bf \-V\-A\-Rx})(void $\ast$, {\bf vec\-\_\-ri}) {\bf \-V\-A\-Rx}(void $\ast$}}\label{structev__loop_abbc51e970555f9c7b979955ceee24593}
+
+
+\-Definition at line 85 of file ev.\-c.
+
+\hypertarget{structev__loop_a0da6dfa7787cf08c7cc74dfa97686031}{\index{ev\-\_\-loop@{ev\-\_\-loop}!\-V\-A\-Rx@{\-V\-A\-Rx}}
+\index{\-V\-A\-Rx@{\-V\-A\-Rx}!ev_loop@{ev\-\_\-loop}}
+\subsubsection[{\-V\-A\-Rx}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mn\-\_\-now} {\bf rfeeds} {\bf rfeedcnt} {\bf pending\-\_\-w} {\bf timeout\-\_\-blocktime} {\bf activecnt} {\bf backend\-\_\-fd} void($\ast$) void($\ast$) {\bf anfds} {\bf pipe\-\_\-w} {\bf pipe\-\_\-write\-\_\-skipped} {\bf postfork} vec\-\_\-r {\bf \-V\-A\-Rx})(void $\ast$, {\bf vec\-\_\-wi}) {\bf \-V\-A\-Rx}(void $\ast$}}\label{structev__loop_a0da6dfa7787cf08c7cc74dfa97686031}
+
+
+\-Definition at line 87 of file ev.\-c.
+
+\hypertarget{structev__loop_a1207f4fd0019e46e4b57c9ae96b9cdd7}{\index{ev\-\_\-loop@{ev\-\_\-loop}!\-V\-A\-Rx@{\-V\-A\-Rx}}
+\index{\-V\-A\-Rx@{\-V\-A\-Rx}!ev_loop@{ev\-\_\-loop}}
+\subsubsection[{\-V\-A\-Rx}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mn\-\_\-now} {\bf rfeeds} {\bf rfeedcnt} {\bf pending\-\_\-w} {\bf timeout\-\_\-blocktime} {\bf activecnt} {\bf backend\-\_\-fd} void($\ast$) void($\ast$) {\bf anfds} {\bf pipe\-\_\-w} {\bf pipe\-\_\-write\-\_\-skipped} {\bf postfork} {\bf vec\-\_\-ro} vec\-\_\-w {\bf \-V\-A\-Rx})(int, {\bf vec\-\_\-max}) {\bf \-V\-A\-Rx}(struct pollfd $\ast$}}\label{structev__loop_a1207f4fd0019e46e4b57c9ae96b9cdd7}
+
+
+\-Definition at line 92 of file ev.\-c.
+
+\hypertarget{structev__loop_a0e284e844796b5ab0224266b15ef3a63}{\index{ev\-\_\-loop@{ev\-\_\-loop}!\-V\-A\-Rx@{\-V\-A\-Rx}}
+\index{\-V\-A\-Rx@{\-V\-A\-Rx}!ev_loop@{ev\-\_\-loop}}
+\subsubsection[{\-V\-A\-Rx}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mn\-\_\-now} {\bf rfeeds} {\bf rfeedcnt} {\bf pending\-\_\-w} {\bf timeout\-\_\-blocktime} {\bf activecnt} {\bf backend\-\_\-fd} void($\ast$) void($\ast$) {\bf anfds} {\bf pipe\-\_\-w} {\bf pipe\-\_\-write\-\_\-skipped} {\bf postfork} {\bf vec\-\_\-ro} {\bf vec\-\_\-wo} poll {\bf \-V\-A\-Rx})(int, {\bf pollmax}) {\bf \-V\-A\-Rx}(int}}\label{structev__loop_a0e284e844796b5ab0224266b15ef3a63}
+
+
+\-Definition at line 97 of file ev.\-c.
+
+\hypertarget{structev__loop_a424e9709e455906e09bf1bb9c531e77c}{\index{ev\-\_\-loop@{ev\-\_\-loop}!\-V\-A\-Rx@{\-V\-A\-Rx}}
+\index{\-V\-A\-Rx@{\-V\-A\-Rx}!ev_loop@{ev\-\_\-loop}}
+\subsubsection[{\-V\-A\-Rx}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mn\-\_\-now} {\bf rfeeds} {\bf rfeedcnt} {\bf pending\-\_\-w} {\bf timeout\-\_\-blocktime} {\bf activecnt} {\bf backend\-\_\-fd} void($\ast$) void($\ast$) {\bf anfds} {\bf pipe\-\_\-w} {\bf pipe\-\_\-write\-\_\-skipped} {\bf postfork} {\bf vec\-\_\-ro} {\bf vec\-\_\-wo} {\bf polls} pollcn {\bf \-V\-A\-Rx})(int $\ast$, {\bf pollidxs}){\bf \-V\-A\-Rx}(int}}\label{structev__loop_a424e9709e455906e09bf1bb9c531e77c}
+
+
+\-Definition at line 99 of file ev.\-c.
+
+\hypertarget{structev__loop_ad3d31f685363d42d641957e2281cb623}{\index{ev\-\_\-loop@{ev\-\_\-loop}!\-V\-A\-Rx@{\-V\-A\-Rx}}
+\index{\-V\-A\-Rx@{\-V\-A\-Rx}!ev_loop@{ev\-\_\-loop}}
+\subsubsection[{\-V\-A\-Rx}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mn\-\_\-now} {\bf rfeeds} {\bf rfeedcnt} {\bf pending\-\_\-w} {\bf timeout\-\_\-blocktime} {\bf activecnt} {\bf backend\-\_\-fd} void($\ast$) void($\ast$) {\bf anfds} {\bf pipe\-\_\-w} {\bf pipe\-\_\-write\-\_\-skipped} {\bf postfork} {\bf vec\-\_\-ro} {\bf vec\-\_\-wo} {\bf polls} {\bf pollcnt} pollidxma {\bf \-V\-A\-Rx})(struct epoll\-\_\-event $\ast$, {\bf epoll\-\_\-events}) {\bf \-V\-A\-Rx}(int}}\label{structev__loop_ad3d31f685363d42d641957e2281cb623}
+
+
+\-Definition at line 104 of file ev.\-c.
+
+\hypertarget{structev__loop_a0949624fea57acded29e6428f687f6b6}{\index{ev\-\_\-loop@{ev\-\_\-loop}!\-V\-A\-Rx@{\-V\-A\-Rx}}
+\index{\-V\-A\-Rx@{\-V\-A\-Rx}!ev_loop@{ev\-\_\-loop}}
+\subsubsection[{\-V\-A\-Rx}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mn\-\_\-now} {\bf rfeeds} {\bf rfeedcnt} {\bf pending\-\_\-w} {\bf timeout\-\_\-blocktime} {\bf activecnt} {\bf backend\-\_\-fd} void($\ast$) void($\ast$) {\bf anfds} {\bf pipe\-\_\-w} {\bf pipe\-\_\-write\-\_\-skipped} {\bf postfork} {\bf vec\-\_\-ro} {\bf vec\-\_\-wo} {\bf polls} {\bf pollcnt} {\bf pollidxmax} epoll\-\_\-eventma {\bf \-V\-A\-Rx})(int $\ast$, {\bf epoll\-\_\-eperms}) {\bf \-V\-A\-Rx}(int}}\label{structev__loop_a0949624fea57acded29e6428f687f6b6}
+
+
+\-Definition at line 106 of file ev.\-c.
+
+\hypertarget{structev__loop_aaf1f0d776092ea9d95e0eeffa591cad7}{\index{ev\-\_\-loop@{ev\-\_\-loop}!\-V\-A\-Rx@{\-V\-A\-Rx}}
+\index{\-V\-A\-Rx@{\-V\-A\-Rx}!ev_loop@{ev\-\_\-loop}}
+\subsubsection[{\-V\-A\-Rx}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mn\-\_\-now} {\bf rfeeds} {\bf rfeedcnt} {\bf pending\-\_\-w} {\bf timeout\-\_\-blocktime} {\bf activecnt} {\bf backend\-\_\-fd} void($\ast$) void($\ast$) {\bf anfds} {\bf pipe\-\_\-w} {\bf pipe\-\_\-write\-\_\-skipped} {\bf postfork} {\bf vec\-\_\-ro} {\bf vec\-\_\-wo} {\bf polls} {\bf pollcnt} {\bf pollidxmax} {\bf epoll\-\_\-eventmax} epoll\-\_\-epermcn {\bf \-V\-A\-Rx})(int, {\bf epoll\-\_\-epermmax}) {\bf \-V\-A\-Rx}(int $\ast$}}\label{structev__loop_aaf1f0d776092ea9d95e0eeffa591cad7}
+
+
+\-Definition at line 108 of file ev.\-c.
+
+\hypertarget{structev__loop_a9a1ed06fa2b171a02732f96b0865f396}{\index{ev\-\_\-loop@{ev\-\_\-loop}!\-V\-A\-Rx@{\-V\-A\-Rx}}
+\index{\-V\-A\-Rx@{\-V\-A\-Rx}!ev_loop@{ev\-\_\-loop}}
+\subsubsection[{\-V\-A\-Rx}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mn\-\_\-now} {\bf rfeeds} {\bf rfeedcnt} {\bf pending\-\_\-w} {\bf timeout\-\_\-blocktime} {\bf activecnt} {\bf backend\-\_\-fd} void($\ast$) void($\ast$) {\bf anfds} {\bf pipe\-\_\-w} {\bf pipe\-\_\-write\-\_\-skipped} {\bf postfork} {\bf vec\-\_\-ro} {\bf vec\-\_\-wo} {\bf polls} {\bf pollcnt} {\bf pollidxmax} {\bf epoll\-\_\-eventmax} {\bf epoll\-\_\-epermcnt} fdchange {\bf \-V\-A\-Rx})(int, {\bf fdchangemax}) {\bf \-V\-A\-Rx}(int}}\label{structev__loop_a9a1ed06fa2b171a02732f96b0865f396}
+
+
+\-Definition at line 130 of file ev.\-c.
+
+\hypertarget{structev__loop_a111b2f2e5e9b29ca107897c880cd3a66}{\index{ev\-\_\-loop@{ev\-\_\-loop}!\-V\-A\-Rx@{\-V\-A\-Rx}}
+\index{\-V\-A\-Rx@{\-V\-A\-Rx}!ev_loop@{ev\-\_\-loop}}
+\subsubsection[{\-V\-A\-Rx}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mn\-\_\-now} {\bf rfeeds} {\bf rfeedcnt} {\bf pending\-\_\-w} {\bf timeout\-\_\-blocktime} {\bf activecnt} {\bf backend\-\_\-fd} void($\ast$) void($\ast$) {\bf anfds} {\bf pipe\-\_\-w} {\bf pipe\-\_\-write\-\_\-skipped} {\bf postfork} {\bf vec\-\_\-ro} {\bf vec\-\_\-wo} {\bf polls} {\bf pollcnt} {\bf pollidxmax} {\bf epoll\-\_\-eventmax} {\bf epoll\-\_\-epermcnt} {\bf fdchanges} fdchangecn {\bf \-V\-A\-Rx})({\bf \-A\-N\-H\-E} $\ast$, {\bf timers}) {\bf \-V\-A\-Rx}(int}}\label{structev__loop_a111b2f2e5e9b29ca107897c880cd3a66}
+
+
+\-Definition at line 133 of file ev.\-c.
+
+\hypertarget{structev__loop_a126cf8d9f6e5fefd6da920905aee2244}{\index{ev\-\_\-loop@{ev\-\_\-loop}!\-V\-A\-Rx@{\-V\-A\-Rx}}
+\index{\-V\-A\-Rx@{\-V\-A\-Rx}!ev_loop@{ev\-\_\-loop}}
+\subsubsection[{\-V\-A\-Rx}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mn\-\_\-now} {\bf rfeeds} {\bf rfeedcnt} {\bf pending\-\_\-w} {\bf timeout\-\_\-blocktime} {\bf activecnt} {\bf backend\-\_\-fd} void($\ast$) void($\ast$) {\bf anfds} {\bf pipe\-\_\-w} {\bf pipe\-\_\-write\-\_\-skipped} {\bf postfork} {\bf vec\-\_\-ro} {\bf vec\-\_\-wo} {\bf polls} {\bf pollcnt} {\bf pollidxmax} {\bf epoll\-\_\-eventmax} {\bf epoll\-\_\-epermcnt} {\bf fdchanges} {\bf fdchangecnt} timerma {\bf \-V\-A\-Rx})(int, {\bf timercnt}) {\bf \-V\-A\-Rx}({\bf \-A\-N\-H\-E} $\ast$}}\label{structev__loop_a126cf8d9f6e5fefd6da920905aee2244}
+
+
+\-Definition at line 135 of file ev.\-c.
+
+\hypertarget{structev__loop_ad388d5465b1ea47bb2c50cc324b219e4}{\index{ev\-\_\-loop@{ev\-\_\-loop}!\-V\-A\-Rx@{\-V\-A\-Rx}}
+\index{\-V\-A\-Rx@{\-V\-A\-Rx}!ev_loop@{ev\-\_\-loop}}
+\subsubsection[{\-V\-A\-Rx}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mn\-\_\-now} {\bf rfeeds} {\bf rfeedcnt} {\bf pending\-\_\-w} {\bf timeout\-\_\-blocktime} {\bf activecnt} {\bf backend\-\_\-fd} void($\ast$) void($\ast$) {\bf anfds} {\bf pipe\-\_\-w} {\bf pipe\-\_\-write\-\_\-skipped} {\bf postfork} {\bf vec\-\_\-ro} {\bf vec\-\_\-wo} {\bf polls} {\bf pollcnt} {\bf pollidxmax} {\bf epoll\-\_\-eventmax} {\bf epoll\-\_\-epermcnt} {\bf fdchanges} {\bf fdchangecnt} {\bf timermax} periodic {\bf \-V\-A\-Rx})(int, {\bf periodicmax}) {\bf \-V\-A\-Rx}(int}}\label{structev__loop_ad388d5465b1ea47bb2c50cc324b219e4}
+
+
+\-Definition at line 139 of file ev.\-c.
+
+\hypertarget{structev__loop_aecd3c7cef8d195c6905f198555ea82cf}{\index{ev\-\_\-loop@{ev\-\_\-loop}!\-V\-A\-Rx@{\-V\-A\-Rx}}
+\index{\-V\-A\-Rx@{\-V\-A\-Rx}!ev_loop@{ev\-\_\-loop}}
+\subsubsection[{\-V\-A\-Rx}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mn\-\_\-now} {\bf rfeeds} {\bf rfeedcnt} {\bf pending\-\_\-w} {\bf timeout\-\_\-blocktime} {\bf activecnt} {\bf backend\-\_\-fd} void($\ast$) void($\ast$) {\bf anfds} {\bf pipe\-\_\-w} {\bf pipe\-\_\-write\-\_\-skipped} {\bf postfork} {\bf vec\-\_\-ro} {\bf vec\-\_\-wo} {\bf polls} {\bf pollcnt} {\bf pollidxmax} {\bf epoll\-\_\-eventmax} {\bf epoll\-\_\-epermcnt} {\bf fdchanges} {\bf fdchangecnt} {\bf timermax} {\bf periodics} periodiccn {\bf \-V\-A\-Rx})(int, {\bf idleall}){\bf \-V\-A\-Rx}(struct {\bf ev\-\_\-prepare} $\ast$$\ast$}}\label{structev__loop_aecd3c7cef8d195c6905f198555ea82cf}
+
+
+\-Definition at line 148 of file ev.\-c.
+
+\hypertarget{structev__loop_a5890978e311cf2a6669720c5aa63aa88}{\index{ev\-\_\-loop@{ev\-\_\-loop}!\-V\-A\-Rx@{\-V\-A\-Rx}}
+\index{\-V\-A\-Rx@{\-V\-A\-Rx}!ev_loop@{ev\-\_\-loop}}
+\subsubsection[{\-V\-A\-Rx}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mn\-\_\-now} {\bf rfeeds} {\bf rfeedcnt} {\bf pending\-\_\-w} {\bf timeout\-\_\-blocktime} {\bf activecnt} {\bf backend\-\_\-fd} void($\ast$) void($\ast$) {\bf anfds} {\bf pipe\-\_\-w} {\bf pipe\-\_\-write\-\_\-skipped} {\bf postfork} {\bf vec\-\_\-ro} {\bf vec\-\_\-wo} {\bf polls} {\bf pollcnt} {\bf pollidxmax} {\bf epoll\-\_\-eventmax} {\bf epoll\-\_\-epermcnt} {\bf fdchanges} {\bf fdchangecnt} {\bf timermax} {\bf periodics} {\bf periodiccnt} prepare {\bf \-V\-A\-Rx})(int, {\bf preparemax}) {\bf \-V\-A\-Rx}(int}}\label{structev__loop_a5890978e311cf2a6669720c5aa63aa88}
+
+
+\-Definition at line 151 of file ev.\-c.
+
+\hypertarget{structev__loop_a0a8efa0251632636e727ce578ef6269a}{\index{ev\-\_\-loop@{ev\-\_\-loop}!\-V\-A\-Rx@{\-V\-A\-Rx}}
+\index{\-V\-A\-Rx@{\-V\-A\-Rx}!ev_loop@{ev\-\_\-loop}}
+\subsubsection[{\-V\-A\-Rx}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mn\-\_\-now} {\bf rfeeds} {\bf rfeedcnt} {\bf pending\-\_\-w} {\bf timeout\-\_\-blocktime} {\bf activecnt} {\bf backend\-\_\-fd} void($\ast$) void($\ast$) {\bf anfds} {\bf pipe\-\_\-w} {\bf pipe\-\_\-write\-\_\-skipped} {\bf postfork} {\bf vec\-\_\-ro} {\bf vec\-\_\-wo} {\bf polls} {\bf pollcnt} {\bf pollidxmax} {\bf epoll\-\_\-eventmax} {\bf epoll\-\_\-epermcnt} {\bf fdchanges} {\bf fdchangecnt} {\bf timermax} {\bf periodics} {\bf periodiccnt} {\bf prepares} preparecn {\bf \-V\-A\-Rx})(struct {\bf ev\-\_\-check} $\ast$$\ast$, {\bf checks}) {\bf \-V\-A\-Rx}(int}}\label{structev__loop_a0a8efa0251632636e727ce578ef6269a}
+
+
+\-Definition at line 154 of file ev.\-c.
+
+\hypertarget{structev__loop_aae9a196e339bc7c28378d949673d68db}{\index{ev\-\_\-loop@{ev\-\_\-loop}!\-V\-A\-Rx@{\-V\-A\-Rx}}
+\index{\-V\-A\-Rx@{\-V\-A\-Rx}!ev_loop@{ev\-\_\-loop}}
+\subsubsection[{\-V\-A\-Rx}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mn\-\_\-now} {\bf rfeeds} {\bf rfeedcnt} {\bf pending\-\_\-w} {\bf timeout\-\_\-blocktime} {\bf activecnt} {\bf backend\-\_\-fd} void($\ast$) void($\ast$) {\bf anfds} {\bf pipe\-\_\-w} {\bf pipe\-\_\-write\-\_\-skipped} {\bf postfork} {\bf vec\-\_\-ro} {\bf vec\-\_\-wo} {\bf polls} {\bf pollcnt} {\bf pollidxmax} {\bf epoll\-\_\-eventmax} {\bf epoll\-\_\-epermcnt} {\bf fdchanges} {\bf fdchangecnt} {\bf timermax} {\bf periodics} {\bf periodiccnt} {\bf prepares} {\bf preparecnt} checkma {\bf \-V\-A\-Rx})(int, {\bf checkcnt}) {\bf \-V\-A\-Rx}(struct {\bf ev\-\_\-fork} $\ast$$\ast$}}\label{structev__loop_aae9a196e339bc7c28378d949673d68db}
+
+
+\-Definition at line 156 of file ev.\-c.
+
+\hypertarget{structev__loop_aac7b9722eaada07e64dcabe1eb5af79f}{\index{ev\-\_\-loop@{ev\-\_\-loop}!\-V\-A\-Rx@{\-V\-A\-Rx}}
+\index{\-V\-A\-Rx@{\-V\-A\-Rx}!ev_loop@{ev\-\_\-loop}}
+\subsubsection[{\-V\-A\-Rx}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mn\-\_\-now} {\bf rfeeds} {\bf rfeedcnt} {\bf pending\-\_\-w} {\bf timeout\-\_\-blocktime} {\bf activecnt} {\bf backend\-\_\-fd} void($\ast$) void($\ast$) {\bf anfds} {\bf pipe\-\_\-w} {\bf pipe\-\_\-write\-\_\-skipped} {\bf postfork} {\bf vec\-\_\-ro} {\bf vec\-\_\-wo} {\bf polls} {\bf pollcnt} {\bf pollidxmax} {\bf epoll\-\_\-eventmax} {\bf epoll\-\_\-epermcnt} {\bf fdchanges} {\bf fdchangecnt} {\bf timermax} {\bf periodics} {\bf periodiccnt} {\bf prepares} {\bf preparecnt} {\bf checkmax} fork {\bf \-V\-A\-Rx})(int, {\bf forkmax}) {\bf \-V\-A\-Rx}(int}}\label{structev__loop_aac7b9722eaada07e64dcabe1eb5af79f}
+
+
+\-Definition at line 160 of file ev.\-c.
+
+\hypertarget{structev__loop_a56e34cf699004a36e5f073ed9bab52eb}{\index{ev\-\_\-loop@{ev\-\_\-loop}!\-V\-A\-Rx@{\-V\-A\-Rx}}
+\index{\-V\-A\-Rx@{\-V\-A\-Rx}!ev_loop@{ev\-\_\-loop}}
+\subsubsection[{\-V\-A\-Rx}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mn\-\_\-now} {\bf rfeeds} {\bf rfeedcnt} {\bf pending\-\_\-w} {\bf timeout\-\_\-blocktime} {\bf activecnt} {\bf backend\-\_\-fd} void($\ast$) void($\ast$) {\bf anfds} {\bf pipe\-\_\-w} {\bf pipe\-\_\-write\-\_\-skipped} {\bf postfork} {\bf vec\-\_\-ro} {\bf vec\-\_\-wo} {\bf polls} {\bf pollcnt} {\bf pollidxmax} {\bf epoll\-\_\-eventmax} {\bf epoll\-\_\-epermcnt} {\bf fdchanges} {\bf fdchangecnt} {\bf timermax} {\bf periodics} {\bf periodiccnt} {\bf prepares} {\bf preparecnt} {\bf checkmax} {\bf forks} forkcn {\bf \-V\-A\-Rx})(struct {\bf ev\-\_\-cleanup} $\ast$$\ast$, {\bf cleanups}) {\bf \-V\-A\-Rx}(int}}\label{structev__loop_a56e34cf699004a36e5f073ed9bab52eb}
+
+
+\-Definition at line 165 of file ev.\-c.
+
+\hypertarget{structev__loop_a8982b5b62a94b67e5d1cd0d13348423d}{\index{ev\-\_\-loop@{ev\-\_\-loop}!\-V\-A\-Rx@{\-V\-A\-Rx}}
+\index{\-V\-A\-Rx@{\-V\-A\-Rx}!ev_loop@{ev\-\_\-loop}}
+\subsubsection[{\-V\-A\-Rx}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mn\-\_\-now} {\bf rfeeds} {\bf rfeedcnt} {\bf pending\-\_\-w} {\bf timeout\-\_\-blocktime} {\bf activecnt} {\bf backend\-\_\-fd} void($\ast$) void($\ast$) {\bf anfds} {\bf pipe\-\_\-w} {\bf pipe\-\_\-write\-\_\-skipped} {\bf postfork} {\bf vec\-\_\-ro} {\bf vec\-\_\-wo} {\bf polls} {\bf pollcnt} {\bf pollidxmax} {\bf epoll\-\_\-eventmax} {\bf epoll\-\_\-epermcnt} {\bf fdchanges} {\bf fdchangecnt} {\bf timermax} {\bf periodics} {\bf periodiccnt} {\bf prepares} {\bf preparecnt} {\bf checkmax} {\bf forks} {\bf forkcnt} cleanupma {\bf \-V\-A\-Rx})(int, {\bf cleanupcnt}) {\bf \-V\-A\-Rx}(\-E\-V\-\_\-\-A\-T\-O\-M\-I\-C\-\_\-\-T}}\label{structev__loop_a8982b5b62a94b67e5d1cd0d13348423d}
+
+
+\-Definition at line 167 of file ev.\-c.
+
+\hypertarget{structev__loop_af018eecb87b100ac3f95a72107e78a9a}{\index{ev\-\_\-loop@{ev\-\_\-loop}!\-V\-A\-Rx@{\-V\-A\-Rx}}
+\index{\-V\-A\-Rx@{\-V\-A\-Rx}!ev_loop@{ev\-\_\-loop}}
+\subsubsection[{\-V\-A\-Rx}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mn\-\_\-now} {\bf rfeeds} {\bf rfeedcnt} {\bf pending\-\_\-w} {\bf timeout\-\_\-blocktime} {\bf activecnt} {\bf backend\-\_\-fd} void($\ast$) void($\ast$) {\bf anfds} {\bf pipe\-\_\-w} {\bf pipe\-\_\-write\-\_\-skipped} {\bf postfork} {\bf vec\-\_\-ro} {\bf vec\-\_\-wo} {\bf polls} {\bf pollcnt} {\bf pollidxmax} {\bf epoll\-\_\-eventmax} {\bf epoll\-\_\-epermcnt} {\bf fdchanges} {\bf fdchangecnt} {\bf timermax} {\bf periodics} {\bf periodiccnt} {\bf prepares} {\bf preparecnt} {\bf checkmax} {\bf forks} {\bf forkcnt} {\bf cleanupmax} async\-\_\-pendin {\bf \-V\-A\-Rx})(struct {\bf ev\-\_\-async} $\ast$$\ast$, {\bf asyncs}) {\bf \-V\-A\-Rx}(int}}\label{structev__loop_af018eecb87b100ac3f95a72107e78a9a}
+
+
+\-Definition at line 172 of file ev.\-c.
+
+\hypertarget{structev__loop_a74a8333c5d2c0de84258507e42ec1bb7}{\index{ev\-\_\-loop@{ev\-\_\-loop}!\-V\-A\-Rx@{\-V\-A\-Rx}}
+\index{\-V\-A\-Rx@{\-V\-A\-Rx}!ev_loop@{ev\-\_\-loop}}
+\subsubsection[{\-V\-A\-Rx}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mn\-\_\-now} {\bf rfeeds} {\bf rfeedcnt} {\bf pending\-\_\-w} {\bf timeout\-\_\-blocktime} {\bf activecnt} {\bf backend\-\_\-fd} void($\ast$) void($\ast$) {\bf anfds} {\bf pipe\-\_\-w} {\bf pipe\-\_\-write\-\_\-skipped} {\bf postfork} {\bf vec\-\_\-ro} {\bf vec\-\_\-wo} {\bf polls} {\bf pollcnt} {\bf pollidxmax} {\bf epoll\-\_\-eventmax} {\bf epoll\-\_\-epermcnt} {\bf fdchanges} {\bf fdchangecnt} {\bf timermax} {\bf periodics} {\bf periodiccnt} {\bf prepares} {\bf preparecnt} {\bf checkmax} {\bf forks} {\bf forkcnt} {\bf cleanupmax} {\bf async\-\_\-pending} asyncma {\bf \-V\-A\-Rx})(int, {\bf asynccnt}) {\bf \-V\-A\-Rx}(\-E\-V\-\_\-\-A\-T\-O\-M\-I\-C\-\_\-\-T}}\label{structev__loop_a74a8333c5d2c0de84258507e42ec1bb7}
+
+
+\-Definition at line 174 of file ev.\-c.
+
+\hypertarget{structev__loop_ab2bac6ae2cba492aac5528930e332c0f}{\index{ev\-\_\-loop@{ev\-\_\-loop}!\-V\-A\-Rx@{\-V\-A\-Rx}}
+\index{\-V\-A\-Rx@{\-V\-A\-Rx}!ev_loop@{ev\-\_\-loop}}
+\subsubsection[{\-V\-A\-Rx}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mn\-\_\-now} {\bf rfeeds} {\bf rfeedcnt} {\bf pending\-\_\-w} {\bf timeout\-\_\-blocktime} {\bf activecnt} {\bf backend\-\_\-fd} void($\ast$) void($\ast$) {\bf anfds} {\bf pipe\-\_\-w} {\bf pipe\-\_\-write\-\_\-skipped} {\bf postfork} {\bf vec\-\_\-ro} {\bf vec\-\_\-wo} {\bf polls} {\bf pollcnt} {\bf pollidxmax} {\bf epoll\-\_\-eventmax} {\bf epoll\-\_\-epermcnt} {\bf fdchanges} {\bf fdchangecnt} {\bf timermax} {\bf periodics} {\bf periodiccnt} {\bf prepares} {\bf preparecnt} {\bf checkmax} {\bf forks} {\bf forkcnt} {\bf cleanupmax} {\bf async\-\_\-pending} {\bf asyncmax} sig\-\_\-pendin {\bf \-V\-A\-Rx})(int, {\bf sigfd}) {\bf \-V\-A\-Rx}({\bf ev\-\_\-io}}}\label{structev__loop_ab2bac6ae2cba492aac5528930e332c0f}
+
+
+\-Definition at line 186 of file ev.\-c.
+
+\hypertarget{structev__loop_a5d87b80eb752b431d01cfb2a5a373037}{\index{ev\-\_\-loop@{ev\-\_\-loop}!\-V\-A\-Rx@{\-V\-A\-Rx}}
+\index{\-V\-A\-Rx@{\-V\-A\-Rx}!ev_loop@{ev\-\_\-loop}}
+\subsubsection[{\-V\-A\-Rx}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mn\-\_\-now} {\bf rfeeds} {\bf rfeedcnt} {\bf pending\-\_\-w} {\bf timeout\-\_\-blocktime} {\bf activecnt} {\bf backend\-\_\-fd} void($\ast$) void($\ast$) {\bf anfds} {\bf pipe\-\_\-w} {\bf pipe\-\_\-write\-\_\-skipped} {\bf postfork} {\bf vec\-\_\-ro} {\bf vec\-\_\-wo} {\bf polls} {\bf pollcnt} {\bf pollidxmax} {\bf epoll\-\_\-eventmax} {\bf epoll\-\_\-epermcnt} {\bf fdchanges} {\bf fdchangecnt} {\bf timermax} {\bf periodics} {\bf periodiccnt} {\bf prepares} {\bf preparecnt} {\bf checkmax} {\bf forks} {\bf forkcnt} {\bf cleanupmax} {\bf async\-\_\-pending} {\bf asyncmax} {\bf sig\-\_\-pending} sigfd\-\_\- {\bf \-V\-A\-Rx})(sigset\-\_\-t, {\bf sigfd\-\_\-set}) {\bf \-V\-A\-Rx}(unsigned int}}\label{structev__loop_a5d87b80eb752b431d01cfb2a5a373037}
+
+
+\-Definition at line 188 of file ev.\-c.
+
+\hypertarget{structev__loop_a771db3357ce44a7c079995398180ba61}{\index{ev\-\_\-loop@{ev\-\_\-loop}!\-V\-A\-Rx@{\-V\-A\-Rx}}
+\index{\-V\-A\-Rx@{\-V\-A\-Rx}!ev_loop@{ev\-\_\-loop}}
+\subsubsection[{\-V\-A\-Rx}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mn\-\_\-now} {\bf rfeeds} {\bf rfeedcnt} {\bf pending\-\_\-w} {\bf timeout\-\_\-blocktime} {\bf activecnt} {\bf backend\-\_\-fd} void($\ast$) void($\ast$) {\bf anfds} {\bf pipe\-\_\-w} {\bf pipe\-\_\-write\-\_\-skipped} {\bf postfork} {\bf vec\-\_\-ro} {\bf vec\-\_\-wo} {\bf polls} {\bf pollcnt} {\bf pollidxmax} {\bf epoll\-\_\-eventmax} {\bf epoll\-\_\-epermcnt} {\bf fdchanges} {\bf fdchangecnt} {\bf timermax} {\bf periodics} {\bf periodiccnt} {\bf prepares} {\bf preparecnt} {\bf checkmax} {\bf forks} {\bf forkcnt} {\bf cleanupmax} {\bf async\-\_\-pending} {\bf asyncmax} {\bf sig\-\_\-pending} {\bf sigfd\-\_\-w} origflag {\bf \-V\-A\-Rx})(unsigned int, {\bf loop\-\_\-count}){\bf \-V\-A\-Rx}(unsigned int}}\label{structev__loop_a771db3357ce44a7c079995398180ba61}
+
+
+\-Definition at line 194 of file ev.\-c.
+
+\hypertarget{structev__loop_a502f06942cf02fd47d500dc6a3655879}{\index{ev\-\_\-loop@{ev\-\_\-loop}!\-V\-A\-Rx@{\-V\-A\-Rx}}
+\index{\-V\-A\-Rx@{\-V\-A\-Rx}!ev_loop@{ev\-\_\-loop}}
+\subsubsection[{\-V\-A\-Rx}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mn\-\_\-now} {\bf rfeeds} {\bf rfeedcnt} {\bf pending\-\_\-w} {\bf timeout\-\_\-blocktime} {\bf activecnt} {\bf backend\-\_\-fd} void($\ast$) void($\ast$) {\bf anfds} {\bf pipe\-\_\-w} {\bf pipe\-\_\-write\-\_\-skipped} {\bf postfork} {\bf vec\-\_\-ro} {\bf vec\-\_\-wo} {\bf polls} {\bf pollcnt} {\bf pollidxmax} {\bf epoll\-\_\-eventmax} {\bf epoll\-\_\-epermcnt} {\bf fdchanges} {\bf fdchangecnt} {\bf timermax} {\bf periodics} {\bf periodiccnt} {\bf prepares} {\bf preparecnt} {\bf checkmax} {\bf forks} {\bf forkcnt} {\bf cleanupmax} {\bf async\-\_\-pending} {\bf asyncmax} {\bf sig\-\_\-pending} {\bf sigfd\-\_\-w} {\bf origflags} loop\-\_\-dept {\bf \-V\-A\-Rx})(void $\ast$, {\bf userdata}){\bf \-V\-A\-R}({\bf release\-\_\-cb}}}\label{structev__loop_a502f06942cf02fd47d500dc6a3655879}
+
+
+\-Definition at line 197 of file ev.\-c.
+
+
+
+\-The documentation for this struct was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+/home/jaymiao/workstation/github/libev-\/4.\-19/\hyperlink{ev_8c}{ev.\-c}\item 
+/home/jaymiao/workstation/github/libev-\/4.\-19/\hyperlink{ev__vars_8h}{ev\-\_\-vars.\-h}\end{DoxyCompactItemize}

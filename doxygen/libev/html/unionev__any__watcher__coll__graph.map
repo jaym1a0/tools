@@ -1,0 +1,18 @@
+<map id="G" name="G">
+<area shape="rect" id="node2" href="$structev__idle.html" title="{ev_idle\n||}" alt="" coords="567,153,628,239"/>
+<area shape="rect" id="node18" href="$structev__embed.html" title="{ev_embed\n|+ other\l+ io\l+ prepare\l+ check\l+ timer\l+ periodic\l+ idle\l+ fork\l+ cleanup\l|}" alt="" coords="857,453,940,677"/>
+<area shape="rect" id="node4" href="$structev__child.html" title="{ev_child\n|+ flags\l+ pid\l+ rpid\l+ rstatus\l|}" alt="" coords="104,497,179,634"/>
+<area shape="rect" id="node6" href="$structev__check.html" title="{ev_check\n||}" alt="" coords="409,153,487,239"/>
+<area shape="rect" id="node8" href="$structev__watcher.html" title="{ev_watcher\n||}" alt="" coords="284,523,372,608"/>
+<area shape="rect" id="node10" href="$structev__timer.html" title="{ev_timer\n|+ repeat\l|}" alt="" coords="191,153,263,239"/>
+<area shape="rect" id="node36" href="$structev__stat.html" title="{ev_stat\n|+ timer\l+ interval\l+ path\l+ prev\l+ attr\l+ wd\l|}" alt="" coords="5,479,80,651"/>
+<area shape="rect" id="node12" href="$structev__cleanup.html" title="{ev_cleanup\n||}" alt="" coords="680,153,768,239"/>
+<area shape="rect" id="node14" href="$structev__signal.html" title="{ev_signal\n|+ signum\l|}" alt="" coords="557,523,635,608"/>
+<area shape="rect" id="node16" href="$structev__async.html" title="{ev_async\n|+ sent\l|}" alt="" coords="659,523,736,608"/>
+<area shape="rect" id="node24" href="$structev__loop.html" title="{ev_loop\n|+ ev_rt_now\l+ backend_modify\l+ backend_poll\l+ VARx\l+ VARx\l+ VARx\l+ VARx\l+ VARx\l+ VARx\l+ VARx\land 21 more...|+ VARx()\l+ VARx()\l+ VARx()\l+ VARx()\l+ VARx()\l+ VARx()\l+ VARx()\l+ VARx()\l}" alt="" coords="792,6,920,386"/>
+<area shape="rect" id="node26" href="$structev__prepare.html" title="{ev_prepare\n||}" alt="" coords="1129,153,1215,239"/>
+<area shape="rect" id="node28" href="$structev__fork.html" title="{ev_fork\n||}" alt="" coords="945,153,1009,239"/>
+<area shape="rect" id="node30" href="$structev__periodic.html" title="{ev_periodic\n|+ offset\l+ interval\l+ reschedule_cb\l|}" alt="" coords="1239,136,1356,256"/>
+<area shape="rect" id="node32" href="$structev__io.html" title="{ev_io\n|+ fd\l+ events\l|}" alt="" coords="1033,145,1105,247"/>
+<area shape="rect" id="node41" href="$structev__watcher__list.html" title="{ev_watcher_list\n||}" alt="" coords="1372,523,1484,608"/>
+</map>
